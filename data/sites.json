@@ -1,0 +1,66 @@
+{
+  "sites": [
+    {
+      "id": "mahajanga",
+      "nom": "IUTAM Mahajanga",
+      "masquer_liste": true,
+      "role": "",
+      "adresse": "Campus d'Ambondrona, Université de Mahajanga, BP 652, Mahajanga (401)",
+      "telephone": "+261 32 05 580 06",
+      "email": "benjaiba@yahoo.fr",
+      "parcours": "",
+      "lien": "",
+      "image": ""
+    },
+    {
+      "id": "antsohihy",
+      "nom": "IUTAM Antsohihy",
+      "role": "",
+      "role_mg": "",
+      "adresse": "",
+      "adresse_mg": "",
+      "telephone": "+261 32 05 580 06 / +261 34 02 653 27",
+      "email": "iutamumg@gmail.com",
+      "parcours": "Agriculture, Élevage, Environnement, Pêche et Aquaculture",
+      "parcours_mg": "Fambolena, Fiompiana, Tontolo iainana, Jono sy Fiompiana trondro",
+      "lien": "",
+      "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
+      "note_mg": "Ny adiresy, ny ora fiasana ary ny fanofanana 2026-2027 dia hamafisina amin'ny sekretaria ao Mahajanga.",
+      "image": "images/antsohihy.jpg",
+      "photos": [
+        {
+          "src": "images/antsohihy-panneau.jpg",
+          "alt": "Panneau « IUTAM Annexe Antsohihy » : accès à 60 m",
+          "alt_mg": "Takelaka « IUTAM Annexe Antsohihy » : 60 m ny lalana"
+        },
+        {
+          "src": "images/antsohihy-acces.jpg",
+          "alt": "Panneau « IUTAM Annexe Antsohihy » : accès à 300 m",
+          "alt_mg": "Takelaka « IUTAM Annexe Antsohihy » : 300 m ny lalana"
+        },
+        {
+          "src": "images/antsohihy-equipe.jpg",
+          "alt": "Groupe devant l'affiche « Nos formations »",
+          "alt_mg": "Vondrona eo anoloan'ny afisy « Ny fanofanana ataontsika »"
+        }
+      ]
+    },
+    {
+      "id": "maevatanana",
+      "nom": "IUTAM Maevatanana",
+      "role": "",
+      "role_mg": "",
+      "adresse": "",
+      "adresse_mg": "",
+      "telephone": "",
+      "email": "",
+      "parcours": "Agriculture, Élevage, Environnement",
+      "parcours_mg": "Fambolena, Fiompiana, Tontolo iainana",
+      "lien": "",
+      "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
+      "note_mg": "Ny adiresy, ny ora fiasana ary ny fanofanana 2026-2027 dia hamafisina amin'ny sekretaria ao Mahajanga.",
+      "image": "images/maevatanana-illustration.svg",
+      "illustration": true
+    }
+  ]
+}

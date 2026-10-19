@@ -1,0 +1,103 @@
+# Configuration Decap CMS : permet de modifier les actualités et les frais sans toucher au code.
+# Voir docs/CMS.md pour le branchement (connexion GitHub) avant utilisation.
+backend:
+  name: github
+  repo: VOTRE_COMPTE/iutam-site        # à remplacer
+  branch: main
+  base_url: https://VOTRE-PASSERELLE-OAUTH   # passerelle d'authentification (voir docs/CMS.md)
+
+local_backend: true                      # test en local : npx decap-server
+locale: fr
+publish_mode: simple
+media_folder: images/actus
+public_folder: /images/actus
+
+collections:
+  - name: actualites
+    label: Actualités
+    files:
+      - name: actualites
+        label: Liste des actualités
+        file: data/actualites.json
+        fields:
+          - label: Actualités
+            name: items
+            widget: list
+            summary: "{{fields.titre}} ({{fields.date}})"
+            fields:
+              - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: Titre (français), name: titre, widget: string }
+              - { label: Titre (malagasy), name: titre_mg, widget: string, required: false }
+              - { label: Résumé (français), name: resume, widget: text }
+              - { label: Résumé (malagasy), name: resume_mg, widget: text, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: "Lien (commence par https://)", name: lien, widget: string, required: false }
+  - name: frais
+    label: Frais de scolarité
+    files:
+      - name: frais
+        label: Grille tarifaire
+        file: data/frais.json
+        fields:
+          - { label: Année universitaire, name: annee, widget: string, required: false }
+          - label: Frais communs à tous les niveaux
+            name: communs
+            widget: list
+            summary: "{{fields.designation}} : {{fields.montant}} Ar"
+            fields:
+              - { label: Désignation (français), name: designation, widget: string }
+              - { label: Désignation (malagasy), name: designation_mg, widget: string, required: false }
+              - { label: Montant en Ariary, name: montant, widget: number, value_type: int, min: 0 }
+          - label: Tranches de frais de formation (intitulés)
+            name: tranches
+            widget: list
+            summary: "{{fields.designation}}"
+            fields:
+              - { label: Intitulé (français), name: designation, widget: string }
+              - { label: Intitulé (malagasy), name: designation_mg, widget: string, required: false }
+          - label: Niveaux (montant d'une tranche)
+            name: niveaux
+            widget: list
+            summary: "{{fields.nom}} : {{fields.tranche}} Ar par tranche"
+            fields:
+              - { label: Nom du niveau (ex. L1 – L2), name: nom, widget: string }
+              - { label: Nom (malagasy), name: nom_mg, widget: string, required: false }
+              - { label: Précision (français), name: detail, widget: string, required: false }
+              - { label: Précision (malagasy), name: detail_mg, widget: string, required: false }
+              - { label: Montant d'une tranche en Ariary, name: tranche, widget: number, value_type: int, min: 0 }
+  - name: sites
+    label: Sites (Antsohihy, Maevatanana…)
+    files:
+      - name: sites
+        label: Liste des sites IUTAM
+        file: data/sites.json
+        fields:
+          - label: Sites
+            name: sites
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { label: Identifiant (sans espace), name: id, widget: string }
+              - { label: Nom (ex. IUTAM Antsohihy), name: nom, widget: string }
+              - { label: Masquer dans la liste (ex. Mahajanga), name: masquer_liste, widget: boolean, required: false, default: false }
+              - { label: Rôle ou statut (français), name: role, widget: string, required: false }
+              - { label: Rôle ou statut (malagasy), name: role_mg, widget: string, required: false }
+              - { label: Adresse (français), name: adresse, widget: string, required: false }
+              - { label: Adresse (malagasy), name: adresse_mg, widget: string, required: false }
+              - { label: Téléphone, name: telephone, widget: string, required: false }
+              - { label: E-mail, name: email, widget: string, required: false }
+              - { label: Parcours proposés (français), name: parcours, widget: string, required: false }
+              - { label: Parcours proposés (malagasy), name: parcours_mg, widget: string, required: false }
+              - { label: Photo de couverture, name: image, widget: image, required: false }
+              - { label: Image illustrative (afficher la mention Illustration), name: illustration, widget: boolean, required: false, default: false }
+              - label: Photos (galerie)
+                name: photos
+                widget: list
+                required: false
+                fields:
+                  - { label: Photo, name: src, widget: image }
+                  - { label: Légende (français), name: alt, widget: string }
+                  - { label: Légende (malagasy), name: alt_mg, widget: string, required: false }
+              - { label: Note (français), name: note, widget: string, required: false }
+              - { label: Note (malagasy), name: note_mg, widget: string, required: false }
+              - { label: "Lien (https://…)", name: lien, widget: string, required: false }

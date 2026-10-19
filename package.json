@@ -1,0 +1,13 @@
+{
+  "name": "iutam-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Site vitrine de l'IUTAM Mahajanga",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "build:mg": "node tools/build-mg.js",
+    "cms": "npx decap-server",
+    "build": "node tools/build-site.js",
+    "build:univ": "node tools/build-site.js --univ"
+  }
+}
