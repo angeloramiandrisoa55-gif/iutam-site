@@ -38,15 +38,22 @@
 Outils respectueux de la vie privée, sans cookies : Plausible, Umami (auto-hébergé) ou Cloudflare Web Analytics. Si ajout d'un script externe, mettre à jour la CSP dans `_headers`.
 
 ## Formulaire de contact
-Actuellement : ouverture du client mail (`mailto:`). Évolutions simples : Formspree ou Netlify Forms (gratuit, sans serveur), ou un petit script PHP sur un hébergement mutualisé.
+Le formulaire envoie désormais les données à l'API (`api/worker.js`) : validation côté serveur, pot de miel, limitation de débit, origine obligatoire. Sans Worker, le repli automatique sur le logiciel de messagerie évite de perdre un message. Voir `docs/API.md` et `docs/WAF.md`.
 
 ## Maintenance (rythme conseillé)
 - À chaque rentrée : vérifier frais, calendrier, contacts, conditions d'admission.
-- Tous les trimestres : tester les liens et l'affichage mobile, sauvegarder le dépôt.
+- Tous les trimestres : tester les liens et l'affichage mobile, sauvegarder le dépôt, lire les alertes Dependabot, **tester la restauration d'une sauvegarde**.
 - Désigner une personne responsable du contenu et une personne technique (vous, ou un étudiant successeur) ; garder ce `README` à jour.
 
 ## Feuille de route
 1. **v1.1 (livrée)** : actualités, frais pilotés par fichiers de données, mentions légales, version malagasy, administration Decap CMS (à brancher).
-2. **v1.2** : relecture des traductions malagasy par un locuteur natif ; page par parcours ; galerie complète ; fil d'actualités sur Facebook.
-3. **v2** : CMS pour tous les contenus (parcours, admission), formulaire de contact avec envoi réel (Formspree / Netlify Forms / PHP).
-4. **v3** : espace étudiant (résultats, certificats) relié au logiciel de scolarité de l'IUTAM, avec authentification et API sécurisée.
+2. **v1.2 (livrée)** : relecture des traductions malagasy par un locuteur natif ; page par parcours ; galerie complète.
+3. **v2.0 (livrée)** : CMS étendu, design refait, panneaux des parcours, 3D, thème sombre, SEO.
+4. **v2.1 (livrée)** — sécurité, infrastructure et contenu :
+   - **Sécurité** : API Worker (validation serveur, limitation de débit, origine obligatoire, JWT, PBKDF2), pare-feu applicatif documenté (`docs/WAF.md`), en-têtes de sécurité durcis sur les trois configurations de serveur, `security.txt` complet.
+   - **Infrastructure** : sauvegardes automatiques quotidiennes, surveillance toutes les 30 minutes, 18 tests de sécurité, contrôles automatiques à chaque publication (liens, traductions, données, encodage, API), minification, déploiement Docker + Caddy (HTTPS automatique).
+   - **Contenu** : débouchés professionnels, guides pratiques, questions fréquentes, moteur de recherche interne, lettre d'information, formulaire qui part réellement.
+   - **Qualité** : Lighthouse 100/100/100 (accessibilité, bonnes pratiques, référencement) en français et en malagasy.
+5. **v2.2** : relecture des traductions malgaches par un locuteur natif ; chiffres clés et taux d'insertion publiés par l'Université ; photos de l'élevage et de Maevatanana.
+6. **v2.3** : espace étudiant (notes, attestations, emplois du temps) relié au logiciel de scolarité, avec les rôles de `docs/ROLES.md`.
+7. **v3.0** : API d'administration, publication depuis l'interface, éventuelle base de données (PostgreSQL) si le volume le justifie.

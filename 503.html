@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Site de l'IUTAM Mahajanga temporairement indisponible pour maintenance.">
+<meta name="robots" content="noindex, follow">
+<title>Site temporairement indisponible — IUTAM Mahajanga</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<style>
+/* Styles locaux : cette page doit s'afficher même si la feuille de style
+   principale est en cache ou inaccessible. */
+main{max-width:640px;margin:0 auto;padding:14vh 6vw 8vh;text-align:center}
+main h1{font-size:clamp(1.6rem,5vw,2.4rem);color:var(--pri);margin:0 0 .4em}
+main p{color:var(--mut);margin:0 0 14px}
+main .btn{display:inline-block;margin:8px 6px 0;padding:12px 26px;border-radius:99px;background:var(--pri);color:#fff;text-decoration:none;font-weight:600}
+.spin{width:44px;height:44px;margin:0 auto 22px;border:4px solid var(--bd);border-top-color:var(--pri);border-radius:50%;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="spin" role="img" aria-label="Chargement"></div>
+  <h1>Site en cours de maintenance</h1>
+  <p>Le site de l'IUTAM est temporairement indisponible pour une opération de maintenance. Merci de revenir dans quelques instants.</p>
+  <p>En cas d'urgence, contactez le secrétariat de l'Institut Universitaire de Technologie et d'Agronomie de Mahajanga par téléphone au <a href="tel:+261320558006">+261 32 05 580 06</a>.</p>
+  <a class="btn" href="/">Réessayer</a>
+</main>
+</body>
+</html>

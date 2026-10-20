@@ -2,5 +2,13 @@
 Thumbs.db
 node_modules/
 _site/
+backup/
+api/*.json
 *.log
 .env
+.env.*
+!.env.example
+*.tar.gz
+*.sha256
+.wrangler/
+.dev.vars

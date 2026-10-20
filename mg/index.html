@@ -27,11 +27,12 @@
 <noscript><p style="padding:12px;text-align:center;background:#fff3cd">Alefaso ny JavaScript mba hahita ny hetsika rehetra. Mbola azo vakiana ny votoatiny.</p></noscript>
 <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
 <header>
-  <a class="brand" href="#hero" aria-label="IUTAM Mahajanga – fandraisana"><img class="brand-mark" src="../favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span></a>
-  <nav id="nav" aria-label="Menio lehibe"><a href="#about" data-n="01">Ny Institiota</a><a href="#vie" data-n="02">Fiainan'ny mpianatra</a><a href="#formations" data-n="03">Fanofanana</a><a href="#admission" data-n="04">Fidirana</a><a href="#frais" data-n="05">Saram-pianarana</a><a href="#actus" data-n="06">Vaovao</a><a href="#contact" data-n="07">Fifandraisana</a></nav>
-  <div class="hr"><a class="lang" href="../" hreflang="fr" lang="fr" title="Français">FR</a><button id="th" class="tg" type="button" aria-label="Hanova ny lohahevitra mazava/maizina" title="Lohahevitra mazava / maizina">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menio" aria-expanded="false" aria-controls="nav">☰</button></div>
+  <a class="brand" href="#hero"><img class="brand-mark" src="../favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span><span class="sr">– fandraisana</span></a>
+  <nav id="nav" aria-label="Menio lehibe"><a href="#about" data-n="01">Ny Institiota</a><a href="#vie" data-n="02">Fiainan'ny mpianatra</a><a href="#formations" data-n="03">Fanofanana</a><a href="#debouches" data-n="04">Asa sy azo alaina</a><a href="#admission" data-n="05">Fidirana</a><a href="#frais" data-n="06">Saram-pianarana</a><a href="#faq" data-n="07">FAQ</a><a href="#actus" data-n="08">Vaovao</a><a href="#contact" data-n="09">Fifandraisana</a></nav>
+  <div class="hr"><button id="sb" class="tg" type="button" aria-label="Hitady ao amin’ny tranokala" title="Hitady (Ctrl + K)">🔍</button><a class="lang" href="../" hreflang="fr" lang="fr" title="Français">FR</a><button id="th" class="tg" type="button" aria-label="Hanova ny lohahevitra mazava/maizina" title="Lohahevitra mazava / maizina">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menio" aria-expanded="false" aria-controls="nav">☰</button></div>
 </header>
 <div id="pg"></div>
+<main id="contenu">
 <div id="hero">
   <div id="stage"><img id="lg" alt="Famantarana ny IUTAM" src="../images/logo.jpg" width="640" height="640" fetchpriority="high"><canvas id="c" aria-label="Famantarana IUTAM mihetsika amin'ny 3D"></canvas></div>
   <div class="hc">
@@ -116,12 +117,12 @@
     </div>
     <p class="mention"><i>Mention</i><b>Biolojia Fampiharina</b></p>
     <p class="lvl-p">Mahazo fototra ara-siansa dia teknika sy teknolojia amin'ny sehatra agronomika sy ny tontolo iainana.</p>
-    <h4>Ireo lalam-pianarana</h4>
+    <h3 class="lsub">Ireo lalam-pianarana</h3>
     <div class="pc">
-      <article class="card pcard p-agri rv"><span class="ic">🌾</span><h3>Fambolena</h3><small>Bac : C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
-      <article class="card pcard p-elev rv"><span class="ic">🐄</span><h3>Fiompiana</h3><small>Bac : C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
-      <article class="card pcard p-env rv"><span class="ic">🌿</span><h3>Tontolo iainana</h3><small>Bac : A2, C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
-      <article class="card pcard p-peche rv"><span class="ic">🐟</span><h3>Jono sy Fiompiana trondro</h3><small>Bac : C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
+      <article class="card pcard p-agri rv"><span class="ic">🌾</span><h4>Fambolena</h4><small>Bac : C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
+      <article class="card pcard p-elev rv"><span class="ic">🐄</span><h4>Fiompiana</h4><small>Bac : C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
+      <article class="card pcard p-env rv"><span class="ic">🌿</span><h4>Tontolo iainana</h4><small>Bac : A2, C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
+      <article class="card pcard p-peche rv"><span class="ic">🐟</span><h4>Jono sy Fiompiana trondro</h4><small>Bac : C, D, S, OSE ary Agricole</small><a class="more" href="#adm-lic">Fepetra amin'ny fidirana →</a></article>
     </div>
     <div class="stg"><b>Stage ao amin'ny tontolon'ny asa</b><span>L1 · Stage fampidirana</span><span>L2 · Stage mpiasa</span><span>L3 · Stage ho an'ny memoara Licence</span><a class="more" href="#frais">Jereo ny saram-pianarana →</a></div>
   </div>
@@ -136,10 +137,10 @@
     </div>
     <p class="mention"><i>Mention</i><b>Agro-biodiversité sy Tontolo iainana</b></p>
     <p class="lvl-p">Manofana injeniera mpahay amin'ny siansa sy teknolojian'ny zavamananaina, biotechnologie, siansan'ny tany, indostrian'ny sakafo, fikarohana, fanavaozana ary fampandrosoana maharitra.</p>
-    <h4>Ireo lalam-pianarana</h4>
+    <h3 class="lsub">Ireo lalam-pianarana</h3>
     <div class="pc">
-      <article class="card pcard p-padd rv"><span class="ic">🐄</span><h3>P.A.D.D.</h3><p>Famokarana biby sy Fampandrosoana maharitra.</p><small>Licence takiana : Fiompiana, Tontolo iainana, Jono sy Fiompiana trondro ary mitovy aminy</small><a class="more" href="#adm-mas">Fepetra amin'ny fidirana →</a></article>
-      <article class="card pcard p-pvtdd rv"><span class="ic">🌴</span><h3>P.V.T.D.D.</h3><p>Famokarana zavamaniry tropikaly sy Fampandrosoana maharitra.</p><small>Licence takiana : Fambolena, Tontolo iainana ary mitovy aminy</small><a class="more" href="#adm-mas">Fepetra amin'ny fidirana →</a></article>
+      <article class="card pcard p-padd rv"><span class="ic">🐄</span><h4>P.A.D.D.</h4><p>Famokarana biby sy Fampandrosoana maharitra.</p><small>Licence takiana : Fiompiana, Tontolo iainana, Jono sy Fiompiana trondro ary mitovy aminy</small><a class="more" href="#adm-mas">Fepetra amin'ny fidirana →</a></article>
+      <article class="card pcard p-pvtdd rv"><span class="ic">🌴</span><h4>P.V.T.D.D.</h4><p>Famokarana zavamaniry tropikaly sy Fampandrosoana maharitra.</p><small>Licence takiana : Fambolena, Tontolo iainana ary mitovy aminy</small><a class="more" href="#adm-mas">Fepetra amin'ny fidirana →</a></article>
     </div>
     <div class="stg"><b>Stage ao amin'ny tontolon'ny asa</b><span>M2 · Stage ho an'ny memoara ingéniorat</span><a class="more" href="#frais">Jereo ny saram-pianarana →</a></div>
   </div>
@@ -222,6 +223,17 @@
   <div class="grid" id="sites-list" aria-live="polite"></div>
 </section>
 
+<section id="debouches">
+  <h2 class="rv">Asa sy azo alaina sy fanatrehana ara-kasa</h2>
+  <p class="sub rv">Ny asa tiana ho an'ny lilan-tanana tsirairay ary ny sehatra mampiasa ny mp-graduat. Ny anarana marina ny laharan'asa dia tokony hamafisina amin'ny sekretaria.</p>
+  <div class="db-filter rv" role="tablist" aria-label="Sivana ny asa azo alaina araka ny lilan-tanana"><button class="db-tab on" type="button" role="tab" aria-selected="true" data-niv="licence">Licence</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="ingeniorat">Ingéniorat</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="">Tous</button></div>
+  <div class="grid" id="deb-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
+  <div class="pub rv">
+    <div><b>Ny fanatrehana ara-kasa anao</b><span>Ny sampana fanatrehana ao amin'ny sekretaria dia manampy anao amin'ny fitadiavana toerana fanatramana, ny fanoratana ny CV-nao ary ny fangatahanao.</span></div>
+    <a class="btn" href="#contact">Miresaka amin’ny fanatrehana</a>
+  </div>
+</section>
+
 <section id="admission">
   <h2 class="rv">Fepetra amin'ny fidirana</h2>
   <p class="sub rv">Fisafidianana araka ny dosiera (Licence), avy eo fisafidianana araka ny dosiera sy dinika (Ingéniorat).</p>
@@ -239,6 +251,9 @@
     <tr><td>P.A.D.D.</td><td>Fiompiana, Tontolo iainana, Jono sy Fiompiana trondro ary mitovy aminy</td></tr>
     <tr><td>P.V.T.D.D.</td><td>Fambolena, Tontolo iainana ary mitovy aminy</td></tr>
   </table></div>
+  <h3 class="rv" id="guides" style="margin-top:56px">Fitantanana azo ampiharina</h3>
+  <p class="sub rv">Ny dingana tokony ho fantatra, dingana tsirairay.</p>
+  <div class="grid" id="guides-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
 </section>
 
 <section id="frais">
@@ -258,6 +273,17 @@
   </table></div><p class="fnote" id="frais-note">Saram-pianarana L1 – L2</p></div></div>
 </section>
 
+<section id="faq">
+  <h2 class="rv">Fanontaniana matetika</h2>
+  <p class="sub rv">Fidirana, frais, formation, stages : les réponses aux questions les plus posées.</p>
+  <div class="faq-tabs rv" id="faq-tabs" role="tablist" aria-label="Sokajy fanontaniana"></div>
+  <div id="faq-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
+  <div class="pub rv">
+    <div><b>Tsy ao ny fanontanianao ?</b><span>Ny sekretaria ny IUTAM dia mamaly ny fanontaniana rehetra momba ny fidirana sy ny fisoratana anarana.</span></div>
+    <a class="btn" href="#contact">Manontany</a>
+  </div>
+</section>
+
 <section id="actus">
   <h2 class="rv">Vaovao</h2>
   <p class="sub rv">Ny vaovao farany avy amin'ny IUTAM.</p>
@@ -268,17 +294,35 @@
   <h2>Fifandraisana</h2>
   <p class="sub">📍 Campus Ambondrona · Oniversiten'i Mahajanga · BP 652<br>Mahajanga (401) · Madagasikara<br>📞 +261 32 05 580 06<br>✉️ benjaiba@yahoo.fr</p>
   <p><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=79X4%2BQ2Q%20Mahajanga" target="_blank" rel="noopener">🗺️ Jereo amin'ny sarintany</a><a class="btn o" href="https://www.mahajanga-univ.mg" target="_blank" rel="noopener">🏛️ Tranokala-n'ny Oniversite</a></p>
-  <form id="f">
-    <input name="n" placeholder="Ny anaranao" required>
-    <input name="e" type="email" placeholder="Ny e-mailaonao" required>
-    <textarea name="m" rows="4" placeholder="Ny hafatrao" required></textarea>
-    <button class="btn" type="submit">Alefa</button>
+  <form id="f" class="form" novalidate>
+    <div class="fr"><label for="c-nom">Anarana sy fanampin’anarana <span aria-hidden="true">*</span></label><input id="c-nom" name="nom" type="text" autocomplete="name" maxlength="120" required></div>
+    <div class="fr"><label for="c-email">Adiresy mailaka <span aria-hidden="true">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+    <div class="fr"><label for="c-sujet">Lohahevitra</label><input id="c-sujet" name="sujet" type="text" maxlength="150" placeholder="Fidirana, frais, stage…"></div>
+    <div class="fr"><label for="c-message">Hafatra <span aria-hidden="true">*</span></label><textarea id="c-message" name="message" rows="5" maxlength="4000" required></textarea></div>
+    <div class="fr hp" aria-hidden="true"><label for="c-company">Aza fenoina ity saha ity<input id="c-company" name="company" type="text" tabindex="-1" autocomplete="off"></label></div>
+    <div class="fr chk"><input id="c-consent" name="consent" type="checkbox" value="1" required><label for="c-consent">Ekeko fa ampiasaina ny angon-drindrinao hamaly ny fangatahanao. <span aria-hidden="true">*</span></label></div>
+    <button class="btn" type="submit">Alefa le message</button>
+    <p class="fm" id="f-msg" role="status" aria-live="polite"></p>
   </form>
+  <div class="nl-wrap">
+    <h3>Gazety fampandrosoana</h3>
+    <p>Mahazoa ny daty fisoratana anarana, ny valiny ary ny vaovao momba ny IUTAM, indray mandeha isam-bolana. Azo atafahatra ny fandefasana azy amin'ny fotoana rehetra.</p>
+    <form id="nl" class="form nl" novalidate>
+      <div class="fr"><label for="n-email">Adiresy mailaka</label><input id="n-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+      <div class="fr hp" aria-hidden="true"><label for="n-company">Aza fenoina ity saha ity<input id="n-company" name="company" type="text" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn o" type="submit">Hisoratra anarana</button>
+      <p class="fm" id="nl-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
 </section>
+</main>
 
 <footer>© <span id="y"></span> IUTAM – Institiota Oniversita momba ny Teknolojia sy ny Agronomia ao Mahajanga. Zo rehetra voatokana. · <a href="../mentions-legales.html">Fanamarihana ara-dalàna</a></footer>
 
 <script src="../js/vendor/three.min.js" defer></script>
 <script src="../js/main.js" defer></script>
+<script src="../js/sections.js" defer></script>
+<script src="../js/forms.js" defer></script>
+<script src="../js/search.js" defer></script>
 </body>
 </html>

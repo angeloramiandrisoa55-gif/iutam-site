@@ -4,9 +4,8 @@ var T={fr:{show:"💰 Voir le détail de la grille tarifaire",hide:"💰 Masquer
 mg:{show:"💰 Hijery ny antsipirian'ny saram-pianarana",hide:"💰 Afeno ny lisitry ny saram-pianarana",empty:"Tsy mbola misy vaovao amin'izao fotoana izao.",more:"Hamaky bebe kokoa",total:"Totalin'ny taona",illus:"Sary ohatra",soon:"Mbola ho avy ny fanazavana : mifandraisa amin'ny sekretaria.",callsite:"Hifandray amin'ity toerana ity",info:"Fanazavana fanampiny",close:"Akatony",fixed:"sarany iraisana",from:"manomboka amin'ny",year:"taona",months:["Janoary","Febroary","Martsa","Aprily","Mey","Jona","Jolay","Aogositra","Septambra","Oktobra","Novambra","Desambra"]}}[LANG];
 
 document.getElementById('y').textContent=new Date().getFullYear();
-// Formulaire : ouvre le client mail (remplacer l'adresse)
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var d=new FormData(this);
-location.href='mailto:benjaiba@yahoo.fr?subject='+encodeURIComponent('Contact site IUTAM – '+d.get('n'))+'&body='+encodeURIComponent(d.get('m')+'\n\n'+d.get('e'));});
+// Le formulaire de contact et la lettre d'information sont gérés par js/forms.js
+// (validation, envoi à l'API, repli sur le logiciel de messagerie).
 // Apparition au scroll
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
@@ -39,7 +38,9 @@ document.querySelectorAll('.stats').forEach(function(el){cio.observe(el)});
 // barre de progression + parallaxe
 var pg=document.getElementById('pg'),hc=document.querySelector('.hc'),hero=document.getElementById('hero'),tk=false;
 function onS(){tk=false;var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?y/h:0)+')';
-if(!reduce&&y<hero.offsetHeight){hc.style.transform='translateY('+(y*.14)+'px)';hc.style.opacity=Math.max(1-y/(hero.offsetHeight*.9),0)}}
+if(reduce)return;
+if(y<hero.offsetHeight){hc.style.transform='translateY('+(y*.14)+'px)';hc.style.opacity=Math.max(1-y/(hero.offsetHeight*.9),0);hc.style.visibility='visible'}
+else{hc.style.opacity=0;hc.style.visibility='hidden'}}
 addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});onS();
 })();
 // Grille tarifaire dépliable

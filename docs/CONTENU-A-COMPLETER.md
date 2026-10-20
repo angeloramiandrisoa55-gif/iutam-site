@@ -2,15 +2,39 @@
 
 ## À obtenir de l'administration
 - [ ] Nom officiel, titre et accord de publication pour la photo du directeur
-- [ ] Adresse e-mail institutionnelle (remplacer `benjaiba@yahoo.fr` dans `index.html`) et numéros de téléphone officiels
-- [ ] Horaires d'ouverture du secrétariat
-- [ ] Confirmation que la grille tarifaire s'applique à tous les niveaux (Licence et Ingéniorat) et pour quelle année universitaire
+- [ ] Adresse e-mail institutionnelle (remplacer `benjaiba@yahoo.fr` dans `index.html`, `data/contact.json` et `data/sites.json`) et numéros de téléphone officiels
+- [ ] Horaires d'ouverture du secrétariat (champs `horaires` de `data/contact.json`)
+- [ ] Confirmation que la grille tarifaire s'applique à tous les niveaux (Licence et Ingéniorat) et pour quelle année universitaire (champ `annee` de `data/frais.json`)
 - [ ] Calendrier d'inscription, pièces à fournir, lieu de dépôt des dossiers
 - [ ] Chiffres réels (effectifs, enseignants, partenaires) si souhaité
 - [ ] Fichier du logo en haute définition (PNG/SVG) : remplace `images/logo.jpg` et `favicon.*`
 - [ ] Photos haute qualité, légendes et accords de publication
-- [ ] Lien de la page Facebook officielle
+- [ ] Lien de la page Facebook officielle (`data/contact.json` → `reseaux.facebook`)
 - [ ] Textes officiels : présentation, mission, mentions légales
+
+## Débouchés professionnels (nouveauté v2.1)
+- [ ] **Faire valider les 24 débouchés** de `data/formations.json` (métier, secteur, description) : ils sont rédigés à partir des maquettes des formations, pas de documents officiels
+- [ ] Confirmer l'intitulé exact des métiers (par exemple « Responsable de production végétale » plutôt que « Responsable de production ») et les secteurs correspondants
+- [ ] Préciser si les débouches diffèrent selon les sites (Antsohihy, Maevatanana) et ajouter un champ si oui
+- [ ] Ajouter les taux d'insertion professionnelle et de réussite, s'ils sont communiqués par l'Université (ils ne sont volontairement pas inventés)
+
+## Questions fréquentes (nouveauté v2.1)
+- [ ] Relire les **16 questions** de `data/faq.json` : elles sont rédigées à partir des conditions d'admission officielles et les usages de la scolarité
+- [ ] Compléter la question sur le **nombre de places** (actuellement sans chiffre : le texte renvoie à la publication annuelle de l'appel à candidatures)
+- [ ] Vérifier la question sur le **logement** : la réponse est volontairement prudente, l'hébergement relevant de l'Université et non de l'IUTAM
+- [ ] Ajouter les questions fréquentes réellement posées au secrétariat (relever les questions reçues pendant un mois, c'est le meilleur matériau)
+
+## Guides pratiques (nouveauté v2.1)
+- [ ] Faire valider la liste des **pièces à fournir** pour l'inscription (`data/guides.json` → `guides[0].pieces`) par le secrétariat
+- [ ] Vérifier le nom exact du dispositif de bourse et du dispositif de frais (`dikan-tena` / *Paid Schooling*) dans les libellés malagasy
+- [ ] Confirmer la liste des pièces pour la demande de bourse (`guides[1].pieces`)
+- [ ] Préciser les modalités de signature de la convention de stage (nombre d'exemplaires, interlocuteur côté IUTAM)
+
+## Coordonnées et API (nouveauté v2.1)
+- [ ] `data/contact.json` → `siege.email`, `siege.telephone`, `siege.horaires` : remplacer les valeurs provisoires
+- [ ] `data/contact.json` → `formulaire.endpoint` et `newsletter.endpoint` : renseigner l'adresse de l'API une fois le Worker déployé (sinon le formulaire bascule sur la messagerie)
+- [ ] `data/contact.json` → `reseaux.facebook` : lien de la page officielle
+- [ ] `data/contact.json` → `institut.nom`, `institut.tutelle` : intitulés officiels complets
 
 ## Panneau des 6 parcours (carrousel)
 - [ ] Faire valider les textes de chaque parcours (rédigés à partir de la brochure : objectifs, stages, conditions d'entrée) ; aucun débouché ni programme détaillé n'est affiché

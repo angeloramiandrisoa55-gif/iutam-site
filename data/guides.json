@@ -1,0 +1,160 @@
+{
+  "guides": [
+    {
+      "id": "inscription",
+      "icone": "📝",
+      "titre": "Préparer son dossier d'inscription",
+      "titre_mg": "Fanomanana ny antontan-taratasy fisoratana anarana",
+      "resume": "Les pièces à réunir et les étapes à suivre pour déposer un dossier complet, sans retour du secrétariat.",
+      "resume_mg": "Ny antontan-taratasy ilaina sy ny dingana tokony hovana mba hahazo antontan-taratasy feno, tsy misy valiny miverina avy amin'ny sekretaria.",
+      "duree": "Environ une semaine",
+      "duree_mg": "Ny toanana iray manodidina",
+      "etapes": [
+        {
+          "t": "1. Vérifier l'éligibilité",
+          "t_mg": "1. Hamaky ny mety ho anarana",
+          "d": "Votre série de baccalauréat est-elle acceptée pour le parcours visé ? Agriculture, Élevage et Pêche et Aquiculture acceptent C, D, S, OSE et Agricole ; Environnement accepte en plus A2.",
+          "d_mg": "Ny sokajy bakalaoraly anao dia ekaina ve amin'ny lilan-tanana tianao? Ny Fambolena, Fiompiana ary Jono sy Fiompiana trondro dia ekaina ny C, D, S, OSE ary Agricole; ny Tontolo iainana dia ekaina koa ny A2."
+        },
+        {
+          "t": "2. Constituer les pièces",
+          "t_mg": "2. Manangona ny antontan-taratasy",
+          "d": "Préparez une photocopie lisible du baccalauréat, le relevé de notes du baccalauréat, une pièce d'identité, quatre photos d'identité, le certificat de scolarité et, le cas échéant, les justificatifs de bourse ou dukan-tena (frais Paid Schooling).",
+          "d_mg": "Manomàna farano dikan-kopey azo verina ny bakalaoraly, ny karatra ny naoty ny bakalaoraly, ny karatra fanondroana, ny sary fanalahidy efatra, ny tapakila fisoratana anarana ary raha misy ny porofo fanaovana fandoavana na dikan-tena (saram-pianarana Paid Schooling)."
+        },
+        {
+          "t": "3. Remplir et signer",
+          "t_mg": "3. Manoratra sy manao sonia",
+          "d": "Le dossier comporte un formulaire d'inscription à compléter, signer et dater. Vérifiez que chaque page est signée.",
+          "d_mg": "Ny antontan-taratasy dia misy taratasy fisoratana anarana tokony hofenoina, hasoniana ary hanomeana daty. Hamarino fa soniana ny pejy tsirairay."
+        },
+        {
+          "t": "4. Déposer au secrétariat",
+          "t_mg": "4. Manatotra amin'ny sekretaria",
+          "d": "Déposez le dossier complet au secrétariat de l'IUTAM (campus d'Ambondrona) ou à l'annexe d'Antsohihy. Conservez une copie ou une photo de chaque pièce.",
+          "d_mg": "Atolotra ny antontan-taratasy feno ao amin'ny sekretaria (campus d'Ambondrona) na amin'ny annexe Antsohihy. Mitahiry kopey na sary ny antontan-taratasy tsirairay."
+        },
+        {
+          "t": "5. Confirmer l'inscription",
+          "t_mg": "5. Manamarina ny fisoratana anarana",
+          "d": "Récupérez le récépissé et la liste des matières. Notez les dates de paiement des tranches : elles sont dues même en cas de retard d'inscription.",
+          "d_mg": "Raiso ny tapakila fisoratana anarana sy ny lisitry ny taranja. Teeo ny daty fandoavana ny tranches: tsy maintsy manao izy aza na dia mora ny fisoratana anarana."
+        }
+      ],
+      "pieces": [
+        "Photocopie du baccalauréat",
+        "Relevé de notes du baccalauréat",
+        "Pièce d'identité en cours de validité",
+        "Quatre photos d'identité",
+        "Certificat de scolarité de l'année précédente",
+        "Justificatif de bourse ou de dispense (le cas échéant)"
+      ],
+      "pieces_mg": [
+        "Dikan-kopey ny bakalaoraly",
+        "Karatra ny naoty ny bakalaoraly",
+        "Karatra fanondroana mbola ao aloha",
+        "Sary fanalahidy efatra",
+        "Tapakila fisoratana anarana ny taona teo aloha",
+        "Porofo fanaovana bursa na dikan-tena (raha ilaina)"
+      ]
+    },
+    {
+      "id": "bourse",
+      "icone": "🎓",
+      "titre": "Demander une bourse ou une aide financière",
+      "titre_mg": "Fanangatahana bursa na fanampiana ara-money",
+      "resume": "Bourses d'État, aide aux frais de scolarité : qui décide, comment faire, et à quel moment.",
+      "resume_mg": "Bursa avy amin'ny Fanjakana, fanampiana amin'ny saram-pianarana : iza no manao ny safidy, ahoana ny fangatahana, ary rahoviana.",
+      "duree": "De 1 à 3 mois selon l'organisme",
+      "duree_mg": "Ny 1 ka hatramin'ny 3 volana, araka ny rafitra",
+      "etapes": [
+        {
+          "t": "1. Identifier l'aide visée",
+          "t_mg": "1. Ham identifying ny fanampiana tiana",
+          "d": "Bourse d'État (Bourse du Gouvernement), aide à l'inscription (frais Paid Schooling), aide d'urgence : les dispositifs diffèrent. Le service des bourses de l'Université de Mahajanga vous oriente sur le bon guichet.",
+          "d_mg": "Bursa avy amin'ny Fanjakana (Bourse du Gouvernement), fanampiana amin'ny fisoratana anarana (saram-pianarana Paid Schooling), fanampianaVonona maika: samy manana ny fomba manokana. Ny sampana bursa ao amin'ny Oniversiten'i Mahajanga dia mitarika anao amin'ny toerana mety."
+        },
+        {
+          "t": "2. R gathering les justificatifs",
+          "t_mg": "2. Manangona ny porofo",
+          "d": "Relevé de notes du baccalauréat, attestation de scolarité, certificat de non-redevance, fiche de revenus du responsable légal, et le formulaire de demande de l'organisme concerné.",
+          "d_mg": "Karatra ny naoty ny bakalaoraly, porofo fisoratana anarana, tapakila tsy mbola nandoa ny saram-pianarana, taratasy momba ny vola miditra amin'ny mpiantoka, ary ny taratasy fangatahana amin'ny rafitra ilaina."
+        },
+        {
+          "t": "3. Déposer dans les délais",
+          "t_mg": "3. Manatotra ara-potoana",
+          "d": "Les appels à candidatures sont annuels et les délais courts, souvent quelques semaines après la rentrée. Se renseigner dès l'ouverture des inscriptions : une demande hors délai est rarement acceptée.",
+          "d_mg": "Ny fiantsoana mpangatahana dia isaky ny taona ary ny vaninandro fohy, matetika herinandro vitsy taorian'ny fandrosoana. Mifandraisa mivantana rehefa misokatra ny fisoratana anarana: tsy mora ekena ny fangatahana lavitra."
+        },
+        {
+          "t": "4. Suivre le dossier",
+          "t_mg": "4. Manaraka ny antontan-taratasy",
+          "d": "Conservez une trace écrite de chaque dépôt et demandez un accusé de réception. Le secrétariat de l'IUTAM peut vérifier l'état de votre dossier auprès de l'organisme financeur.",
+          "d_mg": "Mitahiry traikefa soratana ny fametrahamana tsirairay ary angataka porofo fandraisana. Ny sekretaria ny IUTAM dia afaka manamarina ny toe-javatra ny antontan-taratasy-nao amin'ny rafitra mampa funding."
+        }
+      ],
+      "pieces": [
+        "Relevé de notes du baccalauréat",
+        "Attestation de scolarité en cours",
+        "Certificat de non-redevance",
+        "Fiche de revenus du responsable légal",
+        "Formulaire de demande de l'organisme financeur"
+      ],
+      "pieces_mg": [
+        "Karatra ny naoty ny bakalaoraly",
+        "Porofo fisoratana anarana ankehitriny",
+        "Tapakila tsy mbola nandoa ny saram-pianarana",
+        "Taratasy momba ny vola miditra amin'ny mpiantoka",
+        "Taratasy fangatahana amin'ny rafitra mampa funding"
+      ]
+    },
+    {
+      "id": "stages",
+      "icone": "🎯",
+      "titre": "Organiser son stage",
+      "titre_mg": "Fanomanana ny fanatramana",
+      "resume": "Trouver une structure d'accueil, signer la convention et préparer son rapport de stage.",
+      "resume_mg": "Mitady toerana fandraisana, manao sonia ny fifanarahana ary miomanana ny tatitra ny fanatramana.",
+      "duree": "De 1 à 2 mois avant le début du stage",
+      "duree_mg": "Ny 1 ka hatramin'ny 2 volana alohan'ny fanombohan'ny fanatramana",
+      "etapes": [
+        {
+          "t": "1. Choisir une structure d'accueil",
+          "t_mg": "1. Manidy toerana fandraisana",
+          "d": "Une exploitation agricole, un atelier d'élevage, un bureau d'études, une ONG, un laboratoire ou une entreprise agroalimentaire. Les stages en milieu professionnel sontpreadés en L1 (imprégnation), L2 (ouvrier), L3 (mémoire) et M2 (mémoire d'ingéniorat).",
+          "d_mg": "Tantara fambolena, toeram-piompiana, ofisina fanadihadiana, ONG, laboratoary na orinasa sakafo. Ny fanatramana amin'ny tontolo iainana dia zaraina amin'ny L1 (famarihana), L2 (mpiasa), L3 (fianatra) ary M2 (fianatra amin'ny injeniorat)."
+        },
+        {
+          "t": "2. Signer la convention de stage",
+          "t_mg": "2. Manao sonia ny fifanarahana",
+          "d": "La convention est établie en trois exemplaires (étudiant, entreprise, IUTAM). Le secrétariat vous fournit le modèle. Faites-la viser par l'encadrant de l'IUTAM avant le début du stage.",
+          "d_mg": "Ny fifanarahana dia misy kopia telo (mpianatra, orinasa, IUTAM). Ny sekretaria dia manome ny modely. Ataovy soniana ny mpitantana ny IUTAM alohan'ny fanombohana ny fanatramana."
+        },
+        {
+          "t": "3. Travailler avec l'encadrant",
+          "t_mg": "3. Miasa miaraka amin'ny mpitantana",
+          "d": "Fixez le plan de travail, les objectifs et la fréquence des points. En L3 et M2, le sujet de mémoire doit être arrêté avec l'encadrant académique avant la fin du premier semestre.",
+          "d_mg": "Arahaba ny tetik'asa, ny tanjona sy ny fotoana hanaovana ny fanapahan-kevitra. Amin'ny L3 sy M2, ny lohahevitra ny fianatra dia tsy maintsy faranina miaraka amin'ny mpitantana ara-pianarana alohan'ny fiafarana ny semestera voalohany."
+        },
+        {
+          "t": "4. Rédiger et soutenir",
+          "t_mg": "4. Mamorona sy manao fanazavana",
+          "d": "Le rapport suit le plan fourni par l'IUTAM. La soutenance a lieu devant un jury composé d'enseignants de l'IUTAM et de partenaires professionnels.",
+          "d_mg": "Ny tatitra dia manaraka ny fandaharana omena ny IUTAM. Ny fanazavana dia atao eo anolohan'ny filankevitra misy mpampianatra avy amin'ny IUTAM sy mpanjara eo amin'ny sehatra."
+        }
+      ],
+      "pieces": [
+        "Lettre de motivation",
+        "CV à jour",
+        "Convention de stage signée en trois exemplaires",
+        "Attestation d'encadrement de l'organisme d'accueil"
+      ],
+      "pieces_mg": [
+        "Taratasy fampirisiana",
+        "CV vaovao",
+        "Fifanarahana fanatramana voasonia telo",
+        "Porofo fanabeazana ny mpitantana ao amin'ny toerana fandraisana"
+      ]
+    }
+  ]
+}

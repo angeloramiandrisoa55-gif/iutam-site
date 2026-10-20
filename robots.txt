@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /api/
+Disallow: /503.html
 Sitemap: https://www.VOTRE-DOMAINE.mg/sitemap.xml

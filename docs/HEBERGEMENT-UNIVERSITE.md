@@ -39,9 +39,10 @@ Le dossier `_site/` contient alors tout ce qu'il faut (sans `docs/`, `tools/`, `
 5. Vérifier que les fichiers cachés (`.htaccess`, `.well-known`) sont bien envoyés (activer « afficher les fichiers cachés » dans le logiciel).
 
 ## 5. Serveur web : configuration
-- **Apache** : le fichier `.htaccess` fourni suffit (en-têtes de sécurité, cache, compression, page 404, pas de listage des dossiers).
+- **Apache** : le fichier `.htaccess` fourni suffit (en-têtes de sécurité, cache, compression, page 404, page 503, protection des fichiers sensibles, limitation de débit sur l'API, pare-feu applicatif `mod_security` en mode détection).
 - **IIS** : le fichier `web.config` fourni fait la même chose.
-- **Nginx** : le service informatique reprend le bloc `server { … }` de `docs/DEPLOIEMENT.md`, partie 3.
+- **Nginx** : le service informatique reprend le bloc `server { … }` de `docs/DEPLOIEMENT.md`, partie 3, ou utilise le conteneur Caddy fourni (`deploy/docker-compose.yml`, HTTPS automatique).
+- **Le formulaire de contact** fonctionne sans configuration supplémentaire : sans API déployée, il ouvre le logiciel de messagerie du visiteur. Pour un envoi automatique, déployer le Worker (voir `docs/API.md`) et renseigner `data/contact.json`.
 
 ## 6. HTTPS
 1. Demander l'installation du certificat.
@@ -66,19 +67,28 @@ Garder la même procédure à chaque fois, et garder une copie du dossier préc�
 - Compte SFTP **dédié**, limité au dossier du site ; mot de passe fort ou clé ; pas de FTP en clair.
 - Serveur web et système à jour ; pare-feu ; sauvegarde régulière.
 - Listage des dossiers désactivé (déjà fait dans `.htaccess` et `web.config`).
-- Surveillance : un service gratuit (UptimeRobot) envoie une alerte si le site tombe.
+- Surveillance : un service gratuit (UptimeRobot) envoie une alerte si le site tombe. Le dépôt fournit aussi un automatisme GitHub toutes les 30 minutes (`docs/MONITORING.md`).
 - Pas d'interface d'administration publique : les modifications passent par un dépôt de fichiers contrôlé.
-- Voir aussi `docs/SECURITE.md` (comptes, double authentification, plan d'urgence).
+- Voir aussi `docs/SECURITE.md` (comptes, double authentification, plan d'urgence) et `docs/WAF.md` (pare-feu applicatif).
 
 ## 10. Vérifications après dépôt
 - [ ] `https://iutam.mahajanga-univ.mg` s'ouvre, sans avertissement de sécurité
 - [ ] Logo 3D, thème clair/sombre, version `/mg/`, onglets de frais, fenêtre des mentions légales
+- [ ] Recherche interne (bouton 🔍 ou `Ctrl + K`) : les résultats s'affichent
+- [ ] Sections « Débouchés », « Guides pratiques » et « Questions fréquentes » affichées
+- [ ] Le formulaire de contact accepte un message et affiche une confirmation
 - [ ] Une page inexistante affiche `404.html`
 - [ ] En-têtes : securityheaders.com (ou `curl -I https://…`) : présence de `Content-Security-Policy` et `X-Content-Type-Options`
-- [ ] Les actualités et les frais se chargent (si rien ne s'affiche : le serveur ne sert pas les `.json`, ajouter le type MIME `application/json`)
+- [ ] Les actualités, les frais et l'API se chargent (si rien ne s'affiche : le serveur ne sert pas les `.json`, ajouter le type MIME `application/json`)
 - [ ] Test sur un téléphone avec connexion mobile
 
-## 11. Dépannage
+## 11. Sauvegardes
+Le dépôt GitHub constitue la sauvegarde principale. En complément :
+- sauvegarde automatique quotidienne (workflow `backup.yml`) ;
+- archive hors ligne : `npm run backup` (voir `docs/SECURITE.md`, section « Sauvegardes et restauration ») ;
+- **tester la restauration au moins une fois par an**.
+
+## 12. Dépannage
 | Problème | Cause probable | Solution |
 |---|---|---|
 | Erreur 500 après dépôt | `.htaccess` non accepté par le serveur | Retirer les blocs de modules non installés, ou demander `AllowOverride All` |

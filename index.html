@@ -27,11 +27,12 @@
 <noscript><p style="padding:12px;text-align:center;background:#fff3cd">Pour profiter de toutes les animations, activez JavaScript. Le contenu reste consultable.</p></noscript>
 <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
 <header>
-  <a class="brand" href="#hero" aria-label="IUTAM Mahajanga – accueil"><img class="brand-mark" src="favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span></a>
-  <nav id="nav" aria-label="Navigation principale"><a href="#about" data-n="01">L'Institut</a><a href="#vie" data-n="02">Vie étudiante</a><a href="#formations" data-n="03">Formations</a><a href="#admission" data-n="04">Admission</a><a href="#frais" data-n="05">Frais</a><a href="#actus" data-n="06">Actualités</a><a href="#contact" data-n="07">Contact</a></nav>
-  <div class="hr"><a class="lang" href="mg/" hreflang="mg" lang="mg" title="Teny malagasy">MG</a><button id="th" class="tg" type="button" aria-label="Changer le thème clair/sombre" title="Thème clair / sombre">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button></div>
+  <a class="brand" href="#hero"><img class="brand-mark" src="favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span><span class="sr">– accueil</span></a>
+  <nav id="nav" aria-label="Navigation principale"><a href="#about" data-n="01">L'Institut</a><a href="#vie" data-n="02">Vie étudiante</a><a href="#formations" data-n="03">Formations</a><a href="#debouches" data-n="04">Débouchés</a><a href="#admission" data-n="05">Admission</a><a href="#frais" data-n="06">Frais</a><a href="#faq" data-n="07">FAQ</a><a href="#actus" data-n="08">Actualités</a><a href="#contact" data-n="09">Contact</a></nav>
+  <div class="hr"><button id="sb" class="tg" type="button" aria-label="Rechercher dans le site" title="Rechercher (Ctrl + K)">🔍</button><a class="lang" href="mg/" hreflang="mg" lang="mg" title="Teny malagasy">MG</a><button id="th" class="tg" type="button" aria-label="Changer le thème clair/sombre" title="Thème clair / sombre">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button></div>
 </header>
 <div id="pg"></div>
+<main id="contenu">
 <div id="hero">
   <div id="stage"><img id="lg" alt="Logo de l'IUTAM" src="images/logo.jpg" width="640" height="640" fetchpriority="high"><canvas id="c" aria-label="Logo IUTAM animé en 3D"></canvas></div>
   <div class="hc">
@@ -116,12 +117,12 @@
     </div>
     <p class="mention"><i>Mention</i><b>Biologie Appliquée</b></p>
     <p class="lvl-p">Acquérir des bases scientifiques puis des techniques et technologies dans les domaines agronomiques et environnementaux.</p>
-    <h4>Les parcours</h4>
+    <h3 class="lsub">Les parcours</h3>
     <div class="pc">
-      <article class="card pcard p-agri rv"><span class="ic">🌾</span><h3>Agriculture</h3><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-      <article class="card pcard p-elev rv"><span class="ic">🐄</span><h3>Élevage</h3><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-      <article class="card pcard p-env rv"><span class="ic">🌿</span><h3>Environnement</h3><small>Bac : A2, C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-      <article class="card pcard p-peche rv"><span class="ic">🐟</span><h3>Pêche et Aquaculture</h3><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
+      <article class="card pcard p-agri rv"><span class="ic">🌾</span><h4>Agriculture</h4><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
+      <article class="card pcard p-elev rv"><span class="ic">🐄</span><h4>Élevage</h4><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
+      <article class="card pcard p-env rv"><span class="ic">🌿</span><h4>Environnement</h4><small>Bac : A2, C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
+      <article class="card pcard p-peche rv"><span class="ic">🐟</span><h4>Pêche et Aquaculture</h4><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
     </div>
     <div class="stg"><b>Stages en milieux professionnels</b><span>L1 · Stage d'imprégnation</span><span>L2 · Stage ouvrier</span><span>L3 · Stage de mémoire de Licence</span><a class="more" href="#frais">Voir les frais de scolarité →</a></div>
   </div>
@@ -136,10 +137,10 @@
     </div>
     <p class="mention"><i>Mention</i><b>Agro-biodiversité et Environnement</b></p>
     <p class="lvl-p">Former des ingénieurs spécialisés en sciences et technologies du vivant, biotechnologie, sciences du sol, agroalimentaire, recherche, innovation et développement durable.</p>
-    <h4>Les parcours</h4>
+    <h3 class="lsub">Les parcours</h3>
     <div class="pc">
-      <article class="card pcard p-padd rv"><span class="ic">🐄</span><h3>P.A.D.D.</h3><p>Production Animale et Développement Durable.</p><small>Licence requise : Élevage, Environnement, Pêche et Aquaculture et équivalents</small><a class="more" href="#adm-mas">Conditions d'admission →</a></article>
-      <article class="card pcard p-pvtdd rv"><span class="ic">🌴</span><h3>P.V.T.D.D.</h3><p>Production Végétale Tropicale et Développement Durable.</p><small>Licence requise : Agriculture, Environnement et équivalents</small><a class="more" href="#adm-mas">Conditions d'admission →</a></article>
+      <article class="card pcard p-padd rv"><span class="ic">🐄</span><h4>P.A.D.D.</h4><p>Production Animale et Développement Durable.</p><small>Licence requise : Élevage, Environnement, Pêche et Aquaculture et équivalents</small><a class="more" href="#adm-mas">Conditions d'admission →</a></article>
+      <article class="card pcard p-pvtdd rv"><span class="ic">🌴</span><h4>P.V.T.D.D.</h4><p>Production Végétale Tropicale et Développement Durable.</p><small>Licence requise : Agriculture, Environnement et équivalents</small><a class="more" href="#adm-mas">Conditions d'admission →</a></article>
     </div>
     <div class="stg"><b>Stages en milieux professionnels</b><span>M2 · Stage de mémoire d'ingéniorat</span><a class="more" href="#frais">Voir les frais de scolarité →</a></div>
   </div>
@@ -222,6 +223,17 @@
   <div class="grid" id="sites-list" aria-live="polite"></div>
 </section>
 
+<section id="debouches">
+  <h2 class="rv">Débouchés et insertion professionnelle</h2>
+  <p class="sub rv">Les métiers visés par chaque formation et les secteurs qui recrutent nos diplômés. Les intitulés exacts des postes sont à confirmer avec le secrétariat.</p>
+  <div class="db-filter rv" role="tablist" aria-label="Filtrer les débouchés par formation"><button class="db-tab on" type="button" role="tab" aria-selected="true" data-niv="licence">Licence</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="ingeniorat">Ingéniorat</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="">Tous</button></div>
+  <div class="grid" id="deb-list" aria-live="polite"><p class="empty">Chargement…</p></div>
+  <div class="pub rv">
+    <div><b>Votre insertion professionnelle</b><span>Le service d'orientation du secrétariat vous accompagne dans la recherche de stage, la rédaction de votre CV et vos candidatures.</span></div>
+    <a class="btn" href="#contact">Parler à l'orientation</a>
+  </div>
+</section>
+
 <section id="admission">
   <h2 class="rv">Conditions d'admission</h2>
   <p class="sub rv">Sélection de dossiers (Licence), puis sélection de dossiers et entretien (Ingéniorat).</p>
@@ -239,6 +251,9 @@
     <tr><td>P.A.D.D.</td><td>Élevage, Environnement, Pêche et Aquaculture et équivalents</td></tr>
     <tr><td>P.V.T.D.D.</td><td>Agriculture, Environnement et équivalents</td></tr>
   </table></div>
+  <h3 class="rv" id="guides" style="margin-top:56px">Guides pratiques</h3>
+  <p class="sub rv">Les démarches à connaître, étape par étape.</p>
+  <div class="grid" id="guides-list" aria-live="polite"><p class="empty">Chargement…</p></div>
 </section>
 
 <section id="frais">
@@ -258,6 +273,17 @@
   </table></div><p class="fnote" id="frais-note">Tarifs L1 – L2</p></div></div>
 </section>
 
+<section id="faq">
+  <h2 class="rv">Questions fréquentes</h2>
+  <p class="sub rv">Admission, frais, formation, stages : les réponses aux questions les plus posées.</p>
+  <div class="faq-tabs rv" id="faq-tabs" role="tablist" aria-label="Catégories de questions"></div>
+  <div id="faq-list" aria-live="polite"><p class="empty">Chargement…</p></div>
+  <div class="pub rv">
+    <div><b>Votre question n'est pas là ?</b><span>Le secrétariat de l'IUTAM répond à toutes les questions sur l'admission et la scolarité.</span></div>
+    <a class="btn" href="#contact">Poser la question</a>
+  </div>
+</section>
+
 <section id="actus">
   <h2 class="rv">Actualités</h2>
   <p class="sub rv">Les dernières informations de l'IUTAM.</p>
@@ -268,17 +294,35 @@
   <h2>Contact</h2>
   <p class="sub">📍 Campus d'Ambondrona · Université de Mahajanga · BP 652<br>Mahajanga (401) · Madagascar<br>📞 +261 32 05 580 06<br>✉️ benjaiba@yahoo.fr</p>
   <p><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=79X4%2BQ2Q%20Mahajanga" target="_blank" rel="noopener">🗺️ Voir sur la carte</a><a class="btn o" href="https://www.mahajanga-univ.mg" target="_blank" rel="noopener">🏛️ Site de l'Université</a></p>
-  <form id="f">
-    <input name="n" placeholder="Votre nom" required>
-    <input name="e" type="email" placeholder="Votre e-mail" required>
-    <textarea name="m" rows="4" placeholder="Votre message" required></textarea>
-    <button class="btn" type="submit">Envoyer</button>
+  <form id="f" class="form" novalidate>
+    <div class="fr"><label for="c-nom">Nom et prénom <span aria-hidden="true">*</span></label><input id="c-nom" name="nom" type="text" autocomplete="name" maxlength="120" required></div>
+    <div class="fr"><label for="c-email">Adresse e-mail <span aria-hidden="true">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+    <div class="fr"><label for="c-sujet">Sujet</label><input id="c-sujet" name="sujet" type="text" maxlength="150" placeholder="Admission, frais, stage…"></div>
+    <div class="fr"><label for="c-message">Message <span aria-hidden="true">*</span></label><textarea id="c-message" name="message" rows="5" maxlength="4000" required></textarea></div>
+    <div class="fr hp" aria-hidden="true"><label for="c-company">Ne pas remplir ce champ<input id="c-company" name="company" type="text" tabindex="-1" autocomplete="off"></label></div>
+    <div class="fr chk"><input id="c-consent" name="consent" type="checkbox" value="1" required><label for="c-consent">J'accepte que mes données soient utilisées pour répondre à ma demande. <span aria-hidden="true">*</span></label></div>
+    <button class="btn" type="submit">Envoyer le message</button>
+    <p class="fm" id="f-msg" role="status" aria-live="polite"></p>
   </form>
+  <div class="nl-wrap">
+    <h3>Lettre d'information</h3>
+    <p>Recevez les dates d'inscription, les résultats et les nouvelles de l'IUTAM, une fois par mois. Désinscription possible à tout moment.</p>
+    <form id="nl" class="form nl" novalidate>
+      <div class="fr"><label for="n-email">Adresse e-mail</label><input id="n-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+      <div class="fr hp" aria-hidden="true"><label for="n-company">Ne pas remplir ce champ<input id="n-company" name="company" type="text" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn o" type="submit">S'inscrire</button>
+      <p class="fm" id="nl-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
 </section>
+</main>
 
 <footer>© <span id="y"></span> IUTAM – Institut Universitaire de Technologie et d'Agronomie de Mahajanga. Tous droits réservés. · <a href="mentions-legales.html">Mentions légales</a></footer>
 
 <script src="js/vendor/three.min.js" defer></script>
 <script src="js/main.js" defer></script>
+<script src="js/sections.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/search.js" defer></script>
 </body>
 </html>

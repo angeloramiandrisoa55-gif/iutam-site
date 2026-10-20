@@ -1,0 +1,52 @@
+{
+  "institut": {
+    "nom": "Institut Universitaire de Technologie et d'Agronomie de Mahajanga",
+    "sigle": "IUTAM",
+    "nom_mg": "Institiota Oniversita momba ny Teknolojia sy ny Agronomia ao Mahajanga",
+    "tutelle": "Université de Mahajanga",
+    "tutelle_mg": "Oniversiten'i Mahajanga",
+    "systeme": "MESupRES · Système L.M.D.",
+    "systeme_mg": "MESupRES · Rafitra L.M.D.",
+    "site": "https://www.VOTRE-DOMAINE.mg"
+  },
+  "siege": {
+    "adresse": "Campus d'Ambondrona, Université de Mahajanga, BP 652",
+    "adresse_mg": "Ambondrona, Oniversiten'i Mahajanga, BP 652",
+    "ville": "Mahajanga",
+    "ville_mg": "Mahajanga",
+    "code_postal": "401",
+    "pays": "Madagascar",
+    "pays_mg": "Madagasikara",
+    "telephone": "+261 32 05 580 06",
+    "email": "benjaiba@yahoo.fr",
+    "horaires": "",
+    "horaires_mg": "",
+    "latitude": -15.6634,
+    "longitude": 46.3134
+  },
+  "formulaire": {
+    "endpoint": "",
+    "methode": "POST",
+    "expediteur": "",
+    "sujet": "Contact site IUTAM"
+  },
+  "newsletter": {
+    "endpoint": "",
+    "methode": "POST",
+    "expediteur": ""
+  },
+  "reseaux": {
+    "facebook": "",
+    "linkedin": "",
+    "youtube": "",
+    "email_presse": ""
+  },
+  "messages": {
+    "succes": "Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.",
+    "succes_mg": "Misaotra ! Voalaza ny hafatrao, miverina haingana aminareo izahay.",
+    "erreur": "L'envoi a échoué. Merci de réessayer ou d'appeler le secrétariat.",
+    "erreur_mg": "Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekretaria.",
+    "hors_ligne": "Votre navigateur est hors connexion : votre message a été préparé dans votre messagerie.",
+    "hors_ligne_mg": "Tsy mifandray ny navigateurinao : voaomitry tao amin'ny mailakao ny hafatrao."
+  }
+}
