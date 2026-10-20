@@ -27,9 +27,11 @@
 <noscript><p style="padding:12px;text-align:center;background:#fff3cd">Pour profiter de toutes les animations, activez JavaScript. Le contenu reste consultable.</p></noscript>
 <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
 <header>
-  <a class="brand" href="#hero"><img class="brand-mark" src="favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span><span class="sr">– accueil</span></a>
+  <div class="hd-top">
+    <a class="brand" href="#hero"><img class="brand-mark" src="favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span><span class="sr">– accueil</span></a>
+    <div class="hr"><button id="sb" class="tg" type="button" aria-label="Rechercher dans le site" title="Rechercher (Ctrl + K)">🔍</button><a class="lang" href="mg/" hreflang="mg" lang="mg" title="Teny malagasy">MG</a><button id="th" class="tg" type="button" aria-label="Changer le thème clair/sombre" title="Thème clair / sombre">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button></div>
+  </div>
   <nav id="nav" aria-label="Navigation principale"><a href="#about" data-n="01">L'Institut</a><a href="#vie" data-n="02">Vie étudiante</a><a href="#formations" data-n="03">Formations</a><a href="#debouches" data-n="04">Débouchés</a><a href="#admission" data-n="05">Admission</a><a href="#frais" data-n="06">Frais</a><a href="#faq" data-n="07">FAQ</a><a href="#actus" data-n="08">Actualités</a><a href="#contact" data-n="09">Contact</a></nav>
-  <div class="hr"><button id="sb" class="tg" type="button" aria-label="Rechercher dans le site" title="Rechercher (Ctrl + K)">🔍</button><a class="lang" href="mg/" hreflang="mg" lang="mg" title="Teny malagasy">MG</a><button id="th" class="tg" type="button" aria-label="Changer le thème clair/sombre" title="Thème clair / sombre">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button></div>
 </header>
 <div id="pg"></div>
 <main id="contenu">
@@ -65,7 +67,10 @@
 
 <section id="direction" aria-label="Présentation de l'IUTAM">
   <div class="vie top">
-    <div class="col sq p5 rv" style="aspect-ratio:1/1" role="img" aria-label="Portrait du directeur de l'IUTAM"><i style="--x:0;--y:0;--w:29;--h:56;--k:0;--dx:-44px;--dy:0px"></i><i style="--x:33;--y:0;--w:67;--h:62;--k:1;--dx:0px;--dy:-44px"></i><i style="--x:33;--y:65;--w:36;--h:35;--k:2;--dx:0px;--dy:52px"></i><i style="--x:72;--y:65;--w:28;--h:35;--k:3;--dx:44px;--dy:0px"></i></div>
+    <figure class="portrait rv">
+      <span class="portrait-img"><img src="images/direction.jpg" alt="Portrait du directeur de l'IUTAM" width="1254" height="1254" loading="lazy" decoding="async"></span>
+      <figcaption><b>La Direction</b><span>Institut Universitaire de Technologie et d'Agronomie de Mahajanga</span></figcaption>
+    </figure>
     <div class="rv">
       <h3>L'IUTAM, votre passerelle vers les métiers de l'agronomie et de l'environnement</h3>
       <p>Situé à Mahajanga, l'Institut Universitaire de Technologie et d'Agronomie est rattaché à l'Université de Mahajanga. Établissement à vocation professionnelle, il forme des techniciens et des ingénieurs en Sciences Agronomiques, de la Licence Professionnelle à l'Ingéniorat.</p>
@@ -78,7 +83,7 @@
   <p class="sub rv">Au-delà des salles de classe : pratique, rencontres et réussite.</p>
   <div class="vie">
     <div class="rv">
-      <h3>Vie Étudiante Dynamique :</h3>
+      <h3>Vie Étudiante Dynamique&nbsp;:</h3>
       <p>L'expérience à l'IUTAM va au-delà des salles de classe. Des travaux pratiques aux stages en milieu professionnel, notre institut est un terrain fertile pour cultiver des passions, tisser des liens et construire un avenir au service du développement durable.</p>
     </div>
     <div class="col p2 rv" style="aspect-ratio:900/588" role="img" aria-label="Photo de cérémonie de remise des diplômes"><i style="--x:0;--y:12;--w:34;--h:52;--k:0;--dx:-44px;--dy:0px"></i><i style="--x:37;--y:0;--w:63;--h:40;--k:1;--dx:0px;--dy:-44px"></i><i style="--x:37;--y:43;--w:36;--h:57;--k:2;--dx:0px;--dy:52px"></i><i style="--x:76;--y:43;--w:24;--h:57;--k:3;--dx:44px;--dy:0px"></i><span class="bdg">🌱 Pratique et terrain</span></div>
@@ -99,9 +104,12 @@
     <figure class="g b"><img alt="Bassins de pisciculture et poissons dans une épuisette" src="images/aquaculture.jpg" width="1000" height="605" loading="lazy" decoding="async"><figcaption><b>🐟 Terrain</b><span>Pêche et Aquaculture</span></figcaption></figure>
     <figure class="g c"><img alt="Étudiants en séance de travaux pratiques" src="images/seance-tp.jpg" width="900" height="673" loading="lazy" decoding="async"><figcaption><b>🧪 Séance pratique</b><span>Observer, décrire, classer</span></figcaption></figure>
   </div>
-  <div class="pub rv">
-    <div><b>Rejoignez l'IUTAM</b><span>Le savoir-faire au service du développement durable</span></div>
+  <div class="pub auto rv" id="pub-auto" aria-live="polite">
+    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('images/seance-tp.jpg')"></span>
+    <div class="pub-body"><b>Rejoignez l'IUTAM</b><span>Le savoir-faire au service du développement durable</span></div>
     <a class="btn" href="#admission">Découvrir l'admission</a>
+    <button class="pub-pause" type="button" aria-label="Suspendre le défilement des messages" aria-pressed="false" title="Suspendre / reprendre">⏸</button>
+    <i class="pub-bar" aria-hidden="true"></i>
   </div>
 </section>
 
@@ -227,8 +235,9 @@
   <h2 class="rv">Débouchés et insertion professionnelle</h2>
   <p class="sub rv">Les métiers visés par chaque formation et les secteurs qui recrutent nos diplômés. Les intitulés exacts des postes sont à confirmer avec le secrétariat.</p>
   <div class="db-filter rv" role="tablist" aria-label="Filtrer les débouchés par formation"><button class="db-tab on" type="button" role="tab" aria-selected="true" data-niv="licence">Licence</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="ingeniorat">Ingéniorat</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="">Tous</button></div>
-  <div class="grid" id="deb-list" aria-live="polite"><p class="empty">Chargement…</p></div>
-  <div class="pub rv">
+  <div class="grid db-grid" id="deb-list" aria-live="polite"><p class="empty">Chargement…</p></div>
+  <div class="pub photo rv">
+    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('images/pub-padd.jpg')"></span>
     <div><b>Votre insertion professionnelle</b><span>Le service d'orientation du secrétariat vous accompagne dans la recherche de stage, la rédaction de votre CV et vos candidatures.</span></div>
     <a class="btn" href="#contact">Parler à l'orientation</a>
   </div>
@@ -253,7 +262,7 @@
   </table></div>
   <h3 class="rv" id="guides" style="margin-top:56px">Guides pratiques</h3>
   <p class="sub rv">Les démarches à connaître, étape par étape.</p>
-  <div class="grid" id="guides-list" aria-live="polite"><p class="empty">Chargement…</p></div>
+  <div class="grid gd-grid" id="guides-list" aria-live="polite"><p class="empty">Chargement…</p></div>
 </section>
 
 <section id="frais">
@@ -278,7 +287,8 @@
   <p class="sub rv">Admission, frais, formation, stages : les réponses aux questions les plus posées.</p>
   <div class="faq-tabs rv" id="faq-tabs" role="tablist" aria-label="Catégories de questions"></div>
   <div id="faq-list" aria-live="polite"><p class="empty">Chargement…</p></div>
-  <div class="pub rv">
+  <div class="pub photo rv">
+    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('images/pub-environnement.jpg')"></span>
     <div><b>Votre question n'est pas là ?</b><span>Le secrétariat de l'IUTAM répond à toutes les questions sur l'admission et la scolarité.</span></div>
     <a class="btn" href="#contact">Poser la question</a>
   </div>

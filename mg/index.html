@@ -27,9 +27,11 @@
 <noscript><p style="padding:12px;text-align:center;background:#fff3cd">Alefaso ny JavaScript mba hahita ny hetsika rehetra. Mbola azo vakiana ny votoatiny.</p></noscript>
 <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
 <header>
-  <a class="brand" href="#hero"><img class="brand-mark" src="../favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span><span class="sr">– fandraisana</span></a>
+  <div class="hd-top">
+    <a class="brand" href="#hero"><img class="brand-mark" src="../favicon.png" alt="" width="42" height="42"><span class="brand-txt"><b>IUTAM</b><small>Mahajanga</small></span><span class="sr">– fandraisana</span></a>
+    <div class="hr"><button id="sb" class="tg" type="button" aria-label="Hitady ao amin’ny tranokala" title="Hitady (Ctrl + K)">🔍</button><a class="lang" href="../" hreflang="fr" lang="fr" title="Français">FR</a><button id="th" class="tg" type="button" aria-label="Hanova ny lohahevitra mazava/maizina" title="Lohahevitra mazava / maizina">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menio" aria-expanded="false" aria-controls="nav">☰</button></div>
+  </div>
   <nav id="nav" aria-label="Menio lehibe"><a href="#about" data-n="01">Ny Institiota</a><a href="#vie" data-n="02">Fiainan'ny mpianatra</a><a href="#formations" data-n="03">Fanofanana</a><a href="#debouches" data-n="04">Asa sy azo alaina</a><a href="#admission" data-n="05">Fidirana</a><a href="#frais" data-n="06">Saram-pianarana</a><a href="#faq" data-n="07">FAQ</a><a href="#actus" data-n="08">Vaovao</a><a href="#contact" data-n="09">Fifandraisana</a></nav>
-  <div class="hr"><button id="sb" class="tg" type="button" aria-label="Hitady ao amin’ny tranokala" title="Hitady (Ctrl + K)">🔍</button><a class="lang" href="../" hreflang="fr" lang="fr" title="Français">FR</a><button id="th" class="tg" type="button" aria-label="Hanova ny lohahevitra mazava/maizina" title="Lohahevitra mazava / maizina">🌓</button><button id="bg" class="tg burger" type="button" aria-label="Menio" aria-expanded="false" aria-controls="nav">☰</button></div>
 </header>
 <div id="pg"></div>
 <main id="contenu">
@@ -65,7 +67,10 @@
 
 <section id="direction" aria-label="Fampahafantarana ny IUTAM">
   <div class="vie top">
-    <div class="col sq p5 rv" style="aspect-ratio:1/1" role="img" aria-label="Sarin'ny talen'ny IUTAM"><i style="--x:0;--y:0;--w:29;--h:56;--k:0;--dx:-44px;--dy:0px"></i><i style="--x:33;--y:0;--w:67;--h:62;--k:1;--dx:0px;--dy:-44px"></i><i style="--x:33;--y:65;--w:36;--h:35;--k:2;--dx:0px;--dy:52px"></i><i style="--x:72;--y:65;--w:28;--h:35;--k:3;--dx:44px;--dy:0px"></i></div>
+    <figure class="portrait rv">
+      <span class="portrait-img"><img src="../images/direction.jpg" alt="Sarin'ny talen'ny IUTAM" width="1254" height="1254" loading="lazy" decoding="async"></span>
+      <figcaption><b>Ny Fitantanana</b><span>Institiota Oniversita momba ny Teknolojia sy ny Agronomia ao Mahajanga</span></figcaption>
+    </figure>
     <div class="rv">
       <h3>Ny IUTAM, ny tetezana mankany amin'ny asa momba ny agronomia sy ny tontolo iainana</h3>
       <p>Ao Mahajanga ny Institiota Oniversita momba ny Teknolojia sy ny Agronomia, ary mitambatra amin'ny Oniversiten'i Mahajanga. Sekoly mikendry ny asa izy, manofana teknisiana sy injeniera amin'ny Siansa Agronomika, manomboka amin'ny Licence Professionnelle hatramin'ny Ingéniorat.</p>
@@ -78,7 +83,7 @@
   <p class="sub rv">Mihoatra ny efitrano fianarana : fampiharana, fihaonana ary fahombiazana.</p>
   <div class="vie">
     <div class="rv">
-      <h3>Fiainam-pianarana mavitrika :</h3>
+      <h3>Fiainan’ny mpianatra mihetsika :</h3>
       <p>Ny traikefa ao amin'ny IUTAM dia mihoatra ny efitrano fianarana. Manomboka amin'ny asa fampiharana ka hatramin'ny stage ao amin'ny tontolon'ny asa, ny institiotsika dia tany mahavokatra hitaizana ny faniriana, hanamafisana ny fifandraisana ary hanorina ho avy ho fanompoana ny fampandrosoana maharitra.</p>
     </div>
     <div class="col p2 rv" style="aspect-ratio:900/588" role="img" aria-label="Sarin'ny lanonana fanomezana diplaoma"><i style="--x:0;--y:12;--w:34;--h:52;--k:0;--dx:-44px;--dy:0px"></i><i style="--x:37;--y:0;--w:63;--h:40;--k:1;--dx:0px;--dy:-44px"></i><i style="--x:37;--y:43;--w:36;--h:57;--k:2;--dx:0px;--dy:52px"></i><i style="--x:76;--y:43;--w:24;--h:57;--k:3;--dx:44px;--dy:0px"></i><span class="bdg">🌱 Fampiharana sy toerana fanazaran-tena</span></div>
@@ -99,9 +104,12 @@
     <figure class="g b"><img alt="Dobo fiompiana trondro sy trondro ao anaty harato" src="../images/aquaculture.jpg" width="1000" height="605" loading="lazy" decoding="async"><figcaption><b>🐟 Toerana</b><span>Jono sy Fiompiana trondro</span></figcaption></figure>
     <figure class="g c"><img alt="Mpianatra amin'ny fotoam-pampiharana" src="../images/seance-tp.jpg" width="900" height="673" loading="lazy" decoding="async"><figcaption><b>🧪 Fotoam-pampiharana</b><span>Mandinika, mamaritra, mandahatra</span></figcaption></figure>
   </div>
-  <div class="pub rv">
-    <div><b>Mitambatra amin'ny IUTAM</b><span>Ny fahaizana ho fanompoana ny fampandrosoana maharitra</span></div>
+  <div class="pub auto rv" id="pub-auto" aria-live="polite">
+    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('../images/seance-tp.jpg')"></span>
+    <div class="pub-body"><b>Mitambatra amin'ny IUTAM</b><span>Ny fahaizana ho fanompoana ny fampandrosoana maharitra</span></div>
     <a class="btn" href="#admission">Hijery ny fidirana</a>
+    <button class="pub-pause" type="button" aria-label="Hanohana ny famakiana ny hafatra" aria-pressed="false" title="Hanohana / averina">⏸</button>
+    <i class="pub-bar" aria-hidden="true"></i>
   </div>
 </section>
 
@@ -227,8 +235,9 @@
   <h2 class="rv">Asa sy azo alaina sy fanatrehana ara-kasa</h2>
   <p class="sub rv">Ny asa tiana ho an'ny lilan-tanana tsirairay ary ny sehatra mampiasa ny mp-graduat. Ny anarana marina ny laharan'asa dia tokony hamafisina amin'ny sekretaria.</p>
   <div class="db-filter rv" role="tablist" aria-label="Sivana ny asa azo alaina araka ny lilan-tanana"><button class="db-tab on" type="button" role="tab" aria-selected="true" data-niv="licence">Licence</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="ingeniorat">Ingéniorat</button><button class="db-tab" type="button" role="tab" aria-selected="false" data-niv="">Tous</button></div>
-  <div class="grid" id="deb-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
-  <div class="pub rv">
+  <div class="grid db-grid" id="deb-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
+  <div class="pub photo rv">
+    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('../images/pub-padd.jpg')"></span>
     <div><b>Ny fanatrehana ara-kasa anao</b><span>Ny sampana fanatrehana ao amin'ny sekretaria dia manampy anao amin'ny fitadiavana toerana fanatramana, ny fanoratana ny CV-nao ary ny fangatahanao.</span></div>
     <a class="btn" href="#contact">Miresaka amin’ny fanatrehana</a>
   </div>
@@ -253,7 +262,7 @@
   </table></div>
   <h3 class="rv" id="guides" style="margin-top:56px">Fitantanana azo ampiharina</h3>
   <p class="sub rv">Ny dingana tokony ho fantatra, dingana tsirairay.</p>
-  <div class="grid" id="guides-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
+  <div class="grid gd-grid" id="guides-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
 </section>
 
 <section id="frais">
@@ -278,7 +287,8 @@
   <p class="sub rv">Fidirana, frais, formation, stages : les réponses aux questions les plus posées.</p>
   <div class="faq-tabs rv" id="faq-tabs" role="tablist" aria-label="Sokajy fanontaniana"></div>
   <div id="faq-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
-  <div class="pub rv">
+  <div class="pub photo rv">
+    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('../images/pub-environnement.jpg')"></span>
     <div><b>Tsy ao ny fanontanianao ?</b><span>Ny sekretaria ny IUTAM dia mamaly ny fanontaniana rehetra momba ny fidirana sy ny fisoratana anarana.</span></div>
     <a class="btn" href="#contact">Manontany</a>
   </div>

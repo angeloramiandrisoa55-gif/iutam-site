@@ -253,6 +253,25 @@ collections:
                 widget: list
                 required: false
                 field: { label: Pièce, name: piece }
+  - name: pub
+    label: Bandeau d'accueil
+    files:
+      - name: pub
+        label: Messages du bandeau rotatif
+        file: data/pub.json
+        fields:
+          - label: Messages
+            name: messages
+            widget: list
+            summary: "{{fields.titre}} → {{fields.lien}}"
+            fields:
+              - { label: Titre (français), name: titre, widget: string }
+              - { label: Titre (malagasy), name: titre_mg, widget: string, required: false }
+              - { label: Texte (français), name: texte, widget: text }
+              - { label: Texte (malagasy), name: texte_mg, widget: text, required: false }
+              - { label: "Lien (ex. #admission)", name: lien, widget: string, required: false }
+              - { label: Libellé du bouton (français), name: libelle, widget: string, required: false }
+              - { label: Libellé du bouton (malagasy), name: libelle_mg, widget: string, required: false }
   - name: contact
     label: Coordonnées
     files:

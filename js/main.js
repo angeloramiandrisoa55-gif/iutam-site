@@ -50,9 +50,12 @@ b.querySelector('span').textContent=o?T.hide:T.show})})();
 // Photos en collage
 (function(){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);setTimeout(function(){x.target.classList.add('ok')},2200)}})},{threshold:.2});
 document.querySelectorAll('.col').forEach(function(c){io.observe(c)})})();
-// Logo 3D animé
+// Logo 3D animé — initialisé après le premier affichage, pour ne pas
+// retarder le reste de la page (le logo statique reste visible en attendant)
 (function(){
 var img=document.getElementById('lg'),cv=document.getElementById('c'),st=document.getElementById('stage');
+if(!img||!cv||!st)return;
+function init(){
 try{
 if(!window.THREE)return;
 var R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
@@ -94,6 +97,10 @@ pts.material.opacity=.55+.3*Math.sin(t*2);
 R.render(S,C)}
 loop();
 }catch(e){console.warn('3D indisponible',e)}
+}
+// On laisse la page se peindre avant de démarrer WebGL.
+if(document.readyState==='complete')setTimeout(init,120);
+else addEventListener('load',function(){setTimeout(init,120)});
 })();
 
 // Données dynamiques : actualités et frais (fichiers du dossier data/, modifiables sans toucher au code)

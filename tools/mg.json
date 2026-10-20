@@ -43,7 +43,6 @@
  "L'IUTAM, votre passerelle vers les métiers de l'agronomie et de l'environnement": "Ny IUTAM, ny tetezana mankany amin'ny asa momba ny agronomia sy ny tontolo iainana",
  "Situé à Mahajanga, l'Institut Universitaire de Technologie et d'Agronomie est rattaché à l'Université de Mahajanga. Établissement à vocation professionnelle, il forme des techniciens et des ingénieurs en Sciences Agronomiques, de la Licence Professionnelle à l'Ingéniorat.": "Ao Mahajanga ny Institiota Oniversita momba ny Teknolojia sy ny Agronomia, ary mitambatra amin'ny Oniversiten'i Mahajanga. Sekoly mikendry ny asa izy, manofana teknisiana sy injeniera amin'ny Siansa Agronomika, manomboka amin'ny Licence Professionnelle hatramin'ny Ingéniorat.",
  "Au-delà des salles de classe : pratique, rencontres et réussite.": "Mihoatra ny efitrano fianarana : fampiharana, fihaonana ary fahombiazana.",
- "Vie Étudiante Dynamique :": "Fiainam-pianarana mavitrika :",
  "L'expérience à l'IUTAM va au-delà des salles de classe. Des travaux pratiques aux stages en milieu professionnel, notre institut est un terrain fertile pour cultiver des passions, tisser des liens et construire un avenir au service du développement durable.": "Ny traikefa ao amin'ny IUTAM dia mihoatra ny efitrano fianarana. Manomboka amin'ny asa fampiharana ka hatramin'ny stage ao amin'ny tontolon'ny asa, ny institiotsika dia tany mahavokatra hitaizana ny faniriana, hanamafisana ny fifandraisana ary hanorina ho avy ho fanompoana ny fampandrosoana maharitra.",
  "Photo de cérémonie de remise des diplômes": "Sarin'ny lanonana fanomezana diplaoma",
  "🌱 Pratique et terrain": "🌱 Fampiharana sy toerana fanazaran-tena",
@@ -174,5 +173,9 @@
  "Rechercher (Ctrl + K)": "Hitady (Ctrl + K)",
  "Filtrer les débouchés par formation": "Sivana ny asa azo alaina araka ny lilan-tanana",
  "Catégories de questions": "Sokajy fanontaniana",
- "– accueil": "– fandraisana"
+ "– accueil": "– fandraisana",
+ "Vie Étudiante Dynamique&nbsp;:": "Fiainan’ny mpianatra mihetsika :",
+ "La Direction": "Ny Fitantanana",
+ "Suspendre le défilement des messages": "Hanohana ny famakiana ny hafatra",
+ "Suspendre / reprendre": "Hanohana / averina"
 }

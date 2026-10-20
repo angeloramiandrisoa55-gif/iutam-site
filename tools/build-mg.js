@@ -16,7 +16,9 @@ html = html
            '<a class="lang" href="../" hreflang="fr" lang="fr" title="Français">FR</a>')
   .replace('<link rel="canonical" href="https://www.VOTRE-DOMAINE.mg/">', '<link rel="canonical" href="https://www.VOTRE-DOMAINE.mg/mg/">')
   .replace('<meta property="og:url" content="https://www.VOTRE-DOMAINE.mg/">', '<meta property="og:url" content="https://www.VOTRE-DOMAINE.mg/mg/">')
-  .replace(/(src|href)="(css|js|images|favicon|data|mentions-legales)/g, '$1="../$2');
+  .replace(/(src|href)="(css|js|images|favicon|data|mentions-legales)/g, '$1="../$2')
+  // chemins d'images utilisés dans des styles en ligne (fonds des bandeaux)
+  .replace(/(url\(\s*["']?)images\//g, '$1../images/');
 fs.mkdirSync(path.join(root, 'mg'), { recursive: true });
 fs.writeFileSync(path.join(root, 'mg', 'index.html'), html);
 const unused = keys.filter(k => !used.has(k));

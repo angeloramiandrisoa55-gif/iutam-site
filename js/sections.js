@@ -1,6 +1,10 @@
-// Sections dynamiques : débouchés, guides pratiques, questions fréquentes.
+// Sections dynamiques : débouchés, guides pratiques, questions fréquentes,
+// bandeau publicitaire rotatif.
 // Les contenus viennent des fichiers de data/ (modifiables via le CMS) ; le code
 // se contente de les mettre en forme, dans la langue de la page.
+//
+// Les fiches détaillées (objectifs, compétences, étapes) sont repliées par
+// défaut : la page reste compacte et le visiteur n'ouvre que ce qui l'intéresse.
 
 (function () {
   'use strict';
@@ -18,8 +22,10 @@
       pieces: 'Pièces à réunir',
       etapes: 'Étapes',
       duree: 'Durée indicative',
-      autres: 'Autres questions',
-      resultats: 'résultat(s)'
+      resultats: 'résultat(s)',
+      tout: 'Tout',
+      voirPlus: 'Voir le détail',
+      replier: 'Replier'
     },
     mg: {
       empty: 'Tsy azo ny votoatiny amin\'ity fotoana ity.',
@@ -30,8 +36,10 @@
       pieces: 'Antontan-taratasy ilaina',
       etapes: 'Dingana',
       duree: 'Faharetan\'ny fotoana',
-      autres: 'Fanontaniana hafa',
-      resultats: 'valiny'
+      resultats: 'valiny',
+      tout: 'Rehetra',
+      voirPlus: 'Hijery ny antsipiriany',
+      replier: 'Hidio'
     }
   }[LANG];
 
@@ -66,6 +74,11 @@
 
   /* ------------------------------------------------------------- débouchés */
 
+  var ICONES = {
+    agriculture: '🌾', elevage: '🐄', environnement: '🌿',
+    peche: '🐟', padd: '🥛', pvtdd: '🌴'
+  };
+
   function renderDebouches() {
     var box = document.getElementById('deb-list');
     if (!box) return;
@@ -82,24 +95,31 @@
         return;
       }
       box.innerHTML = list.map(function (p, i) {
+        // Version compacte : métier + secteur visibles, le reste est replié.
         var deb = (p.debouches || []).map(function (d) {
           return '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b>' +
-            '<span class="ds">' + esc(text(d, 'secteur')) + '</span>' +
-            (text(d, 'detail') ? '<span class="dd">' + esc(text(d, 'detail')) + '</span>' : '') +
-            '</li>';
+            '<span class="ds">' + esc(text(d, 'secteur')) + '</span></li>';
+        }).join('');
+        var debDetail = (p.debouches || []).map(function (d) {
+          return text(d, 'detail')
+            ? '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b><span class="dd">' + esc(text(d, 'detail')) + '</span></li>'
+            : '';
         }).join('');
         var obj = (p.objectifs || []).map(function (o) { return '<li>' + esc(text(o, 'fr')) + '</li>'; }).join('');
         var comp = (p.competences || []).map(function (c) { return '<li>' + esc(text(c, 'fr')) + '</li>'; }).join('');
         return '<article class="card nw db" style="--i:' + i + '">' +
-          '<span class="ic">' + (p.id === 'agriculture' ? '🌾' : p.id === 'elevage' ? '🐄' : p.id === 'environnement' ? '🌿' :
-            p.id === 'peche' ? '🐟' : p.id === 'padd' ? '🥛' : '🌴') + '</span>' +
+          '<span class="ic">' + (ICONES[p.id] || '🌱') + '</span>' +
           '<h3>' + esc(text(p, 'nom')) + '</h3>' +
           '<span class="chip">' + esc(p.duree || '') + '</span>' +
           '<p class="dbr">' + esc(text(p, 'resume')) + '</p>' +
-          (obj ? '<h4>' + esc(T.objectifs) + '</h4><ul class="dbl">' + obj + '</ul>' : '') +
-          (comp ? '<h4>' + esc(T.competences) + '</h4><ul class="dbl">' + comp + '</ul>' : '') +
-          '<h4>' + esc(T.metiers) + '</h4><ul class="dbl dm-list">' + deb + '</ul>' +
-          (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '') +
+          '<h4>' + esc(T.metiers) + '</h4>' +
+          '<ul class="dml">' + deb + '</ul>' +
+          (obj || comp ? '<details class="fold"><summary>' + esc(T.objectifs) + ' · ' + esc(T.competences) + '</summary>' +
+            '<ul class="dbl">' + obj + '</ul><ul class="dbl">' + comp + '</ul></details>' : '') +
+          (debDetail ? '<details class="fold"><summary>' + esc(T.voirPlus) + '</summary>' +
+            '<ul class="dbl dm-list">' + debDetail + '</ul>' +
+            (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '') +
+            '</details>' : (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '')) +
           '</article>';
       }).join('');
     }
@@ -135,14 +155,18 @@
           return '<li><b>' + esc(text(e, 't')) + '</b><span>' + esc(text(e, 'd')) + '</span></li>';
         }).join('');
         var pieces = (g.pieces || []).map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('');
-        return '<article class="card nw gd" style="--i:' + i + '">' +
+        return '<details class="card nw gd" style="--i:' + i + '">' +
+          '<summary class="gd-sum">' +
           '<span class="ic">' + esc(g.icone || '📌') + '</span>' +
-          '<h3>' + esc(text(g, 'titre')) + '</h3>' +
-          '<p>' + esc(text(g, 'resume')) + '</p>' +
+          '<span class="gd-t"><b>' + esc(text(g, 'titre')) + '</b>' +
+          '<span>' + esc(text(g, 'resume')) + '</span></span>' +
           (text(g, 'duree') ? '<span class="chip">' + esc(T.duree) + ' : ' + esc(text(g, 'duree')) + '</span>' : '') +
+          '<span class="fold-i" aria-hidden="true">+</span>' +
+          '</summary>' +
+          '<div class="gd-body">' +
           '<h4>' + esc(T.etapes) + '</h4><ol class="gdl">' + steps + '</ol>' +
           (pieces ? '<h4>' + esc(T.pieces) + '</h4><ul class="dbl">' + pieces + '</ul>' : '') +
-          '</article>';
+          '</div></details>';
       }).join('');
     }).catch(function () {
       box.innerHTML = '<p class="empty">' + esc(T.empty) + '</p>';
@@ -163,7 +187,7 @@
         return !groupId || g.id === groupId;
       });
       var total = 0;
-      var html = groups.map(function (g, gi) {
+      var html = groups.map(function (g) {
         var qs = (g.questions || []).map(function (q, qi) {
           total++;
           var id = 'faq-' + g.id + '-' + qi;
@@ -175,16 +199,12 @@
         return '<div class="fqg"><h3 class="fqg-t">' + esc(text(g, 'titre')) + '</h3>' + qs + '</div>';
       }).join('');
       box.innerHTML = html;
-      if (tabs) {
-        var c = tabs.querySelector('[data-count]');
-        if (c) c.textContent = total;
-      }
     }
 
     get('data/faq.json').then(function (d) {
       data = d;
       if (tabs) {
-        tabs.innerHTML = '<button class="fq-tab on" type="button" role="tab" aria-selected="true" data-g="">Tout</button>' +
+        tabs.innerHTML = '<button class="fq-tab on" type="button" role="tab" aria-selected="true" data-g="">' + esc(T.tout) + '</button>' +
           (d.groupes || []).map(function (g) {
             return '<button class="fq-tab" type="button" role="tab" aria-selected="false" data-g="' + esc(g.id) + '">' +
               esc(text(g, 'titre')) + '</button>';
@@ -205,10 +225,91 @@
     });
   }
 
+  /* --------------------------------------------------- bandeau pub rotatif */
+
+  function renderPub() {
+    var box = document.getElementById('pub-auto');
+    if (!box) return;
+
+    var body = box.querySelector('.pub-body');
+    var link = box.querySelector('a.btn');
+    var bar = box.querySelector('.pub-bar');
+    var bg = box.querySelector('.pub-bg');
+    var pauseBtn = box.querySelector('.pub-pause');
+    var items = [];
+    var i = 0, timer = null, hold = false, paused = false;
+
+    var DUR = 7000;
+    var VOILE = 'linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%)';
+
+    /** Chemin d'image relatif à la page (le dossier « mg/ » est à un niveau au-dessus). */
+    function imgsrc(p) {
+      return /^(https?:|data:)/i.test(p) ? p : root + String(p).replace(/^\//, '');
+    }
+
+    function show(n) {
+      i = (n + items.length) % items.length;
+      var it = items[i];
+      body.classList.add('swap');
+      setTimeout(function () {
+        body.innerHTML = '<b>' + esc(text(it, 'titre')) + '</b><span>' + esc(text(it, 'texte')) + '</span>';
+        body.classList.remove('swap');
+        link.setAttribute('href', it.lien || '#admission');
+        link.textContent = text(it, 'libelle') || '→';
+        // photo de fond : le voile sombre garde le texte bien lisible
+        if (bg && it.image) {
+          bg.style.backgroundImage = VOILE + ',url("' + imgsrc(it.image) + '")';
+        }
+      }, 260);
+      if (bar) {
+        bar.style.animation = 'none';
+        void bar.offsetWidth;
+        bar.style.animation = 'pubbar ' + DUR + 'ms linear forwards';
+      }
+    }
+
+    function run() {
+      clearTimeout(timer);
+      if (hold || paused || !items.length) return;
+      timer = setTimeout(function () { show(i + 1); run(); }, DUR);
+    }
+
+    function stop() { clearTimeout(timer); }
+
+    get('data/pub.json').then(function (d) {
+      items = d.messages || [];
+      if (!items.length) return;
+      show(0);
+      run();
+    }).catch(function () { /* le bandeau reste tel quel */ });
+
+    // Pause manuelle : obligatoire pour un contenu qui se met à jour seul (WCAG 2.2.2)
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', function () {
+        paused = !paused;
+        pauseBtn.textContent = paused ? '▶' : '⏸';
+        pauseBtn.setAttribute('aria-pressed', paused ? 'true' : 'false');
+        pauseBtn.setAttribute('aria-label', paused
+          ? (LANG === 'mg' ? 'Hanohana ny famakiana ny hafatra' : 'Reprendre le défilement des messages')
+          : (LANG === 'mg' ? 'Hanohana ny famakiana ny hafatra' : 'Suspendre le défilement des messages'));
+        if (paused) stop(); else run();
+      });
+    }
+
+    box.addEventListener('mouseenter', function () { hold = true; stop(); });
+    box.addEventListener('mouseleave', function () { hold = false; run(); });
+    box.addEventListener('focusin', function () { hold = true; stop(); });
+    box.addEventListener('focusout', function () { hold = false; run(); });
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else run();
+    });
+  }
+
   function start() {
     renderDebouches();
     renderGuides();
     renderFaq();
+    renderPub();
   }
 
   if (document.readyState === 'loading') {
