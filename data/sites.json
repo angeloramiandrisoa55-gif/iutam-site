@@ -30,8 +30,13 @@
       "photos": [
         {
           "src": "images/antsohihy-panneau.jpg",
-          "alt": "Panneau « IUTAM Annexe Antsohihy » : accès à 60 m",
-          "alt_mg": "Takelaka « IUTAM Annexe Antsohihy » : 60 m ny lalana"
+          "alt": "Panneau « IUTAM — Annexe ANTSOHIHY » avec l'indication « 60 m » et les coordonnées",
+          "alt_mg": "Takelaka « IUTAM — Annexe ANTSOHIHY » misy ny « 60 m » sy ny adiresy"
+        },
+        {
+          "src": "images/antsohihy-stand.jpg",
+          "alt": "Le stand de l'IUTAM Antsohihy et son panneau d'accueil",
+          "alt_mg": "Ny toeran'ny IUTAM Antsohihy sy ny takelaky ny fandraisana"
         },
         {
           "src": "images/antsohihy-acces.jpg",

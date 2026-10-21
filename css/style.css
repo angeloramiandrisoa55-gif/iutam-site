@@ -420,10 +420,10 @@ td.flash{animation:flashc 1.2s ease}
 /* idem pour la fiche du site : le panneau reste visible dans le cadre */
 .site.s-maevatanana .cv .ni{object-position:center 30%}
 .site.s-maevatanana .gph img{object-position:center 30%}
-.ps-fr{position:absolute;z-index:1;right:56px;top:50%;width:min(290px,27%);margin:0;padding:8px;border-radius:16px;background:#fff;box-shadow:0 24px 50px #0009;transform:translateY(-52%) translateX(18px);transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.ps-fr{position:absolute;z-index:1;right:48px;top:50%;width:min(360px,32%);margin:0;padding:8px;border-radius:16px;background:#fff;box-shadow:0 24px 50px #0009;transform:translateY(-52%) translateX(18px);transition:transform .5s cubic-bezier(.2,.8,.3,1)}
 .ps.on .ps-fr{transform:translateY(-52%)}
-.ps-fr img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px}
-.ps-fr figcaption{padding:8px 4px 2px;color:#0b3d22;font-size:.8rem;font-weight:700;text-align:center}
+.ps-fr img{display:block;width:100%;aspect-ratio:5/3;object-fit:cover;object-position:center;border-radius:10px}
+.ps-fr figcaption{padding:8px 4px 2px;color:#0b3d22;font-size:.82rem;font-weight:700;text-align:center}
 /* Fiches des sites : photo de couverture cliquable, galerie compacte. */
 .site .cv{position:relative;display:block;overflow:hidden;border-radius:10px;margin-bottom:12px}
 .site .cv .ni{margin:0;transition:transform .45s cubic-bezier(.2,.8,.3,1)}

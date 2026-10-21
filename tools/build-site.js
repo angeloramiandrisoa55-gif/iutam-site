@@ -58,3 +58,7 @@ for (const f of ['index.html', 'mg/index.html', 'mentions-legales.html', '404.ht
 }
 console.log(`_site/ prêt (${univ ? 'serveur Université' : 'hébergeur cloud'}${domain ? ', domaine ' + domain : ''}${min ? ', minifié' : ''}) : ${n} éléments copiés.`);
 console.log(`Empreintes des ressources : css?v=${vCss} · js?v=${vJs}`);
+
+// Les images sont mises en cache un an : on y ajoute l'empreinte du fichier
+// pour qu'une photo remplacée soit rechargée immédiatement.
+cp.execFileSync(process.execPath, [path.join(__dirname, 'stamp-images.js'), out], { stdio: 'inherit' });
