@@ -52,6 +52,9 @@ jobs:
       - name: Contrôler l'encodage des fichiers
         run: node tools/check-encoding.js
 
+      - name: Contrôler la lisibilité des textes posés sur les photos
+        run: node tools/check-contraste.js
+
       - name: Tester l'API (sécurité, validation, jetons)
         run: node tools/test-worker.js
 

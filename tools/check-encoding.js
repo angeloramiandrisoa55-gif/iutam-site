@@ -58,11 +58,14 @@ function walk(dir, acc = []) {
 let problems = 0;
 for (const file of walk(root)) {
   const rel = path.relative(root, file).split(path.sep).join('/');
-  if (rel === SELF) continue;              // ce fichier contient les plages de caractères
+  if (rel === SELF || path.basename(rel) === SELF) continue;              // ce fichier contient les plages de caractères
   const text = fs.readFileSync(file, 'utf8');
   text.split('\n').forEach((line, i) => {
     const bad = [...line].filter(c => isSuspect(c.codePointAt(0)));
-    if (!bad.length) return;
+    // Double encodage : texte lu en ANSI puis reecrit en UTF-8 (sequencees \u00C3 / \u00C2).
+    const mojibake = /[\u00C3\u00C2][\u0080-\u00BF\u00A0-\u00FF]/.test(line);
+    if (!bad.length && !mojibake) return;
+    if (mojibake) bad.push('double encodage');
     problems++;
     const unique = [...new Set(bad)].map(c => c + ' (U+' + c.codePointAt(0).toString(16).toUpperCase() + ')').join(', ');
     console.error(`  ${rel}:${i + 1}  ${unique}`);

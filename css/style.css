@@ -1,5 +1,9 @@
 :root{--bg:#f6f8f4;--fg:#142018;--mut:#51635a;--card:#ffffffcc;--bd:#d5e0d6;--pri:#1b7a43;--acc:#e0a526;--hero:#eaf3ea;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+/* Effets d'entrée sans opacité : le contraste du texte ne bouge pas */
+@keyframes slidein{from{transform:translateX(-34px)}to{transform:none}}
+@keyframes rise{from{transform:scale(.8)}to{transform:none}}
+
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1510;--fg:#e8f1ea;--mut:#9db3a4;--card:#14231acc;--bd:#25382c;--pri:#3fbf74;--acc:#f0b93a;--hero:#0f1d15}}
 :root[data-theme="dark"]{--bg:#0c1510;--fg:#e8f1ea;--mut:#9db3a4;--card:#14231acc;--bd:#25382c;--pri:#3fbf74;--acc:#f0b93a;--hero:#0f1d15}
 html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
@@ -64,9 +68,9 @@ h2.rv:after{content:"";display:block;height:4px;width:0;margin-top:8px;border-ra
 h2.rv.in:after{width:80px}
 @keyframes rowin{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
 @keyframes pop{0%{opacity:0;transform:scale(.5)}70%{transform:scale(1.08)}100%{opacity:1;transform:none}}
-.tw tr,.tl div,.stats div,.steps div:before{opacity:0}
+.tw tr,.tl div,.steps div:before{opacity:0}
 .tw.in tr,.tl.in div{animation:rowin .6s ease forwards;animation-delay:calc(var(--i)*110ms)}
-.stats.in div{animation:pop .7s cubic-bezier(.2,1.2,.4,1) forwards;animation-delay:calc(var(--i)*130ms)}
+.stats.in div{animation:rise .6s cubic-bezier(.2,1.2,.4,1) backwards;animation-delay:calc(var(--i)*120ms)}
 .steps div.in:before{animation:pop .6s .3s both}
 .steps div:before{opacity:1}
 @media (prefers-reduced-motion:reduce){.rv[class]{transform:none!important}.tw tr,.tl div,.stats div{opacity:1!important;animation:none!important}.sc{animation:none}h2.rv:after{width:80px}}
@@ -159,7 +163,7 @@ background:radial-gradient(circle,rgba(63,191,116,.55),rgba(47,111,208,.30) 55%,
 .hr{display:flex;align-items:center;gap:10px}
 .lang{display:inline-grid;place-items:center;height:40px;min-width:40px;padding:0 12px;border:1px solid var(--bd);border-radius:99px;background:var(--card);color:var(--fg);font-weight:700;font-size:.85rem;text-decoration:none;transition:transform .2s}
 .lang:hover{transform:translateY(-2px)}
-.card.nw{animation:rowin .6s ease backwards;animation-delay:calc(var(--i)*110ms)}
+.card.nw{animation:slidein .55s cubic-bezier(.2,.8,.3,1) backwards;animation-delay:calc(var(--i)*90ms)}
 .card .ni{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin-bottom:12px}
 .card .nd{display:block;font-size:.8rem;color:var(--pri);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
 .card .more{display:inline-block;margin-top:12px;color:var(--pri);font-weight:600;text-decoration:none}
@@ -695,7 +699,6 @@ details.gd[open] .fold-i{transform:rotate(45deg);background:var(--pri);color:#ff
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lmd-p a:hover{color:#04210f}}
 @media (max-width:600px){.lmd{padding:20px 16px}.lmd-p a{font-size:.82rem;padding:6px 11px}}
 
-
 /* =============================================================================
    Débouchés — présentation académique (filets, numérotation, capitales)
    ============================================================================= */
@@ -737,3 +740,42 @@ details.gd[open] .fold-i{transform:rotate(45deg);background:var(--pri);color:#ff
   .db-body{padding-left:44px}
 }
 @media (max-width:560px){.db-body{padding-left:6px}}
+
+/* =============================================================================
+   Lisibilité des textes posés sur les photos (panneau des parcours, bandeaux)
+   ============================================================================= */
+/* Voile renforcé : darkness maximale là où se trouve le texte, décroissance
+   vers la droite, plus une couche verticale pour les bords haut et bas. */
+.ps-ov{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;
+  background:
+    linear-gradient(90deg,rgba(3,14,10,.94) 0%,rgba(3,14,10,.88) 36%,rgba(3,14,10,.62) 62%,rgba(3,14,10,.28) 100%),
+    linear-gradient(180deg,rgba(3,14,10,.6) 0%,rgba(3,14,10,0) 26%,rgba(3,14,10,.5) 100%)}
+.ps-ov:after{opacity:.2}
+
+/* Titre : ombre portée double, très lisible même sur une photo claire */
+.ps-t{text-shadow:0 3px 22px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.95)}
+.ps-p{opacity:1;text-shadow:0 1px 14px rgba(0,0,0,.9),0 1px 3px rgba(0,0,0,.8)}
+
+/* Étiquettes : fond translucide + flou, bordure plus claire */
+.ps-m{background:rgba(0,0,0,.45);border-color:rgba(255,255,255,.42);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.ps-m i{opacity:.92;color:#d8f5e4}
+.ps-lv{box-shadow:0 4px 16px rgba(0,0,0,.45)}
+
+/* Pastilles de characteristics (duree, Bac, stages) */
+.ps-k li{background:rgba(0,0,0,.55);border-color:rgba(255,255,255,.45);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-shadow:0 1px 8px rgba(0,0,0,.85)}
+
+/* Boutons */
+.ps .btn{box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.ps .btn.o{background:rgba(0,0,0,.42);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-shadow:0 1px 8px rgba(0,0,0,.8)}
+
+/* Commandes du carrousel */
+.pubs-btn{background:rgba(0,0,0,.45);border-color:rgba(255,255,255,.5);box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.pubs-btn:hover{background:rgba(0,0,0,.65)}
+.pubs-cnt{text-shadow:0 1px 10px rgba(0,0,0,.9)}
+.pubs-bar{background:rgba(0,0,0,.35)}
+
+/* Bandeaux publicitaires : texte sur photo */
+.pub .pub-body b{text-shadow:0 2px 16px rgba(0,0,0,.85),0 1px 3px rgba(0,0,0,.9)}
+.pub .pub-body span{text-shadow:0 1px 12px rgba(0,0,0,.9),0 1px 3px rgba(0,0,0,.8)}
+.pub .btn{box-shadow:0 10px 28px rgba(0,0,0,.45)}
+.pub-pause{background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
