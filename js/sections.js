@@ -26,6 +26,8 @@
       tout: 'Tout',
       licence: 'Licence',
       master: 'Ingéniorat',
+      mentionLic: 'Biologie Appliquée',
+      mentionMas: 'Agro-biodiversité et Environnement',
       bac: 'Bac :',
       voirPlus: 'Voir le détail',
       replier: 'Replier'
@@ -43,6 +45,8 @@
       tout: 'Rehetra',
       licence: 'Licence',
       master: 'Ingéniorat',
+      mentionLic: 'Biologie Appliquée',
+      mentionMas: 'Agro-biodiversité et Tontolo iainana',
       bac: 'Bakalaoraly :',
       voirPlus: 'Hijery ny antsipiriany',
       replier: 'Hidio'
@@ -85,6 +89,9 @@
     peche: '🐟', padd: '🥛', pvtdd: '🌴'
   };
 
+  // Numération romaine : registre « catalogue » plutôt que « application ».
+  var ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+
   function renderDebouches() {
     var box = document.getElementById('deb-list');
     if (!box) return;
@@ -101,11 +108,9 @@
         return;
       }
       box.innerHTML = list.map(function (p, i) {
-        // Une ligne par parcours : identité + résumé + métiers en pastilles.
-        // Tout le reste est déplié à la demande.
-        var deb = (p.debouches || []).map(function (d) {
-          return '<li>' + esc(text(d, 'metier')) + '</li>';
-        }).join('');
+        // Présentation « catalogue » : une ligne par parcours, numérotée en romain.
+        // Le détail (objectifs, compétences, secteurs) se déplie à la demande.
+        var metiers = (p.debouches || []).map(function (d) { return esc(text(d, 'metier')); }).join(' · ');
         var debDetail = (p.debouches || []).map(function (d) {
           return '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b>' +
             '<span class="ds">' + esc(text(d, 'secteur')) + '</span>' +
@@ -115,23 +120,27 @@
         var obj = (p.objectifs || []).map(function (o) { return '<li>' + esc(text(o, 'fr')) + '</li>'; }).join('');
         var comp = (p.competences || []).map(function (c) { return '<li>' + esc(text(c, 'fr')) + '</li>'; }).join('');
         var niveau = p.niveau === 'ingeniorat' ? T.master : T.licence;
+        var mention = p.niveau === 'ingeniorat' ? T.mentionMas : T.mentionLic;
         return '<details class="db-row" style="--i:' + i + '">' +
           '<summary>' +
-          '<span class="db-id"><span class="ic">' + (ICONES[p.id] || '🌱') + '</span>' +
-          '<span class="db-n"><b>' + esc(text(p, 'nom')) + '</b>' +
-          '<small><i>' + esc(p.duree || '') + '</i><i>' + esc(niveau) + '</i></small></span></span>' +
-          '<span class="db-c"><p class="db-r">' + esc(text(p, 'resume')) + '</p>' +
-          '<ul class="db-m">' + deb + '</ul></span>' +
+          '<span class="db-num" aria-hidden="true">' + ROMAN[i] + '</span>' +
+          '<span class="db-t"><b>' + esc(text(p, 'nom')) + '</b>' +
+          '<span class="db-lv">' + esc(niveau) + ' · ' + esc(mention) + '</span></span>' +
+          '<span class="db-m">' + metiers + '</span>' +
+          '<span class="db-d">' + esc(p.duree || '') + '</span>' +
           '<span class="db-x" aria-hidden="true">+</span>' +
           '</summary>' +
           '<div class="db-body">' +
-          (p.bac ? '<p class="db-bac"><b>' + esc(T.bac) + '</b> ' + esc(p.bac) + '</p>' : '') +
+          '<p class="db-cond">' +
+          '<span><b>' + esc(T.bac) + '</b>' + esc(p.bac || '') + '</span>' +
+          '<span><b>' + esc(T.duree) + '</b>' + esc(p.duree || '') + '</span>' +
+          '</p>' +
           '<div class="db-cols">' +
           (obj ? '<div><h5>' + esc(T.objectifs) + '</h5><ul class="dbl">' + obj + '</ul></div>' : '') +
           (comp ? '<div><h5>' + esc(T.competences) + '</h5><ul class="dbl">' + comp + '</ul></div>' : '') +
           (debDetail ? '<div><h5>' + esc(T.metiers) + '</h5><ul class="dbl">' + debDetail + '</ul></div>' : '') +
           '</div>' +
-          (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '') +
+          (text(p, 'poursuite') ? '<p class="db-suite">' + esc(text(p, 'poursuite')) + '</p>' : '') +
           '</div></details>';
       }).join('');
     }
