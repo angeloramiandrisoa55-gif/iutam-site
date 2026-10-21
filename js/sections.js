@@ -24,6 +24,9 @@
       duree: 'Durée indicative',
       resultats: 'résultat(s)',
       tout: 'Tout',
+      licence: 'Licence',
+      master: 'Ingéniorat',
+      bac: 'Bac :',
       voirPlus: 'Voir le détail',
       replier: 'Replier'
     },
@@ -38,6 +41,9 @@
       duree: 'Faharetan\'ny fotoana',
       resultats: 'valiny',
       tout: 'Rehetra',
+      licence: 'Licence',
+      master: 'Ingéniorat',
+      bac: 'Bakalaoraly :',
       voirPlus: 'Hijery ny antsipiriany',
       replier: 'Hidio'
     }
@@ -95,8 +101,8 @@
         return;
       }
       box.innerHTML = list.map(function (p, i) {
-        // Version compacte : la liste des métiers tient sur une ligne par métier ;
-        // secteurs, objectifs, compétences et descriptions sont repliés.
+        // Une ligne par parcours : identité + résumé + métiers en pastilles.
+        // Tout le reste est déplié à la demande.
         var deb = (p.debouches || []).map(function (d) {
           return '<li>' + esc(text(d, 'metier')) + '</li>';
         }).join('');
@@ -108,20 +114,25 @@
         }).join('');
         var obj = (p.objectifs || []).map(function (o) { return '<li>' + esc(text(o, 'fr')) + '</li>'; }).join('');
         var comp = (p.competences || []).map(function (c) { return '<li>' + esc(text(c, 'fr')) + '</li>'; }).join('');
-        return '<article class="card nw db" style="--i:' + i + '">' +
-          '<span class="ic">' + (ICONES[p.id] || '🌱') + '</span>' +
-          '<h3>' + esc(text(p, 'nom')) + '</h3>' +
-          '<span class="chip">' + esc(p.duree || '') + '</span>' +
-          '<p class="dbr">' + esc(text(p, 'resume')) + '</p>' +
-          '<h4>' + esc(T.metiers) + '<span class="h4n">' + (p.debouches || []).length + '</span></h4>' +
-          '<ul class="dml">' + deb + '</ul>' +
-          '<details class="fold"><summary>' + esc(T.voirPlus) + '</summary>' +
-          (obj ? '<h5 class="dh">' + esc(T.objectifs) + '</h5><ul class="dbl">' + obj + '</ul>' : '') +
-          (comp ? '<h5 class="dh">' + esc(T.competences) + '</h5><ul class="dbl">' + comp + '</ul>' : '') +
-          (debDetail ? '<h5 class="dh">' + esc(T.metiers) + '</h5><ul class="dbl dm-list">' + debDetail + '</ul>' : '') +
+        var niveau = p.niveau === 'ingeniorat' ? T.master : T.licence;
+        return '<details class="db-row" style="--i:' + i + '">' +
+          '<summary>' +
+          '<span class="db-id"><span class="ic">' + (ICONES[p.id] || '🌱') + '</span>' +
+          '<span class="db-n"><b>' + esc(text(p, 'nom')) + '</b>' +
+          '<small><i>' + esc(p.duree || '') + '</i><i>' + esc(niveau) + '</i></small></span></span>' +
+          '<span class="db-c"><p class="db-r">' + esc(text(p, 'resume')) + '</p>' +
+          '<ul class="db-m">' + deb + '</ul></span>' +
+          '<span class="db-x" aria-hidden="true">+</span>' +
+          '</summary>' +
+          '<div class="db-body">' +
+          (p.bac ? '<p class="db-bac"><b>' + esc(T.bac) + '</b> ' + esc(p.bac) + '</p>' : '') +
+          '<div class="db-cols">' +
+          (obj ? '<div><h5>' + esc(T.objectifs) + '</h5><ul class="dbl">' + obj + '</ul></div>' : '') +
+          (comp ? '<div><h5>' + esc(T.competences) + '</h5><ul class="dbl">' + comp + '</ul></div>' : '') +
+          (debDetail ? '<div><h5>' + esc(T.metiers) + '</h5><ul class="dbl">' + debDetail + '</ul></div>' : '') +
+          '</div>' +
           (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '') +
-          '</details>' +
-          '</article>';
+          '</div></details>';
       }).join('');
     }
 
