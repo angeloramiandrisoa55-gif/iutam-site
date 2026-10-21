@@ -21,6 +21,16 @@
       "libelle_mg": "Hijery ny fanofanana"
     },
     {
+      "titre": "Une antenne à Maevatanana",
+      "titre_mg": "Misy annexe ao Maevatanana",
+      "texte": "L'IUTAM forme aussi loin de Mahajanga : agriculture, élevage et environnement, dans les locaux de l'antenne.",
+      "texte_mg": "Ny IUTAM dia mampianatra koa lavitra ny Mahajanga : fambolena, fiompiana ary tontolo iainana, ao amin'ny tranon'ny annexe.",
+      "image": "images/maevatanana.jpg",
+      "lien": "#sites-list",
+      "libelle": "Voir l'antenne",
+      "libelle_mg": "Hijery ny annexe"
+    },
+    {
       "titre": "Des débouchés concrets",
       "titre_mg": "Vokatra mazava ny asa",
       "texte": "24 métiers visés par nos formations : technicien agricole, ingénieur agronome, agent de l'eau, responsable de production…",

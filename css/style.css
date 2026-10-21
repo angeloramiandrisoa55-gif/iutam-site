@@ -411,6 +411,11 @@ td.flash{animation:flashc 1.2s ease}
 
 /* Antsohihy / Maevatanana, photos, mobile */
 .p-antso{--pc:#1d5fc2}.p-maeva{--pc:#c7881a}
+/* la photo de l'antenne : le panneau de l'IUTAM reste dans le cadre */
+.p-maeva .ps-bg{object-position:center 26%}
+/* idem pour la fiche du site : le panneau reste visible dans le cadre */
+.site.s-maevatanana .cv .ni{object-position:center 30%}
+.site.s-maevatanana .gph img{object-position:center 30%}
 .ps-fr{position:absolute;z-index:1;right:56px;top:50%;width:min(290px,27%);margin:0;padding:8px;border-radius:16px;background:#fff;box-shadow:0 24px 50px #0009;transform:translateY(-52%) translateX(18px);transition:transform .5s cubic-bezier(.2,.8,.3,1)}
 .ps.on .ps-fr{transform:translateY(-52%)}
 .ps-fr img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px}
@@ -639,16 +644,7 @@ details.gd[open] .fold-i{transform:rotate(45deg);background:var(--pri);color:#ff
 .gd-body h4{margin:16px 0 8px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bl)}
 @media (max-width:640px){.gd-sum{grid-template-columns:auto 1fr;padding:18px 16px}.fold-i{grid-row:1/3;grid-column:2;justify-self:end}.gd-body{padding:0 16px 18px}}
 
-/* Débouchés : trois colonnes, fiches plus compactes */
-.db-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start}
-.card.db{display:flex;flex-direction:column}
-.card.db .fold{margin-top:auto}
-.card.db h4{margin:16px 0 8px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pri)}
-.dml{display:grid;gap:5px;margin:0;padding:0;list-style:none}
-.dml>li{padding:6px 10px;border-radius:9px;background:var(--hero);font-size:.9rem}
-.dml>li b{display:block;font-weight:600;line-height:1.3}
-.dml>li .ds{display:block;font-size:.76rem;color:var(--mut);line-height:1.3;margin-top:1px}
-@media (max-width:640px){.db-grid{grid-template-columns:1fr}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
 /* FAQ : deux colonnes pour gain de place */
 #faq-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:0 26px;align-items:start}

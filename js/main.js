@@ -137,7 +137,7 @@ if(mail)info.push('<li>✉️ <a href="mailto:'+esc(mail)+'">'+esc(mail)+"</a></
 if(s.parcours)info.push("<li>🎓 "+esc(pick(s,"parcours"))+"</li>");
 var ph=(s.photos||[]).map(function(p){var u=imgsrc(p.src),al=esc(pick(p,"alt"));return '<a class="lb gph-a" href="'+esc(u)+'" data-alt="'+al+'"><img src="'+esc(u)+'" alt="'+al+'" loading="lazy"></a>'}).join("");
 var alt=esc(pick(s,"nom"));
-return '<article class="card nw site" style="--i:'+i+'">'+(img?'<a class="lb cv" href="'+esc(img)+'" data-alt="'+alt+'"><img class="ni" src="'+esc(img)+'" alt="'+alt+'" loading="lazy"><span class="cv-zoom" aria-hidden="true">🔍</span>'+(s.illustration?'<span class="ill">'+esc(T.illus)+"</span>":"")+"</a>":'<span class="ic">📍</span>')+
+return '<article class="card nw site s-'+esc(s.id||"")+'" style="--i:'+i+'">'+(img?'<a class="lb cv" href="'+esc(img)+'" data-alt="'+alt+'"><img class="ni" src="'+esc(img)+'" alt="'+alt+'" loading="lazy"><span class="cv-zoom" aria-hidden="true">🔍</span>'+(s.illustration?'<span class="ill">'+esc(T.illus)+"</span>":"")+"</a>":'<span class="ic">📍</span>')+
 "<h3>"+esc(s.nom)+"</h3>"+(s.role?'<span class="chip">'+esc(pick(s,"role"))+"</span>":"")+
 (info.length?'<ul class="sl">'+info.join("")+"</ul>":"")+(s.note?'<p class="soon">'+esc(pick(s,"note"))+"</p>":(info.length?"":'<p class="soon">'+esc(T.soon)+"</p>"))+
 (ph?'<div class="gph">'+ph+"</div>":"")+

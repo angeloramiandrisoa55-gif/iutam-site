@@ -43,6 +43,7 @@
 - [ ] Affiche « Nos formations » (`images/affiche-formations.jpg`) : confirmer qu'elle est à jour (logos des partenaires)
 
 ## Antsohihy et Maevatanana : photos et contacts
+- [ ] **Déposer la photo de l'antenne de Maevatanana** dans `images/maevatanana.jpg` (le code l'attend déjà : fiche du site, panneau des parcours, bandeau rotatif). Recadrer le filigrane de l'appareil photo en bas à gauche avant la mise en ligne : `npm install --no-save sharp && node tools/optimize-images.js images/maevatanana.jpg --crop-bottom=8 --width=1400` (ou `squoosh.app` : largeur 1400 px, qualité 80). Tant que le fichier est absent, la page affiche une image cassée et la vérification des liens échoue (`npm run check`).
 - [ ] Antsohihy : les contacts affichés (032 05 580 06 · 034 02 653 27, iutamumg@gmail.com) viennent des panneaux « IUTAM Annexe Antsohihy » photographiés ; confirmer, et fournir l'adresse précise et les horaires
 - [ ] Autorisation de publier les photos d'Antsohihy (panneaux avec une personne, groupe devant l'affiche, bâtiment avec logo Faritra Sofia)
 - [ ] **Maevatanana : l'image affichée est une illustration (mention « Illustration »), pas une photo** ; fournir une vraie photo et la placer dans `images/` puis dans `data/sites.json` (champ `image`, et mettre `illustration` à `false`)

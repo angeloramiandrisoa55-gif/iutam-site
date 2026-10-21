@@ -32,4 +32,29 @@ if (domain) {
 if (min) {
   cp.execFileSync(process.execPath, [path.join(__dirname, 'minify.js'), out], { stdio: 'inherit' });
 }
+
+// --- empreinte des ressources (cache du navigateur) -----------------------------
+// Les navigateurs conservent css/ et js/ une semaine : sans cette marque, une
+// mise en ligne de code ne serait visible qu'au bout de sept jours.
+// On ajoute donc une empreinte du contenu aux références.
+const crypto = require('crypto');
+function stamp(dir) {
+  const h = crypto.createHash('md5');
+  for (const f of fs.readdirSync(dir).sort()) {
+    const p = path.join(dir, f);
+    if (fs.statSync(p).isFile()) h.update(f).update(fs.readFileSync(p));
+  }
+  return h.digest('hex').slice(0, 8);
+}
+const vCss = stamp(path.join(out, 'css'));
+const vJs = stamp(path.join(out, 'js'));
+for (const f of ['index.html', 'mg/index.html', 'mentions-legales.html', '404.html', '503.html']) {
+  const p = path.join(out, f);
+  if (!fs.existsSync(p)) continue;
+  let s = fs.readFileSync(p, 'utf8');
+  s = s.replace(/((?:href|src)="[^"]*css\/[^"]+\.css)"/g, '$1?v=' + vCss + '"');
+  s = s.replace(/((?:href|src)="[^"]*js\/[^"]+\.js)"/g, '$1?v=' + vJs + '"');
+  fs.writeFileSync(p, s);
+}
 console.log(`_site/ prêt (${univ ? 'serveur Université' : 'hébergeur cloud'}${domain ? ', domaine ' + domain : ''}${min ? ', minifié' : ''}) : ${n} éléments copiés.`);
+console.log(`Empreintes des ressources : css?v=${vCss} · js?v=${vJs}`);

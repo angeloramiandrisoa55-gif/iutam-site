@@ -59,8 +59,14 @@
       "lien": "",
       "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
       "note_mg": "Ny adiresy, ny ora fiasana ary ny fanofanana 2026-2027 dia hamafisina amin'ny sekretaria ao Mahajanga.",
-      "image": "images/maevatanana-illustration.svg",
-      "illustration": true
+      "image": "images/maevatanana.jpg",
+      "photos": [
+        {
+          "src": "images/maevatanana.jpg",
+          "alt": "Façade de l'IUTAM Maevatanana : bâtiment à deux niveaux, panneau « I.U.T.A.M — Antenne Maevatanana » et fléchage vers le secrétariat",
+          "alt_mg": "Ny tampon-trano ny IUTAM Maevatanana : trano roa ambony, takelaka « I.U.T.A.M — Antenne Maevatanana » ary ny fandikana mankany amin'ny sekretaria"
+        }
+      ]
     }
   ]
 }

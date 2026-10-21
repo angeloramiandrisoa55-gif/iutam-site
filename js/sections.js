@@ -95,15 +95,16 @@
         return;
       }
       box.innerHTML = list.map(function (p, i) {
-        // Version compacte : métier + secteur visibles, le reste est replié.
+        // Version compacte : la liste des métiers tient sur une ligne par métier ;
+        // secteurs, objectifs, compétences et descriptions sont repliés.
         var deb = (p.debouches || []).map(function (d) {
-          return '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b>' +
-            '<span class="ds">' + esc(text(d, 'secteur')) + '</span></li>';
+          return '<li>' + esc(text(d, 'metier')) + '</li>';
         }).join('');
         var debDetail = (p.debouches || []).map(function (d) {
-          return text(d, 'detail')
-            ? '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b><span class="dd">' + esc(text(d, 'detail')) + '</span></li>'
-            : '';
+          return '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b>' +
+            '<span class="ds">' + esc(text(d, 'secteur')) + '</span>' +
+            (text(d, 'detail') ? '<span class="dd">' + esc(text(d, 'detail')) + '</span>' : '') +
+            '</li>';
         }).join('');
         var obj = (p.objectifs || []).map(function (o) { return '<li>' + esc(text(o, 'fr')) + '</li>'; }).join('');
         var comp = (p.competences || []).map(function (c) { return '<li>' + esc(text(c, 'fr')) + '</li>'; }).join('');
@@ -112,14 +113,14 @@
           '<h3>' + esc(text(p, 'nom')) + '</h3>' +
           '<span class="chip">' + esc(p.duree || '') + '</span>' +
           '<p class="dbr">' + esc(text(p, 'resume')) + '</p>' +
-          '<h4>' + esc(T.metiers) + '</h4>' +
+          '<h4>' + esc(T.metiers) + '<span class="h4n">' + (p.debouches || []).length + '</span></h4>' +
           '<ul class="dml">' + deb + '</ul>' +
-          (obj || comp ? '<details class="fold"><summary>' + esc(T.objectifs) + ' · ' + esc(T.competences) + '</summary>' +
-            '<ul class="dbl">' + obj + '</ul><ul class="dbl">' + comp + '</ul></details>' : '') +
-          (debDetail ? '<details class="fold"><summary>' + esc(T.voirPlus) + '</summary>' +
-            '<ul class="dbl dm-list">' + debDetail + '</ul>' +
-            (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '') +
-            '</details>' : (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '')) +
+          '<details class="fold"><summary>' + esc(T.voirPlus) + '</summary>' +
+          (obj ? '<h5 class="dh">' + esc(T.objectifs) + '</h5><ul class="dbl">' + obj + '</ul>' : '') +
+          (comp ? '<h5 class="dh">' + esc(T.competences) + '</h5><ul class="dbl">' + comp + '</ul>' : '') +
+          (debDetail ? '<h5 class="dh">' + esc(T.metiers) + '</h5><ul class="dbl dm-list">' + debDetail + '</ul>' : '') +
+          (text(p, 'poursuite') ? '<p class="dbs">' + esc(text(p, 'poursuite')) + '</p>' : '') +
+          '</details>' +
           '</article>';
       }).join('');
     }
@@ -318,3 +319,4 @@
     start();
   }
 })();
+                                                                              
