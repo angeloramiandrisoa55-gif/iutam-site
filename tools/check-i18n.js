@@ -56,6 +56,7 @@ const WHITELIST = new Set([
   'licence', 'Innovation', 'Plateforme',
   // identiques en malagasy (déjà traduits par une balise plus longue)
   'développement durable', 'Licence Pro', 'Ingéniorat (Master)',
+  'L1 · L2 · L3', 'M1 · M2', 'L1', 'L2', 'L3', 'M1', 'M2',
   '🎓 Licence Pro · Ingéniorat', 'Licence Professionnelle',
   '✉️ iutamumg@gmail.com', '✉️ benjaiba@yahoo.fr', 'iutamumg@gmail.com', 'benjaiba@yahoo.fr'
 ]);

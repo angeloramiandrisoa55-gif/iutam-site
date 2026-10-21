@@ -677,24 +677,29 @@ details.gd[open] .fold-i{transform:rotate(45deg);background:var(--pri);color:#ff
 @media (prefers-reduced-motion:reduce){.pub .pub-body{transition:none}.pub-bar{display:none}.pub.auto:before{animation:none}}
 
 
+
 /* =============================================================================
-   Parcours des études : schéma du cursus Bac → Licence → Ingéniorat
+   Les 6 parcours selon le système L.M.D.
    ============================================================================= */
-.cursus{display:grid;gap:0;margin:0 0 30px;padding:0}
-.cur-step{position:relative;padding:18px 22px;border:1px solid var(--bd);border-radius:18px;background:var(--card);box-shadow:0 8px 26px #1b7a431a}
-.cur-step.cur-start{background:var(--hero);border-style:dashed}
-.cur-step.cur-end{border-color:var(--pri);box-shadow:0 10px 30px #1b7a4333}
-.cur-k{display:block;font:700 1.12rem "Chakra Petch",Georgia,serif;letter-spacing:.02em;color:var(--pri)}
-.cur-step.cur-start .cur-k{color:var(--fg)}
-.cur-t{display:block;margin-top:3px;font-size:.88rem;color:var(--mut)}
-.cur-n{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;background:var(--pri);color:#fff;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.cur-p{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
-.cur-p a{display:block;padding:7px 14px;border:1px solid var(--bd);border-radius:99px;background:var(--bg);color:var(--fg);font-size:.87rem;font-weight:600;text-decoration:none;transition:background .2s,color .2s,transform .2s,border-color .2s}
-.cur-p a:hover{background:var(--pri);border-color:var(--pri);color:#fff;transform:translateY(-2px)}
-:root[data-theme="dark"] .cur-p a:hover{color:#04210f}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cur-p a:hover{color:#04210f}}
-.cur-link{position:relative;display:flex;align-items:center;gap:12px;padding:12px 0 12px 30px}
-.cur-link .cur-d{position:relative;z-index:1;padding:4px 14px;border-radius:99px;background:var(--bg);color:var(--pri);font-size:.83rem;font-weight:700;letter-spacing:.03em}
-.cur-link i{position:absolute;left:11px;top:0;bottom:0;width:2px;background:linear-gradient(var(--pri),var(--bl));border-radius:2px}
-.cur-link i:after{content:"";position:absolute;left:-4px;bottom:-1px;width:10px;height:10px;border-right:2px solid var(--bl);border-bottom:2px solid var(--bl);transform:rotate(45deg)}
-@media (max-width:600px){.cur-step{padding:16px}.cur-p a{font-size:.82rem;padding:6px 11px}}
+.stats div small{display:block;margin-top:6px;font-size:.76rem;font-weight:700;letter-spacing:.08em;color:var(--pri);text-transform:uppercase}
+.stats div small:empty{display:none}
+
+.lmd{margin:26px 0 0;padding:24px 26px;border:1px solid var(--bd);border-radius:20px;background:var(--card);box-shadow:0 10px 34px #1b7a431a}
+.lmd-t{margin:0 0 18px;font-size:1.12rem;color:var(--pri);font-family:Georgia,"Times New Roman",serif}
+.lmd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.lmd-niv{--c:var(--pri);--ink:#16683a;padding:16px 18px;border:1px solid var(--bd);border-top:4px solid var(--c);border-radius:16px;background:var(--hero)}
+.lmd-niv.mas{--c:var(--bl);--ink:#1f57a8}
+.lmd-k{display:block;font:700 .78rem "Chakra Petch",system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.lmd-y{display:flex;gap:6px;margin:10px 0 6px}
+.lmd-y i{display:grid;place-items:center;min-width:34px;height:24px;padding:0 8px;border-radius:99px;background:var(--ink);color:#fff;font:700 .74rem ui-monospace,Consolas,monospace;font-style:normal;letter-spacing:.06em}
+:root[data-theme="dark"] .lmd-niv{--ink:#7fe0a4}
+:root[data-theme="dark"] .lmd-niv.mas{--ink:#b8d4ff}
+:root[data-theme="dark"] .lmd-y i{color:#04210f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lmd-niv{--ink:#7fe0a4}:root:not([data-theme="light"]) .lmd-niv.mas{--ink:#b8d4ff}:root:not([data-theme="light"]) .lmd-y i{color:#04210f}}
+.lmd-d{margin:0 0 12px;font-size:.86rem;color:var(--mut)}
+.lmd-p{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.lmd-p a{display:block;padding:7px 14px;border:1px solid var(--bd);border-radius:99px;background:var(--card);color:var(--fg);font-size:.86rem;font-weight:600;text-decoration:none;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.lmd-p a:hover{background:var(--c);border-color:var(--c);color:#fff;transform:translateY(-2px)}
+:root[data-theme="dark"] .lmd-p a:hover{color:#04210f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lmd-p a:hover{color:#04210f}}
+@media (max-width:600px){.lmd{padding:20px 16px}.lmd-p a{font-size:.82rem;padding:6px 11px}}
