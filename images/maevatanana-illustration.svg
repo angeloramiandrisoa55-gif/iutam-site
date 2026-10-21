@@ -1,17 +1,158 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-<defs>
-<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2f4a"/><stop offset=".55" stop-color="#1b6b73"/><stop offset="1" stop-color="#f2c14e"/></linearGradient>
-<radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#ffd45a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd45a" stop-opacity="0"/></radialGradient>
-<linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a8f6b"/><stop offset="1" stop-color="#14573f"/></linearGradient>
-<pattern id="rows" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(-9)"><path d="M0 23H46" stroke="#ffffff2e" stroke-width="2"/></pattern>
-</defs>
-<rect width="1200" height="800" fill="url(#sky)"/>
-<circle cx="820" cy="470" r="250" fill="url(#sun)"/>
-<path d="M0 520C150 430 300 470 450 430S760 380 900 440 1100 430 1200 470V800H0Z" fill="#1c6a63" opacity=".8"/>
-<path d="M0 580C200 500 380 560 560 520S900 480 1200 560V800H0Z" fill="url(#h1)"/>
-<path d="M0 650C220 590 420 640 640 610S1000 580 1200 640V800H0Z" fill="#17694a"/>
-<rect y="600" width="1200" height="200" fill="url(#rows)"/>
-<path d="M0 720C260 670 520 710 760 690S1060 670 1200 700V800H0Z" fill="#0f4d35"/>
-<g fill="#0b3b2a"><rect x="168" y="590" width="7" height="100"/><ellipse cx="171" cy="586" rx="44" ry="28"/><rect x="262" y="620" width="6" height="74"/><ellipse cx="265" cy="617" rx="32" ry="21"/><rect x="1010" y="585" width="7" height="104"/><ellipse cx="1013" cy="581" rx="46" ry="30"/></g>
-<g fill="#ffffff" opacity=".35"><circle cx="120" cy="90" r="2"/><circle cx="300" cy="150" r="1.6"/><circle cx="470" cy="70" r="2"/><circle cx="640" cy="130" r="1.4"/><circle cx="1010" cy="100" r="2"/><circle cx="1130" cy="210" r="1.6"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : paysage rural malgache avec un bâtiment de l'IUTAM, des rizières et des palmiers">
+  <defs>
+    <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fc4e8"/>
+      <stop offset=".42" stop-color="#cfe3ec"/>
+      <stop offset=".72" stop-color="#f6e2c0"/>
+      <stop offset="1" stop-color="#f0c98f"/>
+    </linearGradient>
+    <radialGradient id="soleil" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fffbe8"/>
+      <stop offset=".35" stop-color="#ffe9a8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffd07a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mont" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8d9fae"/>
+      <stop offset="1" stop-color="#6d8494"/>
+    </linearGradient>
+    <linearGradient id="terre" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98a5c"/>
+      <stop offset=".45" stop-color="#a9714a"/>
+      <stop offset="1" stop-color="#8c5c3d"/>
+    </linearGradient>
+    <linearGradient id="riz" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fc46a"/>
+      <stop offset=".5" stop-color="#7fb252"/>
+      <stop offset="1" stop-color="#5f9440"/>
+    </linearGradient>
+    <linearGradient id="toit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b85a3c"/>
+      <stop offset="1" stop-color="#8e3f28"/>
+    </linearGradient>
+    <linearGradient id="mur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3ece0"/>
+      <stop offset="1" stop-color="#ddd2c0"/>
+    </linearGradient>
+    <linearGradient id="eau" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9c9d6"/>
+      <stop offset="1" stop-color="#7ea7bb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ciel et soleil -->
+  <rect width="1200" height="800" fill="url(#ciel)"/>
+  <circle cx="905" cy="150" r="150" fill="url(#soleil)"/>
+  <circle cx="905" cy="150" r="46" fill="#fff6d8" opacity=".95"/>
+
+  <!-- Nuages légers -->
+  <g fill="#ffffff" opacity=".42">
+    <ellipse cx="250" cy="120" rx="110" ry="20"/>
+    <ellipse cx="310" cy="105" rx="70" ry="15"/>
+    <ellipse cx="640" cy="72" rx="86" ry="15"/>
+  </g>
+
+  <!-- Montagnes lointaines -->
+  <path d="M0 300 L150 214 L280 268 L420 196 L560 262 L700 222 L840 286 L980 236 L1120 292 L1200 258 L1200 340 L0 340 Z" fill="url(#mont)" opacity=".5"/>
+  <path d="M0 330 L120 272 L250 318 L400 262 L540 320 L690 282 L820 330 L960 290 L1100 336 L1200 308 L1200 380 L0 380 Z" fill="#5f7a8c" opacity=".55"/>
+
+  <!-- Ligne d'arbres à l'horizon -->
+  <g fill="#4f7a45" opacity=".8">
+    <path d="M0 352 q40 -26 78 -4 q38 -24 76 -2 q40 -22 80 2 q42 -20 82 4 q40 -24 80 -2 q44 -20 86 4 q40 -26 84 -2 q42 -22 84 2 q40 -20 80 4 q46 -22 88 0 q40 -24 84 -2 q44 -20 88 4 l0 44 L0 396 Z"/>
+  </g>
+
+  <!-- Rizières -->
+  <path d="M0 372 L1200 356 L1200 800 L0 800 Z" fill="url(#riz)"/>
+  <g stroke="#4f8033" stroke-width="3" opacity=".45" fill="none">
+    <path d="M0 404 L1200 388"/><path d="M0 438 L1200 422"/><path d="M0 476 L1200 460"/>
+    <path d="M0 520 L1200 504"/><path d="M0 570 L1200 554"/><path d="M0 628 L1200 612"/>
+    <path d="M0 694 L1200 678"/><path d="M0 768 L1200 752"/>
+  </g>
+  <g fill="#6fa544" opacity=".55">
+    <path d="M0 386 L1200 372 L1200 380 L0 394 Z"/>
+    <path d="M0 456 L1200 442 L1200 452 L0 466 Z"/>
+    <path d="M0 546 L1200 532 L1200 544 L0 558 Z"/>
+    <path d="M0 652 L1200 638 L1200 652 L0 666 Z"/>
+  </g>
+
+  <!-- Mare / canal d'irrigation -->
+  <path d="M-20 700 Q300 668 620 686 Q900 700 1220 672 L1220 714 Q900 740 620 722 Q300 706 -20 736 Z" fill="url(#eau)" opacity=".9"/>
+  <path d="M-20 700 Q300 668 620 686 Q900 700 1220 672" stroke="#cfe3ec" stroke-width="3" fill="none" opacity=".6"/>
+
+  <!-- Chemin de terre rouge -->
+  <path d="M470 800 Q500 700 540 620 Q570 566 590 520 L640 520 Q616 572 596 628 Q566 704 560 800 Z" fill="url(#terre)"/>
+  <path d="M470 800 Q500 700 540 620 Q570 566 590 520" stroke="#c79a6d" stroke-width="4" fill="none" opacity=".7"/>
+
+  <!-- Bâtiment principal -->
+  <g>
+    <rect x="600" y="360" width="300" height="128" rx="4" fill="url(#mur)"/>
+    <path d="M580 364 L750 288 L920 364 Z" fill="url(#toit)"/>
+    <path d="M580 364 L920 364 L920 372 L580 372 Z" fill="#6f3020" opacity=".7"/>
+    <path d="M750 288 L750 364" stroke="#7d3624" stroke-width="4" opacity=".5"/>
+    <!-- fenêtre et porte -->
+    <g fill="#5f7f92">
+      <rect x="632" y="392" width="34" height="38" rx="2"/>
+      <rect x="700" y="392" width="34" height="38" rx="2"/>
+      <rect x="766" y="392" width="34" height="38" rx="2"/>
+      <rect x="832" y="392" width="34" height="38" rx="2"/>
+    </g>
+    <g stroke="#efe6d6" stroke-width="2" opacity=".8">
+      <path d="M649 392 V430 M717 392 V430 M783 392 V430 M849 392 V430"/>
+    </g>
+    <rect x="712" y="420" width="42" height="68" rx="2" fill="#7a5236"/>
+    <rect x="600" y="470" width="300" height="18" fill="#cfc3ae"/>
+    <!-- corps de bâtiment latéral -->
+    <rect x="480" y="404" width="122" height="84" rx="3" fill="#e8dfd0"/>
+    <path d="M466 408 L541 362 L616 408 Z" fill="#a5503a"/>
+    <rect x="504" y="430" width="26" height="30" fill="#5f7f92"/>
+    <rect x="552" y="430" width="26" height="30" fill="#5f7f92"/>
+  </g>
+
+  <!-- Arbres : palmiers et bananiers -->
+  <g>
+    <g transform="translate(330,352)">
+      <path d="M0 0 q6 70 2 130" stroke="#7a5a3c" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <g fill="#3f7a41">
+        <path d="M2 0 q-42 -26 -70 -12 q34 26 70 14 Z"/>
+        <path d="M2 0 q40 -30 72 -16 q-32 28 -72 18 Z"/>
+        <path d="M2 0 q-16 -44 -44 -58 q6 38 44 60 Z"/>
+        <path d="M2 0 q20 -44 50 -56 q-10 38 -50 58 Z"/>
+        <path d="M2 0 q-34 -6 -62 8 q34 12 62 -6 Z"/>
+      </g>
+    </g>
+    <g transform="translate(1050,336)">
+      <path d="M0 0 q-8 76 -4 142" stroke="#7a5a3c" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <g fill="#377038">
+        <path d="M0 0 q-46 -24 -76 -8 q36 24 76 10 Z"/>
+        <path d="M0 0 q44 -28 78 -12 q-34 26 -78 14 Z"/>
+        <path d="M0 0 q-18 -46 -48 -60 q8 38 48 62 Z"/>
+        <path d="M0 0 q22 -46 54 -58 q-12 38 -54 60 Z"/>
+      </g>
+    </g>
+    <!-- bananiers -->
+    <g transform="translate(250,470)">
+      <g fill="#4f9438"><path d="M0 0 q-54 -12 -78 16 q40 16 78 -14 Z"/><path d="M0 0 q52 -18 84 8 q-40 22 -84 -6 Z"/><path d="M0 0 q-26 -46 -58 -58 q4 40 58 60 Z"/></g>
+      <rect x="-4" y="0" width="9" height="52" fill="#6f5a38"/>
+    </g>
+    <g transform="translate(1140,500)">
+      <g fill="#4f9438"><path d="M0 0 q-50 -12 -72 16 q38 16 72 -14 Z"/><path d="M0 0 q48 -18 78 8 q-38 22 -78 -6 Z"/></g>
+      <rect x="-4" y="0" width="9" height="48" fill="#6f5a38"/>
+    </g>
+  </g>
+
+  <!-- Personnages -->
+  <g fill="#2f3a44" opacity=".85">
+    <g transform="translate(536,494)">
+      <circle cx="0" cy="-26" r="7"/><path d="M-6 -18 h12 l4 26 h-8 l-2 -18 l-2 18 h-8 Z"/>
+    </g>
+    <g transform="translate(566,502)">
+      <circle cx="0" cy="-24" r="6"/><path d="M-5 -17 h10 l4 23 h-7 l-1.5 -16 l-1.5 16 h-7 Z"/>
+    </g>
+    <g transform="translate(600,496)">
+      <circle cx="0" cy="-25" r="6.5"/><path d="M-6 -18 h12 l4 24 h-8 l-2 -16 l-2 16 h-8 Z"/>
+    </g>
+  </g>
+
+  <!-- Brume d'atmosphère au sol -->
+  <rect x="0" y="352" width="1200" height="120" fill="#ffffff" opacity=".12"/>
+  <rect x="0" y="0" width="1200" height="800" fill="none" stroke="#000000" stroke-opacity=".06" stroke-width="40"/>
 </svg>

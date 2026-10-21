@@ -242,7 +242,6 @@ header:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;
 .brand-txt small{margin-top:6px;font:600 .62rem/1 "Chakra Petch",ui-monospace,system-ui,sans-serif;letter-spacing:.52em;text-transform:uppercase;color:var(--mut)}
 header nav{gap:6px 22px}
 header nav a{position:relative;padding:8px 2px;font:600 .78rem "Chakra Petch",system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);text-decoration:none;transition:color .2s}
-header nav a:before{content:attr(data-n);margin-right:6px;font:600 .62rem ui-monospace,Consolas,monospace;color:var(--pri);opacity:.85}
 header nav a:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--pri),var(--bl));transform:scaleX(0);transform-origin:left;transition:transform .3s}
 header nav a:hover,header nav a.on{color:var(--fg)}
 header nav a:hover:after,header nav a.on:after{transform:scaleX(1)}
@@ -362,13 +361,13 @@ td.flash{animation:flashc 1.2s ease}
 .pubs-bar{position:absolute;left:0;right:0;top:0;z-index:4;height:4px;background:#ffffff22}
 .pubs-bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,#4ddc8c,#ffd45a)}
 @keyframes pubbar{from{width:0}to{width:100%}}
-.ps{position:absolute;inset:0;display:flex;align-items:center;visibility:hidden;opacity:0;transition:opacity .8s ease,visibility 0s .8s}
-.ps.on{visibility:visible;opacity:1;transition:opacity .8s ease,visibility 0s}
-.ps-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ps.on .ps-bg{animation:kb 14s ease-out forwards}
-.ps-ov{position:absolute;inset:0;background:linear-gradient(90deg,#04141fed 0%,#04141fb8 48%,#04141f4d 100%)}
+.ps{position:absolute;inset:0;display:flex;align-items:center;visibility:hidden;opacity:1;transition:visibility 0s}
+.ps.on{visibility:visible;transition:visibility 0s}
+.ps-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
+.ps.on .ps-bg{opacity:1;animation:kb 14s ease-out forwards}
+.ps-ov{position:absolute;inset:0;background:linear-gradient(90deg,#04141fed 0%,#04141fb8 48%,#04141f4d 100%);opacity:0;transition:opacity .45s ease}
 .ps-ov:after{content:"";position:absolute;inset:0;background:var(--pc);opacity:.34;mix-blend-mode:multiply}
-.ps-c{position:relative;z-index:1;width:min(660px,100%);padding:48px 56px 100px}
+.ps-c{position:relative;z-index:1;width:min(660px,100%);padding:48px 56px 100px;transform:translateY(16px);transition:transform .5s cubic-bezier(.2,.8,.3,1)}
 .ps-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .ps-lv{padding:5px 14px;border-radius:99px;background:#7dffb4;color:#04210f;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 .ps-lv.m{background:#8db8ff;color:#06223f}
@@ -379,6 +378,7 @@ td.flash{animation:flashc 1.2s ease}
 .ps-p{max-width:54ch;margin:0 0 18px;line-height:1.7;opacity:.96}
 .ps-k{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
 .ps-k li{padding:4px 12px;border:1px solid var(--pc);border-radius:12px;background:#00000045;font-size:.8rem;font-weight:600;line-height:1.4}
+.ps.on .ps-c{transform:none}
 .ps-b{display:flex;flex-wrap:wrap;gap:10px}
 .ps .btn{margin:0;background:#fff;color:#0b3d22;box-shadow:0 10px 26px #0006}
 .ps .btn.o{border:1px solid #ffffff77;background:#ffffff1c;color:#fff;box-shadow:none}
@@ -411,16 +411,21 @@ td.flash{animation:flashc 1.2s ease}
 
 /* Antsohihy / Maevatanana, photos, mobile */
 .p-antso{--pc:#1d5fc2}.p-maeva{--pc:#c7881a}
-.ps-fr{position:absolute;z-index:1;right:56px;top:50%;width:min(290px,27%);margin:0;padding:8px;border-radius:16px;background:#fff;box-shadow:0 24px 50px #0009;transform:translateY(-52%)}
+.ps-fr{position:absolute;z-index:1;right:56px;top:50%;width:min(290px,27%);margin:0;padding:8px;border-radius:16px;background:#fff;box-shadow:0 24px 50px #0009;transform:translateY(-52%) translateX(18px);transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.ps.on .ps-fr{transform:translateY(-52%)}
 .ps-fr img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px}
 .ps-fr figcaption{padding:8px 4px 2px;color:#0b3d22;font-size:.8rem;font-weight:700;text-align:center}
-.site .cv{position:relative;margin-bottom:12px}
-.site .cv .ni{margin:0}
-.ill{position:absolute;left:10px;bottom:10px;padding:3px 10px;border-radius:99px;background:#000a;color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.gph{display:flex;gap:8px;margin-top:14px}
+/* Fiches des sites : photo de couverture cliquable, galerie compacte. */
+.site .cv{position:relative;display:block;overflow:hidden;border-radius:10px;margin-bottom:12px}
+.site .cv .ni{margin:0;transition:transform .45s cubic-bezier(.2,.8,.3,1)}
+.site a.cv:hover .ni,.site a.cv:focus-visible .ni{transform:scale(1.05)}
+.cv-zoom{position:absolute;right:10px;bottom:10px;z-index:2;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#00000073;color:#fff;font-size:.85rem;opacity:0;transition:opacity .25s}
+.site a.cv:hover .cv-zoom,.site a.cv:focus-visible .cv-zoom{opacity:1}
+.ill{position:absolute;left:10px;bottom:10px;z-index:2;padding:3px 11px;border-radius:99px;background:#000000a6;color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.gph{display:flex;gap:7px;margin-top:12px}
 .gph a{flex:1 1 0;min-width:0}
-.gph img{display:block;width:100%;height:86px;object-fit:cover;object-position:top;border:1px solid var(--bd);border-radius:10px;transition:transform .2s}
-.gph a:hover img{transform:scale(1.04)}
+.gph img{display:block;width:100%;height:60px;object-fit:cover;object-position:top;border:1px solid var(--bd);border-radius:9px;transition:transform .25s,height .25s}
+.gph a:hover img{transform:scale(1.05);height:72px}
 h1,h2,h3,p,li{overflow-wrap:break-word}
 @media (max-width:900px){.ps-fr{display:none}}
 @media (max-width:640px){
@@ -565,37 +570,33 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
    ============================================================================= */
 
 /* ------------------------------------------------- En-tête : deux rangées */
+/* ------------------------------------------------- En-tête : deux rangées */
 header{display:block;padding:0}
 html{scroll-padding-top:calc(94px + env(safe-area-inset-top,0px))}
 .hd-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 5vw 7px}
-header nav{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:2px;padding:0 5vw 7px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+header nav{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:2px;padding:0 5vw 8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 header nav::-webkit-scrollbar{display:none}
-header nav a{position:relative;display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;white-space:nowrap;padding:7px 11px;border-radius:99px;font:700 .72rem "Chakra Petch",system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);text-decoration:none;transition:color .2s,background .2s,transform .2s}
-header nav a:before{content:attr(data-n);display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--hero);color:var(--pri);font:700 .58rem ui-monospace,Consolas,monospace;letter-spacing:0;transition:background .25s,color .25s}
-header nav a:after{content:"";position:absolute;left:50%;right:50%;bottom:2px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--pri),var(--bl));transition:left .3s,right .3s}
+.nav-sep{width:1px;height:15px;flex:0 0 auto;margin:0 7px;background:var(--bd);border-radius:1px}
+header nav a{position:relative;display:inline-flex;align-items:center;flex:0 0 auto;white-space:nowrap;padding:9px 13px;border-radius:99px;font:600 .84rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.005em;color:var(--mut);text-decoration:none;transition:color .2s,background .2s,box-shadow .2s,transform .2s}
 header nav a:hover{color:var(--fg);background:var(--hero);transform:translateY(-1px)}
-header nav a:hover:after{left:22%;right:22%}
-header nav a.on{color:var(--fg);background:var(--hero)}
-header nav a.on:before{background:var(--pri);color:#fff}
-header nav a.on:after{left:22%;right:22%}
+header nav a.on{color:#fff;background:linear-gradient(135deg,var(--pri),var(--bl));box-shadow:0 6px 18px #1b7a4340}
+:root[data-theme="dark"] header nav a.on{color:#04210f;background:linear-gradient(135deg,#4ddc8c,#6aa3f5);box-shadow:0 6px 18px #4ddc8c33}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) header nav a.on{color:#04210f;background:linear-gradient(135deg,#4ddc8c,#6aa3f5);box-shadow:0 6px 18px #4ddc8c33}}
 .hr{display:flex;align-items:center;gap:8px;flex:0 0 auto}
 .brand{flex:0 0 auto}
-/* Sur les écrans intermédiaires, on masque les pastilles numérotées :
-   les neuf liens tiennent alors largement sur une seule ligne. */
-@media (max-width:1240px){
-  header nav a{font-size:.7rem;padding:7px 9px;gap:0}
-  header nav a:before{display:none}
+@media (max-width:1080px){
+  header nav a{font-size:.78rem;padding:8px 10px}
+  .nav-sep{margin:0 4px}
 }
-@media (max-width:1000px){
-  header nav a{font-size:.64rem;padding:6px 7px}
+@media (max-width:900px){
+  header nav a{font-size:.72rem;padding:7px 8px}
 }
 @media (max-width:800px){
   .hd-top{padding:8px 5vw}
   header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 5vw 14px;background:var(--bg);border-bottom:1px solid var(--bd);box-shadow:0 18px 30px #0003}
   header.open nav{display:flex}
-  header nav a{padding:13px 12px;border-radius:12px;border-bottom:1px solid var(--bd);font-size:.86rem;justify-content:flex-start}
-  header nav a:before{width:20px;height:20px}
-  header nav a:after{display:none}
+  header nav a{padding:13px 12px;border-radius:12px;border-bottom:1px solid var(--bd);font-size:.9rem;justify-content:flex-start}
+  .nav-sep{display:none}
 }
 @media (prefers-reduced-motion:reduce){header nav a:hover{transform:none}}
 
@@ -675,3 +676,25 @@ details.gd[open] .fold-i{transform:rotate(45deg);background:var(--pri);color:#ff
 @keyframes pubbar{from{width:0}to{width:100%}}
 @media (prefers-reduced-motion:reduce){.pub .pub-body{transition:none}.pub-bar{display:none}.pub.auto:before{animation:none}}
 
+
+/* =============================================================================
+   Parcours des études : schéma du cursus Bac → Licence → Ingéniorat
+   ============================================================================= */
+.cursus{display:grid;gap:0;margin:0 0 30px;padding:0}
+.cur-step{position:relative;padding:18px 22px;border:1px solid var(--bd);border-radius:18px;background:var(--card);box-shadow:0 8px 26px #1b7a431a}
+.cur-step.cur-start{background:var(--hero);border-style:dashed}
+.cur-step.cur-end{border-color:var(--pri);box-shadow:0 10px 30px #1b7a4333}
+.cur-k{display:block;font:700 1.12rem "Chakra Petch",Georgia,serif;letter-spacing:.02em;color:var(--pri)}
+.cur-step.cur-start .cur-k{color:var(--fg)}
+.cur-t{display:block;margin-top:3px;font-size:.88rem;color:var(--mut)}
+.cur-n{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;background:var(--pri);color:#fff;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.cur-p{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
+.cur-p a{display:block;padding:7px 14px;border:1px solid var(--bd);border-radius:99px;background:var(--bg);color:var(--fg);font-size:.87rem;font-weight:600;text-decoration:none;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.cur-p a:hover{background:var(--pri);border-color:var(--pri);color:#fff;transform:translateY(-2px)}
+:root[data-theme="dark"] .cur-p a:hover{color:#04210f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cur-p a:hover{color:#04210f}}
+.cur-link{position:relative;display:flex;align-items:center;gap:12px;padding:12px 0 12px 30px}
+.cur-link .cur-d{position:relative;z-index:1;padding:4px 14px;border-radius:99px;background:var(--bg);color:var(--pri);font-size:.83rem;font-weight:700;letter-spacing:.03em}
+.cur-link i{position:absolute;left:11px;top:0;bottom:0;width:2px;background:linear-gradient(var(--pri),var(--bl));border-radius:2px}
+.cur-link i:after{content:"";position:absolute;left:-4px;bottom:-1px;width:10px;height:10px;border-right:2px solid var(--bl);border-bottom:2px solid var(--bl);transform:rotate(45deg)}
+@media (max-width:600px){.cur-step{padding:16px}.cur-p a{font-size:.82rem;padding:6px 11px}}
