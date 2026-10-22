@@ -14,9 +14,9 @@
 
   var T = {
     fr: {
-      placeholder: 'Hitady ny fanofanana, ny fanontaniana, ny vaovao…',
-      open: 'Hitady ao amin\'ny tranokala',
-      close: 'Hidio ny fitadiavana',
+      placeholder: 'Hitady ny lalam-piofanana, ny fanontaniana, ny vaovao…',
+      open: 'Fikarohana ao amin\'ny tranonkala',
+      close: 'Hidio ny fikarohana',
       empty: 'Tsy misy valiny. Andramo teny hafa.',
       hint: 'Torohevitra : Ctrl + K hanokatra, Échap hidio',
       noResults: 'Tsy misy valiny',
@@ -25,9 +25,9 @@
       data: 'amin\'ny votoatiny'
     },
     mg: {
-      placeholder: 'Hitady ny fanofanana, ny fanontaniana, ny vaovao…',
-      open: 'Hitady ao amin\'ny tranokala',
-      close: 'Hidio ny fitadiavana',
+      placeholder: 'Hitady ny lalam-piofanana, ny fanontaniana, ny vaovao…',
+      open: 'Fikarohana ao amin\'ny tranonkala',
+      close: 'Hidio ny fikarohana',
       empty: 'Tsy misy valiny. Andramo teny hafa.',
       hint: 'Torohevitra : Ctrl + K hanokatra, Échap hidio',
       noResults: 'Tsy misy valiny',

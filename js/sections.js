@@ -21,7 +21,7 @@
       competences: 'Fahaizana',
       pieces: 'Antontan-taratasy ilaina',
       etapes: 'Dingana',
-      duree: 'Faharetan\'ny fotoana',
+      duree: 'Faharetan\'ny fiofanana',
       resultats: 'résultat(s)',
       tout: 'Rehetra',
       licence: 'Laisansa',
@@ -40,7 +40,7 @@
       competences: 'Fahaizana',
       pieces: 'Antontan-taratasy ilaina',
       etapes: 'Dingana',
-      duree: 'Faharetan\'ny fotoana',
+      duree: 'Faharetan\'ny fiofanana',
       resultats: 'valiny',
       tout: 'Rehetra',
       licence: 'Laisansa',
@@ -111,6 +111,9 @@
         // Présentation « catalogue » : une ligne par parcours, numérotée en romain.
         // Le détail (objectifs, compétences, secteurs) se déplie à la demande.
         var metiers = (p.debouches || []).map(function (d) { return esc(text(d, 'metier')); }).join(' · ');
+        var metiersLigne = (p.metiers_mg && p.metiers_mg.length)
+          ? p.metiers_mg.join(' · ')
+          : metiers;
         var debDetail = (p.debouches || []).map(function (d) {
           return '<li class="dm"><b>' + esc(text(d, 'metier')) + '</b>' +
             '<span class="ds">' + esc(text(d, 'secteur')) + '</span>' +
@@ -125,9 +128,9 @@
           '<summary>' +
           '<span class="db-num" aria-hidden="true">' + ROMAN[i] + '</span>' +
           '<span class="db-t"><b>' + esc(text(p, 'nom')) + '</b>' +
-          '<span class="db-lv">' + esc(niveau) + ' · ' + esc(mention) + '</span></span>' +
-          '<span class="db-m">' + metiers + '</span>' +
-          '<span class="db-d">' + esc(text({ duree: p.duree, duree_mg: p.duree_mg }, 'duree')) + '</span>' +
+          '<span class="db-lv">' + esc(text({ mention: p.mention_mg }, 'mention') || (niveau + ' · ' + mention)) + '</span></span>' +
+          '<span class="db-m">' + esc(metiersLigne) + '</span>' +
+          '<span class="db-d">' + esc(text({ duree: p.duree, duree_mg: p.duree_pleine_mg || p.duree_mg }, 'duree')) + '</span>' +
           '<span class="db-x" aria-hidden="true">+</span>' +
           '</summary>' +
           '<div class="db-body">' +

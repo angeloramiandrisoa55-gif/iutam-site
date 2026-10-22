@@ -6,9 +6,9 @@
       "titre": "Préparer son dossier d'inscription",
       "titre_mg": "Fanomanana ny antontan-taratasy fisoratana anarana",
       "resume": "Les pièces à réunir et les étapes à suivre pour déposer un dossier complet, sans retour du secrétariat.",
-      "resume_mg": "Ny antontan-taratasy ilaina sy ny dingana tokony hovana mba hahazo antontan-taratasy feno, tsy misy valiny miverina avy amin'ny sekretaria.",
+      "resume_mg": "Fanazavana momba ireo antontan-taratasy ilaina sy ny dingana arahina mba hahafahana manolotra antontan-taratasy feno, ka hampihenana ny mety hiverenan'ny fangatahana noho ny tsy fahampiana.",
       "duree": "Environ une semaine",
-      "duree_mg": "Ny toanana iray manodidina",
+      "duree_mg": "Fotoana ilaina: manodidina ny iray volana.",
       "etapes": [
         {
           "t": "1. Vérifier l'éligibilité",
@@ -30,7 +30,7 @@
         },
         {
           "t": "4. Déposer au secrétariat",
-          "t_mg": "4. Manatotra amin'ny sekretaria",
+          "t_mg": "4. Manatotra amin’ny sekreteria",
           "d": "Déposez le dossier complet au secrétariat de l'IUTAM (campus d'Ambondrona) ou à l'annexe d'Antsohihy. Conservez une copie ou une photo de chaque pièce.",
           "d_mg": "Atolotra ny antontan-taratasy feno ao amin'ny sekretaria ny IUTAM (campus Ambondrona) na amin'ny annexe Antsohihy. Mitahiry kopey na sary ny antontan-taratasy tsirairay."
         },
@@ -62,21 +62,21 @@
       "id": "bourse",
       "icone": "🎓",
       "titre": "Demander une bourse ou une aide financière",
-      "titre_mg": "Fanangatahana bursa na fanampiana ara-money",
+      "titre_mg": "Fangatahana vatsim-pianarana na fanampiana ara-bola",
       "resume": "Bourses d'État, aide aux frais de scolarité : qui décide, comment faire, et à quel moment.",
-      "resume_mg": "Bursa avy amin'ny Fanjakana, fanampiana amin'ny saram-pianarana : iza no manao ny safidy, ahoana ny fangatahana, ary rahoviana.",
+      "resume_mg": "Fanazavana momba ny vatsim-pianarana omen'ny Fanjakana sy ny fanampiana amin'ny saram-pianarana: iza no afaka mangataka, ahoana ny fomba fangatahana ary rahoviana no tokony hanaovana izany.",
       "duree": "De 1 à 3 mois selon l'organisme",
-      "duree_mg": "Ny 1 ka hatramin'ny 3 volana, araka ny rafitra",
+      "duree_mg": "Fotoana ilaina: iray ka hatramin'ny telo volana, arakaraka ny rafitra misahana izany.",
       "etapes": [
         {
           "t": "1. Identifier l'aide visée",
-          "t_mg": "1. Hamaky ny fanampiana tiana",
+          "t_mg": "1. Hamaky ny vatsim-pianarana tiana",
           "d": "Bourse d'État (Bourse du Gouvernement), aide à l'inscription (frais Paid Schooling), aide d'urgence : les dispositifs diffèrent. Le service des bourses de l'Université de Mahajanga vous oriente sur le bon guichet.",
-          "d_mg": "Bursa avy amin'ny Fanjakana (Bourse du Gouvernement), fanampiana amin'ny fisoratana anarana (saram-pisoratana Paid Schooling), fanampiana Vonona maika: samy manana ny fomba manokana. Ny sampana bursa ao amin'ny Oniversiten'i Mahajanga dia mitarika anao amin'ny toerana mety."
+          "d_mg": "Fanazavana ny vatsim-pianarana omen’ny Fanjakana sy ny fanampiana amin’ny saram-pianarana: iza no afaka mangataka, ahoana ny fomba fangatahana ary rahoviana no tokony hanaovana izany."
         },
         {
           "t": "2. R gathering les justificatifs",
-          "t_mg": "2. Manangona ny porofo",
+          "t_mg": "2. Manangona ny antontan-taratasy",
           "d": "Relevé de notes du baccalauréat, attestation de scolarité, certificat de non-redevance, fiche de revenus du responsable légal, et le formulaire de demande de l'organisme concerné.",
           "d_mg": "Karatra ny naoty ny bakalaoraly, porofo fisoratana anarana, tapakila tsy mbola nandoa ny saram-pianarana, taratasy momba ny vola miditra amin'ny mpiantoka, ary ny taratasy fangatahana amin'ny rafitra ilaina."
         },
@@ -112,11 +112,11 @@
       "id": "stages",
       "icone": "🎯",
       "titre": "Organiser son stage",
-      "titre_mg": "Fanomanana ny fanazaran-tena",
+      "titre_mg": "Fanomanana ny fiofanana anaty toeram-piasana",
       "resume": "Trouver une structure d'accueil, signer la convention et préparer son rapport de stage.",
-      "resume_mg": "Mitady toerana fandraisana, manao sonia ny fifanarahana ary miomanana ny tatitra ny fanazaran-tena.",
+      "resume_mg": "Fitadiavana toeram-pandraisana, fanaovan-tsonia ny fifanarahana ary fanomanana ny tatitra momba ny fiofanana.",
       "duree": "De 1 à 2 mois avant le début du stage",
-      "duree_mg": "Ny 1 ka hatramin'ny 2 volana alohan'ny fanombohan'ny fanazaran-tena",
+      "duree_mg": "Fotoana ilaina: iray ka hatramin'ny roa volana alohan'ny hanombohan'ny fiofanana.",
       "etapes": [
         {
           "t": "1. Choisir une structure d'accueil",
@@ -132,13 +132,13 @@
         },
         {
           "t": "3. Travailler avec l'encadrant",
-          "t_mg": "3. Miasa miaraka amin'ny mpitantana",
+          "t_mg": "3. Miasa miaraka amin’ny mpitantana",
           "d": "Fixez le plan de travail, les objectifs et la fréquence des points. En L3 et M2, le sujet de mémoire doit être arrêté avec l'encadrant académique avant la fin du premier semestre.",
           "d_mg": "Arahaba ny tetik'asa, ny tanjona sy ny fotoana hanaovana ny fanapahan-kevitra. Amin'ny L3 sy M2, ny lohahevitra ny taratasy fanaovan-tsoratra dia tsy maintsy faranina miaraka amin'ny mpitantana ara-pianarana alohan'ny fiafarana ny semestera voalohany."
         },
         {
           "t": "4. Rédiger et soutenir",
-          "t_mg": "4. Mamorona sy manao fanazavana",
+          "t_mg": "4. Mamorona ny tatitra ary manao fanazavana",
           "d": "Le rapport suit le plan fourni par l'IUTAM. La soutenance a lieu devant un jury composé d'enseignants de l'IUTAM et de partenaires professionnels.",
           "d_mg": "Ny tatitra dia manaraka ny fandaharana omena ny IUTAM. Ny fanazavana dia atao eo anolohan'ny filankevitra misy mpampianatra avy amin'ny IUTAM sy mpanjara eo amin'ny sehatra."
         }

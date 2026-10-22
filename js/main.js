@@ -1,7 +1,7 @@
 // Langue et textes dynamiques
 var LANG=document.documentElement.lang==="mg"?"mg":"fr";
-var T={fr:{show:"💰 Voir le détail de la grille tarifaire",hide:"💰 Masquer la grille tarifaire",empty:"Aucune actualité pour le moment.",more:"Lire la suite",total:"Total annuel",illus:"Illustration",soon:"Informations à venir : contactez le secrétariat.",callsite:"Contacter ce site",info:"Plus d'informations",close:"Fermer",fixed:"de frais communs",from:"dès",year:"an",months:["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]},
-mg:{show:"💰 Hijery ny antsipirian'ny saram-pianarana",hide:"💰 Afeno ny lisitry ny saram-pianarana",empty:"Tsy mbola misy vaovao amin'izao fotoana izao.",more:"Hamaky bebe kokoa",total:"Totalin'ny taona",illus:"Sary ohatra",soon:"Mbola ho avy ny fanazavana : mifandraisa amin'ny sekretaria.",callsite:"Hifandray amin'ity toerana ity",info:"Fanazavana fanampiny",close:"Akatony",fixed:"sarany iraisana",from:"manomboka amin'ny",year:"taona",months:["Janoary","Febroary","Martsa","Aprily","Mey","Jona","Jolay","Aogositra","Septambra","Oktobra","Novambra","Desambra"]}}[LANG];
+var T={fr:{show:"💰 Voir le détail de la grille tarifaire",hide:"💰 Masquer la grille tarifaire",empty:"Aucune actualité pour le moment.",more:"Lire la suite",total:"Total annuel",illus:"Illustration",soon:"Informations à venir : contactez le secrétariat.",callsite:"Contacter ce site",info:"Plus d'informations",lieu:"📍 ",tel:"📞 ",mail:"✉️ ",parcours:"🎓 ",close:"Fermer",fixed:"de frais communs",from:"dès",year:"an",months:["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]},
+mg:{show:"💰 Hijery ny antsipirian'ny saram-pianarana",hide:"💰 Afeno ny lisitry ny saram-pianarana",empty:"Tsy mbola misy vaovao amin'izao fotoana izao.",more:"Hamaky bebe kokoa",total:"Totalin'ny taona",illus:"Sary ohatra",soon:"Mbola ho avy ny fanazavana : mifandraisa amin'ny sekreteria.",callsite:"Mifandraisa amin'ity toeram-pampianarana ity",info:"Fanazavana fanampiny",lieu:"📍 Toerana: ",tel:"Telefaonina: ",mail:"Mailaka: ",parcours:"Lalam-piofanana: ",close:"Akatony",fixed:"sarany iraisana",from:"manomboka amin'ny",year:"taona",months:["Janoary","Febroary","Martsa","Aprily","Mey","Jona","Jolay","Aogositra","Septambra","Oktobra","Novambra","Desambra"]}}[LANG];
 
 document.getElementById('y').textContent=new Date().getFullYear();
 // Le formulaire de contact et la lettre d'information sont gérés par js/forms.js
@@ -131,10 +131,10 @@ SL.innerHTML=L.map(function(s,i){
 var img=s.image?imgsrc(s.image):"",lk=safe(s.lien),info=[],
 tels=String(s.telephone||"").split("/").map(function(x){return{t:x.replace(/[^+0-9]/g,""),d:x.trim()}}).filter(function(x){return x.t}),
 mail=/^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/.test(s.email||"")?s.email:"";
-if(s.adresse)info.push("<li>📍 "+esc(pick(s,"adresse"))+"</li>");
-if(tels.length)info.push("<li>📞 "+tels.map(function(x){return '<a href="tel:'+x.t+'">'+esc(x.d)+"</a>"}).join(" · ")+"</li>");
-if(mail)info.push('<li>✉️ <a href="mailto:'+esc(mail)+'">'+esc(mail)+"</a></li>");
-if(s.parcours)info.push("<li>🎓 "+esc(pick(s,"parcours"))+"</li>");
+if(s.adresse)info.push("<li>"+T.lieu+esc(pick(s,"adresse"))+"</li>");
+if(tels.length)info.push("<li>"+T.tel+tels.map(function(x){return '<a href="tel:'+x.t+'">'+esc(x.d)+"</a>"}).join(" · ")+"</li>");
+if(mail)info.push('<li>'+T.mail+'<a href="mailto:'+esc(mail)+'">'+esc(mail)+"</a></li>");
+if(s.parcours)info.push("<li>"+T.parcours+esc(pick(s,"parcours"))+"</li>");
 var ph=(s.photos||[]).map(function(p){var u=imgsrc(p.src),al=esc(pick(p,"alt"));return '<a class="lb gph-a" href="'+esc(u)+'" data-alt="'+al+'"><img src="'+esc(u)+'" alt="'+al+'" loading="lazy"></a>'}).join("");
 var alt=esc(pick(s,"nom"));
 return '<article class="card nw site s-'+esc(s.id||"")+'" style="--i:'+i+'">'+(img?'<a class="lb cv" href="'+esc(img)+'" data-alt="'+alt+'"><img class="ni" src="'+esc(img)+'" alt="'+alt+'" loading="lazy"><span class="cv-zoom" aria-hidden="true">🔍</span>'+(s.illustration?'<span class="ill">'+esc(T.illus)+"</span>":"")+"</a>":'<span class="ic">📍</span>')+

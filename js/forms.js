@@ -20,7 +20,7 @@
     fr: {
       sending: 'Mampandefa…',
       ok: 'Misaotra ! Voalaza ny hafatrao, miverina haingana aminareo izahay.',
-      ko: 'Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekretaria.',
+      ko: 'Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekreteria.',
       offline: 'Tsy mifandray ny navigateurinao : voaomitry tao amin\'ny mailakao ny hafatrao.',
       required: 'Tsy maintsy fenoina ity saha ity.',
       email: 'Mangataka adiresy mailaka marina.',
@@ -30,17 +30,17 @@
       rate: 'Be loatra ny fandefasana avy amin\'ity fitaovana ity. Mangataka andramo indray.',
       saved: 'Voarakitra ny fisoratana anarana.',
       subscribe: 'Hisoratra anarana',
-      subscribed: 'Misaotra ! Voasoratra anarana amin\'ny gazety fampandrosoana.'
+      subscribed: 'Misaotra ! Voasoratra anarana amin\'ny taratasy fampitam-baovao.'
     },
     mg: {
       sending: 'Mampandefa…',
       ok: 'Misaotra ! Voalaza ny hafatrao, miverina haingana aminareo izahay.',
-      ko: 'Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekretaria.',
+      ko: 'Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekreteria.',
       offline: 'Tsy mifandray ny navigateurinao : voaomitry tao amin\'ny mailakao ny hafatrao.',
       required: 'Tsy maintsy fenoina ity saha ity.',
       email: 'Mangataka adiresy mailaka marina.',
       short: 'Tsy feno ny hafatra (10 litera farafahakeliny).',
-      consent: 'Tsy maintsy manaiky ianao mba hampiasaina ny angon-drindrinao.',
+      consent: 'Tsy maintsy manaiky ianao mba hampiasaina ny angon-drakitra omeko.',
       tooLong: 'Tsy fara ny saha ity.',
       rate: 'Be loatra ny fandefasana avy amin’ity fitaovana ity. Mangataka andramo indray.',
       saved: 'Voarakitra ny fisoratana anarana.',

@@ -2,9 +2,9 @@
   "messages": [
     {
       "titre": "Rejoignez l'IUTAM",
-      "titre_mg": "Miaraha amin'ny IUTAM",
+      "titre_mg": "MIARAHA AMIN'NY IUTAM",
       "texte": "Le savoir-faire au service du développement durable",
-      "texte_mg": "Ny fahaizana ho fanompoana ny fampandrosoana maharitra",
+      "texte_mg": "Ny fahaiza-manao ho fanompoana ny fampandrosoana maharitra.",
       "image": "images/seance-tp.jpg",
       "lien": "#admission",
       "libelle": "Découvrir l'admission",
@@ -12,53 +12,53 @@
     },
     {
       "titre": "6 parcours, 2 diplômes",
-      "titre_mg": "6 lilan-tanana, 2 diplôma",
+      "titre_mg": "Lalam-piofanana 6 · diplaoma 2",
       "texte": "De la Licence Professionnelle à l'Ingéniorat au grade de Master, en agronomie et environnement",
-      "texte_mg": "Avy amin'ny Laisansa Matihanina ka hatramin'ny Injenieran'ny Mastera, amin'ny agronomia sy ny tontolo iainana",
+      "texte_mg": "Ao anatin'ny rafitra LMD, ny lalam-piofanana enina dia mitondra any amin'ny diplaoma Laisansa Matihanina (Bakalorea + 3) na Diplaoma Injeniera amin'ny ambaratonga Mastera (Bakalorea + 5).",
       "image": "images/pub-elevage.jpg",
       "lien": "#formations",
       "libelle": "Voir les formations",
-      "libelle_mg": "Hijery ny fanofanana"
+      "libelle_mg": "Jereo ny lalam-piofanana"
     },
     {
       "titre": "Une antenne à Maevatanana",
-      "titre_mg": "Misy annexe ao Maevatanana",
+      "titre_mg": "IUTAM MAEVATANANA",
       "texte": "L'IUTAM forme aussi loin de Mahajanga : agriculture, élevage et environnement, dans les locaux de l'antenne.",
-      "texte_mg": "Ny IUTAM dia mampianatra koa lavitra ny Mahajanga : fambolena, fiompiana ary tontolo iainana, ao amin'ny tranon'ny annexe.",
+      "texte_mg": "Misy annexe ao Maevatanana: ny IUTAM dia mampianatra koa lavitra ny Mahajanga, amin'ny fambolena, ny fiompiana ary ny tontolo iainana.",
       "image": "images/maevatanana.jpg",
       "lien": "#sites-list",
       "libelle": "Voir l'antenne",
-      "libelle_mg": "Hijery ny annexe"
+      "libelle_mg": "Jereo ny annexe"
     },
     {
       "titre": "Des débouchés concrets",
-      "titre_mg": "Vokatra mazava ny asa",
+      "titre_mg": "SEHATRA ARAK'ASA SY FAHAFAHANA MIDITRA AMIN'NY ASA",
       "texte": "24 métiers visés par nos formations : technicien agricole, ingénieur agronome, agent de l'eau, responsable de production…",
-      "texte_mg": "24 asa tiana ho an'ny lilan-pianarantsika : teknisy agrikola, injeniera agronoma, mpiambina ny rano, mpiantoka ny famokarana…",
+      "texte_mg": "Ireto avy ny asa azo kendrena arakaraka ny lalam-piofanana sy ny sehatra afaka mandray ireo nahazo diplaoma.",
       "image": "images/pub-agriculture.jpg",
       "lien": "#debouches",
       "libelle": "Explorer les débouchés",
-      "libelle_mg": "Hijery ny asa azo tanterahina"
+      "libelle_mg": "Jereo ny asa azo alaina"
     },
     {
       "titre": "Bourses et aides financières",
-      "titre_mg": "Bursa sy fanampiana ara-money",
+      "titre_mg": "VATSIM-PIANARANA SY FANAMPIANA ARA-BOLA",
       "texte": "Le guide pas à pas pour demander une bourse et réunir les bonnes pièces",
-      "texte_mg": "Ny fitantanana an-tsaky ho an'ny fangatahana bursa sy ny fanangonana ny antontan-taratasy mety",
+      "texte_mg": "Fanazavana momba ireo vatsim-pianarana sy fanampiana, ny antontan-taratasy ilaina sy ny kalandrie.",
       "image": "images/diplomes.jpg",
       "lien": "#guides",
       "libelle": "Voir le guide",
-      "libelle_mg": "Hijery ny fitantanana"
+      "libelle_mg": "Jereo ny fitantanana"
     },
     {
       "titre": "Vos questions, nos réponses",
-      "titre_mg": "Ny fanontanianao, ny valinay",
+      "titre_mg": "FANONTANIANA APETRAKA MATETIKA",
       "texte": "Admission, frais, formation, stages : la FAQ répond aux questions les plus posées",
-      "texte_mg": "Fidirana, saram-pianarana, fanofanana, fanazaran-tena : ny fanontaniana matetika dia manana valiny",
+      "texte_mg": "Valin'ireo fanontaniana apetraka matetika momba ny fidirana, ny saram-pianarana ary ny fiofanana.",
       "image": "images/labo.jpg",
       "lien": "#faq",
       "libelle": "Consulter la FAQ",
-      "libelle_mg": "Hijery ny FAQ"
+      "libelle_mg": "Jereo ny fanontaniana"
     }
   ]
 }
