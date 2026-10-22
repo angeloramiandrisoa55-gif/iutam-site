@@ -15,22 +15,22 @@
   var T = {
     fr: {
       empty: 'Contenu indisponible pour le moment.',
-      metiers: 'Métiers',
-      secteur: 'Secteur',
-      objectifs: 'Objectifs de la formation',
-      competences: 'Compétences',
-      pieces: 'Pièces à réunir',
-      etapes: 'Étapes',
-      duree: 'Durée indicative',
+      metiers: 'Asa',
+      secteur: 'Sehatra',
+      objectifs: 'Tanjon\'ny fanofanana',
+      competences: 'Fahaizana',
+      pieces: 'Antontan-taratasy ilaina',
+      etapes: 'Dingana',
+      duree: 'Faharetan\'ny fotoana',
       resultats: 'résultat(s)',
-      tout: 'Tout',
-      licence: 'Licence',
-      master: 'Ingéniorat',
-      mentionLic: 'Biologie Appliquée',
-      mentionMas: 'Agro-biodiversité et Environnement',
-      bac: 'Bac :',
-      voirPlus: 'Voir le détail',
-      replier: 'Replier'
+      tout: 'Rehetra',
+      licence: 'Laisansa',
+      master: 'Injenieran\'ny Mastera',
+      mentionLic: 'Biolojia Ampiharina',
+      mentionMas: 'Agro-biodiversité sy Tontolo iainana',
+      bac: 'Bakalorea :',
+      voirPlus: 'Hijery ny antsipiriany',
+      replier: 'Hidio'
     },
     mg: {
       empty: 'Tsy azo ny votoatiny amin\'ity fotoana ity.',
@@ -43,11 +43,11 @@
       duree: 'Faharetan\'ny fotoana',
       resultats: 'valiny',
       tout: 'Rehetra',
-      licence: 'Licence',
-      master: 'Ingéniorat',
-      mentionLic: 'Biologie Appliquée',
-      mentionMas: 'Agro-biodiversité et Tontolo iainana',
-      bac: 'Bakalaoraly :',
+      licence: 'Laisansa',
+      master: 'Injenieran\'ny Mastera',
+      mentionLic: 'Biolojia Ampiharina',
+      mentionMas: 'Agro-biodiversité sy Tontolo iainana',
+      bac: 'Bakalorea :',
       voirPlus: 'Hijery ny antsipiriany',
       replier: 'Hidio'
     }
@@ -85,8 +85,8 @@
   /* ------------------------------------------------------------- débouchés */
 
   var ICONES = {
-    agriculture: '🌾', elevage: '🐄', environnement: '🌿',
-    peche: '🐟', padd: '🥛', pvtdd: '🌴'
+    agriculture: '🌾\', elevage: \'🐄\', environnement: \'🌿',
+    peche: '🐟\', padd: \'🥛\', pvtdd: \'🌴'
   };
 
   // Numération romaine : registre « catalogue » plutôt que « application ».
@@ -127,7 +127,7 @@
           '<span class="db-t"><b>' + esc(text(p, 'nom')) + '</b>' +
           '<span class="db-lv">' + esc(niveau) + ' · ' + esc(mention) + '</span></span>' +
           '<span class="db-m">' + metiers + '</span>' +
-          '<span class="db-d">' + esc(p.duree || '') + '</span>' +
+          '<span class="db-d">' + esc(text({ duree: p.duree, duree_mg: p.duree_mg }, 'duree')) + '</span>' +
           '<span class="db-x" aria-hidden="true">+</span>' +
           '</summary>' +
           '<div class="db-body">' +

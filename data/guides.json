@@ -14,13 +14,13 @@
           "t": "1. Vérifier l'éligibilité",
           "t_mg": "1. Hamaky ny mety ho anarana",
           "d": "Votre série de baccalauréat est-elle acceptée pour le parcours visé ? Agriculture, Élevage et Pêche et Aquiculture acceptent C, D, S, OSE et Agricole ; Environnement accepte en plus A2.",
-          "d_mg": "Ny sokajy bakalaoraly anao dia ekaina ve amin'ny lilan-tanana tianao? Ny Fambolena, Fiompiana ary Jono sy Fiompiana trondro dia ekaina ny C, D, S, OSE ary Agricole; ny Tontolo iainana dia ekaina koa ny A2."
+          "d_mg": "Ny sokajy bakalaoraly anao dia ekaina ve amin'ny lilan-tanana tianao ? Ny Fambolena, ny Fiompiana ary ny Jono sy Fiompiana Trondro dia ekaina ny C, D, S, OSE ary Agricole ; ny Tontolo iainana dia ekaina koa ny A2."
         },
         {
           "t": "2. Constituer les pièces",
           "t_mg": "2. Manangona ny antontan-taratasy",
-          "d": "Préparez une photocopie lisible du baccalauréat, le relevé de notes du baccalauréat, une pièce d'identité, quatre photos d'identité, le certificat de scolarité et, le cas échéant, les justificatifs de bourse ou dukan-tena (frais Paid Schooling).",
-          "d_mg": "Manomàna farano dikan-kopey azo verina ny bakalaoraly, ny karatra ny naoty ny bakalaoraly, ny karatra fanondroana, ny sary fanalahidy efatra, ny tapakila fisoratana anarana ary raha misy ny porofo fanaovana fandoavana na dikan-tena (saram-pianarana Paid Schooling)."
+          "d": "Préparez une photocopie lisible du baccalauréat, le relevé de notes du baccalauréat, une pièce d'identité, quatre photos d'identité, le certificat de scolarité et, le cas échéant, les justificatifs de bourse ou de dispense.",
+          "d_mg": "Manomàna farano dikan-kopey azo verina ny bakalaoraly, ny karatra ny naoty ny bakalaoraly, ny karam-pihidentity, ny sary fanalahidy efatra, ny tapakila fisoratana anarana ary, raha ilaina, ny porofo fanaovana fandoavana na fangatahana fangatahana."
         },
         {
           "t": "3. Remplir et signer",
@@ -32,7 +32,7 @@
           "t": "4. Déposer au secrétariat",
           "t_mg": "4. Manatotra amin'ny sekretaria",
           "d": "Déposez le dossier complet au secrétariat de l'IUTAM (campus d'Ambondrona) ou à l'annexe d'Antsohihy. Conservez une copie ou une photo de chaque pièce.",
-          "d_mg": "Atolotra ny antontan-taratasy feno ao amin'ny sekretaria (campus d'Ambondrona) na amin'ny annexe Antsohihy. Mitahiry kopey na sary ny antontan-taratasy tsirairay."
+          "d_mg": "Atolotra ny antontan-taratasy feno ao amin'ny sekretaria ny IUTAM (campus Ambondrona) na amin'ny annexe Antsohihy. Mitahiry kopey na sary ny antontan-taratasy tsirairay."
         },
         {
           "t": "5. Confirmer l'inscription",
@@ -52,10 +52,10 @@
       "pieces_mg": [
         "Dikan-kopey ny bakalaoraly",
         "Karatra ny naoty ny bakalaoraly",
-        "Karatra fanondroana mbola ao aloha",
+        "Karam-pihidentity mbola ao aloha",
         "Sary fanalahidy efatra",
         "Tapakila fisoratana anarana ny taona teo aloha",
-        "Porofo fanaovana bursa na dikan-tena (raha ilaina)"
+        "Porofo fanaovana bursa na fangatahana (raha ilaina)"
       ]
     },
     {
@@ -70,9 +70,9 @@
       "etapes": [
         {
           "t": "1. Identifier l'aide visée",
-          "t_mg": "1. Ham identifying ny fanampiana tiana",
+          "t_mg": "1. Hamaky ny fanampiana tiana",
           "d": "Bourse d'État (Bourse du Gouvernement), aide à l'inscription (frais Paid Schooling), aide d'urgence : les dispositifs diffèrent. Le service des bourses de l'Université de Mahajanga vous oriente sur le bon guichet.",
-          "d_mg": "Bursa avy amin'ny Fanjakana (Bourse du Gouvernement), fanampiana amin'ny fisoratana anarana (saram-pianarana Paid Schooling), fanampianaVonona maika: samy manana ny fomba manokana. Ny sampana bursa ao amin'ny Oniversiten'i Mahajanga dia mitarika anao amin'ny toerana mety."
+          "d_mg": "Bursa avy amin'ny Fanjakana (Bourse du Gouvernement), fanampiana amin'ny fisoratana anarana (saram-pisoratana Paid Schooling), fanampiana Vonona maika: samy manana ny fomba manokana. Ny sampana bursa ao amin'ny Oniversiten'i Mahajanga dia mitarika anao amin'ny toerana mety."
         },
         {
           "t": "2. R gathering les justificatifs",
@@ -112,29 +112,29 @@
       "id": "stages",
       "icone": "🎯",
       "titre": "Organiser son stage",
-      "titre_mg": "Fanomanana ny fanatramana",
+      "titre_mg": "Fanomanana ny fanazaran-tena",
       "resume": "Trouver une structure d'accueil, signer la convention et préparer son rapport de stage.",
-      "resume_mg": "Mitady toerana fandraisana, manao sonia ny fifanarahana ary miomanana ny tatitra ny fanatramana.",
+      "resume_mg": "Mitady toerana fandraisana, manao sonia ny fifanarahana ary miomanana ny tatitra ny fanazaran-tena.",
       "duree": "De 1 à 2 mois avant le début du stage",
-      "duree_mg": "Ny 1 ka hatramin'ny 2 volana alohan'ny fanombohan'ny fanatramana",
+      "duree_mg": "Ny 1 ka hatramin'ny 2 volana alohan'ny fanombohan'ny fanazaran-tena",
       "etapes": [
         {
           "t": "1. Choisir une structure d'accueil",
           "t_mg": "1. Manidy toerana fandraisana",
-          "d": "Une exploitation agricole, un atelier d'élevage, un bureau d'études, une ONG, un laboratoire ou une entreprise agroalimentaire. Les stages en milieu professionnel sontpreadés en L1 (imprégnation), L2 (ouvrier), L3 (mémoire) et M2 (mémoire d'ingéniorat).",
-          "d_mg": "Tantara fambolena, toeram-piompiana, ofisina fanadihadiana, ONG, laboratoary na orinasa sakafo. Ny fanatramana amin'ny tontolo iainana dia zaraina amin'ny L1 (famarihana), L2 (mpiasa), L3 (fianatra) ary M2 (fianatra amin'ny injeniorat)."
+          "d": "Une exploitation agricole, un atelier d'élevage, un bureau d'études, une ONG, un laboratoire ou une entreprise agroalimentaire. Les stages en milieu professionnel sont répartis en L1 (imprégnation), L2 (ouvrier), L3 (mémoire) et M2 (mémoire d'ingéniorat).",
+          "d_mg": "Tantara fambolena, toeram-piompiana, ofisina fanadihadiana, ONG, laboratoary na orinasa sakafo. Ny fanazaran-tena ao amin'ny tontolon'ny asa dia zaraina amin'ny L1 (fampidirana), L2 (mpiasa), L3 (taratasy fanaovan-tsoratra) ary M2 (taratasy fanaovan-tsoratra injeniera)."
         },
         {
           "t": "2. Signer la convention de stage",
           "t_mg": "2. Manao sonia ny fifanarahana",
           "d": "La convention est établie en trois exemplaires (étudiant, entreprise, IUTAM). Le secrétariat vous fournit le modèle. Faites-la viser par l'encadrant de l'IUTAM avant le début du stage.",
-          "d_mg": "Ny fifanarahana dia misy kopia telo (mpianatra, orinasa, IUTAM). Ny sekretaria dia manome ny modely. Ataovy soniana ny mpitantana ny IUTAM alohan'ny fanombohana ny fanatramana."
+          "d_mg": "Ny fifanarahana dia misy kopia telo (mpianatra, orinasa, IUTAM). Ny sekretaria dia manome ny modely. Ataovy soniana ny mpitantana ny IUTAM alohan'ny fanombohana ny fanazaran-tena."
         },
         {
           "t": "3. Travailler avec l'encadrant",
           "t_mg": "3. Miasa miaraka amin'ny mpitantana",
           "d": "Fixez le plan de travail, les objectifs et la fréquence des points. En L3 et M2, le sujet de mémoire doit être arrêté avec l'encadrant académique avant la fin du premier semestre.",
-          "d_mg": "Arahaba ny tetik'asa, ny tanjona sy ny fotoana hanaovana ny fanapahan-kevitra. Amin'ny L3 sy M2, ny lohahevitra ny fianatra dia tsy maintsy faranina miaraka amin'ny mpitantana ara-pianarana alohan'ny fiafarana ny semestera voalohany."
+          "d_mg": "Arahaba ny tetik'asa, ny tanjona sy ny fotoana hanaovana ny fanapahan-kevitra. Amin'ny L3 sy M2, ny lohahevitra ny taratasy fanaovan-tsoratra dia tsy maintsy faranina miaraka amin'ny mpitantana ara-pianarana alohan'ny fiafarana ny semestera voalohany."
         },
         {
           "t": "4. Rédiger et soutenir",
@@ -152,7 +152,7 @@
       "pieces_mg": [
         "Taratasy fampirisiana",
         "CV vaovao",
-        "Fifanarahana fanatramana voasonia telo",
+        "Fifanarahana fanazaran-tena voasonia telo",
         "Porofo fanabeazana ny mpitantana ao amin'ny toerana fandraisana"
       ]
     }

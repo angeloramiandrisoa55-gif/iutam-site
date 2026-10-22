@@ -2,19 +2,19 @@
   "messages": [
     {
       "titre": "Rejoignez l'IUTAM",
-      "titre_mg": "Hiato amin'ny IUTAM",
+      "titre_mg": "Miaraha amin'ny IUTAM",
       "texte": "Le savoir-faire au service du développement durable",
-      "texte_mg": "Ny fahaizana ho fanompoana ny fandrosoana maharitra",
+      "texte_mg": "Ny fahaizana ho fanompoana ny fampandrosoana maharitra",
       "image": "images/seance-tp.jpg",
       "lien": "#admission",
       "libelle": "Découvrir l'admission",
-      "libelle_mg": "Hitady ny fidirana"
+      "libelle_mg": "Fantaro ny fepetra fidirana"
     },
     {
       "titre": "6 parcours, 2 diplômes",
       "titre_mg": "6 lilan-tanana, 2 diplôma",
       "texte": "De la Licence Professionnelle à l'Ingéniorat au grade de Master, en agronomie et environnement",
-      "texte_mg": "Avy amin'ny Licence Professionnelle ka hatramin'ny Ingéniorat amin'ny am-barajy ny Master, amin'ny agronomia sy ny tontolo iainana",
+      "texte_mg": "Avy amin'ny Laisansa Matihanina ka hatramin'ny Injenieran'ny Mastera, amin'ny agronomia sy ny tontolo iainana",
       "image": "images/pub-elevage.jpg",
       "lien": "#formations",
       "libelle": "Voir les formations",
@@ -38,13 +38,13 @@
       "image": "images/pub-agriculture.jpg",
       "lien": "#debouches",
       "libelle": "Explorer les débouchés",
-      "libelle_mg": "Hijery ny asa azo alaina"
+      "libelle_mg": "Hijery ny asa azo tanterahina"
     },
     {
       "titre": "Bourses et aides financières",
       "titre_mg": "Bursa sy fanampiana ara-money",
       "texte": "Le guide pas à pas pour demander une bourse et réunir les bonnes pièces",
-      "texte_mg": "Ny fitantanana ho an'ny fangatahana bursa sy ny fanangonana ny antontan-taratasy mety",
+      "texte_mg": "Ny fitantanana an-tsaky ho an'ny fangatahana bursa sy ny fanangonana ny antontan-taratasy mety",
       "image": "images/diplomes.jpg",
       "lien": "#guides",
       "libelle": "Voir le guide",
@@ -54,7 +54,7 @@
       "titre": "Vos questions, nos réponses",
       "titre_mg": "Ny fanontanianao, ny valinay",
       "texte": "Admission, frais, formation, stages : la FAQ répond aux questions les plus posées",
-      "texte_mg": "Fidirana, saram-pianarana, fanofanana, fanatramana : ny fanontaniana matetika dia manana valiny",
+      "texte_mg": "Fidirana, saram-pianarana, fanofanana, fanazaran-tena : ny fanontaniana matetika dia manana valiny",
       "image": "images/labo.jpg",
       "lien": "#faq",
       "libelle": "Consulter la FAQ",

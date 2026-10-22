@@ -18,10 +18,23 @@
       "selection": "Sélection de dossiers",
       "selection_mg": "Safidy araka ny antontan-taratasy",
       "stages": [
-        { "niveau": "L1", "titre": "Stage d'imprégnation", "titre_mg": "Fanatramana famarihana" },
-        { "niveau": "L2", "titre": "Stage ouvrier", "titre_mg": "Fanatramana mpiasa" },
-        { "niveau": "L3", "titre": "Stage de mémoire de Licence", "titre_mg": "Fanatramana fianatra momba ny Tetik'asa Famaranana" }
-      ]
+        {
+          "niveau": "L1",
+          "titre": "Stage d'imprégnation",
+          "titre_mg": "Fanatramana famarihana"
+        },
+        {
+          "niveau": "L2",
+          "titre": "Stage ouvrier",
+          "titre_mg": "Fanatramana mpiasa"
+        },
+        {
+          "niveau": "L3",
+          "titre": "Stage de mémoire de Licence",
+          "titre_mg": "Fanatramana fianatra momba ny Tetik'asa Famaranana"
+        }
+      ],
+      "duree_mg": "3 ans"
     },
     {
       "id": "ingeniorat",
@@ -37,8 +50,13 @@
       "selection": "Sélection de dossiers puis entretien",
       "selection_mg": "Safidy araka ny antontan-taratasy dia manaraka amin'ny fanadinana",
       "stages": [
-        { "niveau": "M2", "titre": "Stage de mémoire d'ingéniorat", "titre_mg": "Fanatramana fianatra momba ny Tetik'asa Famaranana" }
-      ]
+        {
+          "niveau": "M2",
+          "titre": "Stage de mémoire d'ingéniorat",
+          "titre_mg": "Fanatramana fianatra momba ny Tetik'asa Famaranana"
+        }
+      ],
+      "duree_mg": "2 ans"
     }
   ],
   "parcours": [
@@ -49,10 +67,16 @@
       "niveau": "licence",
       "duree": "3 ans",
       "bac": "C, D, S, OSE et Agricole",
-      "bac_series": ["C", "D", "S", "OSE", "Agricole"],
+      "bac_series": [
+        "C",
+        "D",
+        "S",
+        "OSE",
+        "Agricole"
+      ],
       "image": "images/pub-agriculture.jpg",
       "resume": "Acquérez les bases scientifiques, les techniques et les technologies de la production agricole, du terrain au laboratoire.",
-      "resume_mg": "Mahazo ny fanalahidy miavina, ny teknika ary ny teknolojia momba ny fambolena, avy eo amin'ny tany ka hatramin'ny laboratoary.",
+      "resume_mg": "Mahazo ny fanalahidy miavina, ny teknika sy ny teknolojia momba ny fambolena, avy eo amin'ny tany ka hatramin'ny laboratoary.",
       "objectifs": [
         "Maîtriser les itinéraires techniques des principales cultures de la région",
         "Conduire un essai agronomique et interpréter ses résultats",
@@ -74,13 +98,42 @@
         "Toekarena agronomika sy fitantanana ny tantara"
       ],
       "debouches": [
-        { "metier": "Technicien agricole", "metier_mg": "Teknisy agrikola", "secteur": "Exploitations agricoles", "secteur_mg": "Tantara fambolena", "detail": "Suivi des cultures, conseil technique de proximité, préparation des campagnes." },
-        { "metier": "Responsable de production végétale", "metier_mg": "Mpiantoka ny famokarana ny zavamaniry", "secteur": "Coopératives et sociétés agricoles", "secteur_mg": "Fikambanana sy fikambanan-kasa ara-pambolena", "detail": "Planification des semis, encadrement des producteurs, contrôle qualité de la récolte." },
-        { "metier": "Conseiller agricole", "metier_mg": "Mpampianatra ara-pambolena", "secteur": "Services de développement rural", "secteur_mg": "Sampon'ny fandrosoana ny tany", "detail": "Accompagnement des producteurs, appui aux projets, diffusion des itinéraires techniques." },
-        { "metier": "Chef d'exploitation", "metier_mg": "Lehibe ny tantara", "secteur": "Secteur privé", "secteur_mg": "Sehatra manokana", "detail": "Gestion complète d'une exploitation, du plan de campagne à la commercialisation." }
+        {
+          "metier": "Technicien agricole",
+          "metier_mg": "Teknisy agrikola",
+          "secteur": "Exploitations agricoles",
+          "secteur_mg": "Tantara fambolena",
+          "detail": "Suivi des cultures, conseil technique de proximité, préparation des campagnes.",
+          "detail_mg": "Fanaraha-maso ny voly, torohevitra teknika akaiky, fanomanana ny fanaovana saha."
+        },
+        {
+          "metier": "Responsable de production végétale",
+          "metier_mg": "Mpiantoka ny famokarana ny zavamaniry",
+          "secteur": "Coopératives et sociétés agricoles",
+          "secteur_mg": "Fikambanana sy fikambanan-kasa ara-pambolena",
+          "detail": "Planification des semis, encadrement des producteurs, contrôle qualité de la récolte.",
+          "detail_mg": "Fandrindrana ny fambolena, fanaraha-maso ny mpamokatra, fanaraha-maso ny kalita ny vokatra."
+        },
+        {
+          "metier": "Conseiller agricole",
+          "metier_mg": "Mpampianatra ara-pambolena",
+          "secteur": "Services de développement rural",
+          "secteur_mg": "Sampon'ny fandrosoana ny tany",
+          "detail": "Accompagnement des producteurs, appui aux projets, diffusion des itinéraires techniques.",
+          "detail_mg": "Fanaraha-maso ny mpamokatra, fanampiana ny tetik'asa, fizarazarana ny lalana ara-teknika."
+        },
+        {
+          "metier": "Chef d'exploitation",
+          "metier_mg": "Lehibe ny tantara",
+          "secteur": "Secteur privé",
+          "secteur_mg": "Sehatra manokana",
+          "detail": "Gestion complète d'une exploitation, du plan de campagne à la commercialisation.",
+          "detail_mg": "Fitantanana feno ny tantara, avy amin'ny fandrindrana ny fanaovana ka hatramin'ny fivarotana."
+        }
       ],
       "poursuite": "Ingéniorat P.V.T.D.D., na fiofanana manana mari-pahaizana amin'ny agronomia sy ny fitantanana ny rano.",
-      "poursuite_mg": "Ingéniorat P.V.T.D.D., na fiofanana manana mari-pahaizana amin'ny agronomia sy ny fitantanana ny rano."
+      "poursuite_mg": "Injenieran'ny Mastera P.V.T.D.D., na fiofanana manana mari-pahaizana amin'ny agronomia sy ny fitantanana ny rano.",
+      "duree_mg": "3 taona"
     },
     {
       "id": "elevage",
@@ -89,7 +142,13 @@
       "niveau": "licence",
       "duree": "3 ans",
       "bac": "C, D, S, OSE et Agricole",
-      "bac_series": ["C", "D", "S", "OSE", "Agricole"],
+      "bac_series": [
+        "C",
+        "D",
+        "S",
+        "OSE",
+        "Agricole"
+      ],
       "image": "images/pub-elevage.jpg",
       "resume": "Découvrez les techniques et les technologies de l'élevage, appuyées par des bases scientifiques solides et la pratique de terrain.",
       "resume_mg": "Hitantara ny teknika sy ny teknolojia momba ny fiompiana, mifototra amin'ny fanalahidy miavina sy ny fanaovana an-tany.",
@@ -114,13 +173,42 @@
         "Fiompiana sy fitantanana ny sakafo"
       ],
       "debouches": [
-        { "metier": "Technicien d'élevage", "metier_mg": "Teknisy fiompiana", "secteur": "Élevages et coopératives", "secteur_mg": "Fiompiana sy fikambanana", "detail": "Suivi des troupeaux, alimentation, soins quotidiens, registers d'élevage." },
-        { "metier": "Responsable de ferme avicole ou porcine", "metier_mg": "Mpiantoka ny tany fambolena sy ny biby", "secteur": "Production intensive", "secteur_mg": "Famokarana mahery", "detail": "Pilotage des bâtiments, de l'ambiance et des cycles de production." },
-        { "metier": "Agent d'élevage", "metier_mg": "Mpiasa fiompiana", "secteur": "Servicesveterinaires et élevage", "secteur_mg": "Sampon'ny biby sy ny mpanao dokotera", "detail": "Appui aux éleveurs, prophylaxis, collecte et mise en marché." },
-        { "metier": "Ingénieur agronome (après Ingéniorat)", "metier_mg": "Injeniera agronoma (aorian'ny Ingéniorat)", "secteur": "P.A.D.D.", "secteur_mg": "P.A.D.D.", "detail": "Poursuite vers l'Ingéniorat Production Animale et Développement Durable." }
+        {
+          "metier": "Technicien d'élevage",
+          "metier_mg": "Teknisy fiompiana",
+          "secteur": "Élevages et coopératives",
+          "secteur_mg": "Fiompiana sy fikambanana",
+          "detail": "Suivi des troupeaux, alimentation, soins quotidiens, registers d'élevage.",
+          "detail_mg": "Fanaraha-maso ny biby, fand feeding, fikarakarana isan'andro, bokin'ny fiompiana."
+        },
+        {
+          "metier": "Responsable de ferme avicole ou porcine",
+          "metier_mg": "Mpiantoka ny tany fambolena sy ny biby",
+          "secteur": "Production intensive",
+          "secteur_mg": "Famokarana mahery",
+          "detail": "Pilotage des bâtiments, de l'ambiance et des cycles de production.",
+          "detail_mg": "Fitantanana ny trano, ny toerana ary ny dingana famokarana."
+        },
+        {
+          "metier": "Agent d'élevage",
+          "metier_mg": "Mpiasa fiompiana",
+          "secteur": "Servicesveterinaires et élevage",
+          "secteur_mg": "Sampon'ny biby sy ny mpanao dokotera",
+          "detail": "Appui aux éleveurs, prophylaxis, collecte et mise en marché.",
+          "detail_mg": "Fanampiana ny mpamokatra, fiarovana, fanangonana ary fanidirana an-tserana."
+        },
+        {
+          "metier": "Ingénieur agronome (après Ingéniorat)",
+          "metier_mg": "Injeniera agronoma (aorian'ny Injeniorat)",
+          "secteur": "P.A.D.D.",
+          "secteur_mg": "P.A.D.D.",
+          "detail": "Poursuite vers l'Ingéniorat Production Animale et Développement Durable.",
+          "detail_mg": "Manohy amin'ny Injenieran'ny Mastera Famokarana Biby sy Fampandrosoana Maharitra."
+        }
       ],
       "poursuite": "Ingéniorat P.A.D.D. : famokarana biby, bioteknika ary fandrosoana maharitra.",
-      "poursuite_mg": "Ingéniorat P.A.D.D. : famokarana biby, bioteknika ary fandrosoana maharitra."
+      "poursuite_mg": "Injenieran'ny Mastera P.A.D.D. : famokarana biby, bioteknika ary fampandrosoana maharitra.",
+      "duree_mg": "3 taona"
     },
     {
       "id": "environnement",
@@ -129,10 +217,17 @@
       "niveau": "licence",
       "duree": "3 ans",
       "bac": "A2, C, D, S, OSE et Agricole",
-      "bac_series": ["A2", "C", "D", "S", "OSE", "Agricole"],
+      "bac_series": [
+        "A2",
+        "C",
+        "D",
+        "S",
+        "OSE",
+        "Agricole"
+      ],
       "image": "images/pub-environnement.jpg",
       "resume": "Étudiez les milieux naturels et leurs enjeux : gestion de l'eau, des sols, de la biodiversité et développement durable.",
-      "resume_mg": "Jereo ny tontolo iainana sy ny olana mifandray aminy : fitantanana ny rano, ny tany, ny biodiversita ary ny fandrosoana maharitra.",
+      "resume_mg": "Jereo ny tontolo iainana sy ny olana mifandray aminy : fitantanana ny rano, ny tany, ny biodiversita ary fampandrosoana maharitra.",
       "objectifs": [
         "Diagnostiquer l'état d'un milieu (eau, sol, écosystème)",
         "Construire et mettre en œuvre un plan de gestion durable",
@@ -154,13 +249,42 @@
         "Biodiversita sy ekolojia ampiharina"
       ],
       "debouches": [
-        { "metier": "Technicien environnement", "metier_mg": "Teknisy tontolo iainana", "secteur": "Bureaux d'études", "secteur_mg": "Ofisina fanadihadiana", "detail": "Prélèvements, analyses, rédaction de rapports techniques et de dossiers d'impact." },
-        { "metier": "Agent de l'eau et de l'assainissement", "metier_mg": "Mpiambina ny rano sy ny fadiovana", "secteur": "Collectivités et ONG", "secteur_mg": "Kaominota sy ONG", "detail": "Exploitation et maintenance des ouvrages, sensibilisation des ménages." },
-        { "metier": "Conservateur d'aires protégées", "metier_mg": "Mpiambina ny toerana voatokana", "secteur": "Parcs et aires protégées", "secteur_mg": "Parcs sy toerana voatokana", "detail": "Inventaires d'espèces, suivi écologique, maraude et médiation." },
-        { "metier": "Chargé d'assainissement et de déchets", "metier_mg": "Mpiandraikitra ny fadiovana sy ny waste", "secteur": "Gestion des déchets", "secteur_mg": "Fitantanana ny waste", "detail": "Collecte, tri, valorisation et traitement des déchets solides." }
+        {
+          "metier": "Technicien environnement",
+          "metier_mg": "Teknisy tontolo iainana",
+          "secteur": "Bureaux d'études",
+          "secteur_mg": "Ofisina fanadihadiana",
+          "detail": "Prélèvements, analyses, rédaction de rapports techniques et de dossiers d'impact.",
+          "detail_mg": "Fangatrohana, fanadihadiana, famoronana ny tatitra teknika sy ny antontan-taratasy momba ny fiantraikan'ny tontolo iainana."
+        },
+        {
+          "metier": "Agent de l'eau et de l'assainissement",
+          "metier_mg": "Mpiambina ny rano sy ny fadiovana",
+          "secteur": "Collectivités et ONG",
+          "secteur_mg": "Kaominota sy ONG",
+          "detail": "Exploitation et maintenance des ouvrages, sensibilisation des ménages.",
+          "detail_mg": "Fitantanana sy fikarakarana ny rafitra, fanentanana ny tokantrano."
+        },
+        {
+          "metier": "Conservateur d'aires protégées",
+          "metier_mg": "Mpiambina ny toerana voatokana",
+          "secteur": "Parcs et aires protégées",
+          "secteur_mg": "Parks sy toerana voatokana",
+          "detail": "Inventaires d'espèces, suivi écologique, maraude et médiation.",
+          "detail_mg": "Fan inventories ny karazana, fanaraha-maso ny tontolo iainana, fialavesatra sy fampifandraisana."
+        },
+        {
+          "metier": "Chargé d'assainissement et de déchets",
+          "metier_mg": "Mpiandraikitra ny fadiovana sy ny waste",
+          "secteur": "Gestion des déchets",
+          "secteur_mg": "Fitantanana ny waste",
+          "detail": "Collecte, tri, valorisation et traitement des déchets solides.",
+          "detail_mg": "Fangatrohana, fanizarana, fanampiana ny lanjao sy ny fikarakarana ny waste mafy."
+        }
       ],
       "poursuite": "Ingéniorat P.A.D.D. ou P.V.T.D.D., ou mastère en sciences de l'environnement.",
-      "poursuite_mg": "Ingéniorat P.A.D.D. na P.V.T.D.D., na master amin'ny siansa momba ny tontolo iainana."
+      "poursuite_mg": "Injenieran'ny Mastera P.A.D.D. na P.V.T.D.D., na master amin'ny siansa momba ny tontolo iainana.",
+      "duree_mg": "3 taona"
     },
     {
       "id": "peche",
@@ -169,7 +293,13 @@
       "niveau": "licence",
       "duree": "3 ans",
       "bac": "C, D, S, OSE et Agricole",
-      "bac_series": ["C", "D", "S", "OSE", "Agricole"],
+      "bac_series": [
+        "C",
+        "D",
+        "S",
+        "OSE",
+        "Agricole"
+      ],
       "image": "images/pub-peche.jpg",
       "resume": "Formez-vous aux techniques de la pêche et de l'aquaculture, à la gestion des zones humides et à la valorisation du poisson.",
       "resume_mg": "Ampianatro ny teknika momba ny jono sy ny fiompiana trondro, ny fitantanana ny faritra mandoharana ary ny fampidirana ny trondro amin'ny tsena.",
@@ -194,13 +324,42 @@
         "Fanovana sy fanaraha-maso ny vokatra avy amin'ny ranomasina"
       ],
       "debouches": [
-        { "metier": "Technicien aquaculture", "metier_mg": "Teknisy fiompiana trondro", "secteur": "Piscicultures et coopératives", "secteur_mg": "Fiompiana trondro sy fikambanana", "detail": "Conduite d'écloseries et d'étangs, alimentation, suivi sanitaire, récolte." },
-        { "metier": "Pêcheur professionnel", "metier_mg": "Mpijono", "secteur": "Pêche artisanale", "secteur_mg": "Jono kely", "detail": "Pêche côtière et hauturière, vente et transformation des produits." },
-        { "metier": "Agent de développement de la pêche", "metier_mg": "Mpiandroso ny jono", "secteur": "Secteur public et ONG", "secteur_mg": "Sehatra mpanjakana sy ONG", "detail": "Structuration des filières, gestion des zones de pêche, statistics." },
-        { "metier": "Responsable de la transformation", "metier_mg": "Mpiantoka ny fanovana", "secteur": "Agroalimentaire", "secteur_mg": "Sakafo sy fambolena", "detail": "Séchage, salage, fumage, conditionnement et respect des normes d'hygiène." }
+        {
+          "metier": "Technicien aquaculture",
+          "metier_mg": "Teknisy fiompiana trondro",
+          "secteur": "Piscicultures et coopératives",
+          "secteur_mg": "Fiompiana trondro sy fikambanana",
+          "detail": "Conduite d'écloseries et d'étangs, alimentation, suivi sanitaire, récolte.",
+          "detail_mg": "Fitantanana ny trano fanolorana trondro sy ny ranomasina, fand feeding, fanaraha-maso ny fahasalamana, fandraisana."
+        },
+        {
+          "metier": "Pêcheur professionnel",
+          "metier_mg": "Mpijono",
+          "secteur": "Pêche artisanale",
+          "secteur_mg": "Jono kely",
+          "detail": "Pêche côtière et hauturière, vente et transformation des produits.",
+          "detail_mg": "Jono any amoron-drano sy any anaty, fivarotana sy fanovana ny vokatra."
+        },
+        {
+          "metier": "Agent de développement de la pêche",
+          "metier_mg": "Mpiandroso ny jono",
+          "secteur": "Secteur public et ONG",
+          "secteur_mg": "Sehatra mpanjgovernmentalna sy ONG",
+          "detail": "Structuration des filières, gestion des zones de pêche, statistics.",
+          "detail_mg": "Fananganana ny filalaovana, fitantanana ny faritra jono, statistika."
+        },
+        {
+          "metier": "Responsable de la transformation",
+          "metier_mg": "Mpiantoka ny fanovana",
+          "secteur": "Agroalimentaire",
+          "secteur_mg": "Sakafo sy fambolena",
+          "detail": "Séchage, salage, fumage, conditionnement et respect des normes d'hygiène.",
+          "detail_mg": "Famamono, fanamiana, fitomezana, fam packaging ary fanaraha-maso ny fenitra hygiénique."
+        }
       ],
       "poursuite": "Ingéniorat P.A.D.D., na master sy fiofanana manokana amin'ny hara sy ny ranomasina.",
-      "poursuite_mg": "Ingéniorat P.A.D.D., na master sy fiofanana manokana momba ny hara sy ny ranomasina."
+      "poursuite_mg": "Injenieran'ny Mastera P.A.D.D., na master sy fiofanana manokana amin'ny hara sy ny ranomasina.",
+      "duree_mg": "3 taona"
     },
     {
       "id": "padd",
@@ -212,7 +371,7 @@
       "bac_series": [],
       "image": "images/pub-padd.jpg",
       "resume": "Formation d'ingénieur au grade de Master en sciences et technologies du vivant, biologie animale, recherche, innovation et développement durable.",
-      "resume_mg": "Fanofanana ho injeniera amin'ny am-barajy ny Master amin'ny siansa sy teknolojian'ny aina, biolojia momba ny biby, fikarohana, fano novelty ary fandrosoana maharitra.",
+      "resume_mg": "Fanofanana ho injeniera amin'ny ambaratonga Mastera amin'ny siansa sy teknolojian'ny aina, biolojian'ny biby, fikarohana, fanavaozana ary fampandrosoana maharitra.",
       "objectifs": [
         "Conduire des projets de R&D appliquée en production animale",
         "Maîtriser les biotechnologies de reproduction et de nutrition animale",
@@ -221,7 +380,7 @@
       "objectifs_mg": [
         "Mitantana tetik'asa fikarohana sy fanampiana amin'ny famokarana biby",
         "Manahatra ny bioteknika momba ny fanaovana sy ny sakafo azo atao amin'ny biby",
-        "Mitantana fil ala amin'ny fiompiana mifanaraka amin'ny fandrosoana maharitra"
+        "Mitantana fil ala amin'ny fiompiana mifanaraka amin'ny fampandrosoana maharitra"
       ],
       "competences": [
         "Biotechnologie et génétique animale",
@@ -231,16 +390,45 @@
       "competences_mg": [
         "Bioteknika sy jenetika momba ny biby",
         "Sakafo azo atao amin'ny biby sy fahasalamana ny biby",
-        "Fomba fikarohana, fitantanana tetik'asa sy fano novelty"
+        "Fomba fikarohana, fitantanana tetik'asa sy fanavaozana"
       ],
       "debouches": [
-        { "metier": "Ingénieur agronome en production animale", "metier_mg": "Injeniera agronoma momba ny famokarana biby", "secteur": "Fermes et coopératives", "secteur_mg": "Tantara sy fikambanana", "detail": "Conception de systèmes d'élevage, pilotage d'une unité de production." },
-        { "metier": "Chargé de recherche et développement", "metier_mg": "Mpiandraikitra ny fikarohana sy ny fanampiana", "secteur": "Instituts et universités", "secteur_mg": "Institoly sy oniversite", "detail": "Essais agronomiques, analyse de données, valorisation scientifique." },
-        { "metier": "Responsable qualité et conformité", "metier_mg": "Mpiandraikitra ny kalita sy ny fepetra", "secteur": "Agroalimentaire et industrie", "secteur_mg": "Sakafo sy sehatra", "detail": "Traçabilité, sécurité sanitaire, audits et relation avec les certification." },
-        { "metier": "Consultant en développement rural", "metier_mg": "Mpanolotsaina momba ny fandrosoana ny tany", "secteur": "ONG et bureaux d'études", "secteur_mg": "ONG sy ofisina fanadihadiana", "detail": "Études de faisabilité, encadrement de projets, formation de producteurs." }
+        {
+          "metier": "Ingénieur agronome en production animale",
+          "metier_mg": "Injeniera agronoma momba ny famokarana biby",
+          "secteur": "Fermes et coopératives",
+          "secteur_mg": "Tantara sy fikambanana",
+          "detail": "Conception de systèmes d'élevage, pilotage d'une unité de production.",
+          "detail_mg": "Famaritra ny rafitra fiompiana, fitantanana ny singa famokarana."
+        },
+        {
+          "metier": "Chargé de recherche et développement",
+          "metier_mg": "Mpiandraikitra ny fikarohana sy ny fanampiana",
+          "secteur": "Instituts et universités",
+          "secteur_mg": "Institoly sy oniversite",
+          "detail": "Essais agronomiques, analyse de données, valorisation scientifique.",
+          "detail_mg": "Fanandramana agronomika, famakafaka ny angona, fanampiana ny vokatry ny siansa."
+        },
+        {
+          "metier": "Responsable qualité et conformité",
+          "metier_mg": "Mpiandraikitra ny kalita sy ny fepetra",
+          "secteur": "Agroalimentaire et industrie",
+          "secteur_mg": "Sakafo sy sehatra",
+          "detail": "Traçabilité, sécurité sanitaire, audits et relation avec les certification.",
+          "detail_mg": "Fanaraha-maso ny tehirizo, fahasalamana, fanadinana sy fifandraisana amin'ny fanelanelana kalita."
+        },
+        {
+          "metier": "Consultant en développement rural",
+          "metier_mg": "Mpanolotsaina momba ny fandrosoana ny tany",
+          "secteur": "ONG et bureaux d'études",
+          "secteur_mg": "ONG sy ofisina fanadihadiana",
+          "detail": "Études de faisabilité, encadrement de projets, formation de producteurs.",
+          "detail_mg": "Fikarohana ny fahafahana, fanaraha-maso tetik'asa, fanofanana ny mpamokatra."
+        }
       ],
       "poursuite": "Doctorat en sciences agronomiques, ou insertion dans l'industrie agroalimentaire.",
-      "poursuite_mg": "Doktora amin'ny siansa agronomika, na asa ao amin'ny sehatra momba ny sakafo."
+      "poursuite_mg": "Doktora amin'ny siansa agronomika, na asa ao amin'ny sehatra momba ny sakafo.",
+      "duree_mg": "2 taona"
     },
     {
       "id": "pvtdd",
@@ -252,14 +440,14 @@
       "bac_series": [],
       "image": "images/pub-pvtdd.jpg",
       "resume": "Formation d'ingénieur au grade de Master en sciences et technologies du vivant, biologie végétale, biotechnologie, recherche et développement durable.",
-      "resume_mg": "Fanofanana ho injeniera amin'ny am-barajy ny Master amin'ny siansa sy teknolojian'ny aina, biolojia momba ny zavamaniry, bioteknika, fikarohana ary fandrosoana maharitra.",
+      "resume_mg": "Fanofanana ho injeniera amin'ny ambaratonga Mastera amin'ny siansa sy teknolojian'ny aina, biolojian'ny zavamaniry, bioteknika, fikarohana ary fampandrosoana maharitra.",
       "objectifs": [
         "Maîtriser les techniques de production végétale tropicale (maraîchage, fruits, agrumes)",
         "Conduire des essais agronomiques et des essais variétaux",
         "Développer des alternatives économiquement viables et écologiques"
       ],
       "objectifs_mg": [
-        "Manahatra ny teknikan'ny famokarana zavamaniry tropikal (sakana, fruity, kisitra)",
+        "Manahatra ny teknikan'ny famokarana zavamaniry tropikaly (sakana, fruity, kisitra)",
         "Mitantana ny fanandramana agronomika sy ny fanandramana ny karazana",
         "Man developsaka safidy mahomby ara-toekarena sy ara-ekolojia"
       ],
@@ -269,18 +457,47 @@
         "Transformation des produits et économie rurale"
       ],
       "competences_mg": [
-        "Agrobiologia sy agronomia tropikal",
+        "Agrobiologia sy agronomia tropikaly",
         "Bioteknika momba ny zavamaniry sy ny fanamarihana ny karazana",
         "Fanovana ny vokatra sy toekarena ny tany"
       ],
       "debouches": [
-        { "metier": "Ingénieur agronome en production végétale", "metier_mg": "Injeniera agronoma momba ny famokarana zavamaniry", "secteur": "Exploitations et sociétés agricoles", "secteur_mg": "Tantara sy fikambanan-kasa", "detail": "Conception d'itinéraires techniques, encadrement d'équipes, pilotage de production." },
-        { "metier": "Sélectionneur / improvement variétal", "metier_mg": "Mpanalahidy ny karazana", "secteur": "Recherche et semences", "secteur_mg": "Fikarohana sy voa", "detail": "Création et évaluation de variétés adaptées au climat et aux sols de la région." },
-        { "metier": "Responsable qualité fruits et légumes", "metier_mg": "Mpiandraikitra ny kalita", "secteur": "Filière horticole", "secteur_mg": "Sehatra hortikola", "detail": "Conditionnement, stockage, contrôle qualité, mise en marché." },
-        { "metier": "Consultant en développement durable", "metier_mg": "Mpanolotsaina momba ny fandrosoana maharitra", "secteur": "ONG et institutions", "secteur_mg": "ONG sy masoivoho", "detail": "Diagnostics de projets, agriculture de conservation, appui aux exploitations." }
+        {
+          "metier": "Ingénieur agronome en production végétale",
+          "metier_mg": "Injeniera agronoma momba ny famokarana zavamaniry",
+          "secteur": "Exploitations et sociétés agricoles",
+          "secteur_mg": "Tantara sy fikambanan-kasa",
+          "detail": "Conception d'itinéraires techniques, encadrement d'équipes, pilotage de production.",
+          "detail_mg": "Famaritra ny lalana ara-teknika, fanaraha-maso ekipa, fitantanana ny famokarana."
+        },
+        {
+          "metier": "Sélectionneur / improvement variétal",
+          "metier_mg": "Mpanalahidy ny karazana",
+          "secteur": "Recherche et semences",
+          "secteur_mg": "Fikarohana sy voa",
+          "detail": "Création et évaluation de variétés adaptées au climat et aux sols de la région.",
+          "detail_mg": "Famoronana sy fanamarihana ny karazana mifanaraka amin'ny toetr'andro sy ny tany eo amin'ny faritra."
+        },
+        {
+          "metier": "Responsable qualité fruits et légumes",
+          "metier_mg": "Mpiandraikitra ny kalita",
+          "secteur": "Filière horticole",
+          "secteur_mg": "Sehatra hortikola",
+          "detail": "Conditionnement, stockage, contrôle qualité, mise en marché.",
+          "detail_mg": "Fam packaging, fitahirana, fanaraha-maso ny kalita, fanidirana an-tserana."
+        },
+        {
+          "metier": "Consultant en développement durable",
+          "metier_mg": "Mpanolotsaina momba ny fampandrosoana maharitra",
+          "secteur": "ONG et institutions",
+          "secteur_mg": "ONG sy masoivoho",
+          "detail": "Diagnostics de projets, agriculture de conservation, appui aux exploitations.",
+          "detail_mg": "Fanapahan-kevitra ny tetik'asa, fambolena arovana, fanampiana ny tantara."
+        }
       ],
       "poursuite": "Doctorat en sciences du végétal, ou insertion dans l'agroalimentaire et les projets de développement.",
-      "poursuite_mg": "Doktora amin'ny siansa momba ny zavamaniry, na toe-karena ao amin'ny sakafo sy ny tetik'asa fandrosoana."
+      "poursuite_mg": "Doktora amin'ny siansa momba ny zavamaniry, na toe-karena ao amin'ny sakafo sy ny tetik'asa fandrosoana.",
+      "duree_mg": "2 taona"
     }
   ]
 }

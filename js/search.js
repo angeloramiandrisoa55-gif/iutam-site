@@ -14,15 +14,15 @@
 
   var T = {
     fr: {
-      placeholder: 'Rechercher une formation, une question, une actualité…',
-      open: 'Rechercher dans le site',
-      close: 'Fermer la recherche',
-      empty: 'Aucun résultat. Essayez un autre mot-clé.',
-      hint: 'Astuce : Ctrl + K pour ouvrir, Échap pour fermer',
-      noResults: 'Aucun résultat',
-      results: 'résultats',
-      sections: 'dans cette page',
-      data: 'dans les contenus'
+      placeholder: 'Hitady ny fanofanana, ny fanontaniana, ny vaovao…',
+      open: 'Hitady ao amin\'ny tranokala',
+      close: 'Hidio ny fitadiavana',
+      empty: 'Tsy misy valiny. Andramo teny hafa.',
+      hint: 'Torohevitra : Ctrl + K hanokatra, Échap hidio',
+      noResults: 'Tsy misy valiny',
+      results: 'valiny',
+      sections: 'amin\'ity pejy ity',
+      data: 'amin\'ny votoatiny'
     },
     mg: {
       placeholder: 'Hitady ny fanofanana, ny fanontaniana, ny vaovao…',

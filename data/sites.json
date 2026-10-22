@@ -22,7 +22,7 @@
       "telephone": "+261 32 05 580 06 / +261 34 02 653 27",
       "email": "iutamumg@gmail.com",
       "parcours": "Agriculture, Élevage, Environnement, Pêche et Aquaculture",
-      "parcours_mg": "Fambolena, Fiompiana, Tontolo iainana, Jono sy Fiompiana trondro",
+      "parcours_mg": "Fambolena, Fiompiana, Tontolo iainana, Jono sy Fiompiana Trondro",
       "lien": "",
       "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
       "note_mg": "Ny adiresy, ny ora fiasana ary ny fanofanana 2026-2027 dia hamafisina amin'ny sekretaria ao Mahajanga.",
@@ -31,17 +31,17 @@
         {
           "src": "images/antsohihy-panneau.jpg",
           "alt": "Panneau « IUTAM — Annexe ANTSOHIHY » avec l'indication « 60 m » et les coordonnées",
-          "alt_mg": "Takelaka « IUTAM — Annexe ANTSOHIHY » misy ny « 60 m » sy ny adiresy"
+          "alt_mg": "Takelaka « IUTAM — Annexe ANTSOHIHY » manondro ny làlana ho any (60 m) sy ny adiresy"
         },
         {
           "src": "images/antsohihy-stand.jpg",
           "alt": "Le stand de l'IUTAM Antsohihy et son panneau d'accueil",
-          "alt_mg": "Ny toeran'ny IUTAM Antsohihy sy ny takelaky ny fandraisana"
+          "alt_mg": "Takelaka « IUTAM Annexe Antsohihy » : 300 m ny lalana"
         },
         {
           "src": "images/antsohihy-acces.jpg",
           "alt": "Panneau « IUTAM Annexe Antsohihy » : accès à 300 m",
-          "alt_mg": "Takelaka « IUTAM Annexe Antsohihy » : 300 m ny lalana"
+          "alt_mg": "Vondrona eo anoloan'ny afisy « Ny fanofanana ataontsika »"
         },
         {
           "src": "images/antsohihy-equipe.jpg",
@@ -69,7 +69,7 @@
         {
           "src": "images/maevatanana.jpg",
           "alt": "Façade de l'IUTAM Maevatanana : bâtiment à deux niveaux, panneau « I.U.T.A.M — Antenne Maevatanana » et fléchage vers le secrétariat",
-          "alt_mg": "Ny tampon-trano ny IUTAM Maevatanana : trano roa ambony, takelaka « I.U.T.A.M — Antenne Maevatanana » ary ny fandikana mankany amin'ny sekretaria"
+          "alt_mg": "Ny tampon-trano ny IUTAM Maevatanana : trano roa ambony misy ny takelaka « I.U.T.A.M — Antenne Maevatanana » sy ny fandikana mankany amin'ny sekretaria"
         }
       ]
     }

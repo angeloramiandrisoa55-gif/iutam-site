@@ -2,16 +2,16 @@
   "institut": {
     "nom": "Institut Universitaire de Technologie et d'Agronomie de Mahajanga",
     "sigle": "IUTAM",
-    "nom_mg": "Institiota Oniversita momba ny Teknolojia sy ny Agronomia ao Mahajanga",
+    "nom_mg": "Ivontoeram-pampianarana eny amin'ny Anjerimanontolo momba ny Teknolojia sy ny Agronomia ao Mahajanga",
     "tutelle": "Université de Mahajanga",
-    "tutelle_mg": "Oniversiten'i Mahajanga",
+    "tutelle_mg": "Anjerimanontolo Mahajanga",
     "systeme": "MESupRES · Système L.M.D.",
-    "systeme_mg": "MESupRES · Rafitra L.M.D.",
+    "systeme_mg": "MESupReS · Rafitra LMD",
     "site": "https://www.VOTRE-DOMAINE.mg"
   },
   "siege": {
     "adresse": "Campus d'Ambondrona, Université de Mahajanga, BP 652",
-    "adresse_mg": "Ambondrona, Oniversiten'i Mahajanga, BP 652",
+    "adresse_mg": "Campus Ambondrona, Anjerimanontolo Mahajanga, BP 652",
     "ville": "Mahajanga",
     "ville_mg": "Mahajanga",
     "code_postal": "401",
