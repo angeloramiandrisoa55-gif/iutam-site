@@ -107,7 +107,10 @@ for (const [ai, bi, score] of back) {
   // La clé doit être le texte FRANÇAIS BRUT (avec &nbsp; etc.) : le
   // remplacement dans build-mg.js est littéral.
   const cle = (fr[ai].raw !== undefined ? fr[ai].raw : fr[ai].value);
-  const officiel = off[bi].value;
+  let officiel = off[bi].value;
+  // Si le texte français se termine par une espace (séparation avant une
+  // balise), la traduction doit la conserver, sinon les mots se collent.
+  if (/ $/.test(cle) && !/ $/.test(officiel) && !/[<»]/.test(officiel)) officiel += ' ';
   if (!cle || !officiel || cle === officiel) { ignores++; continue; }
   if (score < 0.45) { faible.push(cle + ' ⟵ ' + officiel + ' (' + score.toFixed(2) + ')'); }
   if (dict[cle] !== officiel) {
