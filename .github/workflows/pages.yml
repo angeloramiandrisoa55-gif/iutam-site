@@ -89,7 +89,7 @@ jobs:
           test -f _site/404.html
           du -sh _site
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
