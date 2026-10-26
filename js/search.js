@@ -14,22 +14,22 @@
 
   var T = {
     fr: {
-      placeholder: 'Hitady ny lalam-piofanana, ny fanontaniana, ny vaovao…',
-      open: 'Fikarohana ao amin\'ny tranonkala',
-      close: 'Hidio ny fikarohana',
-      empty: 'Tsy misy valiny. Andramo teny hafa.',
-      hint: 'Torohevitra : Ctrl + K hanokatra, Échap hidio',
-      noResults: 'Tsy misy valiny',
-      results: 'valiny',
-      sections: 'amin\'ity pejy ity',
-      data: 'amin\'ny votoatiny'
+      placeholder: 'Rechercher une formation, une question, une actualité…',
+      open: 'Rechercher sur le site',
+      close: 'Fermer la recherche',
+      empty: 'Aucun résultat. Essayez d\'autres mots.',
+      hint: 'Astuce : Ctrl + K pour ouvrir, Échap pour fermer',
+      noResults: 'Aucun résultat',
+      results: 'résultat(s)',
+      sections: 'dans cette page',
+      data: 'dans le contenu'
     },
     mg: {
       placeholder: 'Hitady ny lalam-piofanana, ny fanontaniana, ny vaovao…',
       open: 'Fikarohana ao amin\'ny tranonkala',
       close: 'Hidio ny fikarohana',
       empty: 'Tsy misy valiny. Andramo teny hafa.',
-      hint: 'Torohevitra : Ctrl + K hanokatra, Échap hidio',
+      hint: 'Torohevitra : Ctrl + K hanokatra, Esc hidio',
       noResults: 'Tsy misy valiny',
       results: 'valiny',
       sections: 'amin\'ity pejy ity',

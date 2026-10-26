@@ -167,14 +167,17 @@ if(head)head.textContent=T.from+" "+money(Math.min.apply(null,N.map(total)))+" /
 }).catch(function(){});
 })();
 
-// Navigation : section active et menu mobile
+// Navigation : section active et menu mobile (Echap, clic a l'exterieur, redimensionnement)
 (function(){
-var h=document.querySelector("header"),b=document.getElementById("bg"),L=[].slice.call(document.querySelectorAll("#nav a[href^='#']"));
-function close(){h.classList.remove("open");if(b){b.setAttribute("aria-expanded","false");b.textContent="☰"}}
+var h=document.querySelector("header"),b=document.getElementById("bg"),L=[].slice.call(document.querySelectorAll("#nav a[href^='#']:not(.cta)"));
+function close(back){h.classList.remove("open");if(b){b.setAttribute("aria-expanded","false");b.textContent="☰";if(back===true)b.focus()}}
 if(b)b.addEventListener("click",function(){var o=h.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");b.textContent=o?"✕":"☰"});
-L.forEach(function(a){a.addEventListener("click",close)});
+[].slice.call(h.querySelectorAll("#nav a, .hd-cta")).forEach(function(a){a.addEventListener("click",function(){close()})});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("open"))close(true)});
+document.addEventListener("click",function(e){if(h.classList.contains("open")&&!h.contains(e.target))close()});
+window.addEventListener("resize",function(){if(b&&h.classList.contains("open")&&b.offsetParent===null)close()});
 if(!("IntersectionObserver" in window))return;
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)L.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)L.forEach(function(a){var on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","location");else a.removeAttribute("aria-current")})})},{rootMargin:"-45% 0px -50% 0px"});
 L.forEach(function(a){var s=document.querySelector(a.getAttribute("href"));if(s)io.observe(s)});
 })();
 

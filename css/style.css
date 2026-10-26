@@ -579,7 +579,7 @@ h1,h2,h3,p,li{overflow-wrap:break-word}
 header{display:block;padding:0}
 html{scroll-padding-top:calc(94px + env(safe-area-inset-top,0px))}
 .hd-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 5vw 7px}
-header nav{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:2px;padding:0 5vw 8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+header nav{display:flex;align-items:center;justify-content:center;justify-content:safe center;flex-wrap:nowrap;gap:2px;padding:0 5vw 8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 header nav::-webkit-scrollbar{display:none}
 .nav-sep{width:1px;height:15px;flex:0 0 auto;margin:0 7px;background:var(--bd);border-radius:1px}
 header nav a{position:relative;display:inline-flex;align-items:center;flex:0 0 auto;white-space:nowrap;padding:9px 13px;border-radius:99px;font:600 .84rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.005em;color:var(--mut);text-decoration:none;transition:color .2s,background .2s,box-shadow .2s,transform .2s}
@@ -604,6 +604,63 @@ header nav a.on{color:#fff;background:linear-gradient(135deg,var(--pri),var(--bl
   .nav-sep{display:none}
 }
 @media (prefers-reduced-motion:reduce){header nav a:hover{transform:none}}
+
+/* =============================================================================
+   Barre de navigation v3 : bouton d'inscription, menu mobile fluide, malagasy
+   ============================================================================= */
+
+/* Bouton d'inscription : .hd-cta dans l'en-tete, .nav-cta = copie dans le menu mobile */
+.cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto;height:40px;padding:0 18px;border-radius:99px;font:700 .76rem/1 "Chakra Petch",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;text-decoration:none;color:#2b1d00;background:linear-gradient(135deg,#f8cf5f,var(--acc));box-shadow:0 6px 16px #e0a52640,inset 0 1px 0 #ffffff70;transition:transform .2s,box-shadow .2s,filter .2s;-webkit-tap-highlight-color:transparent}
+.cta:after{content:"\2192";font-size:1.1em;line-height:1;transition:transform .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 22px #e0a52666,inset 0 1px 0 #ffffff70;filter:saturate(1.12)}
+.cta:hover:after{transform:translateX(3px)}
+.cta:active{transform:scale(.97)}
+.cta:focus-visible{outline:3px solid var(--bl);outline-offset:3px}
+.hd-cta:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;animation:ctaRing 2.6s ease-out 1.5s 3}
+@keyframes ctaRing{0%{box-shadow:0 0 0 0 #e0a52699}100%{box-shadow:0 0 0 12px #e0a52600}}
+.nav-cta{display:none}
+@keyframes navIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media (max-width:560px){.hd-cta{display:none}}
+/* Arrivee sur le formulaire depuis le bouton d'inscription : le premier champ reste visible sous l'en-tete collant */
+#f{scroll-margin-top:28px}
+
+/* Menu deroulant (mobile) : ouverture animee, defilement interne sur ecran bas, bouton plein largeur */
+@media (max-width:800px){
+  header nav{overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 64px - env(safe-area-inset-top,0px));max-height:calc(100dvh - 64px - env(safe-area-inset-top,0px))}
+  header.open nav{animation:navIn .22s ease-out}
+  header nav a.nav-cta,header nav a.nav-cta:hover{display:inline-flex;justify-content:center;height:48px;margin:14px 0 0;padding:0 18px;border:0;border-radius:99px;font-size:.85rem;color:#2b1d00;background:linear-gradient(135deg,#f8cf5f,var(--acc));transform:none}
+}
+
+/* Teny malagasy (lang="mg") : les libelles etant plus longs, la barre en deux rangees est
+   remplacee par le menu burger des 1100 px, et les pills sont resserrees au-dela. */
+html[lang="mg"] header nav{padding-left:2vw;padding-right:2vw}
+html[lang="mg"] header nav a{font-size:.78rem;padding:8px 10px}
+html[lang="mg"] .nav-sep{margin:0 3px}
+@media (max-width:1180px){html[lang="mg"] header nav a{font-size:.74rem;padding:8px 8px}}
+@media (max-width:1100px){
+  html[lang="mg"] .burger{display:inline-grid;place-items:center}
+  html[lang="mg"] header nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 5vw 14px;background:var(--bg);border-bottom:1px solid var(--bd);box-shadow:0 18px 30px #0003;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 64px - env(safe-area-inset-top,0px));max-height:calc(100dvh - 64px - env(safe-area-inset-top,0px))}
+  html[lang="mg"] header.open nav{display:flex;animation:navIn .22s ease-out}
+  html[lang="mg"] header nav a{padding:13px 12px;border-radius:12px;border-bottom:1px solid var(--bd);font-size:.9rem;justify-content:flex-start}
+  html[lang="mg"] .nav-sep{display:none}
+  html[lang="mg"] .hd-top{padding:8px 5vw}
+  html[lang="mg"] header nav a.nav-cta,html[lang="mg"] header nav a.nav-cta:hover{display:inline-flex;justify-content:center;height:48px;margin:14px 0 0;padding:0 18px;border:0;border-radius:99px;font-size:.85rem;color:#2b1d00;background:linear-gradient(135deg,#f8cf5f,var(--acc));transform:none}
+}
+@media (prefers-reduced-motion:reduce){.hd-cta:before{animation:none}header.open nav{animation:none!important}.cta,.cta:after{transition:none}.cta:hover{transform:none}}
+
+/* Hero : deux colonnes egales, bloc de texte centre dans sa colonne, titre equilibre
+   (plus de mot orphelin), boutons alignes sur le bord gauche du texte */
+@media (min-width:801px){#hero{grid-template-columns:1fr 1fr}}
+.hc{margin:0 auto;max-width:600px}
+html[lang="mg"] #hero h1{font-size:clamp(1.8rem,3.2vw,2.8rem)}
+#hero h1{font-size:clamp(1.9rem,3.7vw,3.2rem);line-height:1.12;text-wrap:balance}
+#hero p{text-wrap:pretty}
+.hc .tag{text-wrap:balance;text-align:center;line-height:1.35}
+/* Cartes de chiffres : textes equilibres, sous-texte moins espace (evite 4 lignes en malagasy) */
+.stats div{text-wrap:balance}
+.stats div small{letter-spacing:.05em;line-height:1.5}
+.hc .btn{margin:8px 10px 6px 0}
+@media (max-width:800px){#hero h1,html[lang="mg"] #hero h1{font-size:clamp(1.8rem,7.4vw,2.4rem)}.hc .btn{margin:8px 5px 6px}}
 
 /* ------------------------------------------- Portrait de la direction */
 .portrait{position:relative;margin:0;max-width:440px;width:100%}

@@ -30,6 +30,9 @@
     "expediteur": "",
     "sujet": "Contact site IUTAM"
   },
+  "inscription": {
+    "url": ""
+  },
   "newsletter": {
     "endpoint": "",
     "methode": "POST",

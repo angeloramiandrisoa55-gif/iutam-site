@@ -11,6 +11,28 @@
 
 Les textes qui viennent de `data/*.json` (actualités, frais) se traduisent dans les champs `titre_mg`, `resume_mg`, `designation_mg`.
 
+## Barre de navigation malagasy (libellés courts)
+Les intitulés officiels de `mg.json` (« Sehatra arak'asa sy fahafahana miasa », « Fanontaniana apetraka matetika »…) sont trop longs pour la barre : ils restent utilisés pour les **titres de sections**, mais la barre utilise des libellés courts définis dans `NAV_MG` (`tools/build-mg.js`, étape 2b) :
+
+| Lien | Libellé court | Infobulle (intitulé officiel) |
+|---|---|---|
+| `#about` | Momba ny IUTAM | Ny Ivontoeram-pampianarana |
+| `#vie` | Fiainana | Fiainan'ny mpianatra |
+| `#formations` | Fiofanana | |
+| `#debouches` | Fahafahana asa | Sehatra arak'asa sy fahafahana miasa |
+| `#admission` | Hisoratra anarana | Fidirana |
+| `#frais` | Saram-pianarana | |
+| `#faq` | Fanontaniana | Fanontaniana apetraka matetika |
+| `#actus` | Vaovao | |
+| `#contact` | Fifandraisana | |
+
+Le bouton d'inscription (`<a class="cta hd-cta">` dans l'en-tête, copie `nav-cta` dans le menu mobile) s'écrit « S'inscrire » en français et **Hisoratra izao** en malagasy (constante `CTA_MG`). **Cible du bouton :** il mène au formulaire (`#f`), prérempli (sujet « Pré-inscription » / « Fisoratana anarana » + modèle de message, voir `forms.js`). Si l'Université a une plateforme d'inscription en ligne, renseigner `"inscription": { "url": "https://…" }` dans `data/contact.json` : le bouton ouvrira alors ce lien (nouvel onglet). Le modèle de message malagasy est à faire relire par un locuteur natif.
+
+Pour changer un libellé de la barre, modifier `NAV_MG` / `CTA_MG`, puis `npm run build:mg`. En malagasy, le menu burger remplace la barre à 2 rangées sous 1100 px (800 px en français).
+
+## Données : champs malagasy (`data/*.json`)
+Chaque texte français a son équivalent `_mg` ; si le `_mg` est vide, la page malagasy retombe sur le français (donc du français dans la page MG). Pour `formations.json`, penser à renseigner pour chaque parcours : `objectifs_mg[]`, `competences_mg[]`, `bac_mg`, et pour chaque débouché `metier_mg`, `secteur_mg`, `detail_mg`. `metiers_mg[]` doit rester identique à la liste des `metier_mg`. Pour `guides.json` : `pieces_mg[]`, `duree_mg`. Les libellés de l'interface (titres de colonnes, boutons, messages du formulaire, recherche) sont dans les tableaux `T` de `js/sections.js`, `js/forms.js`, `js/search.js` et `js/main.js` : le bloc `fr` doit être en français, le bloc `mg` en malagasy.
+
 ## Relecture des traductions
 Les traductions malagasy de la page principale sont désormais le **texte officiel** transmis par l'IUTAM (version v2.1). Elles font foi.
 

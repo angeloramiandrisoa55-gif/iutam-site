@@ -21,6 +21,35 @@ html = html.replace(
 // 2. Traduction du texte
 html = html.replace(new RegExp(keys.map(esc).join('|'), 'g'), m => { used.add(m); return dict[m]; });
 
+// 2b. Barre de navigation malagasy : libellés COURTS (les intitulés officiels sont
+//     trop longs : la barre débordait). Ne touche ni mg.json ni les titres de
+//     sections, qui gardent leur traduction officielle. [libellé court, intitulé
+//     officiel affiché en infobulle quand il diffère]
+const NAV_MG = {
+  '#about':      ['Momba ny IUTAM',  "Ny Ivontoeram-pampianarana"],
+  '#vie':        ['Fiainana',        "Fiainan'ny mpianatra"],
+  '#formations': ['Fiofanana',       ''],
+  '#debouches':  ['Fahafahana asa',  "Sehatra arak'asa sy fahafahana miasa"],
+  '#admission':  ['Hisoratra anarana', 'Fidirana'],
+  '#frais':      ['Saram-pianarana', ''],
+  '#faq':        ['Fanontaniana',    'Fanontaniana apetraka matetika'],
+  '#actus':      ['Vaovao',          ''],
+  '#contact':    ['Fifandraisana',   '']
+};
+const CTA_MG = 'Hisoratra izao';
+html = html.replace(/<nav id="nav"[\s\S]*?<\/nav>/, nav => nav.replace(
+  /<a href="(#[a-z]+)">[^<]*<\/a>/g,
+  (m, h) => NAV_MG[h] ? `<a href="${h}"${NAV_MG[h][1] ? ` title="${NAV_MG[h][1]}"` : ''}>${NAV_MG[h][0]}</a>` : m
+));
+html = html.replace(/(<a class="cta (?:hd|nav)-cta"[^>]*>)[^<]*(<\/a>)/g, `$1${CTA_MG}$2`);
+
+// 2c. Cartes de chiffres (« À propos ») : intitulés abrégés pour que les 4 cartes
+//     gardent la même hauteur (les intitulés officiels, repris ailleurs dans la page,
+//     tiennent sur 3 lignes dans une carte).
+html = html.replace(/<div class="stats rv">[\s\S]*?\n  <\/div>/, bloc => bloc
+  .replace("Diplaoma Injeniera amin'ny ambaratonga Mastera", 'Injeniera (Mastera)')
+  .replace("Hetsika aseho ao amin'ny toerana fampirantiana", 'Hetsika aseho'));
+
 // 3. Ajustements propres à la version malgache
 html = html
   .replace('<html lang="fr">', '<html lang="mg" data-root="../">')

@@ -15,22 +15,23 @@
   var T = {
     fr: {
       empty: 'Contenu indisponible pour le moment.',
-      metiers: 'Asa',
-      secteur: 'Sehatra',
-      objectifs: 'Tanjon\'ny fanofanana',
-      competences: 'Fahaizana',
-      pieces: 'Antontan-taratasy ilaina',
-      etapes: 'Dingana',
-      duree: 'Faharetan\'ny fiofanana',
+      metiers: 'Métiers',
+      secteur: 'Secteur',
+      objectifs: 'Objectifs de la formation',
+      competences: 'Compétences',
+      pieces: 'Pièces à fournir',
+      etapes: 'Étapes',
+      duree: 'Durée de la formation',
+      delai: 'Délai',
       resultats: 'résultat(s)',
-      tout: 'Rehetra',
-      licence: 'Laisansa',
-      master: 'Injenieran\'ny Mastera',
-      mentionLic: 'Biolojia Ampiharina',
-      mentionMas: 'Agro-biodiversité sy Tontolo iainana',
-      bac: 'Bakalorea :',
-      voirPlus: 'Hijery ny antsipiriany',
-      replier: 'Hidio'
+      tout: 'Tous',
+      licence: 'Licence',
+      master: 'Ingéniorat (Master)',
+      mentionLic: 'Biologie appliquée',
+      mentionMas: 'Agro-biodiversité et Environnement',
+      bac: 'Baccalauréat :',
+      voirPlus: 'Voir le détail',
+      replier: 'Replier'
     },
     mg: {
       empty: 'Tsy azo ny votoatiny amin\'ity fotoana ity.',
@@ -46,9 +47,10 @@
       licence: 'Laisansa',
       master: 'Injenieran\'ny Mastera',
       mentionLic: 'Biolojia Ampiharina',
-      mentionMas: 'Agro-biodiversité sy Tontolo iainana',
+      mentionMas: 'Agro-biodiversita sy Tontolo iainana',
       bac: 'Bakalorea :',
       voirPlus: 'Hijery ny antsipiriany',
+      delai: '',
       replier: 'Hidio'
     }
   }[LANG];
@@ -110,8 +112,9 @@
       box.innerHTML = list.map(function (p, i) {
         // Présentation « catalogue » : une ligne par parcours, numérotée en romain.
         // Le détail (objectifs, compétences, secteurs) se déplie à la demande.
-        var metiers = (p.debouches || []).map(function (d) { return esc(text(d, 'metier')); }).join(' · ');
-        var metiersLigne = (p.metiers_mg && p.metiers_mg.length)
+        var metiers = (p.debouches || []).map(function (d) { return text(d, 'metier'); }).join(' · ');
+        // la ligne de métiers malagasy n'est utilisée que sur la page malagasy
+        var metiersLigne = (LANG === 'mg' && p.metiers_mg && p.metiers_mg.length)
           ? p.metiers_mg.join(' · ')
           : metiers;
         var debDetail = (p.debouches || []).map(function (d) {
@@ -120,23 +123,28 @@
             (text(d, 'detail') ? '<span class="dd">' + esc(text(d, 'detail')) + '</span>' : '') +
             '</li>';
         }).join('');
-        var obj = (p.objectifs || []).map(function (o) { return '<li>' + esc(text(o, 'fr')) + '</li>'; }).join('');
-        var comp = (p.competences || []).map(function (c) { return '<li>' + esc(text(c, 'fr')) + '</li>'; }).join('');
+        // listes : version malagasy si elle est complète, sinon repli sur le français
+        function liste(fr, mg) {
+          var src = (LANG === 'mg' && mg && mg.length) ? mg : (fr || []);
+          return src.map(function (x) { return '<li>' + esc(text(x, 'fr')) + '</li>'; }).join('');
+        }
+        var obj = liste(p.objectifs, p.objectifs_mg);
+        var comp = liste(p.competences, p.competences_mg);
         var niveau = p.niveau === 'ingeniorat' ? T.master : T.licence;
         var mention = p.niveau === 'ingeniorat' ? T.mentionMas : T.mentionLic;
         return '<details class="db-row" style="--i:' + i + '">' +
           '<summary>' +
           '<span class="db-num" aria-hidden="true">' + ROMAN[i] + '</span>' +
           '<span class="db-t"><b>' + esc(text(p, 'nom')) + '</b>' +
-          '<span class="db-lv">' + esc(text({ mention: p.mention_mg }, 'mention') || (niveau + ' · ' + mention)) + '</span></span>' +
+          '<span class="db-lv">' + esc((LANG === 'mg' && p.mention_mg) || (niveau + ' · ' + mention)) + '</span></span>' +
           '<span class="db-m">' + esc(metiersLigne) + '</span>' +
-          '<span class="db-d">' + esc(text({ duree: p.duree, duree_mg: p.duree_pleine_mg || p.duree_mg }, 'duree')) + '</span>' +
+          '<span class="db-d">' + esc(text(p, 'duree')) + '</span>' +
           '<span class="db-x" aria-hidden="true">+</span>' +
           '</summary>' +
           '<div class="db-body">' +
           '<p class="db-cond">' +
-          '<span><b>' + esc(T.bac) + '</b>' + esc(p.bac || '') + '</span>' +
-          '<span><b>' + esc(T.duree) + '</b>' + esc(p.duree || '') + '</span>' +
+          '<span><b>' + esc(T.bac) + '</b>' + esc(text(p, 'bac')) + '</span>' +
+          '<span><b>' + esc(T.duree) + '</b>' + esc(text(p, 'duree')) + '</span>' +
           '</p>' +
           '<div class="db-cols">' +
           (obj ? '<div><h5>' + esc(T.objectifs) + '</h5><ul class="dbl">' + obj + '</ul></div>' : '') +
@@ -178,13 +186,14 @@
         var steps = (g.etapes || []).map(function (e) {
           return '<li><b>' + esc(text(e, 't')) + '</b><span>' + esc(text(e, 'd')) + '</span></li>';
         }).join('');
-        var pieces = (g.pieces || []).map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('');
+        var piecesSrc = (LANG === 'mg' && g.pieces_mg && g.pieces_mg.length) ? g.pieces_mg : (g.pieces || []);
+        var pieces = piecesSrc.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('');
         return '<details class="card nw gd" style="--i:' + i + '">' +
           '<summary class="gd-sum">' +
           '<span class="ic">' + esc(g.icone || '📌') + '</span>' +
           '<span class="gd-t"><b>' + esc(text(g, 'titre')) + '</b>' +
           '<span>' + esc(text(g, 'resume')) + '</span></span>' +
-          (text(g, 'duree') ? '<span class="chip">' + esc(T.duree) + ' : ' + esc(text(g, 'duree')) + '</span>' : '') +
+          (text(g, 'duree') ? '<span class="chip">' + (T.delai ? esc(T.delai) + ' : ' : '') + esc(text(g, 'duree')) + '</span>' : '') +
           '<span class="fold-i" aria-hidden="true">+</span>' +
           '</summary>' +
           '<div class="gd-body">' +
@@ -314,8 +323,8 @@
         pauseBtn.textContent = paused ? '▶' : '⏸';
         pauseBtn.setAttribute('aria-pressed', paused ? 'true' : 'false');
         pauseBtn.setAttribute('aria-label', paused
-          ? (LANG === 'mg' ? 'Hanohana ny famakiana ny hafatra' : 'Reprendre le défilement des messages')
-          : (LANG === 'mg' ? 'Hanohana ny famakiana ny hafatra' : 'Suspendre le défilement des messages'));
+          ? (LANG === 'mg' ? 'Hanohy ny hafatra mihodina' : 'Reprendre le défilement des messages')
+          : (LANG === 'mg' ? 'Hampiato ny hafatra mihodina' : 'Suspendre le défilement des messages'));
         if (paused) stop(); else run();
       });
     }

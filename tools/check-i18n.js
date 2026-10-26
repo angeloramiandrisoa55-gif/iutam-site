@@ -52,7 +52,7 @@ const WHITELIST = new Set([
   'IUTAM', 'Mahajanga', 'Antsohihy', 'Maevatanana', 'MG', 'FR', 'FAQ',
   'P.A.D.D.', 'P.V.T.D.D.', 'Licence', 'Master', 'Mention', 'Annexe',
   'Ingéniorat', 'Tous', 'toutes', 'Contact', 'Admission', 'Frais', 'Formations',
-  'Teny malagasy', 'L\'Institut', 'Actualités', 'Vie étudiante', 'Faculté',
+  'Teny malagasy', 'Version malgache', 'L\'Institut', 'Actualités', 'Vie étudiante', 'Faculté',
   'licence', 'Innovation', 'Plateforme',
   // identiques en malagasy (déjà traduits par une balise plus longue)
   'développement durable', 'Licence Pro', 'Ingéniorat (Master)',

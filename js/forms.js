@@ -18,34 +18,34 @@
 
   var T = {
     fr: {
-      sending: 'Mampandefa…',
-      ok: 'Misaotra ! Voalaza ny hafatrao, miverina haingana aminareo izahay.',
-      ko: 'Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekreteria.',
-      offline: 'Tsy mifandray ny navigateurinao : voaomitry tao amin\'ny mailakao ny hafatrao.',
-      required: 'Tsy maintsy fenoina ity saha ity.',
-      email: 'Mangataka adiresy mailaka marina.',
-      short: 'Tsy feno ny hafatra (10 litera farafahakeliny).',
-      consent: 'Ny manaiky anao dia ilaina hanarahana ny fangatahanao.',
-      tooLong: 'Tsy feno ny saha ity.',
-      rate: 'Be loatra ny fandefasana avy amin\'ity fitaovana ity. Mangataka andramo indray.',
-      saved: 'Voarakitra ny fisoratana anarana.',
-      subscribe: 'Hisoratra anarana',
-      subscribed: 'Misaotra ! Voasoratra anarana amin\'ny taratasy fampitam-baovao.'
+      sending: 'Envoi en cours…',
+      ok: 'Merci ! Votre message a bien été envoyé, nous vous répondrons rapidement.',
+      ko: 'L\'envoi a échoué. Veuillez réessayer ou appeler le secrétariat.',
+      offline: 'Envoi direct indisponible : votre message a été préparé dans votre messagerie.',
+      required: 'Ce champ est obligatoire.',
+      email: 'Veuillez saisir une adresse e-mail valide.',
+      short: 'Message trop court (10 caractères minimum).',
+      consent: 'Votre accord est nécessaire pour traiter votre demande.',
+      tooLong: 'Ce champ est trop long.',
+      rate: 'Trop d\'envois depuis cet appareil. Veuillez réessayer plus tard.',
+      saved: 'Inscription enregistrée.',
+      subscribe: 'S\'inscrire',
+      subscribed: 'Merci ! Vous êtes inscrit(e) à la lettre d\'information.'
     },
     mg: {
       sending: 'Mampandefa…',
-      ok: 'Misaotra ! Voalaza ny hafatrao, miverina haingana aminareo izahay.',
-      ko: 'Tsy nahomby ny fandefasana. Mangataka andramo indray na antsoyinao ny sekreteria.',
-      offline: 'Tsy mifandray ny navigateurinao : voaomitry tao amin\'ny mailakao ny hafatrao.',
+      ok: 'Misaotra ! Voaray ny hafatrao, hamaly anao faingana izahay.',
+      ko: 'Tsy nahomby ny fandefasana. Andramo indray azafady, na antsoy ny sekreteria.',
+      offline: 'Tsy afaka mandefa mivantana : nomanina ao amin\'ny mailakao ny hafatrao.',
       required: 'Tsy maintsy fenoina ity saha ity.',
-      email: 'Mangataka adiresy mailaka marina.',
-      short: 'Tsy feno ny hafatra (10 litera farafahakeliny).',
+      email: 'Ampidiro adiresy mailaka marina.',
+      short: 'Fohy loatra ny hafatra (10 litera farafahakeliny).',
       consent: 'Tsy maintsy manaiky ianao mba hampiasaina ny angon-drakitra omeko.',
-      tooLong: 'Tsy fara ny saha ity.',
-      rate: 'Be loatra ny fandefasana avy amin’ity fitaovana ity. Mangataka andramo indray.',
+      tooLong: 'Lava loatra ity saha ity.',
+      rate: 'Be loatra ny fandefasana avy amin\'ity fitaovana ity. Andramo indray any aoriana kely.',
       saved: 'Voarakitra ny fisoratana anarana.',
       subscribe: 'Hisoratra anarana',
-      subscribed: 'Misaotra ! Voasoratra anarana amin’ny gazety fampandrosoana.'
+      subscribed: 'Misaotra ! Voasoratra anarana amin\'ny taratasy fampitam-baovao ianao.'
     }
   }[LANG];
 
@@ -252,16 +252,52 @@
     });
   }
 
+  /* ------------------------------------------------------------------ bouton « S'inscrire » */
+  // Deux cas :
+  //  - data/contact.json contient "inscription": { "url": "https://..." } : le bouton ouvre
+  //    la plateforme officielle d'inscription de l'Université ;
+  //  - sinon : le bouton mène au formulaire, déjà prérempli (sujet + modèle de message),
+  //    qui part par la même API / messagerie que le formulaire de contact.
+  var I = LANG === 'mg' ? {
+    sujet: 'Fisoratana anarana',
+    msg: "Arahaba,\nTe hisoratra anarana ao amin'ny IUTAM aho.\n\nLalam-piofanana tiana : \nAmbaratonga (Laisansa / Mastera) : \nBakalorea (andiany, taona) na Laisansa : \nTelefaona : \n"
+  } : {
+    sujet: 'Pré-inscription',
+    msg: "Bonjour,\nJe souhaite m'inscrire à l'IUTAM.\n\nParcours souhaité : \nNiveau (Licence / Master) : \nBaccalauréat (série, année) ou Licence : \nTéléphone : \n"
+  };
+
+  function initInscription(cfg) {
+    var btns = document.querySelectorAll('.cta[data-cta="inscription"]');
+    var url = cfg && cfg.inscription && cfg.inscription.url;
+    if (url && /^https?:\/\//i.test(url)) {
+      Array.prototype.forEach.call(btns, function (a) {
+        a.href = url; a.target = '_blank'; a.rel = 'noopener';
+      });
+      return;
+    }
+    var form = document.getElementById('f');
+    if (!form) return;
+    Array.prototype.forEach.call(btns, function (a) {
+      a.addEventListener('click', function () {
+        var sujet = form.elements.sujet, msg = form.elements.message;
+        if (sujet && !sujet.value.trim()) sujet.value = I.sujet;
+        if (msg && !msg.value.trim()) { msg.value = I.msg; msg.rows = 8; }
+      });
+    });
+  }
+
   /* ------------------------------------------------------------------ démarrage */
 
   function start() {
     get('data/contact.json').then(function (cfg) {
       initContact(cfg);
       initNewsletter(cfg);
+      initInscription(cfg);
     }).catch(function () {
       // Sans configuration, le formulaire de contact reste utilisable par messagerie.
       initContact(null);
       initNewsletter(null);
+      initInscription(null);
     });
   }
 

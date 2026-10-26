@@ -149,6 +149,7 @@ collections:
               - { label: Niveau (licence ou ingeniorat), name: niveau, widget: select, options: [licence, ingeniorat] }
               - { label: Durée, name: duree, widget: string }
               - { label: Séries de Bacc admises (texte), name: bac, widget: string }
+              - { label: Séries de Bacc admises (malagasy), name: bac_mg, widget: string, required: false }
               - label: Séries de Bacc admises (liste)
                 name: bac_series
                 widget: list
