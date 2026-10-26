@@ -220,9 +220,9 @@ const openapi = {
     version: VERSION,
     description: 'API en lecture seule des contenus publics de l\'Institut Universitaire de Technologie et d\'Agronomie de Mahajanga. ' +
       'Servie en JSON statique (CORS ouvert). Les écritures passent par api/worker.js — voir docs/API.md.',
-    license: { name: 'Usage institutionnel', url: 'https://www.VOTRE-DOMAINE.mg/' }
+    license: { name: 'Usage institutionnel', url: 'https://iutam.univ.mg/' }
   },
-  servers: [{ url: 'https://www.VOTRE-DOMAINE.mg', description: 'Production' }],
+  servers: [{ url: 'https://iutam.univ.mg', description: 'Production' }],
   tags: endpoints.map(e => ({ name: e.path.replace('/api/', '').replace('.json', ''), description: e.description })),
   paths
 };

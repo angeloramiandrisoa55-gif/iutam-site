@@ -25,7 +25,7 @@ jobs:
       - name: Contrôler le site et l'API
         id: probe
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://www.VOTRE-DOMAINE.mg' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}
           HC_PING_URL: ${{ secrets.HC_PING_URL }}
         run: |
           set -e
@@ -53,7 +53,7 @@ jobs:
       - name: Vérifier la présence du certificat HTTPS
         id: tls
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://www.VOTRE-DOMAINE.mg' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}
         run: |
           set -e
           host=$(echo "$SITE_URL" | sed -E 's#https?://([^/]+).*#\1#')
@@ -74,7 +74,7 @@ jobs:
             const body = [
               'Une vérification automatique a échoué.',
               '',
-              `- Site : ${{ vars.SITE_URL || 'https://www.VOTRE-DOMAINE.mg' }}`,
+              `- Site : ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}`,
               '- Pages testées : /, /mg/, /api/index.json, /mentions-legales.html',
               '',
               'À faire : vérifier le déploiement, le certificat, puis relancer le travail :',
@@ -93,6 +93,6 @@ jobs:
       - name: Publier le résultat
         if: always()
         run: |
-          echo "Site : ${{ vars.SITE_URL || 'https://www.VOTRE-DOMAINE.mg' }}"
+          echo "Site : ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}"
           echo "Statut : ${{ steps.probe.outputs.failed == '1' && 'INDISPONIBLE' || 'OPÉRATIONNEL' }}"
           echo "Certificat : ${{ steps.tls.outputs.expire || 'inconnu' }}"

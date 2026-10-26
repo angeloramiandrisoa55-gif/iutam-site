@@ -54,8 +54,8 @@ html = html.replace(/<div class="stats rv">[\s\S]*?\n  <\/div>/, bloc => bloc
 html = html
   .replace('<html lang="fr">', '<html lang="mg" data-root="../">')
   .replace('fr_MG', 'mg_MG')
-  .replace('<link rel="canonical" href="https://www.VOTRE-DOMAINE.mg/">', '<link rel="canonical" href="https://www.VOTRE-DOMAINE.mg/mg/">')
-  .replace('<meta property="og:url" content="https://www.VOTRE-DOMAINE.mg/">', '<meta property="og:url" content="https://www.VOTRE-DOMAINE.mg/mg/">')
+  .replace('<link rel="canonical" href="https://iutam.univ.mg/">', '<link rel="canonical" href="https://iutam.univ.mg/mg/">')
+  .replace('<meta property="og:url" content="https://iutam.univ.mg/">', '<meta property="og:url" content="https://iutam.univ.mg/mg/">')
   .replace(/(src|href)="(css|js|images|favicon|data|mentions-legales)/g, '$1="../$2')
   // chemins d'images utilisés dans des styles en ligne (fonds des bandeaux)
   .replace(/(url\(\s*["']?)images\//g, '$1../images/');
