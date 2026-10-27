@@ -53,7 +53,7 @@ html = html.replace(/<div class="stats rv">[\s\S]*?\n  <\/div>/, bloc => bloc
 // 3. Ajustements propres à la version malgache
 html = html
   .replace('<html lang="fr">', '<html lang="mg" data-root="../">')
-  .replace('fr_MG', 'mg_MG')
+  .replace('fr_FR', 'mg_MG')
   .replace('<link rel="canonical" href="https://iutam.univ.mg/">', '<link rel="canonical" href="https://iutam.univ.mg/mg/">')
   .replace('<meta property="og:url" content="https://iutam.univ.mg/">', '<meta property="og:url" content="https://iutam.univ.mg/mg/">')
   .replace(/(src|href)="(css|js|images|favicon|data|mentions-legales)/g, '$1="../$2')
