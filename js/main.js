@@ -247,3 +247,22 @@ x.addEventListener("click",close);
 m.addEventListener("click",function(e){if(e.target===m)close()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!m.hidden)close()});
 })();
+
+// URL propre : les liens internes (#about, #vie...) défilent sans afficher l'ancre dans la barre d'adresse
+(function(){
+var propre=location.pathname+location.search;
+function retirer(){if(location.hash&&window.history&&history.replaceState)history.replaceState(null,"",propre)}
+document.addEventListener("click",function(e){
+var a=e.target.closest&&e.target.closest('a[href^="#"]');
+if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+var id=a.getAttribute("href").slice(1);
+if(!id)return;
+var cible=document.getElementById(id);
+if(!cible)return;
+e.preventDefault();
+var calme=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+cible.scrollIntoView({behavior:calme?"auto":"smooth",block:"start"});
+retirer();
+});
+window.addEventListener("load",function(){setTimeout(retirer,60)});
+})();

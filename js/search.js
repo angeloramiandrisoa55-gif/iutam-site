@@ -301,7 +301,7 @@
         close();
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          history.replaceState(null, '', '#' + id);
+          history.replaceState(null, '', location.pathname + location.search);
         }
       });
     });
