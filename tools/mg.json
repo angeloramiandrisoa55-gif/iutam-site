@@ -90,8 +90,6 @@
  "Total annuel": "Totalin'ny taona",
  "Les dernières informations de l'IUTAM.": "Ireo vaovao farany avy amin'ny IUTAM.",
  "Chargement…": "Mampiditra…",
- "🗺️ Voir sur la carte": "Jereo amin'ny sarintany",
- "🏛️ Site de l'Université": "Tranonkalan'ny Anjerimanontolo",
  "Mentions légales": "Fampahafantarana ara-dalàna",
  "Institut Universitaire de Technologie et d'Agronomie de Mahajanga": "Ivontoeram-pampianarana eny amin'ny Anjerimanontolo momba ny Teknolojia sy ny Agronomia ao Mahajanga.",
  "Université de Mahajanga": "Oniversiten'i Mahajanga",
@@ -206,6 +204,15 @@
  "J'accepte que mes données soient utilisées pour répondre à ma demande. ": "Manaiky aho fa hampiasaina ny angon-drakitra omeko mba handinihana sy hamaliana ny fangatahako.",
  "Envoyer le message": "Alefaso ny hafatra",
  "FAQ": "Fanontaniana apetraka matetika",
- "📍 Campus d'Ambondrona · Université de Mahajanga · BP 652<br>Mahajanga (401) · Madagascar<br>📞 +261 32 05 580 06<br>✉️ benjaiba@yahoo.fr": "📍 Toerana: Toeram-pianarana Ambondrona · Anjerimanontolon'i Mahajanga · BP 652<br>Mahajanga (401) · Madagasikara<br>Telefaonina: +261 32 05 580 06<br>Mailaka: benjaiba@yahoo.fr",
- "© <span id=\"y\"></span> IUTAM – Institut Universitaire de Technologie et d'Agronomie de Mahajanga. Tous droits réservés. · ": "© <span id=\"y\"></span> IUTAM – Ivontoeram-pampianarana eny amin'ny Anjerimanontolo momba ny Teknolojia sy ny Agronomia ao Mahajanga. Zo rehetra voatokana. · "
+ "© <span id=\"y\"></span> IUTAM – Institut Universitaire de Technologie et d'Agronomie de Mahajanga. Tous droits réservés. · ": "© <span id=\"y\"></span> IUTAM – Ivontoeram-pampianarana eny amin'ny Anjerimanontolo momba ny Teknolojia sy ny Agronomia ao Mahajanga. Zo rehetra voatokana. · ",
+ "Adresse": "Adiresy",
+ "Téléphone": "Telefaonina",
+ "E-mail": "Mailaka",
+ "Campus d'Ambondrona · Université de Mahajanga · BP 652": "Campus Ambondrona · Oniversiten'i Mahajanga · BP 652",
+ "Mahajanga (401) · Madagascar": "Mahajanga (401) · Madagasikara",
+ "Voir sur la carte": "Jereo amin'ny sarintany",
+ "Envoyer un e-mail": "Alefaso mailaka",
+ "Site de l'Université": "Tranonkalan'ny Anjerimanontolo",
+ "Visiter le site": "Tsidiho ny tranonkala",
+ "mahajanga-univ.mg": "mahajanga-univ.mg"
 }
