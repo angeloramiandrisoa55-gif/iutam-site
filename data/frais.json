@@ -1,0 +1,62 @@
+{
+  "annee": "",
+  "communs": [
+    {
+      "designation": "Droit d'inscription",
+      "designation_mg": "Sarany fisoratana anarana",
+      "montant": 60000
+    },
+    {
+      "designation": "Frais généraux",
+      "designation_mg": "Saran'ny fiasana ankapobeny",
+      "montant": 15000
+    },
+    {
+      "designation": "Assurance scolaire / étudiante",
+      "designation_mg": "Fiantohana ho an'ny mpianatra",
+      "montant": 5000
+    },
+    {
+      "designation": "Tenue vestimentaire (Polo)",
+      "designation_mg": "Fitafiana (Polo)",
+      "montant": 30000
+    }
+  ],
+  "tranches": [
+    {
+      "designation": "1ère tranche de frais de formation",
+      "designation_mg": "Fandoavam-bola voalohany amin'ny saram-pianarana"
+    },
+    {
+      "designation": "2ème tranche de frais de formation",
+      "designation_mg": "Fandoavam-bola faharoa amin'ny saram-pianarana"
+    },
+    {
+      "designation": "3ème tranche de frais de formation",
+      "designation_mg": "Fandoavam-bola fahatelo amin'ny saram-pianarana"
+    }
+  ],
+  "niveaux": [
+    {
+      "nom": "L1 – L2",
+      "nom_mg": "L1 – L2",
+      "detail": "Licence 1 et Licence 2",
+      "detail_mg": "Licence 1 sy Licence 2",
+      "tranche": 166700
+    },
+    {
+      "nom": "L3",
+      "nom_mg": "L3",
+      "detail": "Licence 3",
+      "detail_mg": "Laisansa 3",
+      "tranche": 186700
+    },
+    {
+      "nom": "M1 – M2",
+      "nom_mg": "M1 – M2",
+      "detail": "Master 1 et Master 2 (Ingéniorat)",
+      "detail_mg": "Master 1 sy Master 2 (Ingéniorat)",
+      "tranche": 300000
+    }
+  ]
+}

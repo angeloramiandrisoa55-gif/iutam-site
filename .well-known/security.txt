@@ -1,0 +1,8 @@
+Contact: mailto:benjaiba@yahoo.fr
+Expires: 2027-10-19T00:00:00.000Z
+Encryption: https://iutam.univ.mg/
+Preferred-Languages: fr, mg
+Canonical: https://iutam.univ.mg/.well-known/security.txt
+Policy: https://iutam.univ.mg/mentions-legales.html
+Acknowledgments: https://iutam.univ.mg/mentions-legales.html
+Hiring: https://iutam.univ.mg/mentions-legales.html

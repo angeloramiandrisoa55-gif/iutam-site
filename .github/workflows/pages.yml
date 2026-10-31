@@ -1,0 +1,97 @@
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Vérifications
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Contrôler les fichiers de données (JSON valide)
+        run: |
+          set -e
+          for f in data/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && echo "OK  $f"
+          done
+
+      - name: Contrôler la cohérence des traductions malgaches
+        run: |
+          node tools/build-mg.js
+          if [ -n "$(git status --porcelain mg/index.html)" ]; then
+            echo "::warning::mg/index.html n'est pas à jour : lancer « npm run build:mg » et commiter."
+          fi
+
+      - name: Contrôler les liens internes et les ressources
+        run: |
+          node tools/check-links.js
+
+      - name: Contrôler la traduction malagache
+        run: node tools/check-i18n.js
+
+      - name: Contrôler les données
+        run: node tools/fix-data.js --check
+
+      - name: Contrôler l'encodage des fichiers
+        run: node tools/check-encoding.js
+
+      - name: Contrôler la lisibilité des textes posés sur les photos
+        run: node tools/check-contraste.js
+
+      - name: Tester l'API (sécurité, validation, jetons)
+        run: node tools/test-worker.js
+
+      - name: Vérifier la syntaxe JavaScript
+        run: |
+          for f in js/*.js api/worker.js tools/*.js; do
+            node --check "$f" && echo "OK  $f"
+          done
+
+  deploy:
+    name: Publication
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Préparer le site (version malagasy, API JSON, minification)
+        run: node tools/build-site.js --min
+
+      - name: Vérifier le dossier construit
+        run: |
+          test -f _site/index.html
+          test -f _site/mg/index.html
+          test -f _site/api/index.json
+          test -f _site/404.html
+          du -sh _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

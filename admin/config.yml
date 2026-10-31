@@ -1,0 +1,327 @@
+# Configuration Decap CMS : permet de modifier les actualités et les frais sans toucher au code.
+# Voir docs/CMS.md pour le branchement (connexion GitHub) avant utilisation.
+backend:
+  name: github
+  repo: VOTRE_COMPTE/iutam-site        # à remplacer
+  branch: main
+  base_url: https://VOTRE-PASSERELLE-OAUTH   # passerelle d'authentification (voir docs/CMS.md)
+
+local_backend: true                      # test en local : npx decap-server
+locale: fr
+publish_mode: simple
+media_folder: images/actus
+public_folder: /images/actus
+
+collections:
+  - name: actualites
+    label: Actualités
+    files:
+      - name: actualites
+        label: Liste des actualités
+        file: data/actualites.json
+        fields:
+          - label: Actualités
+            name: items
+            widget: list
+            summary: "{{fields.titre}} ({{fields.date}})"
+            fields:
+              - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: Titre (français), name: titre, widget: string }
+              - { label: Titre (malagasy), name: titre_mg, widget: string, required: false }
+              - { label: Résumé (français), name: resume, widget: text }
+              - { label: Résumé (malagasy), name: resume_mg, widget: text, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: "Lien (commence par https://)", name: lien, widget: string, required: false }
+  - name: frais
+    label: Frais de scolarité
+    files:
+      - name: frais
+        label: Grille tarifaire
+        file: data/frais.json
+        fields:
+          - { label: Année universitaire, name: annee, widget: string, required: false }
+          - label: Frais communs à tous les niveaux
+            name: communs
+            widget: list
+            summary: "{{fields.designation}} : {{fields.montant}} Ar"
+            fields:
+              - { label: Désignation (français), name: designation, widget: string }
+              - { label: Désignation (malagasy), name: designation_mg, widget: string, required: false }
+              - { label: Montant en Ariary, name: montant, widget: number, value_type: int, min: 0 }
+          - label: Tranches de frais de formation (intitulés)
+            name: tranches
+            widget: list
+            summary: "{{fields.designation}}"
+            fields:
+              - { label: Intitulé (français), name: designation, widget: string }
+              - { label: Intitulé (malagasy), name: designation_mg, widget: string, required: false }
+          - label: Niveaux (montant d'une tranche)
+            name: niveaux
+            widget: list
+            summary: "{{fields.nom}} : {{fields.tranche}} Ar par tranche"
+            fields:
+              - { label: Nom du niveau (ex. L1 – L2), name: nom, widget: string }
+              - { label: Nom (malagasy), name: nom_mg, widget: string, required: false }
+              - { label: Précision (français), name: detail, widget: string, required: false }
+              - { label: Précision (malagasy), name: detail_mg, widget: string, required: false }
+              - { label: Montant d'une tranche en Ariary, name: tranche, widget: number, value_type: int, min: 0 }
+  - name: sites
+    label: Sites (Antsohihy, Maevatanana…)
+    files:
+      - name: sites
+        label: Liste des sites IUTAM
+        file: data/sites.json
+        fields:
+          - label: Sites
+            name: sites
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { label: Identifiant (sans espace), name: id, widget: string }
+              - { label: Nom (ex. IUTAM Antsohihy), name: nom, widget: string }
+              - { label: Masquer dans la liste (ex. Mahajanga), name: masquer_liste, widget: boolean, required: false, default: false }
+              - { label: Rôle ou statut (français), name: role, widget: string, required: false }
+              - { label: Rôle ou statut (malagasy), name: role_mg, widget: string, required: false }
+              - { label: Adresse (français), name: adresse, widget: string, required: false }
+              - { label: Adresse (malagasy), name: adresse_mg, widget: string, required: false }
+              - { label: Téléphone, name: telephone, widget: string, required: false }
+              - { label: E-mail, name: email, widget: string, required: false }
+              - { label: Parcours proposés (français), name: parcours, widget: string, required: false }
+              - { label: Parcours proposés (malagasy), name: parcours_mg, widget: string, required: false }
+              - { label: Photo de couverture, name: image, widget: image, required: false }
+              - { label: Image illustrative (afficher la mention Illustration), name: illustration, widget: boolean, required: false, default: false }
+              - label: Photos (galerie)
+                name: photos
+                widget: list
+                required: false
+                fields:
+                  - { label: Photo, name: src, widget: image }
+                  - { label: Légende (français), name: alt, widget: string }
+                  - { label: Légende (malagasy), name: alt_mg, widget: string, required: false }
+              - { label: Note (français), name: note, widget: string, required: false }
+              - { label: Note (malagasy), name: note_mg, widget: string, required: false }
+              - { label: "Lien (https://…)", name: lien, widget: string, required: false }
+  - name: formations
+    label: Formations et débouchés
+    files:
+      - name: formations
+        label: Parcours, objectifs et débouchés
+        file: data/formations.json
+        fields:
+          - label: Mention de la Licence
+            name: mention_licence
+            widget: string
+          - label: Mention de l'Ingéniorat
+            name: mention_ingeniorat
+            widget: string
+          - label: Niveaux
+            name: niveaux
+            widget: list
+            summary: "{{fields.nom}} ({{fields.duree}})"
+            fields:
+              - { label: Identifiant, name: id, widget: string }
+              - { label: Nom (français), name: nom, widget: string }
+              - { label: Nom (malagasy), name: nom_mg, widget: string, required: false }
+              - { label: Durée, name: duree, widget: string }
+              - { label: Durée en années, name: duree_annees, widget: number, value_type: int, min: 1 }
+              - { label: Diplôme (français), name: diplome, widget: string }
+              - { label: Diplôme (malagasy), name: diplome_mg, widget: string, required: false }
+              - { label: Condition d'accès (français), name: condition, widget: string }
+              - { label: Condition d'accès (malagasy), name: condition_mg, widget: string, required: false }
+              - { label: Mode de sélection (français), name: selection, widget: string }
+              - { label: Mode de sélection (malagasy), name: selection_mg, widget: string, required: false }
+              - label: Stages
+                name: stages
+                widget: list
+                required: false
+                fields:
+                  - { label: Niveau, name: niveau, widget: string }
+                  - { label: Intitulé (français), name: titre, widget: string }
+                  - { label: Intitulé (malagasy), name: titre_mg, widget: string, required: false }
+          - label: Parcours
+            name: parcours
+            widget: list
+            summary: "{{fields.nom}} — {{fields.debouches.length}} débouchés"
+            fields:
+              - { label: Identifiant (sans espace), name: id, widget: string }
+              - { label: Nom (français), name: nom, widget: string }
+              - { label: Nom (malagasy), name: nom_mg, widget: string, required: false }
+              - { label: Niveau (licence ou ingeniorat), name: niveau, widget: select, options: [licence, ingeniorat] }
+              - { label: Durée, name: duree, widget: string }
+              - { label: Séries de Bacc admises (texte), name: bac, widget: string }
+              - { label: Séries de Bacc admises (malagasy), name: bac_mg, widget: string, required: false }
+              - label: Séries de Bacc admises (liste)
+                name: bac_series
+                widget: list
+                required: false
+                field: { label: Série, name: serie }
+              - { label: Résumé (français), name: resume, widget: text }
+              - { label: Résumé (malagasy), name: resume_mg, widget: text, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - label: Objectifs
+                name: objectifs
+                widget: list
+                required: false
+                field: { label: Objectif, name: texte }
+              - label: Objectifs (malagasy)
+                name: objectifs_mg
+                widget: list
+                required: false
+                field: { label: Objectif, name: texte }
+              - label: Compétences
+                name: competences
+                widget: list
+                required: false
+                field: { label: Compétence, name: texte }
+              - label: Compétences (malagasy)
+                name: competences_mg
+                widget: list
+                required: false
+                field: { label: Compétence, name: texte }
+              - label: Débouchés professionnels
+                name: debouches
+                widget: list
+                required: false
+                summary: "{{fields.metier}} — {{fields.secteur}}"
+                fields:
+                  - { label: Métier (français), name: metier, widget: string }
+                  - { label: Métier (malagasy), name: metier_mg, widget: string, required: false }
+                  - { label: Secteur (français), name: secteur, widget: string }
+                  - { label: Secteur (malagasy), name: secteur_mg, widget: string, required: false }
+                  - { label: Description, name: detail, widget: text, required: false }
+              - { label: Poursuite d'études (français), name: poursuite, widget: string, required: false }
+              - { label: Poursuite d'études (malagasy), name: poursuite_mg, widget: string, required: false }
+  - name: faq
+    label: Questions fréquentes
+    files:
+      - name: faq
+        label: FAQ
+        file: data/faq.json
+        fields:
+          - label: Groupes de questions
+            name: groupes
+            widget: list
+            summary: "{{fields.titre}} ({{fields.questions.length}} questions)"
+            fields:
+              - { label: Identifiant, name: id, widget: string }
+              - { label: Titre (français), name: titre, widget: string }
+              - { label: Titre (malagasy), name: titre_mg, widget: string, required: false }
+              - label: Questions
+                name: questions
+                widget: list
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: Question (français), name: q, widget: string }
+                  - { label: Question (malagasy), name: q_mg, widget: string, required: false }
+                  - { label: Réponse (français), name: r, widget: text }
+                  - { label: Réponse (malagasy), name: r_mg, widget: text, required: false }
+  - name: guides
+    label: Guides pratiques
+    files:
+      - name: guides
+        label: Guides
+        file: data/guides.json
+        fields:
+          - label: Guides
+            name: guides
+            widget: list
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: Identifiant, name: id, widget: string }
+              - { label: Icône (émoji), name: icone, widget: string, required: false }
+              - { label: Titre (français), name: titre, widget: string }
+              - { label: Titre (malagasy), name: titre_mg, widget: string, required: false }
+              - { label: Résumé (français), name: resume, widget: text }
+              - { label: Résumé (malagasy), name: resume_mg, widget: text, required: false }
+              - { label: Durée indicative (français), name: duree, widget: string, required: false }
+              - { label: Durée indicative (malagasy), name: duree_mg, widget: string, required: false }
+              - label: Étapes
+                name: etapes
+                widget: list
+                summary: "{{fields.t}}"
+                fields:
+                  - { label: Titre de l'étape (français), name: t, widget: string }
+                  - { label: Titre de l'étape (malagasy), name: t_mg, widget: string, required: false }
+                  - { label: Description (français), name: d, widget: text }
+                  - { label: Description (malagasy), name: d_mg, widget: text, required: false }
+              - label: Pièces à réunir
+                name: pieces
+                widget: list
+                required: false
+                field: { label: Pièce, name: piece }
+              - label: Pièces à réunir (malagasy)
+                name: pieces_mg
+                widget: list
+                required: false
+                field: { label: Pièce, name: piece }
+  - name: pub
+    label: Bandeau d'accueil
+    files:
+      - name: pub
+        label: Messages du bandeau rotatif
+        file: data/pub.json
+        fields:
+          - label: Messages
+            name: messages
+            widget: list
+            summary: "{{fields.titre}} → {{fields.lien}}"
+            fields:
+              - { label: Titre (français), name: titre, widget: string }
+              - { label: Titre (malagasy), name: titre_mg, widget: string, required: false }
+              - { label: Texte (français), name: texte, widget: text }
+              - { label: Texte (malagasy), name: texte_mg, widget: text, required: false }
+              - { label: "Lien (ex. #admission)", name: lien, widget: string, required: false }
+              - { label: Libellé du bouton (français), name: libelle, widget: string, required: false }
+              - { label: Libellé du bouton (malagasy), name: libelle_mg, widget: string, required: false }
+  - name: contact
+    label: Coordonnées
+    files:
+      - name: contact
+        label: Contact et API
+        file: data/contact.json
+        fields:
+          - label: Identité de l'institut
+            name: institut
+            widget: object
+            fields:
+              - { label: Nom complet, name: nom, widget: string }
+              - { label: Sigle, name: sigle, widget: string }
+              - { label: Nom (malagasy), name: nom_mg, widget: string, required: false }
+              - { label: Tutelle, name: tutelle, widget: string }
+              - { label: Tutelle (malagasy), name: tutelle_mg, widget: string, required: false }
+              - { label: Mention officielle, name: systeme, widget: string }
+              - { label: Mention officielle (malagasy), name: systeme_mg, widget: string, required: false }
+          - label: Siège
+            name: siege
+            widget: object
+            fields:
+              - { label: Adresse, name: adresse, widget: string }
+              - { label: Adresse (malagasy), name: adresse_mg, widget: string, required: false }
+              - { label: Ville, name: ville, widget: string }
+              - { label: Code postal, name: code_postal, widget: string }
+              - { label: Pays, name: pays, widget: string }
+              - { label: Téléphone, name: telephone, widget: string }
+              - { label: E-mail, name: email, widget: string }
+              - { label: Horaires d'ouverture, name: horaires, widget: string, required: false }
+              - { label: Horaires (malagasy), name: horaires_mg, widget: string, required: false }
+              - { label: Latitude, name: latitude, widget: number, value_type: float, required: false }
+              - { label: Longitude, name: longitude, widget: number, value_type: float, required: false }
+          - label: Formulaire de contact
+            name: formulaire
+            widget: object
+            fields:
+              - { label: "Adresse de l'API (laisser vide si l'API n'est pas déployée)", name: endpoint, widget: string, required: false }
+              - { label: Sujet par défaut, name: sujet, widget: string, required: false }
+          - label: Lettre d'information
+            name: newsletter
+            widget: object
+            fields:
+              - { label: "Adresse de l'API (laisser vide si l'API n'est pas déployée)", name: endpoint, widget: string, required: false }
+          - label: Réseaux sociaux
+            name: reseaux
+            widget: object
+            fields:
+              - { label: Page Facebook, name: facebook, widget: string, required: false }
+              - { label: Page LinkedIn, name: linkedin, widget: string, required: false }
+              - { label: Chaîne YouTube, name: youtube, widget: string, required: false }
+              - { label: E-mail presse, name: email_presse, widget: string, required: false }

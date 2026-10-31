@@ -1,0 +1,31 @@
+{
+  "name": "iutam-site",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Site vitrine de l'IUTAM Mahajanga — statique + API JSON + API Worker",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "build": "node tools/build-site.js",
+    "build:mg": "node tools/build-mg.js",
+    "build:api": "node tools/build-api.js",
+    "build:min": "node tools/build-site.js --min",
+    "build:univ": "node tools/build-site.js --univ",
+    "build:univ:min": "node tools/build-site.js --univ --min",
+    "check": "node tools/check-links.js",
+    "check:i18n": "node tools/check-i18n.js",
+    "check:data": "node tools/fix-data.js --check",
+    "check:encoding": "node tools/check-encoding.js",
+    "test": "node tools/test-worker.js",
+    "check:all": "npm run check && npm run check:i18n && npm run check:data && npm run check:encoding && npm run check:syntax && npm run check:contraste && npm test",
+    "backup": "node tools/backup.js",
+    "backup:list": "node tools/backup.js --list",
+    "cms": "npx decap-server",
+    "serve": "npx serve .",
+    "api:dev": "npx wrangler dev",
+    "check:syntax": "node tools/check-syntax.js",
+    "check:contraste": "node tools/check-contraste.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
