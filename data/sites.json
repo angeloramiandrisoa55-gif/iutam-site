@@ -1,0 +1,78 @@
+{
+  "sites": [
+    {
+      "id": "mahajanga",
+      "nom": "IUTAM Mahajanga",
+      "masquer_liste": true,
+      "role": "",
+      "adresse": "Campus d'Ambondrona, Université de Mahajanga, BP 652, Mahajanga (401)",
+      "telephone": "+261 32 05 580 06",
+      "email": "benjaiba@yahoo.fr",
+      "parcours": "",
+      "lien": "",
+      "image": "",
+      "adresse_mg": "Toby Ambondrona, Anjerimanontolo Mahajanga, BP 652, Mahajanga (401)"
+    },
+    {
+      "id": "antsohihy",
+      "nom": "IUTAM Antsohihy",
+      "role": "",
+      "role_mg": "",
+      "adresse": "",
+      "adresse_mg": "",
+      "telephone": "+261 32 05 580 06 / +261 34 02 653 27",
+      "email": "iutamumg@gmail.com",
+      "parcours": "Agriculture, Élevage, Environnement, Pêche et Aquaculture",
+      "parcours_mg": "Fambolena, Fiompiana, Tontolo iainana, Jono sy Fiompiana anaty rano.",
+      "lien": "",
+      "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
+      "note_mg": "Mbola hamafisin'ny sekreteria ao Mahajanga ny adiresy, ny ora fiasana ary ny lalam-piofanana ho an'ny taom-pianarana 2026–2027.",
+      "image": "images/antsohihy.jpg",
+      "photos": [
+        {
+          "src": "images/antsohihy-panneau.jpg",
+          "alt": "Panneau « IUTAM — Annexe ANTSOHIHY » avec l'indication « 60 m » et les coordonnées",
+          "alt_mg": "Takelaka famantarana « IUTAM — Annexe Antsohihy », manondro ny lalana sy ny toerana, eo amin'ny 60 m."
+        },
+        {
+          "src": "images/antsohihy-stand.jpg",
+          "alt": "Le stand de l'IUTAM Antsohihy et son panneau d'accueil",
+          "alt_mg": "Takelaka famantarana « IUTAM Annexe Antsohihy », manondro ny lalana eo amin'ny 300 m."
+        },
+        {
+          "src": "images/antsohihy-acces.jpg",
+          "alt": "Panneau « IUTAM Annexe Antsohihy » : accès à 300 m",
+          "alt_mg": "Vondron'olona mijoro eo anoloan'ny afisy « Ny lalam-piofanana atolotray »."
+        },
+        {
+          "src": "images/antsohihy-equipe.jpg",
+          "alt": "Groupe devant l'affiche « Nos formations »",
+          "alt_mg": "Vondron'olona mijoro eo anoloan'ny afisy « Ny lalam-piofanana atolotray »."
+        }
+      ]
+    },
+    {
+      "id": "maevatanana",
+      "nom": "IUTAM Maevatanana",
+      "role": "",
+      "role_mg": "",
+      "adresse": "",
+      "adresse_mg": "",
+      "telephone": "",
+      "email": "",
+      "parcours": "Agriculture, Élevage, Environnement",
+      "parcours_mg": "Fambolena, Fiompiana ary Tontolo iainana.",
+      "lien": "",
+      "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
+      "note_mg": "Mbola hamafisin'ny sekreteria ao Mahajanga ny adiresy, ny ora fiasana ary ny lalam-piofanana ho an'ny taom-pianarana 2026–2027.",
+      "image": "images/maevatanana.jpg",
+      "photos": [
+        {
+          "src": "images/maevatanana.jpg",
+          "alt": "Façade de l'IUTAM Maevatanana : bâtiment à deux niveaux, panneau « I.U.T.A.M — Antenne Maevatanana » et fléchage vers le secrétariat",
+          "alt_mg": "Sarin'ny tafon'ny IUTAM Maevatanana: trano misy rihana roa, ahitana ny takelaka « I.U.T.A.M — Antenne Maevatanana » sy ny famantarana mankany amin'ny sekreteria."
+        }
+      ]
+    }
+  ]
+}

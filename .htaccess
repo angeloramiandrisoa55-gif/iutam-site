@@ -1,0 +1,175 @@
+# =============================================================================
+# IUTAM Mahajanga — configuration Apache (serveur de l'Université / mutualisé)
+# =============================================================================
+# Prérequis : AllowOverride All, modules headers, expires, deflate, rewrite,
+#             env (et optionnellement security2, limit_req ou ratelimit).
+# Tout ce qui est optionnel est encadré par <IfModule> : si le module manque,
+# Apache ignore le bloc au lieu de renvoyer une erreur 500.
+#
+# Sommaire
+#   1. Réglages de base
+#   2. Redirection HTTPS (à activer après installation du certificat)
+#   3. En-têtes de sécurité (CSP, HSTS, anti-clickjacking…)
+#   4. Pare-feu applicatif (WAF) — mod_security + OWASP CRS
+#   5. Limitation de débit
+#   6. Fichiers à ne jamais servir
+#   7. API JSON (CORS, types MIME)
+#   8. Compression et cache
+# =============================================================================
+
+# --- 1. Réglages de base -------------------------------------------------------
+Options -Indexes -MultiViews
+Options +FollowSymLinks
+ServerSignature Off
+ServerTokens Prod
+ErrorDocument 404 /404.html
+ErrorDocument 503 /503.html
+DirectoryIndex index.html
+
+# Bloque les méthodes HTTP inutiles (TRACE permet de voler des en-têtes)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|DEBUG|CONNECT)$ [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# --- 2. Redirection vers HTTPS -------------------------------------------------
+# À ACTIVER (retirer les « # ») UNIQUEMENT quand le certificat est installé,
+# sinon le site devient inaccessible. Voir docs/SECURITE.md, section 2.
+#<IfModule mod_rewrite.c>
+#  RewriteEngine On
+#  RewriteCond %{HTTPS} !=on
+#  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#</IfModule>
+
+# --- 3. En-têtes de sécurité ----------------------------------------------------
+<IfModule mod_headers.c>
+  # Transport : le navigateur garde le HTTPS pendant 2 ans, préchargement possible
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+  # Défaut contre le MIME sniffing et le clickjacking
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+
+  # Empêche Apache d'annoncer sa version
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+
+  # Politique de contenu stricte (CSP).
+  # 'unsafe-inline' est requis pour les styles calculés en JavaScript (thème, animations).
+  # Si le formulaire est branché sur api/worker.js, ajouter l'origine du Worker :
+  #   form-action 'self' https://api.VOTRE-DOMAINE.mg mailto:;
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.VOTRE-DOMAINE.mg; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
+
+  # Le site est en français et en malagasy : on autorise la recherche Google
+  # à ne garder qu'une seule version de la page (pas de doublon).
+  <FilesMatch "\.(html|json)$">
+    Header always set Vary "Accept-Language, Accept-Encoding"
+  </FilesMatch>
+</IfModule>
+
+# --- 4. Pare-feu applicatif (WAF) -------------------------------------------------
+# mod_security avec les règles OWASP CRS : bloque injections SQL, XSS, RCE, etc.
+# Souvent déjà installé sur les mutualisés (cPanel). S'il est absent, le site
+# fonctionne normalement — c'est une protection en profondeur, pas un remplacement
+# de la validation côté serveur (voir api/worker.js).
+<IfModule mod_security2.c>
+  <IfModule mod_security2.c>
+    SecRuleEngine DetectionOnly
+    SecRequestBodyAccess On
+    SecAuditEngine RelevantOnly
+    SecAuditLog /var/log/apache2/iutam-modsec-audit.log
+    SecResponseBodyAccess Off
+  </IfModule>
+  # Passer à "On" une fois les faux positifs traités (voir docs/WAF.md)
+  # SecRuleEngine On
+  # SecRequestBodyLimit 131072
+  # SecRequestBodyNoFilesLimit 131072
+  # SecRequestBodyInMemoryLimit 131072
+  # Include /usr/share/modsecurity-crs/*.conf
+</IfModule>
+
+# --- 5. Limitation de débit ------------------------------------------------------
+# mod_ratelimit limite le nombre de requêtes simultanées par IP.
+# Utile contre le bourrage du formulaire de contact.
+<IfModule mod_ratelimit.c>
+  <Location /api/>
+    SetEnv rate-limit 20
+    SetEnv rate-limit-remaining 10
+    SetEnv rate-limit-reset 60
+  </Location>
+</IfModule>
+
+# --- 6. Fichiers à ne jamais servir ------------------------------------------------
+<FilesMatch "^\.|\.(sql|bak|old|orig|save|swp|log|ini|env|yml|yaml|conf|sh|ps1|bat|key|pem|p12|md5)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Le dossier de travail (outils de compilation) ne doit jamais être exposé.
+RedirectMatch 404 ^/(tools|docs|_site|\.git|\.github)/
+
+# --- 7. API JSON -------------------------------------------------------------------
+AddType application/json .json
+AddType font/woff2 .woff2
+
+# Accès en lecture seule depuis n'importe quelle origine (données publiques).
+# Le Worker (api/worker.js) applique, lui, un CORS strict pour les écritures.
+<IfModule mod_headers.c>
+  <FilesMatch "^.*\.json$">
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Accept"
+    Header always set Access-Control-Max-Age "86400"
+  </FilesMatch>
+</IfModule>
+
+# --- 8. Compression et cache ----------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Compression Brotli, plus efficace que gzip (à activer si le module est installé)
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType application/json "access plus 5 minutes"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Les fichiers statiques sont immuables quand leur nom contient une empreinte ;
+# les autres sont revalidés à chaque visite (le contenu change souvent).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2|jpg|jpeg|png|webp|svg)$">
+    Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Pas de negotiation de contenu (inutile ici, parfois source d'une faille)
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
