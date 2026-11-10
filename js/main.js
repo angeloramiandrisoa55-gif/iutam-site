@@ -73,7 +73,7 @@ var ready=false;var tex=new THREE.TextureLoader().load(img.src,function(){ready=
 tex.minFilter=THREE.LinearFilter;tex.generateMipmaps=false;
 var U={map:{value:tex},t:{value:0}};
 var mat=new THREE.ShaderMaterial({uniforms:U,vertexShader:'varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
-fragmentShader:'uniform sampler2D map;uniform float t;varying vec2 v;void main(){vec2 u=(v-.5)*1.16+.5;vec4 c=texture2D(map,u);float d=abs((v.x+v.y)*.5-(fract(t*.22)*1.8-.4));float b=smoothstep(.09,0.,d);c.rgb+=b*.45;gl_FragColor=vec4(c.rgb,1.);}',side:THREE.FrontSide});
+fragmentShader:'uniform sampler2D map;uniform float t;varying vec2 v;void main(){vec2 u=(v-.5)*1.0+.5;vec4 c=texture2D(map,u);float d=abs((v.x+v.y)*.5-(fract(t*.22)*1.8-.4));float b=smoothstep(.09,0.,d);c.rgb+=b*.45;gl_FragColor=vec4(c.rgb,1.);}',side:THREE.FrontSide});
 var geo=new THREE.CircleGeometry(2,96);
 var front=new THREE.Mesh(geo,mat),back=new THREE.Mesh(geo,mat);back.rotation.y=Math.PI;back.position.z=-.001;
 var rim=new THREE.Mesh(new THREE.TorusGeometry(2.03,.05,24,120),new THREE.MeshBasicMaterial({color:0xe0a526}));
