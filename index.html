@@ -6,6 +6,7 @@
 <meta name="description" content="IUTAM – Institut Universitaire de Technologie et d'Agronomie de Mahajanga : formations, admission, actualités et contact.">
 <title>IUTAM Mahajanga – Institut Universitaire de Technologie et d'Agronomie</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/assistant.css">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -309,13 +310,14 @@
 
 <section id="faq">
   <h2 class="rv">Questions fréquentes</h2>
-  <p class="sub rv">Admission, frais, formation, stages : les réponses aux questions les plus posées.</p>
-  <div class="faq-tabs rv" id="faq-tabs" role="tablist" aria-label="Catégories de questions"></div>
-  <div id="faq-list" aria-live="polite"><p class="empty">Chargement…</p></div>
-  <div class="pub photo rv">
-    <span class="pub-bg" aria-hidden="true" style="background-image:linear-gradient(100deg,rgba(4,30,19,.9) 0%,rgba(8,38,62,.8) 50%,rgba(4,30,19,.45) 100%),url('images/pub-environnement.jpg')"></span>
-    <div><b>Votre question n'est pas là ?</b><span>Le secrétariat de l'IUTAM répond à toutes les questions sur l'admission et la scolarité.</span></div>
-    <a class="btn" href="#contact">Poser la question</a>
+  <p class="sub rv">Admission, frais, formation, stages : l'assistant de l'IUTAM répond à vos questions à partir des informations officielles.</p>
+  <div class="as-card rv">
+    <div class="as-card-h">
+      <span class="as-av" aria-hidden="true" data-ic="chat"></span>
+      <div><b>Assistant IUTAM</b><span>Posez votre question ou choisissez-en une.</span></div>
+    </div>
+    <div class="as-chips" id="as-suggest"></div>
+    <button class="btn" type="button" data-assistant-open>Ouvrir l'assistant</button>
   </div>
 </section>
 
@@ -363,5 +365,7 @@
 <script src="js/sections.js" defer></script>
 <script src="js/forms.js" defer></script>
 <script src="js/search.js" defer></script>
+<script src="js/icons.js" defer></script>
+<script src="js/assistant.js" defer></script>
 </body>
 </html>

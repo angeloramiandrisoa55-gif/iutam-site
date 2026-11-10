@@ -145,9 +145,6 @@
  "Guides pratiques": "TOROLALANA AZO AMPIHARINA",
  "Les démarches à connaître, étape par étape.": "Ireo dingana tokony harahina, hazavaina tsikelikely.",
  "Questions fréquentes": "FANONTANIANA APETRAKA MATETIKA",
- "Votre question n'est pas là ?": "Tsy hitanao ato ve ny valin'ny fanontanianao?",
- "Le secrétariat de l'IUTAM répond à toutes les questions sur l'admission et la scolarité.": "Vonona hamaly ny fanontaniana rehetra momba ny fidirana sy ny fisoratana anarana ny sekreterian'ny IUTAM.",
- "Poser la question": "Mametraha fanontaniana →",
  "Adresse e-mail": "Adiresy mailaka",
  "Sujet": "Antony ifandraisana",
  "Ne pas remplir ce champ": "Aza fenoina ity saha ity.",
@@ -157,7 +154,6 @@
  "Rechercher dans le site": "Fikarohana ao amin'ny tranonkala",
  "Rechercher (Ctrl + K)": "Hikaroka (Ctrl + K)",
  "Filtrer les débouchés par formation": "Sivana ireo fivoahana amin'ny asa araka ny fanofanana",
- "Catégories de questions": "Sokajin'ny fanontaniana",
  "– accueil": "– fandraisana",
  "Vie Étudiante Dynamique&nbsp;:": "Fiainan'ny mpianatra mavitrika",
  "La Direction": "NY FITARIHANA",
@@ -196,7 +192,6 @@
  "IUTAM ": "IUTAM",
  "Ingéniorat": "Injeniera",
  "Tous": "Rehetra",
- "Admission, frais, formation, stages : les réponses aux questions les plus posées.": "Fepetra fidirana, saram-pianarana, lalam-piofanana ary fiofanana anaty toeram-piasana: valin'ireo fanontaniana apetraka matetika.",
  "Nom et prénom ": "Anarana sy fanampin'anarana",
  "Adresse e-mail ": "Adiresy mailaka ",
  "Admission, frais, stage…": "Fepetra fidirana, saram-pianarana, fiofanana anaty toeram-piasana…",
@@ -214,5 +209,9 @@
  "Envoyer un e-mail": "Alefaso mailaka",
  "Site de l'Université": "Tranonkalan'ny Anjerimanontolo",
  "Visiter le site": "Tsidiho ny tranonkala",
- "mahajanga-univ.mg": "mahajanga-univ.mg"
+ "mahajanga-univ.mg": "mahajanga-univ.mg",
+ "Admission, frais, formation, stages : l'assistant de l'IUTAM répond à vos questions à partir des informations officielles.": "Fidirana, saram-pianarana, lalam-piofanana, fiofanana anaty orinasa: ny mpanampy an'ny IUTAM no mamaly ny fanontanianao araka ny fampahalalana ofisialy.",
+ "Assistant IUTAM": "Mpanampy IUTAM",
+ "Posez votre question ou choisissez-en une.": "Soraty ny fanontanianao na misafidiya iray.",
+ "Ouvrir l'assistant": "Sokafy ny mpanampy"
 }
