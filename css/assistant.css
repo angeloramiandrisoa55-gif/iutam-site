@@ -101,3 +101,36 @@
   .as-fab,.as-chip,.as-act,.as-send,.as-x{transition:none}
 }
 @media print{.as{display:none}}
+
+/* ===== Performance et affichage téléphone ===== */
+
+/* La page ne doit jamais être plus large que l'écran (les cartes qui arrivent de la droite l'élargissaient) */
+html,body{max-width:100%;overflow-x:clip}
+@supports not (overflow-x:clip){html,body{overflow-x:hidden}}
+
+/* Logo sans 3D (téléphones et appareils modestes) : image fixe avec un léger balancement */
+#stage.lite{perspective:900px}
+#stage.lite #c{display:none}
+#stage.lite #lg{position:relative;z-index:2;border-radius:50%;animation:iutamcoin 7s ease-in-out infinite}
+@keyframes iutamcoin{0%,100%{transform:translateY(0) rotateY(-12deg)}50%{transform:translateY(-8px) rotateY(12deg)}}
+
+/* Téléphones : on garde le décor mais on coupe les animations qui font ramer */
+@media (max-width:820px),(pointer:coarse){
+  .bg i,#stage:before,#stage:after,header:after,.brand-txt b{animation:none!important}
+  #stage:before{filter:blur(14px)}
+  .ps-m,.ps-k li,.ps .btn.o,.pub-pause,.cc-i,.as-card,.ill{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+}
+
+/* Bouton de l'assistant : plus petit partout, simple icône sur téléphone et tablette */
+.as-fab{gap:8px;padding:10px 16px;font-size:.88rem}
+.as-fab .ic-i{width:20px;height:20px}
+@media (max-width:820px){
+  .as-fab{justify-content:center;width:52px;height:52px;padding:0}
+  .as-fab-t{display:none}
+  .as-fab .ic-i{width:24px;height:24px}
+}
+@media (max-width:560px){
+  .as-chip,.as-b{max-width:100%}
+  .as-log{padding:14px 12px}
+}
+@media (prefers-reduced-motion:reduce){#stage.lite #lg{animation:none}}

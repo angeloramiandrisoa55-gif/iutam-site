@@ -55,15 +55,21 @@ document.querySelectorAll('.col').forEach(function(c){io.observe(c)})})();
 (function(){
 var img=document.getElementById('lg'),cv=document.getElementById('c'),st=document.getElementById('stage');
 if(!img||!cv||!st)return;
+var lite=matchMedia('(max-width:820px)').matches||matchMedia('(pointer:coarse)').matches||(navigator.hardwareConcurrency||8)<=2||(navigator.deviceMemory||8)<=2||!!(navigator.connection&&navigator.connection.saveData);
 function init(){
+if(lite){st.classList.add('lite');return}
+if(window.THREE){go();return}
+var s=document.createElement('script');s.src=(document.documentElement.dataset.root||'')+'js/vendor/three.min.js';s.onload=go;document.head.appendChild(s)
+}
+function go(){
 try{
 if(!window.THREE)return;
 var R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
-R.setPixelRatio(Math.min(devicePixelRatio,2));
+R.setPixelRatio(Math.min(devicePixelRatio,1.5));
 var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,100);C.position.z=7;
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var G=new THREE.Group();S.add(G);
-var tex=new THREE.TextureLoader().load(img.src,function(){img.style.visibility='hidden'});
+var ready=false;var tex=new THREE.TextureLoader().load(img.src,function(){ready=true;t0=performance.now();img.style.visibility='hidden'});
 tex.minFilter=THREE.LinearFilter;tex.generateMipmaps=false;
 var U={map:{value:tex},t:{value:0}};
 var mat=new THREE.ShaderMaterial({uniforms:U,vertexShader:'varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
@@ -82,7 +88,7 @@ cv.addEventListener('click',function(){if(!reduce)spinT=(performance.now()-t0)/1
 function rs(){var w=st.clientWidth;R.setSize(w,w,false)}rs();addEventListener('resize',rs);
 new IntersectionObserver(function(a){vis=a[0].isIntersecting}).observe(st);
 function ease(x){return 1-Math.pow(1-x,3)}
-function loop(){requestAnimationFrame(loop);if(!vis)return;
+function loop(){requestAnimationFrame(loop);if(!vis||!ready||document.hidden)return;
 var t=(performance.now()-t0)/1000;U.t.value=t;
 if(!reduce&&t>3.5&&t-spinT>9)spinT=t;
 var k=reduce?1:Math.min(t/2.6,1),e=ease(k);
