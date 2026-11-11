@@ -11,7 +11,7 @@
       "parcours": "",
       "lien": "",
       "image": "",
-      "adresse_mg": "Toby Ambondrona, Anjerimanontolo Mahajanga, BP 652, Mahajanga (401)"
+      "adresse_mg": "Toby Ambondrona, Anjerimanontolon'i Mahajanga, BP 652, Mahajanga (401)"
     },
     {
       "id": "antsohihy",
@@ -26,7 +26,7 @@
       "parcours_mg": "Fambolena, Fiompiana, Tontolo iainana, Jono sy Fiompiana anaty rano.",
       "lien": "",
       "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
-      "note_mg": "Mbola hamafisin'ny sekreteria ao Mahajanga ny adiresy, ny ora fiasana ary ny lalam-piofanana ho an'ny taom-pianarana 2026–2027.",
+      "note_mg": "Mbola mila hamafisin'ny Sekreteria ao Mahajanga ny adiresy, ny ora fiasana ary ny lalam-piofanana atolotra ho an'ny taom-pianarana 2026–2027.",
       "image": "images/antsohihy.jpg",
       "photos": [
         {
@@ -64,13 +64,13 @@
       "parcours_mg": "Fambolena, Fiompiana ary Tontolo iainana.",
       "lien": "",
       "note": "Adresse, horaires et offre 2026-2027 à confirmer auprès du secrétariat de l'IUTAM à Mahajanga.",
-      "note_mg": "Mbola hamafisin'ny sekreteria ao Mahajanga ny adiresy, ny ora fiasana ary ny lalam-piofanana ho an'ny taom-pianarana 2026–2027.",
+      "note_mg": "Mbola mila hamafisin'ny Sekreteria ao Mahajanga ny adiresy, ny ora fiasana ary ny lalam-piofanana atolotra ho an'ny taom-pianarana 2026–2027.",
       "image": "images/maevatanana.jpg",
       "photos": [
         {
           "src": "images/maevatanana.jpg",
           "alt": "Façade de l'IUTAM Maevatanana : bâtiment à deux niveaux, panneau « I.U.T.A.M — Antenne Maevatanana » et fléchage vers le secrétariat",
-          "alt_mg": "Sarin'ny tafon'ny IUTAM Maevatanana: trano misy rihana roa, ahitana ny takelaka « I.U.T.A.M — Antenne Maevatanana » sy ny famantarana mankany amin'ny sekreteria."
+          "alt_mg": "Sarin'ny tafon'ny IUTAM Maevatanana: trano misy rihana roa, ahitana ny takelaka « I.U.T.A.M — Antenne Maevatanana » sy ny famantarana mankany amin'ny Sekreteria."
         }
       ]
     }

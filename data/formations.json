@@ -2,7 +2,7 @@
   "mention_licence": "Biologie Appliquée",
   "mention_licence_mg": "Biolojia Ampiharina",
   "mention_ingeniorat": "Agro-biodiversité et Environnement",
-  "mention_ingeniorat_mg": "Agro-biodiversita sy Tontolo iainana",
+  "mention_ingeniorat_mg": "Agro-biodiversité sy Tontolo iainana",
   "niveaux": [
     {
       "id": "licence",
@@ -76,7 +76,7 @@
       ],
       "image": "images/pub-agriculture.jpg",
       "resume": "Acquérez les bases scientifiques, les techniques et les technologies de la production agricole, du terrain au laboratoire.",
-      "resume_mg": "Mahazo fototra ara-tsiansa, ara-teknika ary ara-teknolojia momba ny famokarana ara-pambolena ny mpianatra. Ahitana asa fampiharana eny an-kianja sy ao amin'ny laboratoara izany, ary arahin'ny fiofanana anaty toeram-piasana.",
+      "resume_mg": "Mahazo fototra ara-tsiansa, ara-teknika ary ara-teknolojia momba ny famokarana ara-pambolena ny mpianatra. Ahitana asa fampiharana eny an-kianja sy ao amin'ny laboratoara izany, ary arahin'ny fiofanana eny amin'ny toeram-piasana.",
       "objectifs": [
         "Maîtriser les itinéraires techniques des principales cultures de la région",
         "Conduire un essai agronomique et interpréter ses résultats",
@@ -104,7 +104,7 @@
           "secteur": "Exploitations agricoles",
           "secteur_mg": "Toeram-pambolena",
           "detail": "Suivi des cultures, conseil technique de proximité, préparation des campagnes.",
-          "detail_mg": "Fanarahana ny voly, torohevitra ara-teknika akaikin'ny tantsaha, fanomanana ny vanim-potoana fambolena."
+          "detail_mg": "Fanaraha-maso ny voly, fanomezana torohevitra ara-teknika ho an'ny tantsaha ary fanomanana ny vanim-potoanan'ny fambolena."
         },
         {
           "metier": "Responsable de production végétale",
@@ -112,15 +112,15 @@
           "secteur": "Coopératives et sociétés agricoles",
           "secteur_mg": "Koperativa sy orinasa ara-pambolena",
           "detail": "Planification des semis, encadrement des producteurs, contrôle qualité de la récolte.",
-          "detail_mg": "Fanomanana ny famafazana voa, fitarihana ny mpamokatra, fanaraha-maso ny kalitaon'ny vokatra voaray."
+          "detail_mg": "Fandrindrana ny famafazana voa, fanohanana ny mpamokatra ary fanaraha-maso ny kalitaon'ny vokatra voaray."
         },
         {
           "metier": "Conseiller agricole",
           "metier_mg": "Mpanolo-tsaina ara-pambolena",
           "secteur": "Services de développement rural",
-          "secteur_mg": "Sampan-draharaha fampandrosoana ambanivohitra",
+          "secteur_mg": "Sampan-draharaha misahana ny fampandrosoana ambanivohitra",
           "detail": "Accompagnement des producteurs, appui aux projets, diffusion des itinéraires techniques.",
-          "detail_mg": "Fanaraha-mandroso ny mpamokatra, fanohanana ny tetik'asa, fampielezana ny teknika fambolena."
+          "detail_mg": "Fanohanana ny mpamokatra, fanampiana amin'ny fanatanterahana tetikasa ary fampielezana ny teknika fambolena."
         },
         {
           "metier": "Chef d'exploitation",
@@ -128,13 +128,13 @@
           "secteur": "Secteur privé",
           "secteur_mg": "Sehatra tsy miankina",
           "detail": "Gestion complète d'une exploitation, du plan de campagne à la commercialisation.",
-          "detail_mg": "Fitantanana tanteraka ny toeram-pambolena, hatramin'ny drafitry ny vanim-potoana ka hatramin'ny varotra."
+          "detail_mg": "Fitantanana ny asa rehetra ao amin'ny toeram-pambolena, manomboka amin'ny fandrindrana ny vanim-potoana ka hatramin'ny fivarotana ny vokatra."
         }
       ],
       "poursuite": "Ingéniorat P.V.T.D.D., ou formation spécialisée en agronomie et en gestion de l'eau.",
       "poursuite_mg": "Injenieran'ny Mastera P.V.T.D.D., na fiofanana manana mari-pahaizana amin'ny agronomia sy ny fitantanana ny rano.",
       "duree_mg": "3 taona",
-      "mention_mg": "Laisansa · Biolojia Ampiharina",
+      "mention_mg": "Laisansa Matihanina · Biolojia Ampiharina",
       "niveau_mg": "Laisansa",
       "metiers_mg": [
         "Teknisianina momba ny fambolena",
@@ -205,11 +205,11 @@
           "secteur": "Services vétérinaires et élevage",
           "secteur_mg": "Servisy veterinera sy fiompiana",
           "detail": "Appui aux éleveurs, prophylaxie, collecte et mise en marché.",
-          "detail_mg": "Fanohanana ny mpiompy, fisorohana ny aretina, fanangonana sy fanaterana ny vokatra amin'ny tsena."
+          "detail_mg": "Fanohanana ny mpiompy, fisorohana ny aretina ary fanampiana amin'ny fanangonana sy fivarotana ny vokatra."
         },
         {
           "metier": "Ingénieur agronome (après Ingéniorat)",
-          "metier_mg": "Injeniera momba ny agronomia rehefa vita ny fiofanana mifanaraka amin'izany",
+          "metier_mg": "Injeniera momba ny agronomia rehefa nahavita ny fiofanana takiana",
           "secteur": "P.A.D.D.",
           "secteur_mg": "P.A.D.D.",
           "detail": "Poursuite vers l'Ingéniorat Production Animale et Développement Durable.",
@@ -275,7 +275,7 @@
           "secteur": "Bureaux d'études",
           "secteur_mg": "Birao fandalinana",
           "detail": "Prélèvements, analyses, rédaction de rapports techniques et de dossiers d'impact.",
-          "detail_mg": "Fakana santionany, famakafakana, fanoratana tatitra ara-teknika sy antontan-taratasy momba ny fiantraikany."
+          "detail_mg": "Fakana santionany, famakafakana ary fanomanana tatitra ara-teknika sy antontan-taratasy momba ny fiantraikan'ny tetikasa."
         },
         {
           "metier": "Agent de l'eau et de l'assainissement",
@@ -283,7 +283,7 @@
           "secteur": "Collectivités et ONG",
           "secteur_mg": "Kaominina sy ONG",
           "detail": "Exploitation et maintenance des ouvrages, sensibilisation des ménages.",
-          "detail_mg": "Fampiasana sy fikojakojana ny fotodrafitrasa, fanentanana ny ankohonana."
+          "detail_mg": "Fanaraha-maso sy fikojakojana fotodrafitrasa ary fanentanana ny mponina."
         },
         {
           "metier": "Conservateur d'aires protégées",
@@ -303,9 +303,9 @@
         }
       ],
       "poursuite": "Ingéniorat P.A.D.D. ou P.V.T.D.D., ou mastère en sciences de l'environnement.",
-      "poursuite_mg": "Injenieran'ny Mastera P.A.D.D. na P.V.T.D.D., na master amin'ny siansa momba ny tontolo iainana.",
+      "poursuite_mg": "Fanohizana fianarana voalaza: P.A.D.D. na P.V.T.D.D., na Mastera amin'ny siansa momba ny tontolo iainana.",
       "duree_mg": "3 taona",
-      "mention_mg": "Laisansa · Biolojia Ampiharina",
+      "mention_mg": "Laisansa Matihanina · Biolojia Ampiharina",
       "niveau_mg": "Laisansa",
       "metiers_mg": [
         "Teknisianina momba ny tontolo iainana",
@@ -360,7 +360,7 @@
           "secteur": "Piscicultures et coopératives",
           "secteur_mg": "Toeram-piompiana trondro sy koperativa",
           "detail": "Conduite d'écloseries et d'étangs, alimentation, suivi sanitaire, récolte.",
-          "detail_mg": "Fitantanana ny toeram-pamokarana zana-trondro sy ny dobo, fanomezana sakafo, fanarahana ny fahasalaman'ny trondro, fijinjana."
+          "detail_mg": "Fitantanana ny toeram-pamokarana zana-trondro sy ny dobo, fandrindrana ny famahanana, fanaraha-maso ny fahasalaman'ny trondro ary fijinjana."
         },
         {
           "metier": "Pêcheur professionnel",
@@ -372,11 +372,11 @@
         },
         {
           "metier": "Agent de développement de la pêche",
-          "metier_mg": "Mpanentana ny fampandrosoana ny jono",
+          "metier_mg": "Mpanentana ny fampandrosoana ny sehatry ny jono",
           "secteur": "Secteur public et ONG",
           "secteur_mg": "Sehatra ampahibemaso sy ONG",
           "detail": "Structuration des filières, gestion des zones de pêche, statistiques.",
-          "detail_mg": "Fandaminana ny sehatra, fitantanana ny faritra fanjonoana, antontan'isa."
+          "detail_mg": "Fanohanana ny fandaminana ny sehatra, ny fitantanana ny faritra fanjonoana ary ny fanangonana antontan'isa."
         },
         {
           "metier": "Responsable de la transformation",
@@ -390,7 +390,7 @@
       "poursuite": "Ingéniorat P.A.D.D., ou master et formation spécialisée en halieutique et sciences de la mer.",
       "poursuite_mg": "Injenieran'ny Mastera P.A.D.D., na master sy fiofanana manokana amin'ny hara sy ny ranomasina.",
       "duree_mg": "3 taona",
-      "mention_mg": "Laisansa · Biolojia Ampiharina",
+      "mention_mg": "Laisansa Matihanina · Biolojia Ampiharina",
       "niveau_mg": "Laisansa",
       "metiers_mg": [
         "Teknisianina momba ny fiompiana trondro",
@@ -439,7 +439,7 @@
           "secteur": "Fermes et coopératives",
           "secteur_mg": "Toeram-piompiana sy koperativa",
           "detail": "Conception de systèmes d'élevage, pilotage d'une unité de production.",
-          "detail_mg": "Famolavolana rafitra fiompiana, fitarihana ny faritra famokarana."
+          "detail_mg": "Famolavolana rafitra fiompiana sy fitarihana ny sampana famokarana."
         },
         {
           "metier": "Chargé de recherche et développement",
@@ -451,11 +451,11 @@
         },
         {
           "metier": "Responsable qualité et conformité",
-          "metier_mg": "Tompon'andraikitra amin'ny kalitao sy ny fanarahana fenitra",
+          "metier_mg": "Tompon'andraikitra amin'ny kalitao sy ny fanajana ny fenitra",
           "secteur": "Agroalimentaire et industrie",
           "secteur_mg": "Indostrian'ny sakafo sy indostria",
           "detail": "Traçabilité, sécurité sanitaire, audits et relation avec les organismes de certification.",
-          "detail_mg": "Fanaraha-maso ny lalan'ny vokatra, fiarovana ara-pahasalamana, fanaovana audit ary fifandraisana amin'ireo andrim-pankatoavana."
+          "detail_mg": "Fanaraha-maso ny dian'ny vokatra, ny fiarovana ara-pahasalamana, ny fanaraha-maso anatiny ary ny fifandraisana amin'ireo rafitra mpanamarina."
         },
         {
           "metier": "Consultant en développement rural",
@@ -463,13 +463,13 @@
           "secteur": "ONG et bureaux d'études",
           "secteur_mg": "ONG sy birao fandalinana",
           "detail": "Études de faisabilité, encadrement de projets, formation de producteurs.",
-          "detail_mg": "Fandalinana ny fahafahana manatontosa, fitarihana tetik'asa, fampiofanana ny mpamokatra."
+          "detail_mg": "Fanadihadiana ny fahafahana manatanteraka tetikasa, fitarihana tetikasa ary fanofanana ny mpamokatra."
         }
       ],
       "poursuite": "Doctorat en sciences agronomiques, ou insertion dans l'industrie agroalimentaire.",
       "poursuite_mg": "Doktora amin'ny siansa agronomika, na asa ao amin'ny sehatra momba ny sakafo.",
       "duree_mg": "2 taona",
-      "mention_mg": "Diplaoma Injeniera amin'ny ambaratonga Mastera · Agro-biodiversita sy Tontolo iainana",
+      "mention_mg": "Diplaoma Injeniera amin'ny ambaratonga Mastera · Agro-biodiversité sy Tontolo iainana",
       "niveau_mg": "Mastera",
       "metiers_mg": [
         "Injeniera momba ny famokarana biby",
@@ -518,7 +518,7 @@
           "secteur": "Exploitations et sociétés agricoles",
           "secteur_mg": "Toeram-pambolena sy orinasa ara-pambolena",
           "detail": "Conception d'itinéraires techniques, encadrement d'équipes, pilotage de production.",
-          "detail_mg": "Famolavolana teknika fambolena, fitarihana ekipa, fitantanana ny famokarana."
+          "detail_mg": "Famolavolana teknika fambolena, fitarihana ekipa ary fitantanana ny famokarana."
         },
         {
           "metier": "Sélectionneur / améliorateur variétal",
@@ -526,7 +526,7 @@
           "secteur": "Recherche et semences",
           "secteur_mg": "Fikarohana sy voa fambolena",
           "detail": "Création et évaluation de variétés adaptées au climat et aux sols de la région.",
-          "detail_mg": "Famoronana sy fanombanana karazana zavamaniry mifanaraka amin'ny toetrandro sy ny tanin'ny faritra."
+          "detail_mg": "Famoronana sy fanombanana karazana zavamaniry mifanaraka amin'ny toetrandro sy ny toetry ny tany any amin'ny faritra."
         },
         {
           "metier": "Responsable qualité fruits et légumes",
@@ -534,7 +534,7 @@
           "secteur": "Filière horticole",
           "secteur_mg": "Sehatry ny voankazo sy anana",
           "detail": "Conditionnement, stockage, contrôle qualité, mise en marché.",
-          "detail_mg": "Fonosana, fitehirizana, fanaraha-maso ny kalitao, fametrahana amin'ny tsena."
+          "detail_mg": "Famonosana, fitehirizana, fanaraha-maso ny kalitao ary fametrahana ny vokatra eny an-tsena."
         },
         {
           "metier": "Consultant en développement durable",
@@ -542,13 +542,13 @@
           "secteur": "ONG et institutions",
           "secteur_mg": "ONG sy institiota",
           "detail": "Diagnostics de projets, agriculture de conservation, appui aux exploitations.",
-          "detail_mg": "Fitiliana tetik'asa, fambolena mitahiry ny tany, fanohanana ny toeram-pambolena."
+          "detail_mg": "Fanombanana tetikasa, fampiroboroboana ny fambolena miaro ny tany ary fanohanana ny toeram-pambolena."
         }
       ],
       "poursuite": "Doctorat en sciences du végétal, ou insertion dans l'agroalimentaire et les projets de développement.",
-      "poursuite_mg": "Doktora amin'ny siansa momba ny zavamaniry, na toe-karena ao amin'ny sakafo sy ny tetik'asa fandrosoana.",
+      "poursuite_mg": "Fanohizana fianarana voalaza: Doktora amin'ny siansa momba ny zavamaniry, na sehatra mifandraika amin'ny toe-karena ara-tsakafo sy ny tetikasa fampandrosoana.",
       "duree_mg": "2 taona",
-      "mention_mg": "Diplaoma Injeniera amin'ny ambaratonga Mastera · Agro-biodiversita sy Tontolo iainana",
+      "mention_mg": "Diplaoma Injeniera amin'ny ambaratonga Mastera · Agro-biodiversité sy Tontolo iainana",
       "niveau_mg": "Mastera",
       "metiers_mg": [
         "Injeniera momba ny famokarana zavamaniry",

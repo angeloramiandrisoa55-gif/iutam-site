@@ -3,12 +3,12 @@
   "communs": [
     {
       "designation": "Droit d'inscription",
-      "designation_mg": "Sarany fisoratana anarana",
+      "designation_mg": "Saram-pisoratana anarana",
       "montant": 60000
     },
     {
       "designation": "Frais généraux",
-      "designation_mg": "Saran'ny fiasana ankapobeny",
+      "designation_mg": "Saram-piasana ankapobeny",
       "montant": 15000
     },
     {

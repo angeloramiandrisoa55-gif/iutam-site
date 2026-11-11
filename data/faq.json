@@ -21,7 +21,7 @@
           "q": "Comment déposer mon dossier d'admission ?",
           "q_mg": "Ahoana no ametrahana ny antontan-taratasy fangatahana fidirana?",
           "r": "Le dossier est déposé au secrétariat de l'IUTAM, au campus d'Ambondrona (Université de Mahajanga, BP 652, Mahajanga). Pour les annexes, le dépôt peut également se faire à Antsohihy. Les dates d'ouverture des inscriptions et la liste complète des pièces sont communiquées chaque année : contactez le secrétariat pour connaître le calendrier en cours.",
-          "r_mg": "Azo atolotra ao amin'ny sekreterian'ny IUTAM, ao amin'ny Campus Ambondrona, Oniversiten'i Mahajanga, BP 652, Mahajanga, ny antontan-taratasy fangatahana. Azo atolotra any Antsohihy ihany koa izany, raha misy ny fandaminana mifandraika amin'izany. Ny daty fanombohan'ny fisoratana anarana sy ny lisitry ny antontan-taratasy ilaina dia avoaka isan-taona. Mifandraisa amin'ny sekreteria mba hahazoana ny fandaharam-potoana sy ny toromarika manan-kery amin'izao fotoana izao."
+          "r_mg": "Azo atolotra ao amin'ny Sekreterian'ny IUTAM, ao amin'ny Campus Ambondrona, Anjerimanontolon'i Mahajanga, BP 652, Mahajanga, ny antontan-taratasy fangatahana. Azo atolotra any Antsohihy ihany koa izany, raha misy ny fandaminana mifandraika amin'izany. Ny daty fanombohan'ny fisoratana anarana sy ny lisitry ny antontan-taratasy ilaina dia avoaka isan-taona. Mifandraisa amin'ny Sekreteria mba hahazoana ny fandaharam-potoana sy ny toromarika manan-kery amin'izao fotoana izao."
         },
         {
           "q": "Le nombre de places est-il limité ?",
@@ -46,38 +46,38 @@
           "q": "Les frais sont-ils payables en plusieurs tranches ?",
           "q_mg": "Azo aloa tsikelikely ve ny saram-pianarana?",
           "r": "Oui. Les frais de formation sont répartis en trois tranches. Le calendrier exact de versement et les facilités de paiement sont indiqués par le secrétariat lors de l'inscription. Pour un échéancier personnalisé, contactez le secrétariat avant la rentrée.",
-          "r_mg": "Eny. Azo zaraina ho fandoavam-bola telo ny saram-pianarana. Ny daty sy ny fomba fandoavana dia hazavain'ny sekreteria amin'ny fotoana fisoratana anarana. Raha mila fanazavana momba ny fandaharam-pandoavana ianao, dia tsara ny manatona ny sekreteria mialoha."
+          "r_mg": "Eny. Azo zaraina ho fandoavam-bola telo ny saram-pianarana. Ny daty sy ny fomba fandoavana dia hazavain'ny Sekreteria amin'ny fotoana fisoratana anarana. Raha mila fanazavana momba ny fandaharam-pandoavana ianao, dia tsara ny manatona ny Sekreteria mialoha."
         },
         {
           "q": "Existe-t-il des bourses ou des aides financières ?",
           "q_mg": "Misy vatsim-pianarana na fanampiana ara-bola ve?",
           "r": "Des bourses d'État et des aides à l'inscription existent, mais elles sont attribuées par les organismes concernés et non par l'IUTAM directement. L'IUTAM peut vous informer sur les dossiers à constituer et les calendriers. Le service des bourses de l'Université de Mahajanga reste le point de contact le plus direct.",
-          "r_mg": "Mety hisy ny vatsim-pianarana omen'ny Fanjakana sy ny fanampiana mifandraika amin'ny fisoratana anarana, arakaraka ny fepetra sy ny fandaminana manan-kery. Tsy ny IUTAM irery no miandraikitra ny fanomezana izany. Afaka manoro ny mpianatra momba ny antontan-taratasy ilaina sy ny fandaharam-potoana ny IUTAM. Ho an'ny fanazavana fanampiny, dia azo ifandraisana ny sampan-draharaha misahana ny vatsim-pianarana eo anivon'ny Oniversiten'i Mahajanga."
+          "r_mg": "Mety hisy ny vatsim-pianarana omen'ny Fanjakana sy ny fanampiana mifandraika amin'ny fisoratana anarana, arakaraka ny fepetra sy ny fandaminana manan-kery. Tsy ny IUTAM irery no miandraikitra ny fanomezana izany. Afaka manoro ny mpianatra momba ny antontan-taratasy ilaina sy ny fandaharam-potoana ny IUTAM. Ho an'ny fanazavana fanampiny, dia azo ifandraisana ny sampan-draharaha misahana ny vatsim-pianarana eo anivon'ny Anjerimanontolon'i Mahajanga."
         },
         {
           "q": "Le logement est-il assuré sur le campus ?",
           "q_mg": "Misy toeram-pisakafoana ve ao amin'ny campus?",
           "r": "L'IUTAM n'est pas un établissement résidentiel : l'hébergement relève de l'Université de Mahajanga et des services du campus. Le secrétariat peut vous indiquer les options disponibles à proximité. Renseignez-vous en priorité sur la période de rentrée, les places étant limitées.",
-          "r_mg": "Mba hahazoana vaovao marina momba ny toeram-pisakafoana sy ny tolotra misy eo amin'ny campus, dia manatona ny sekreterian'ny IUTAM. Afaka manoro ny toerana sy ny safidy misy manodidina ny toeram-pampianarana izy ireo."
+          "r_mg": "Mba hahazoana vaovao marina momba ny toeram-pisakafoana sy ny tolotra misy eo amin'ny campus, dia manatona ny Sekreterian'ny IUTAM. Afaka manoro ny toerana sy ny safidy misy manodidina ny toeram-pampianarana izy ireo."
         }
       ]
     },
     {
       "id": "formation",
       "titre": "Formation et stages",
-      "titre_mg": "LALAM-PIOFANANA SY FIOFANANA ANATY ORINASA",
+      "titre_mg": "LALAM-PIOFANANA SY FIOFANANA ENY AMIN'NY TOERAM-PIASANA",
       "questions": [
         {
           "q": "Comment la formation est-elle organisée ?",
           "q_mg": "Ahoana ny fandaminana ny lalam-piofanana?",
           "r": "La formation suit le système L.M.D. : la Licence Professionnelle dure 3 ans après le baccalauréat et l'Ingéniorat au grade de Master dure 2 ans après la Licence. Les enseignements combinent cours magistraux, travaux pratiques en laboratoire, travaux sur le terrain, stages et mémoire.",
-          "r_mg": "Ny fiofanana dia manaraka ny rafitra LMD (Licence–Master–Doctorat). Maharitra telo taona aorian'ny Bakalorea ny Licence professionnelle, ary roa taona aorian'ny Licence ny fiofanana Injeniera amin'ny ambaratonga Master, araka ny fandaharam-piofanana. Ahitana fampianarana an-dakilasy, asa fampiharana any amin'ny laboratoara, asa eny an-kianja, fiofanana anaty orinasa ary fanatanterahana tetikasa famaranana ny fiofanana."
+          "r_mg": "Ny fiofanana dia manaraka ny rafitra LMD (Licence–Master–Doctorat). Maharitra telo taona aorian'ny Bakalorea ny Licence professionnelle, ary roa taona aorian'ny Licence ny fiofanana Injeniera amin'ny ambaratonga Master, araka ny fandaharam-piofanana. Ahitana fampianarana an-dakilasy, asa fampiharana any amin'ny laboratoara, asa eny an-kianja, fiofanana eny amin'ny toeram-piasana ary fanatanterahana tetikasa famaranana ny fiofanana."
         },
         {
           "q": "Les stages sont-ils obligatoires ?",
-          "q_mg": "Tsy maintsy manao fiofanana anaty orinasa ve ny mpianatra?",
+          "q_mg": "Tsy maintsy manao fiofanana eny amin'ny toeram-piasana ve ny mpianatra?",
           "r": "Oui. Le programme prévoit un stage d'imprégnation en L1, un stage ouvrier en L2, un stage de mémoire en L3 et un stage de mémoire d'ingéniorat en M2. Chaque stage fait l'objet d'une convention signée avec l'organisme d'accueil et d'une évaluation.",
-          "r_mg": "Eny. Tafiditra ao anatin'ny fandaharam-piofanana ny fiofanana anaty orinasa na eny amin'ny toeram-piasana. Araka ny ambaratonga, dia misy ny fiofanana fampidirana amin'ny L1, ny fiofanana arak'asa amin'ny L2, ny fiofanana mifandraika amin'ny fanomanana ny asa soratra famaranana amin'ny L3, ary ny fiofanana ho an'ny asa soratra famaranana ny fiofanana Injeniera amin'ny M2. Ny fiofanana tsirairay dia tanterahina araka ny fandaminana napetraky ny sekoly sy ny toeram-pandraisana, miaraka amin'ny fifanarahana sy ny fanombanana mifanaraka amin'izany."
+          "r_mg": "Eny. Tafiditra ao anatin'ny fandaharam-piofanana ny fiofanana eny amin'ny toeram-piasana na eny amin'ny toeram-piasana. Araka ny ambaratonga, dia misy ny fiofanana fampidirana amin'ny L1, ny fiofanana arak'asa amin'ny L2, ny fiofanana mifandraika amin'ny fanomanana ny asa soratra famaranana amin'ny L3, ary ny fiofanana ho an'ny asa soratra famaranana ny fiofanana Injeniera amin'ny M2. Ny fiofanana tsirairay dia tanterahina araka ny fandaminana napetraky ny sekoly sy ny toeram-pandraisana, miaraka amin'ny fifanarahana sy ny fanombanana mifanaraka amin'izany."
         },
         {
           "q": "Peut-on suivre une formation en cours d'emploi ou à distance ?",
@@ -89,7 +89,7 @@
           "q": "Quels diplômes sont délivrés ?",
           "q_mg": "Inona avy ny mari-pahaizana omen'ny IUTAM?",
           "r": "L'IUTAM délivre la Licence Professionnelle (mention Biologie Appliquée) et l'Ingéniorat au grade de Master (mention Agro-biodiversité et Environnement). Les diplômes sont préparés dans le cadre du système L.M.D. de l'Université de Mahajanga.",
-          "r_mg": "Araka ny fandaharam-piofanana voalaza, ny IUTAM dia manolotra ny Licence professionnelle eo amin'ny sehatry ny Biolojia ampiharina sy ny fiofanana Injeniera amin'ny ambaratonga Master, mifandraika amin'ny Agro-biodiversité sy ny Tontolo iainana. Tafiditra ao anatin'ny rafitra LMD eo anivon'ny Oniversiten'i Mahajanga ireo fiofanana ireo. Ny anarana ofisialin'ny mari-pahaizana sy ny lalam-piofanana tsirairay dia tokony hifanaraka amin'ny antontan-taratasy ofisialin'ny sekoly."
+          "r_mg": "Araka ny fandaharam-piofanana voalaza, ny IUTAM dia manolotra ny Licence professionnelle eo amin'ny sehatry ny Biolojia ampiharina sy ny fiofanana Injeniera amin'ny ambaratonga Master, mifandraika amin'ny Agro-biodiversité sy ny Tontolo iainana. Tafiditra ao anatin'ny rafitra LMD eo anivon'ny Anjerimanontolon'i Mahajanga ireo fiofanana ireo. Ny anarana ofisialin'ny mari-pahaizana sy ny lalam-piofanana tsirairay dia tokony hifanaraka amin'ny antontan-taratasy ofisialin'ny sekoly."
         }
       ]
     },
@@ -102,19 +102,19 @@
           "q": "Où se trouve l'IUTAM ?",
           "q_mg": "Aiza no misy ny IUTAM?",
           "r": "L'IUTAM est situé sur le campus d'Ambondrona de l'Université de Mahajanga, BP 652, Mahajanga 401, Madagascar. L'institut dispose également d'une annexe à Antsohihy et d'un site à Maevatanana : renseignez-vous auprès du secrétariat sur l'offre de formation et les horaires de ces sites.",
-          "r_mg": "Ao amin'ny campus Ambondrona ny Oniversiten'i Mahajanga, BP 652, Mahajanga 401, Madagasikara no misy ny IUTAM. Misy annexe ao Antsohihy ary toerana ao Maevatanana koa : mifandraisa amin'ny sekretaria momba ny fanofanana sy ny ora fiasana amin'ireo toerana ireo."
+          "r_mg": "Ao amin'ny campus Ambondrona ny Anjerimanontolon'i Mahajanga, BP 652, Mahajanga 401, Madagasikara no misy ny IUTAM. Misy annexe ao Antsohihy ary toerana ao Maevatanana koa : mifandraisa amin'ny Sekreteria momba ny fanofanana sy ny ora fiasana amin'ireo toerana ireo."
         },
         {
           "q": "Comment contacter le secrétariat ?",
-          "q_mg": "Ahoana no fomba hifandraisana amin'ny sekreteria?",
+          "q_mg": "Ahoana no fomba hifandraisana amin'ny Sekreteria?",
           "r": "Par téléphone au +261 32 05 580 06, par e-mail, ou directement au secrétariat du campus d'Ambondrona pendant les heures d'ouverture. Le formulaire de contact de cette page est également à votre disposition.",
-          "r_mg": "Amin'ny finday amin'ny +261 32 05 580 06, amin'ny mailaka, na mivantana amin'ny sekretaria ao amin'ny campus Ambondrona mandritra ny ora fiasana. Ny taratasy fifandraisana eto amin'ity pejy ity koa dia azonao atao."
+          "r_mg": "Amin'ny finday amin'ny +261 32 05 580 06, amin'ny mailaka, na mivantana amin'ny Sekreteria ao amin'ny campus Ambondrona mandritra ny ora fiasana. Ny taratasy fifandraisana eto amin'ity pejy ity koa dia azonao atao."
         },
         {
           "q": "Puis-je visiter l'IUTAM sans rendez-vous ?",
           "q_mg": "Afaka manatona ny IUTAM ve ny olona iray raha tsy naka fotoana mialoha?",
           "r": "Oui, l'accueil du secrétariat est ouvert aux visiteurs. Pour un rendez-vous (orientation, dossier d'admission, convention de stage), il est préférable de prendre contact à l'avance : cela garantit qu'une personne sera disponible pour vous répondre.",
-          "r_mg": "Eny, misokatra ho an'ny mpitsiditra ny fandraisana ao amin'ny sekretaria. Raha ilaina fotoana (fitarana, antontan-taratasy fidirana, fifanarahana fanazaran-tena), tsara raha mifandraisa aloha : izay dia manarantea fa hisy olona afaka mamaly anao."
+          "r_mg": "Eny, misokatra ho an'ny mpitsiditra ny fandraisana ao amin'ny Sekreteria. Raha ilaina fotoana (fitarana, antontan-taratasy fidirana, fifanarahana fanazaran-tena), tsara raha mifandraisa aloha : izay dia manarantea fa hisy olona afaka mamaly anao."
         },
         {
           "q": "Le site existe-t-il en malagasy et sur les réseaux sociaux ?",
