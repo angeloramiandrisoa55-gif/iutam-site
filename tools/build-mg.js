@@ -26,17 +26,17 @@ html = html.replace(new RegExp(keys.map(esc).join('|'), 'g'), m => { used.add(m)
 //     sections, qui gardent leur traduction officielle. [libellé court, intitulé
 //     officiel affiché en infobulle quand il diffère]
 const NAV_MG = {
-  '#about':      ['Momba ny IUTAM',  "Ny Ivontoeram-pampianarana"],
+  '#about':      ['Momba ny IUTAM',  ''],
   '#vie':        ['Fiainana',        "Fiainan'ny mpianatra"],
-  '#formations': ['Fiofanana',       ''],
-  '#debouches':  ['Fahafahana asa',  "Sehatra arak'asa sy fahafahana miasa"],
-  '#admission':  ['Hisoratra anarana', 'Fidirana'],
-  '#frais':      ['Saram-pianarana', ''],
+  '#formations': ['Lalam-piofanana', ''],
+  '#debouches':  ["Fahafahana arak'asa", ''],
+  '#admission':  ['Fepetra fidirana', ''],
+  '#frais':      ['Saram-pianarana', 'Saram-pisoratana anarana sy saram-pianarana'],
   '#faq':        ['Fanontaniana',    'Fanontaniana apetraka matetika'],
   '#actus':      ['Vaovao',          ''],
   '#contact':    ['Fifandraisana',   '']
 };
-const CTA_MG = 'Hisoratra izao';
+const CTA_MG = 'Hisoratra anarana';
 html = html.replace(/<nav id="nav"[\s\S]*?<\/nav>/, nav => nav.replace(
   /<a href="(#[a-z]+)">[^<]*<\/a>/g,
   (m, h) => NAV_MG[h] ? `<a href="${h}"${NAV_MG[h][1] ? ` title="${NAV_MG[h][1]}"` : ''}>${NAV_MG[h][0]}</a>` : m
