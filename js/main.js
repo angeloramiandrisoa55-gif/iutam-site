@@ -272,3 +272,17 @@ retirer();
 });
 window.addEventListener("load",function(){setTimeout(retirer,60)});
 })();
+
+// Les 6 parcours : un clic ouvre la fiche du parcours choisi
+(function(){
+var liens=document.querySelectorAll('.lmd-p a[data-pc]');
+if(!liens.length)return;
+Array.prototype.forEach.call(liens,function(a){
+a.addEventListener('click',function(){
+var onglet=document.querySelector('.pt.'+a.getAttribute('data-pc'));
+if(onglet)onglet.click();
+var panneau=document.getElementById('pubs');
+if(panneau)setTimeout(function(){panneau.focus({preventScroll:true})},60);
+});
+});
+})();

@@ -141,3 +141,12 @@ html,body{max-width:100%;overflow-x:clip}
 @media (max-width:560px){
   .as-panel{top:var(--vvt,0px);bottom:auto;height:var(--vvh,100dvh)}
 }
+
+/* ===== Parcours cliquables et titre malagasy ===== */
+/* le panneau des parcours ne passe pas sous l'en-tête quand on y arrive par un lien */
+#pubs{scroll-margin-top:64px}
+@media (min-width:900px){#pubs{scroll-margin-top:130px}}
+.lmd-p a{cursor:pointer}
+.lmd-p a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* malagasy : « fampandrosoana lovainjafy » toujours sur une seule ligne */
+html[lang="mg"] #hero h1 span{display:inline-block;white-space:nowrap;font-size:min(1em,7.5vw)}
