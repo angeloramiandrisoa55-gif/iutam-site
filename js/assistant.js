@@ -511,6 +511,37 @@
     }
   }
 
+  /* Téléphone : le bouton « Retour » ferme l'assistant au lieu de quitter le site */
+  var histPushed = false;
+  var prevRestoration = null;
+  function pushHistory() {
+    if (histPushed || window.innerWidth > 560 || !window.history || !history.pushState) return;
+    try {
+      prevRestoration = history.scrollRestoration;
+      history.scrollRestoration = 'manual';
+      history.pushState({ iutamChat: 1 }, '', location.href);
+      histPushed = true;
+    } catch (e) {}
+  }
+  function endHistory() {
+    setTimeout(function () {
+      try { if (prevRestoration) history.scrollRestoration = prevRestoration; } catch (e) {}
+    }, 400);
+  }
+  function popHistory() {
+    if (!histPushed) return;
+    histPushed = false;
+    try { history.back(); } catch (e) {}
+    endHistory();
+  }
+  window.addEventListener('popstate', function () {
+    if (el.panel && isOpen()) {
+      histPushed = false;
+      close(false, true);
+      endHistory();
+    }
+  });
+
   function isOpen() {
     return !el.panel.hidden;
   }
@@ -523,15 +554,17 @@
     el.root.classList.add('is-open');
     welcome();
     watchViewport(true);
+    pushHistory();
     setTimeout(function () { el.input.focus({ preventScroll: true }); }, 60);
   }
 
-  function close(restoreFocus) {
+  function close(restoreFocus, fromHistory) {
     if (!isOpen()) return;
     el.panel.hidden = true;
     el.fab.setAttribute('aria-expanded', 'false');
     el.root.classList.remove('is-open');
     watchViewport(false);
+    if (!fromHistory) popHistory();
     if (restoreFocus !== false && lastTrigger && lastTrigger.focus) lastTrigger.focus({ preventScroll: true });
   }
 
