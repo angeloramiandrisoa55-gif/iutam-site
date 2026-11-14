@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://iutam.univ.mg/</loc><changefreq>monthly</changefreq><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iutam.univ.mg/"/>
+    <xhtml:link rel="alternate" hreflang="mg" href="https://iutam.univ.mg/mg/"/></url>
+  <url><loc>https://iutam.univ.mg/mg/</loc><changefreq>monthly</changefreq><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iutam.univ.mg/"/>
+    <xhtml:link rel="alternate" hreflang="mg" href="https://iutam.univ.mg/mg/"/></url>
+  <url><loc>https://iutam.univ.mg/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
