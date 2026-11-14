@@ -47,7 +47,7 @@ html = html.replace(/(<a class="cta (?:hd|nav)-cta"[^>]*>)[^<]*(<\/a>)/g, `$1${C
 //     gardent la même hauteur (les intitulés officiels, repris ailleurs dans la page,
 //     tiennent sur 3 lignes dans une carte).
 html = html.replace(/<div class="stats rv">[\s\S]*?\n  <\/div>/, bloc => bloc
-  .replace("Diplaoma Injeniera amin'ny ambaratonga Mastera", 'Injeniera (Mastera)')
+  .replace("Diplaoma Injeniora amin'ny ambaratonga Mastera", 'Injeniora (Mastera)')
   .replace("Hetsika aseho ao amin'ny toerana fampirantiana", 'Hetsika aseho'));
 
 // 3. Ajustements propres à la version malgache

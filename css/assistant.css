@@ -134,3 +134,10 @@ html,body{max-width:100%;overflow-x:clip}
   .as-log{padding:14px 12px}
 }
 @media (prefers-reduced-motion:reduce){#stage.lite #lg{animation:none}}
+
+/* ===== Clavier sur téléphone : la fenêtre suit la zone visible ===== */
+.as-lock,.as-lock body{overflow:hidden}
+.as-in{font-size:max(16px,1rem)}
+@media (max-width:560px){
+  .as-panel{top:var(--vvt,0px);bottom:auto;height:var(--vvh,100dvh)}
+}

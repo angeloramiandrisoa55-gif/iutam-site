@@ -478,6 +478,39 @@
     row.appendChild(categoryChips());
   }
 
+  /* Téléphone : quand le clavier s'ouvre, la fenêtre prend la hauteur de la zone réellement visible */
+  var vvOn = false;
+  function syncViewport() {
+    var vv = window.visualViewport;
+    if (!vv || window.innerWidth > 560) {
+      el.panel.style.removeProperty('--vvh');
+      el.panel.style.removeProperty('--vvt');
+      return;
+    }
+    el.panel.style.setProperty('--vvh', vv.height + 'px');
+    el.panel.style.setProperty('--vvt', vv.offsetTop + 'px');
+    scrollDown();
+  }
+  function watchViewport(on) {
+    var vv = window.visualViewport;
+    document.documentElement.classList.toggle('as-lock', !!on && window.innerWidth <= 560);
+    if (vv && on && !vvOn) {
+      vv.addEventListener('resize', syncViewport);
+      vv.addEventListener('scroll', syncViewport);
+      vvOn = true;
+    } else if (vv && !on && vvOn) {
+      vv.removeEventListener('resize', syncViewport);
+      vv.removeEventListener('scroll', syncViewport);
+      vvOn = false;
+    }
+    if (on) {
+      syncViewport();
+    } else {
+      el.panel.style.removeProperty('--vvh');
+      el.panel.style.removeProperty('--vvt');
+    }
+  }
+
   function isOpen() {
     return !el.panel.hidden;
   }
@@ -489,6 +522,7 @@
     el.fab.setAttribute('aria-expanded', 'true');
     el.root.classList.add('is-open');
     welcome();
+    watchViewport(true);
     setTimeout(function () { el.input.focus({ preventScroll: true }); }, 60);
   }
 
@@ -497,6 +531,7 @@
     el.panel.hidden = true;
     el.fab.setAttribute('aria-expanded', 'false');
     el.root.classList.remove('is-open');
+    watchViewport(false);
     if (restoreFocus !== false && lastTrigger && lastTrigger.focus) lastTrigger.focus({ preventScroll: true });
   }
 

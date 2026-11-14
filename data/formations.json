@@ -132,7 +132,7 @@
         }
       ],
       "poursuite": "Ingéniorat P.V.T.D.D., ou formation spécialisée en agronomie et en gestion de l'eau.",
-      "poursuite_mg": "Injenieran'ny Mastera P.V.T.D.D., na fiofanana manana mari-pahaizana amin'ny agronomia sy ny fitantanana ny rano.",
+      "poursuite_mg": "Injenioran'ny Mastera P.V.T.D.D., na fiofanana manana mari-pahaizana amin'ny agronomia sy ny fitantanana ny rano.",
       "duree_mg": "3 taona",
       "mention_mg": "Laisansa Matihanina · Biolojia Ampiharina",
       "niveau_mg": "Laisansa",
@@ -209,15 +209,15 @@
         },
         {
           "metier": "Ingénieur agronome (après Ingéniorat)",
-          "metier_mg": "Injeniera momba ny agronomia rehefa nahavita ny fiofanana takiana",
+          "metier_mg": "Injeniora momba ny agronomia rehefa nahavita ny fiofanana takiana",
           "secteur": "P.A.D.D.",
           "secteur_mg": "P.A.D.D.",
           "detail": "Poursuite vers l'Ingéniorat Production Animale et Développement Durable.",
-          "detail_mg": "Fanohizana any amin'ny Injenieran'ny Mastera Famokarana biby sy Fampandrosoana maharitra."
+          "detail_mg": "Fanohizana any amin'ny Injenioran'ny Mastera Famokarana biby sy Fampandrosoana lovainjafy."
         }
       ],
       "poursuite": "Ingéniorat P.A.D.D. : production animale, biotechnologie et développement durable.",
-      "poursuite_mg": "Injenieran'ny Mastera P.A.D.D. : famokarana biby, bioteknika ary fampandrosoana maharitra.",
+      "poursuite_mg": "Injenioran'ny Mastera P.A.D.D. : famokarana biby, bioteknika ary fampandrosoana lovainjafy.",
       "duree_mg": "3 taona",
       "mention_mg": "Laisansa · Biolojia Ampiharina",
       "niveau_mg": "Laisansa",
@@ -225,7 +225,7 @@
         "Teknisianina momba ny fiompiana",
         "Tompon'andraikitra amin'ny toeram-piompiana akoho na kisoa",
         "Mpiasa manam-pahaizana momba ny fiompiana",
-        "Injeniera momba ny agronomia rehefa vita ny fiofanana mifanaraka amin'izany"
+        "Injeniora momba ny agronomia rehefa vita ny fiofanana mifanaraka amin'izany"
       ],
       "duree_pleine_mg": "Faharetan'ny fiofanana: 3 taona",
       "bac_mg": "C, D, S, OSE ary Agricole"
@@ -247,7 +247,7 @@
       ],
       "image": "images/pub-environnement.jpg",
       "resume": "Étudiez les milieux naturels et leurs enjeux : gestion de l'eau, des sols, de la biodiversité et développement durable.",
-      "resume_mg": "Jereo ny tontolo iainana sy ny olana mifandray aminy : fitantanana ny rano, ny tany, ny biodiversita ary fampandrosoana maharitra.",
+      "resume_mg": "Jereo ny tontolo iainana sy ny olana mifandray aminy : fitantanana ny rano, ny tany, ny biodiversita ary fampandrosoana lovainjafy.",
       "objectifs": [
         "Diagnostiquer l'état d'un milieu (eau, sol, écosystème)",
         "Construire et mettre en œuvre un plan de gestion durable",
@@ -388,7 +388,7 @@
         }
       ],
       "poursuite": "Ingéniorat P.A.D.D., ou master et formation spécialisée en halieutique et sciences de la mer.",
-      "poursuite_mg": "Injenieran'ny Mastera P.A.D.D., na master sy fiofanana manokana amin'ny hara sy ny ranomasina.",
+      "poursuite_mg": "Injenioran'ny Mastera P.A.D.D., na master sy fiofanana manokana amin'ny hara sy ny ranomasina.",
       "duree_mg": "3 taona",
       "mention_mg": "Laisansa Matihanina · Biolojia Ampiharina",
       "niveau_mg": "Laisansa",
@@ -404,14 +404,14 @@
     {
       "id": "padd",
       "nom": "P.A.D.D. — Production Animale et Développement Durable",
-      "nom_mg": "P.A.D.D. — Famokarana biby sy fampandrosoana maharitra",
+      "nom_mg": "P.A.D.D. — Famokarana biby sy fampandrosoana lovainjafy",
       "niveau": "ingeniorat",
       "duree": "2 ans",
       "bac": "Licence en Élevage, Environnement, Pêche et Aquaculture et équivalents",
       "bac_series": [],
       "image": "images/pub-padd.jpg",
       "resume": "Formation d'ingénieur au grade de Master en sciences et technologies du vivant, biologie animale, recherche, innovation et développement durable.",
-      "resume_mg": "Fanofanana ho injeniera amin'ny ambaratonga Mastera amin'ny siansa sy teknolojian'ny aina, biolojian'ny biby, fikarohana, fanavaozana ary fampandrosoana maharitra.",
+      "resume_mg": "Fanofanana ho injeniora amin'ny ambaratonga Mastera amin'ny siansa sy teknolojian'ny aina, biolojian'ny biby, fikarohana, fanavaozana ary fampandrosoana lovainjafy.",
       "objectifs": [
         "Conduire des projets de R&D appliquée en production animale",
         "Maîtriser les biotechnologies de reproduction et de nutrition animale",
@@ -420,7 +420,7 @@
       "objectifs_mg": [
         "Mitarika tetik'asa fikarohana sy fampandrosoana ampiharina amin'ny famokarana biby",
         "Mahay ny bioteknolojia momba ny fanatsarana taranaka sy ny sakafon'ny biby",
-        "Mitarika sehatra fiompiana mifanaraka amin'ny fampandrosoana maharitra"
+        "Mitarika sehatra fiompiana mifanaraka amin'ny fampandrosoana lovainjafy"
       ],
       "competences": [
         "Biotechnologie et génétique animale",
@@ -435,7 +435,7 @@
       "debouches": [
         {
           "metier": "Ingénieur agronome en production animale",
-          "metier_mg": "Injeniera momba ny famokarana biby",
+          "metier_mg": "Injeniora momba ny famokarana biby",
           "secteur": "Fermes et coopératives",
           "secteur_mg": "Toeram-piompiana sy koperativa",
           "detail": "Conception de systèmes d'élevage, pilotage d'une unité de production.",
@@ -469,10 +469,10 @@
       "poursuite": "Doctorat en sciences agronomiques, ou insertion dans l'industrie agroalimentaire.",
       "poursuite_mg": "Doktora amin'ny siansa agronomika, na asa ao amin'ny sehatra momba ny sakafo.",
       "duree_mg": "2 taona",
-      "mention_mg": "Diplaoma Injeniera amin'ny ambaratonga Mastera · Agro-biodiversité sy Tontolo iainana",
+      "mention_mg": "Diplaoma Injeniora amin'ny ambaratonga Mastera · Agro-biodiversité sy Tontolo iainana",
       "niveau_mg": "Mastera",
       "metiers_mg": [
-        "Injeniera momba ny famokarana biby",
+        "Injeniora momba ny famokarana biby",
         "Tompon'andraikitra amin'ny fikarohana sy ny fanohanana ara-teknika",
         "Tompon'andraikitra amin'ny kalitao sy ny fanarahana fenitra",
         "Mpanolo-tsaina momba ny fampandrosoana ny tontolo ambanivohitra"
@@ -483,14 +483,14 @@
     {
       "id": "pvtdd",
       "nom": "P.V.T.D.D. — Production Végétale Tropicale et Développement Durable",
-      "nom_mg": "P.V.T.D.D. — Famokarana zavamaniry tropikaly sy fampandrosoana maharitra",
+      "nom_mg": "P.V.T.D.D. — Famokarana zavamaniry tropikaly sy fampandrosoana lovainjafy",
       "niveau": "ingeniorat",
       "duree": "2 ans",
       "bac": "Licence en Agriculture, Environnement et équivalents",
       "bac_series": [],
       "image": "images/pub-pvtdd.jpg",
       "resume": "Formation d'ingénieur au grade de Master en sciences et technologies du vivant, biologie végétale, biotechnologie, recherche et développement durable.",
-      "resume_mg": "Fanofanana ho injeniera amin'ny ambaratonga Mastera amin'ny siansa sy teknolojian'ny aina, biolojian'ny zavamaniry, bioteknika, fikarohana ary fampandrosoana maharitra.",
+      "resume_mg": "Fanofanana ho injeniora amin'ny ambaratonga Mastera amin'ny siansa sy teknolojian'ny aina, biolojian'ny zavamaniry, bioteknika, fikarohana ary fampandrosoana lovainjafy.",
       "objectifs": [
         "Maîtriser les techniques de production végétale tropicale (maraîchage, fruits, agrumes)",
         "Conduire des essais agronomiques et des essais variétaux",
@@ -514,7 +514,7 @@
       "debouches": [
         {
           "metier": "Ingénieur agronome en production végétale",
-          "metier_mg": "Injeniera momba ny famokarana zavamaniry",
+          "metier_mg": "Injeniora momba ny famokarana zavamaniry",
           "secteur": "Exploitations et sociétés agricoles",
           "secteur_mg": "Toeram-pambolena sy orinasa ara-pambolena",
           "detail": "Conception d'itinéraires techniques, encadrement d'équipes, pilotage de production.",
@@ -538,7 +538,7 @@
         },
         {
           "metier": "Consultant en développement durable",
-          "metier_mg": "Mpanolo-tsaina momba ny fampandrosoana maharitra",
+          "metier_mg": "Mpanolo-tsaina momba ny fampandrosoana lovainjafy",
           "secteur": "ONG et institutions",
           "secteur_mg": "ONG sy institiota",
           "detail": "Diagnostics de projets, agriculture de conservation, appui aux exploitations.",
@@ -548,13 +548,13 @@
       "poursuite": "Doctorat en sciences du végétal, ou insertion dans l'agroalimentaire et les projets de développement.",
       "poursuite_mg": "Fanohizana fianarana voalaza: Doktora amin'ny siansa momba ny zavamaniry, na sehatra mifandraika amin'ny toe-karena ara-tsakafo sy ny tetikasa fampandrosoana.",
       "duree_mg": "2 taona",
-      "mention_mg": "Diplaoma Injeniera amin'ny ambaratonga Mastera · Agro-biodiversité sy Tontolo iainana",
+      "mention_mg": "Diplaoma Injeniora amin'ny ambaratonga Mastera · Agro-biodiversité sy Tontolo iainana",
       "niveau_mg": "Mastera",
       "metiers_mg": [
-        "Injeniera momba ny famokarana zavamaniry",
+        "Injeniora momba ny famokarana zavamaniry",
         "Mpanatsara karazana zavamaniry",
         "Tompon'andraikitra amin'ny kalitaon'ny voankazo sy legioma",
-        "Mpanolo-tsaina momba ny fampandrosoana maharitra"
+        "Mpanolo-tsaina momba ny fampandrosoana lovainjafy"
       ],
       "duree_pleine_mg": "Faharetan'ny fiofanana: 2 taona",
       "bac_mg": "Laisansa amin'ny Fambolena, Tontolo iainana ary mitovy aminy"

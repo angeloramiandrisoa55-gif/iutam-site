@@ -45,7 +45,7 @@
       resultats: 'valiny',
       tout: 'Rehetra',
       licence: 'Laisansa',
-      master: 'Injenieran\'ny Mastera',
+      master: 'Injenioran\'ny Mastera',
       mentionLic: 'Biolojia Ampiharina',
       mentionMas: 'Agro-biodiversita sy Tontolo iainana',
       bac: 'Bakalorea :',
