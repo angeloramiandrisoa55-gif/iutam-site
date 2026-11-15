@@ -706,3 +706,20 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else if (document.body) init();
 })();
+
+// Bouton flottant : se range pendant que l'on descend dans la page (téléphone)
+(function () {
+  var dernier = window.pageYOffset;
+  var minuteur = null;
+  window.addEventListener('scroll', function () {
+    var r = document.getElementById('as-root');
+    if (!r || window.innerWidth > 820 || r.classList.contains('is-open')) return;
+    var y = window.pageYOffset;
+    var d = y - dernier;
+    dernier = y;
+    if (d > 6 && y > 200) r.classList.add('as-away');
+    else if (d < -6) r.classList.remove('as-away');
+    clearTimeout(minuteur);
+    minuteur = setTimeout(function () { r.classList.remove('as-away'); }, 1400);
+  }, { passive: true });
+})();

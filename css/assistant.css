@@ -149,4 +149,19 @@ html,body{max-width:100%;overflow-x:clip}
 .lmd-p a{cursor:pointer}
 .lmd-p a:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 /* malagasy : « fampandrosoana lovainjafy » toujours sur une seule ligne */
-html[lang="mg"] #hero h1 span{display:inline-block;white-space:nowrap;font-size:min(1em,7.5vw)}
+
+/* ===== Titre malagasy ajusté ===== */
+/* le contenu de l'accueil ne peut plus élargir la page */
+#hero .hc,#hero #stage{min-width:0}
+#hero h1{max-width:100%}
+/* malagasy : « fampandrosoana lovainjafy » sur une seule ligne, taille adaptée à l'écran */
+html[lang="mg"] #hero h1 span{display:inline-block;white-space:nowrap;max-width:100%;font-size:min(1em,6.2vw)}
+
+/* ===== Menu du téléphone : les icônes laissent passer le clic au bouton ===== */
+.ic-i{pointer-events:none}
+
+/* ===== Bouton flottant discret ===== */
+.as-fab{transition:transform .3s ease,opacity .3s ease,box-shadow .25s ease}
+.as.as-away .as-fab{transform:translateY(calc(100% + 28px));opacity:0;pointer-events:none}
+.as-fab::after{animation-iteration-count:2}
+@keyframes asring{0%{box-shadow:0 0 0 0 rgba(63,191,116,.5)}100%{box-shadow:0 0 0 12px rgba(63,191,116,0)}}

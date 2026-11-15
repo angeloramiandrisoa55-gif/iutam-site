@@ -286,3 +286,44 @@ if(panneau)setTimeout(function(){panneau.focus({preventScroll:true})},60);
 });
 });
 })();
+
+// Titre malagasy : le mot en vert tient toujours sur une seule ligne
+(function(){
+if(document.documentElement.lang!=='mg')return;
+var h=document.querySelector('#hero h1');
+var s=h&&h.querySelector('span');
+if(!s)return;
+function ajuster(){
+s.style.fontSize='';
+var dispo=h.clientWidth;
+var w=s.scrollWidth;
+if(dispo>0&&w>dispo){s.style.fontSize=(parseFloat(getComputedStyle(s).fontSize)*dispo/w*0.97)+'px'}
+}
+ajuster();
+window.addEventListener('resize',ajuster);
+window.addEventListener('load',ajuster);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ajuster);
+})();
+
+// Panneau des parcours : la hauteur s'adapte au texte
+(function(){
+var st=document.querySelector('.pubs-stage');
+if(!st)return;
+var minuteur=null;
+function ajuster(){
+st.style.minHeight='';
+var base=st.getBoundingClientRect().height;
+var besoin=0;
+[].forEach.call(st.querySelectorAll('.ps-c'),function(c){
+besoin=Math.max(besoin,c.getBoundingClientRect().height)
+});
+var cible=Math.ceil(besoin+16);
+if(cible>base)st.style.minHeight=cible+'px'
+}
+function planifier(){clearTimeout(minuteur);minuteur=setTimeout(ajuster,120)}
+ajuster();
+window.addEventListener('resize',planifier);
+window.addEventListener('load',planifier);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(planifier);
+if('MutationObserver' in window)new MutationObserver(planifier).observe(st,{childList:true,subtree:true,characterData:true});
+})();
