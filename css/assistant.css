@@ -165,3 +165,25 @@ html[lang="mg"] #hero h1 span{display:inline-block;white-space:nowrap;max-width:
 .as.as-away .as-fab{transform:translateY(calc(100% + 28px));opacity:0;pointer-events:none}
 .as-fab::after{animation-iteration-count:2}
 @keyframes asring{0%{box-shadow:0 0 0 0 rgba(63,191,116,.5)}100%{box-shadow:0 0 0 12px rgba(63,191,116,0)}}
+
+/* ===== Adaptation aux écrans ===== */
+/* le navigateur du téléphone ne grossit plus le texte de lui-même */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+/* encoche / bords arrondis (paysage) : le contenu reste dans la zone sûre */
+body{padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+/* grilles : jamais plus larges que l'écran */
+.lmd-grid,.gd-grid{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+/* en-tête : tient sur tous les téléphones, même 280 px ou texte agrandi */
+@media (max-width:560px){
+  header{padding-left:min(5vw,18px);padding-right:min(5vw,18px);gap:8px}
+  .brand{gap:8px;min-width:0}
+  .brand-mark{width:min(42px,10.5vw);height:min(42px,10.5vw)}
+  .brand-txt b{font-size:min(1.45rem,6.2vw)}
+  .brand-txt small{font-size:min(.62rem,2.5vw);letter-spacing:.32em;margin-top:4px}
+  .hr{gap:min(8px,1.6vw)}
+  .tg{width:min(40px,9.6vw);height:min(40px,9.6vw);font-size:min(1.1rem,4.4vw)}
+  .lang{height:min(40px,9.6vw);min-width:min(40px,9.6vw);padding:0 min(12px,2.2vw);font-size:min(.85rem,3.4vw)}
+}
+@media (max-width:300px){
+  .brand-txt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
