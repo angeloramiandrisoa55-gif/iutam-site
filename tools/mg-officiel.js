@@ -203,8 +203,8 @@ const P = [
 
   // --- contact ----------------------------------------------------------------
   ["Contact", "FIFANDRAISANA"],
-  ["📍 Campus d'Ambondrona · Université de Mahajanga · BP 652<br>Mahajanga (401) · Madagascar<br>📞 +261 32 05 580 06<br>✉️ benjaiba@yahoo.fr",
-   "📍 Toerana: Toeram-pianarana Ambondrona · Anjerimanontolon'i Mahajanga · BP 652<br>Mahajanga (401) · Madagasikara<br>Telefaonina: +261 32 05 580 06<br>Mailaka: benjaiba@yahoo.fr"],
+  ["📍 Campus d'Ambondrona · Université de Mahajanga · BP 652<br>Mahajanga (401) · Madagascar<br>📞 +261 32 05 580 06<br>✉️ beramilavonjy@gmail.com",
+   "📍 Toerana: Toeram-pianarana Ambondrona · Anjerimanontolon'i Mahajanga · BP 652<br>Mahajanga (401) · Madagasikara<br>Telefaonina: +261 32 05 580 06<br>Mailaka: beramilavonjy@gmail.com"],
   ["🗺️ Voir sur la carte", "Jereo amin'ny sarintany"],
   ["🏛️ Site de l'Université", "Tranonkalan'ny Anjerimanontolo"],
   ["Nom et prénom", "Anarana sy fanampin'anarana"],

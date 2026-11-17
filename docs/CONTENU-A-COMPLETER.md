@@ -2,7 +2,7 @@
 
 ## À obtenir de l'administration
 - [ ] Nom officiel, titre et accord de publication pour la photo du directeur
-- [ ] Adresse e-mail institutionnelle (remplacer `benjaiba@yahoo.fr` dans `index.html`, `data/contact.json` et `data/sites.json`) et numéros de téléphone officiels
+- [ ] Adresse e-mail institutionnelle (remplacer `beramilavonjy@gmail.com` dans `index.html`, `data/contact.json` et `data/sites.json`) et numéros de téléphone officiels
 - [ ] Horaires d'ouverture du secrétariat (champs `horaires` de `data/contact.json`)
 - [ ] Confirmation que la grille tarifaire s'applique à tous les niveaux (Licence et Ingéniorat) et pour quelle année universitaire (champ `annee` de `data/frais.json`)
 - [ ] Calendrier d'inscription, pièces à fournir, lieu de dépôt des dossiers
@@ -51,7 +51,7 @@
 
 ## Contacts à trancher
 - [ ] **Numéro officiel du secrétariat** : +261 32 05 580 06 (brochure) ou +261 32 05 582 14 (page officielle en ligne de l'IUTAM) ; appeler les deux et garder le bon
-- [ ] **E-mail officiel** : benjaiba@yahoo.fr (brochure) ou iutamumg@gmail.com (page officielle en ligne)
+- [ ] **E-mail officiel** : beramilavonjy@gmail.com (brochure) ou iutamumg@gmail.com (page officielle en ligne)
 - [ ] Une fois tranché : remplacer dans `index.html`, `mentions-legales.html`, `data/sites.json` (bouton d'appel : constante `SEC` dans `js/main.js`)
 
 ## IUTAM Antsohihy et IUTAM Maevatanana (pub)

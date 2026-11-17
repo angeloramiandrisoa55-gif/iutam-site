@@ -60,7 +60,7 @@ const WHITELIST = new Set([
   'Mahajanga (401) · Madagascar',
   'L1', 'L2', 'L3', 'M1', 'M2',
   '🎓 Licence Pro · Ingéniorat', 'Licence Professionnelle',
-  '✉️ iutamumg@gmail.com', '✉️ benjaiba@yahoo.fr', 'iutamumg@gmail.com', 'benjaiba@yahoo.fr'
+  '✉️ iutamumg@gmail.com', '✉️ beramilavonjy@gmail.com', 'iutamumg@gmail.com', 'beramilavonjy@gmail.com'
 ]);
 const noise = /^[0-9\s\W]*$/;
 const real = missing.filter(t => !noise.test(t) && !WHITELIST.has(t.trim()) && !/^[\d\s., ]+(Ar|%)?$/.test(t.trim()));
