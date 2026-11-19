@@ -199,7 +199,7 @@ function open(){m.hidden=false;document.body.style.overflow="hidden";box.scrollT
 a.addEventListener("click",function(e){e.preventDefault();if(loaded){open();return}
 fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
 var s=new DOMParser().parseFromString(t,"text/html").querySelector("main.legal");if(!s)throw 0;
-var b=s.querySelector(".back");if(b)b.remove();body.innerHTML=s.innerHTML;loaded=true;open()
+[].forEach.call(s.querySelectorAll(".back,.back-bottom"),function(b){b.remove()});body.innerHTML=s.innerHTML;loaded=true;open()
 }).catch(function(){location.href=a.href})});
 x.addEventListener("click",close);
 m.addEventListener("click",function(e){if(e.target===m)close()});

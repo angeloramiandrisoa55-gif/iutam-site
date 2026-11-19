@@ -187,3 +187,42 @@ body{padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inse
 @media (max-width:300px){
   .brand-txt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 }
+
+/* ===== Fenêtres de détails (débouchés, guides, grille tarifaire) et pied de page ===== */
+.mm-sheet .mm-box{display:flex;flex-direction:column;max-width:900px;max-height:90vh;max-height:90dvh;padding:0;overflow:hidden;animation:sheetpop .25s cubic-bezier(.2,.8,.2,1)}
+@keyframes sheetpop{from{transform:translateY(18px) scale(.98)}to{transform:none}}
+.sheet-bar{display:flex;flex:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--bd);background:var(--bg)}
+.sheet-back{padding:9px 16px;border:1px solid var(--pri);border-radius:99px;background:transparent;color:var(--pri);font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;transition:background .2s,color .2s}
+.sheet-back:hover{background:var(--pri);color:var(--on,#fff)}
+.sheet-x{display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--bd);border-radius:50%;background:var(--card);color:var(--fg);font-size:1rem;cursor:pointer;transition:transform .3s,background .2s}
+.sheet-x:hover{transform:rotate(90deg);background:var(--bd)}
+.sheet-back:focus-visible,.sheet-x:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.sheet-in{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:22px 24px 30px}
+.sheet-eyebrow{margin:0 0 6px;color:var(--pri);font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sheet-t{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.35rem,4.6vw,1.9rem);line-height:1.2}
+.sheet-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 6px}
+.sheet-line{color:var(--mut);font-size:.95rem}
+.sheet-head{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--bd)}
+.sheet-gd{display:flex;align-items:flex-start;gap:16px}
+.sheet-gd .ic{display:grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;background:var(--bl,#2f6fd6);color:#fff;font-size:1.5rem}
+.sheet-gd .ic .ic-i{width:1em;height:1em;stroke-width:1.7}
+.sheet-gt .chip,.sheet-meta .chip{display:inline-block;padding:5px 12px;border:1px solid var(--bd);border-radius:99px;background:var(--hero);font-size:.85rem;font-weight:600}
+.sheet-gt .sheet-t{margin-bottom:6px}
+.sheet-gt .sheet-line{margin:0 0 8px}
+.sheet-body .db-body,.sheet-body .gd-body{max-height:none;padding:0;margin:0;border:0}
+.sheet-fees{overflow-x:auto}
+@media (max-width:560px){
+  .mm-sheet{align-items:flex-end;padding:0}
+  .mm-sheet .mm-box{max-width:none;max-height:92vh;max-height:92dvh;border-radius:22px 22px 0 0;animation:sheetup .3s cubic-bezier(.2,.8,.2,1)}
+  .sheet-in{padding:18px 16px 26px}
+}
+@keyframes sheetup{from{transform:translateY(60px)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.mm-sheet .mm-box{animation:none}.sheet-x,.sheet-back{transition:none}}
+
+/* lignes repliées : le détail ne s'étale plus dans la page, un clic ouvre la fenêtre */
+details.db-row[open] .db-body,details.gd[open] .gd-body{display:none}
+
+/* pied de page : copyright, nom de l'institut sur une seule ligne, mentions */
+footer p{margin:0}
+footer .ft-n{display:block;max-width:100%;margin:4px 0;white-space:nowrap}
+footer .ft-l{margin-top:2px}

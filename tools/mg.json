@@ -199,7 +199,6 @@
  "J'accepte que mes données soient utilisées pour répondre à ma demande. ": "Manaiky aho fa hampiasaina handinihana sy hamaliana ny fangatahako ny angon-drakitra omeko.",
  "Envoyer le message": "Alefaso ny hafatra",
  "FAQ": "Fanontaniana apetraka matetika",
- "© <span id=\"y\"></span> IUTAM – Institut Universitaire de Technologie et d'Agronomie de Mahajanga. Tous droits réservés. · ": "© <span id=\"y\"></span> IUTAM – Ivontoeram-pampianarana momba ny Teknolojia sy ny Agronomia ao Mahajanga. Zo rehetra voatokana. · ",
  "Adresse": "Adiresy",
  "Téléphone": "Telefaonina",
  "E-mail": "Mailaka",
@@ -213,5 +212,7 @@
  "Admission, frais, formation, stages : l'assistant de l'IUTAM répond à vos questions à partir des informations officielles.": "Mikasika ny fidirana, ny saram-pianarana, ny lalam-piofanana ary ny fiofanana eny amin'ny toeram-piasana, ny mpanampy virtoaly an'ny IUTAM dia manome valiny mifototra amin'ny fampahalalana ofisialy voarakitra ao amin'ny tranonkala.",
  "Assistant IUTAM": "Mpanampy IUTAM",
  "Posez votre question ou choisissez-en une.": "Soraty eto ny fanontanianao na mifidiana iray amin'ireto:",
- "Ouvrir l'assistant": "Sokafy ny mpanampy"
+ "Ouvrir l'assistant": "Sokafy ny mpanampy",
+ "Institut Universitaire de Technologie et d'Agronomie de Mahajanga.": "Ivontoeram-pampianarana momba ny Teknolojia sy ny Agronomia ao Mahajanga.",
+ "Tous droits réservés": "Zo rehetra voatokana"
 }
