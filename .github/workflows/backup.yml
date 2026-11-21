@@ -1,0 +1,77 @@
+name: Sauvegardes
+
+# Sauvegarde quotidienne du site : le dépôt GitHub est déjà la source de vérité,
+# cet automatisme crée en plus une étiquette horodatée, une branche « backup »
+# et un artefact ZIP conservé 30 jours (restauration rapide en cas de incident).
+#
+# Restauration : voir docs/SECURITE.md, section « Sauvegardes et restauration ».
+
+on:
+  schedule:
+    - cron: '17 2 * * *'   # tous les jours à 02 h 17 UTC (évite les pointes)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backup
+  cancel-in-progress: true
+
+jobs:
+  backup:
+    name: Sauvegarde du site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Préparer le site
+        run: node tools/build-site.js --min
+
+      - name: Créer l'archive
+        run: |
+          set -e
+          STAMP=$(date -u +%Y-%m-%d)
+          mkdir -p backup
+          tar -czf "backup/iutam-site-${STAMP}.tar.gz" \
+            --exclude='./.git' --exclude='./backup' --exclude='./node_modules' .
+          tar -tzf "backup/iutam-site-${STAMP}.tar.gz" > /dev/null
+          sha256sum "backup/iutam-site-${STAMP}.tar.gz" > "backup/iutam-site-${STAMP}.tar.gz.sha256"
+          echo "Archive prête : backup/iutam-site-${STAMP}.tar.gz"
+          ls -lh backup/
+
+      - name: Conserver l'artefact 30 jours
+        uses: actions/upload-artifact@v4
+        with:
+          name: iutam-site-backup
+          path: backup/
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Étiqueter la version sauvegardée
+        run: |
+          git config user.name "sauvegarde-bot"
+          git config user.email "backup@iutam.local"
+          git tag -f "backup-$(date -u +%Y-%m-%d)" -m "Sauvegarde automatique du $(date -u +%Y-%m-%d)"
+          git push --force origin "refs/tags/backup-$(date -u +%Y-%m-%d)"
+
+      - name: Mettre à jour la branche de secours
+        run: |
+          set -e
+          git config user.name "sauvegarde-bot"
+          git config user.email "backup@iutam.local"
+          git checkout --orphan backup
+          git add -A
+          git commit -m "Sauvegarde automatique $(date -u +%Y-%m-%d)" || true
+          git push --force origin backup
+
+      - name: Supprimer les anciennes archives (conservation 30 jours)
+        run: |
+          git tag -l 'backup-*' | sort | head -n -30 | xargs -r -n1 git tag -d
+          git push origin --tags --force || true

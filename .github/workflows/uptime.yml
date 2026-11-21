@@ -1,0 +1,98 @@
+name: Surveillance du site
+
+# Vérifie toutes les 30 minutes que le site public et l'API répondent.
+# En cas d'échec, une alerte est envoyée à healthchecks.io (si la variable
+# HC_PING_URL est définie) et une demande GitHub est ouverte.
+# La variable SITE_URL permet de surveiller un autre déploiement
+# (Cloudflare Pages, serveur de l'Université).
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    name: Vérification de la disponibilité
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Contrôler le site et l'API
+        id: probe
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}
+          HC_PING_URL: ${{ secrets.HC_PING_URL }}
+        run: |
+          set -e
+          failed=0
+          for url in "$SITE_URL/" "$SITE_URL/mg/" "$SITE_URL/api/index.json" "$SITE_URL/mentions-legales.html"; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$url" || echo 000)
+            echo "::group::$url -> HTTP $code"
+            if [ "$code" = "200" ]; then
+              echo "OK $url"
+              if [ -n "$HC_PING_URL" ]; then
+                curl -s -o /dev/null --max-time 10 "$HC_PING_URL/$url" || true
+              fi
+            else
+              echo "ÉCHEC $url (HTTP $code)"
+              failed=1
+              if [ -n "$HC_PING_URL" ]; then
+                curl -s -o /dev/null --max-time 10 "$HC_PING_URL/$url/fail" || true
+              fi
+            fi
+            echo "::endgroup::"
+          done
+          echo "failed=$failed" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Vérifier la présence du certificat HTTPS
+        id: tls
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}
+        run: |
+          set -e
+          host=$(echo "$SITE_URL" | sed -E 's#https?://([^/]+).*#\1#')
+          end=$(date -u -d '+14 days' +%Y%m%d%H%M%SZ 2>/dev/null || date -u -v+14d +%Y%m%d%H%M%SZ)
+          out=$(echo | openssl s_client -servername "$host" -connect "$host:443" 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null || echo "")
+          echo "Fin de validité : ${out:-inconnue}"
+          if echo "$out" | grep -q "notAfter"; then
+            expiry=$(echo "$out" | sed -E 's/notAfter=(.+)Z?/\1/')
+            echo "expire=$expiry" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ouvrir une alerte en cas de panne
+        if: steps.probe.outputs.failed == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'Le site IUTAM ne répond pas';
+            const body = [
+              'Une vérification automatique a échoué.',
+              '',
+              `- Site : ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}`,
+              '- Pages testées : /, /mg/, /api/index.json, /mentions-legales.html',
+              '',
+              'À faire : vérifier le déploiement, le certificat, puis relancer le travail :',
+              '`npm run build && npm run build:site`',
+            ].join('\n');
+            const { owner, repo } = context.repo;
+            const issues = await github.rest.issues.listForRepo({ owner, repo, state: 'open', labels: 'alerte' });
+            const exists = issues.data.some(i => i.title === title);
+            if (!exists) {
+              await github.rest.issues.create({
+                owner, repo, title, body,
+                labels: ['alerte'],
+              });
+            }
+
+      - name: Publier le résultat
+        if: always()
+        run: |
+          echo "Site : ${{ vars.SITE_URL || 'https://iutam.univ.mg' }}"
+          echo "Statut : ${{ steps.probe.outputs.failed == '1' && 'INDISPONIBLE' || 'OPÉRATIONNEL' }}"
+          echo "Certificat : ${{ steps.tls.outputs.expire || 'inconnu' }}"
