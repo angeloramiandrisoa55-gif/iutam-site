@@ -252,7 +252,8 @@
           });
         });
       }
-      draw('');
+      var first = tabs && tabs.querySelectorAll('.fq-tab')[1];
+      if (first) first.click(); else draw('');
     }).catch(function () {
       box.innerHTML = '<p class="empty">' + esc(T.empty) + '</p>';
     });
@@ -340,7 +341,7 @@
 
   function start() {
     renderDebouches();
-    renderGuides();
+    // les démarches (liste compacte + pages dédiées) sont gérées par js/vues.js
     renderFaq();
     renderPub();
   }

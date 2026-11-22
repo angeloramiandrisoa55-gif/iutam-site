@@ -7,6 +7,7 @@
 <title>IUTAM Mahajanga – Institut Universitaire de Technologie et d'Agronomie</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/assistant.css">
+<link rel="stylesheet" href="css/vues.css">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -65,10 +66,10 @@
         <span class="lmd-y"><i>L1</i><i>L2</i><i>L3</i></span>
         <p class="lmd-d">Bac + 3 — 3 ans après le baccalauréat, mention Biologie Appliquée</p>
         <ul class="lmd-p">
-          <li><a href="#pubs" data-pc="p-agri">Agriculture</a></li>
-          <li><a href="#pubs" data-pc="p-elev">Élevage</a></li>
-          <li><a href="#pubs" data-pc="p-env">Environnement</a></li>
-          <li><a href="#pubs" data-pc="p-peche">Pêche et Aquaculture</a></li>
+          <li><a href="#/formation/agriculture">Agriculture</a></li>
+          <li><a href="#/formation/elevage">Élevage</a></li>
+          <li><a href="#/formation/environnement">Environnement</a></li>
+          <li><a href="#/formation/peche">Pêche et Aquaculture</a></li>
         </ul>
       </div>
       <div class="lmd-niv mas">
@@ -76,8 +77,8 @@
         <span class="lmd-y"><i>M1</i><i>M2</i></span>
         <p class="lmd-d">Bac + 3 requis — 2 ans supplémentaires, soit Bac + 5, mention Agro-biodiversité et Environnement</p>
         <ul class="lmd-p">
-          <li><a href="#pubs" data-pc="p-padd">P.A.D.D. — Production Animale et Développement Durable</a></li>
-          <li><a href="#pubs" data-pc="p-pvtdd">P.V.T.D.D. — Production Végétale Tropicale et Développement Durable</a></li>
+          <li><a href="#/formation/padd">P.A.D.D. — Production Animale et Développement Durable</a></li>
+          <li><a href="#/formation/pvtdd">P.V.T.D.D. — Production Végétale Tropicale et Développement Durable</a></li>
         </ul>
       </div>
     </div>
@@ -152,12 +153,7 @@
     <p class="mention"><i>Mention</i><b>Biologie Appliquée</b></p>
     <p class="lvl-p">Acquérir des bases scientifiques puis des techniques et technologies dans les domaines agronomiques et environnementaux.</p>
     <h3 class="lsub">Les parcours</h3>
-    <div class="pc">
-      <article class="card pcard p-agri rv"><span class="ic">🌾</span><h4>Agriculture</h4><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-      <article class="card pcard p-elev rv"><span class="ic">🐄</span><h4>Élevage</h4><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-      <article class="card pcard p-env rv"><span class="ic">🌿</span><h4>Environnement</h4><small>Bac : A2, C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-      <article class="card pcard p-peche rv"><span class="ic">🐟</span><h4>Pêche et Aquaculture</h4><small>Bac : C, D, S, OSE et Agricole</small><a class="more" href="#adm-lic">Conditions d'admission →</a></article>
-    </div>
+    <div class="fl" data-niv="licence" aria-live="polite"></div>
     <div class="stg"><b>Stages en milieux professionnels</b><span>L1 · Stage d'imprégnation</span><span>L2 · Stage ouvrier</span><span>L3 · Stage de mémoire de Licence</span><a class="more" href="#frais">Voir les frais de scolarité →</a></div>
   </div>
 
@@ -172,88 +168,14 @@
     <p class="mention"><i>Mention</i><b>Agro-biodiversité et Environnement</b></p>
     <p class="lvl-p">Former des ingénieurs spécialisés en sciences et technologies du vivant, biotechnologie, sciences du sol, agroalimentaire, recherche, innovation et développement durable.</p>
     <h3 class="lsub">Les parcours</h3>
-    <div class="pc">
-      <article class="card pcard p-padd rv"><span class="ic">🐄</span><h4>P.A.D.D.</h4><p>Production Animale et Développement Durable.</p><small>Licence requise : Élevage, Environnement, Pêche et Aquaculture et équivalents</small><a class="more" href="#adm-mas">Conditions d'admission →</a></article>
-      <article class="card pcard p-pvtdd rv"><span class="ic">🌴</span><h4>P.V.T.D.D.</h4><p>Production Végétale Tropicale et Développement Durable.</p><small>Licence requise : Agriculture, Environnement et équivalents</small><a class="more" href="#adm-mas">Conditions d'admission →</a></article>
-    </div>
+    <div class="fl" data-niv="ingeniorat" aria-live="polite"></div>
     <div class="stg"><b>Stages en milieux professionnels</b><span>M2 · Stage de mémoire d'ingéniorat</span><a class="more" href="#frais">Voir les frais de scolarité →</a></div>
   </div>
 </section>
 
 <section id="sites">
-  <div class="pubs rv" id="pubs" role="region" aria-roledescription="carousel" aria-label="Présentation des parcours" tabindex="-1">
-    <div class="pubs-bar"><i></i></div>
-    <div class="pubs-stage">
-    <article class="ps p-agri on" role="group" aria-roledescription="slide" aria-label="Agriculture">
-      <img class="ps-bg" src="images/pub-agriculture.jpg" alt="Parcelles de cultures étiquetées et étudiants sur le terrain" width="1000" height="750" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Licence Professionnelle</span><span class="ps-m"><i>Mention</i>Biologie Appliquée</span></div>
-        <h3 class="ps-t">Agriculture</h3><p class="ps-p">Acquérez les bases scientifiques, les techniques et les technologies de la production agricole. Travaux pratiques sur le terrain et en laboratoire, puis stages en milieu professionnel.</p><ul class="ps-k"><li>3 ans après le Bac</li><li>Bac : C, D, S, OSE et Agricole</li><li>Stages de la L1 à la L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Conditions d'admission →</a><a class="btn o" href="#frais">Voir les frais</a></div></div>
-    </article>
-    <article class="ps p-elev" role="group" aria-roledescription="slide" aria-label="Élevage">
-      <img class="ps-bg" src="images/pub-elevage.jpg" alt="Étudiants en cours dans un amphithéâtre" width="1000" height="750" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Licence Professionnelle</span><span class="ps-m"><i>Mention</i>Biologie Appliquée</span></div>
-        <h3 class="ps-t">Élevage</h3><p class="ps-p">Découvrez les techniques et les technologies de l'élevage, appuyées par des bases scientifiques solides. Pratique en laboratoire et sur le terrain, avec la vitrine d'activités et la ferme école.</p><ul class="ps-k"><li>3 ans après le Bac</li><li>Bac : C, D, S, OSE et Agricole</li><li>Stages de la L1 à la L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Conditions d'admission →</a><a class="btn o" href="#frais">Voir les frais</a></div></div>
-    </article>
-    <article class="ps p-env" role="group" aria-roledescription="slide" aria-label="Environnement">
-      <img class="ps-bg" src="images/pub-environnement.jpg" alt="Pépinière sous ombrière : jeunes plants en bacs" width="1000" height="748" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Licence Professionnelle</span><span class="ps-m"><i>Mention</i>Biologie Appliquée</span></div>
-        <h3 class="ps-t">Environnement</h3><p class="ps-p">Étudiez les milieux naturels et leurs enjeux grâce aux bases scientifiques, aux techniques et aux technologies des domaines agronomiques et environnementaux. Ouvert aussi aux bacheliers A2.</p><ul class="ps-k"><li>3 ans après le Bac</li><li>Bac : A2, C, D, S, OSE et Agricole</li><li>Stages de la L1 à la L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Conditions d'admission →</a><a class="btn o" href="#frais">Voir les frais</a></div></div>
-    </article>
-    <article class="ps p-peche" role="group" aria-roledescription="slide" aria-label="Pêche et Aquaculture">
-      <img class="ps-bg" src="images/pub-peche.jpg" alt="Bassins de pisciculture et poissons dans une épuisette" width="1000" height="605" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Licence Professionnelle</span><span class="ps-m"><i>Mention</i>Biologie Appliquée</span></div>
-        <h3 class="ps-t">Pêche et Aquaculture</h3><p class="ps-p">Formez-vous aux techniques de la pêche et de l'aquaculture, avec les bases scientifiques et les technologies du domaine. Pratique en laboratoire et sur le terrain, stages en milieu professionnel.</p><ul class="ps-k"><li>3 ans après le Bac</li><li>Bac : C, D, S, OSE et Agricole</li><li>Stages de la L1 à la L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Conditions d'admission →</a><a class="btn o" href="#frais">Voir les frais</a></div></div>
-    </article>
-    <article class="ps p-padd" role="group" aria-roledescription="slide" aria-label="P.A.D.D.">
-      <img class="ps-bg" src="images/pub-padd.jpg" alt="Laboratoire : microscope et autoclave" width="660" height="358" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv m">Ingéniorat au grade de Master</span><span class="ps-m"><i>Mention</i>Agro-biodiversité et Environnement</span></div>
-        <h3 class="ps-t">P.A.D.D.</h3><p class="ps-p"><b>Production Animale et Développement Durable.</b> Formation d'ingénieur au grade de Master en sciences et technologies du vivant, biologie animale, recherche, innovation et développement durable.</p><ul class="ps-k"><li>2 ans après la Licence</li><li>Licence requise : Élevage, Environnement, Pêche et Aquaculture et équivalents</li><li>Sélection sur dossier puis entretien</li><li>Stage de mémoire d'ingéniorat (M2)</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-mas">Conditions d'admission →</a><a class="btn o" href="#frais">Voir les frais</a></div></div>
-    </article>
-    <article class="ps p-pvtdd" role="group" aria-roledescription="slide" aria-label="P.V.T.D.D.">
-      <img class="ps-bg" src="images/pub-pvtdd.jpg" alt="Plants tropicaux sous ombrière de culture" width="1000" height="748" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv m">Ingéniorat au grade de Master</span><span class="ps-m"><i>Mention</i>Agro-biodiversité et Environnement</span></div>
-        <h3 class="ps-t">P.V.T.D.D.</h3><p class="ps-p"><b>Production Végétale Tropicale et Développement Durable.</b> Formation d'ingénieur au grade de Master en sciences et technologies du vivant, biologie végétale, biotechnologie, recherche, innovation et développement durable.</p><ul class="ps-k"><li>2 ans après la Licence</li><li>Licence requise : Agriculture, Environnement et équivalents</li><li>Sélection sur dossier puis entretien</li><li>Stage de mémoire d'ingéniorat (M2)</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-mas">Conditions d'admission →</a><a class="btn o" href="#frais">Voir les frais</a></div></div>
-    </article>
-    <article class="ps p-antso" role="group" aria-roledescription="slide" aria-label="Antsohihy">
-      <img class="ps-bg" src="images/antsohihy.jpg" alt="Bâtiment à Antsohihy" width="1200" height="760" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <figure class="ps-fr"><img src="images/antsohihy-panneau.jpg" alt="Panneau « IUTAM Annexe Antsohihy » : accès à 60 m" width="404" height="242" loading="lazy" decoding="async"><figcaption>Panneau d'accès · 60 m</figcaption></figure>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Annexe</span><span class="ps-m">Près de chez vous</span></div>
-        <h3 class="ps-t">IUTAM <b>Antsohihy</b></h3>
-        <p class="ps-p">Annexe de l'IUTAM à Antsohihy : formation agronomique habilitée par le MESupRES. Agriculture, élevage, environnement, pêche et aquaculture (offre à confirmer pour 2026-2027).</p>
-        <ul class="ps-k"><li>📞 032 05 580 06 · 034 02 653 27</li><li>✉️ iutamumg@gmail.com</li></ul>
-        <div class="ps-b"><a class="btn" href="tel:+261320558006">Appeler</a><a class="btn o" href="#sites-list">Découvrir les sites</a></div></div>
-    </article>
-    <article class="ps p-maeva" role="group" aria-roledescription="slide" aria-label="Maevatanana">
-      <img class="ps-bg" src="images/maevatanana.jpg" alt="Façade de l'IUTAM Maevatanana : bâtiment à deux niveaux avec le panneau « I.U.T.A.M — Antenne Maevatanana » et le fléchage vers le secrétariat" width="1600" height="1200" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-m">Près de chez vous</span></div>
-        <h3 class="ps-t">IUTAM <b>Maevatanana</b></h3>
-        <p class="ps-p">Renseignez-vous sur les parcours proposés à Maevatanana (agriculture, élevage, environnement) auprès du secrétariat de l'IUTAM à Mahajanga.</p>
-        <ul class="ps-k"><li>Offre à confirmer auprès du secrétariat</li></ul>
-        <div class="ps-b"><a class="btn" href="tel:+261320558006">Contacter le secrétariat</a><a class="btn o" href="#sites-list">Découvrir les sites</a></div></div>
-    </article>
-    </div>
-    <div class="pubs-ctl">
-      <button class="pubs-btn pubs-prev" type="button" aria-label="Panneau précédent">←</button>
-      <button class="pubs-btn pubs-next" type="button" aria-label="Panneau suivant">→</button>
-      <span class="pubs-cnt">01 / 08</span>
-    </div>
-  </div>
-  <div class="pubs-tabs"><button class="pt p-agri on" type="button" aria-current="true"><i></i>Agriculture</button><button class="pt p-elev" type="button"><i></i>Élevage</button><button class="pt p-env" type="button"><i></i>Environnement</button><button class="pt p-peche" type="button"><i></i>Pêche et Aquaculture</button><button class="pt p-padd" type="button"><i></i>P.A.D.D.</button><button class="pt p-pvtdd" type="button"><i></i>P.V.T.D.D.</button><button class="pt p-antso" type="button"><i></i>Antsohihy</button><button class="pt p-maeva" type="button"><i></i>Maevatanana</button></div>
   <a class="pubs-poster lb" id="poster-link" href="images/affiche-formations.jpg" data-alt="Affiche « Nos formations » : Licence Professionnelle et Ingéniorat au grade de Master">📄 Voir l'affiche des formations</a>
+  <h3 class="sites-t">Près de chez vous</h3>
   <div class="grid" id="sites-list" aria-live="polite"></div>
 </section>
 
@@ -288,7 +210,7 @@
   </table></div>
   <h3 class="rv" id="guides" style="margin-top:56px">Guides pratiques</h3>
   <p class="sub rv">Les démarches à connaître, étape par étape.</p>
-  <div class="grid gd-grid" id="guides-list" aria-live="polite"><p class="empty">Chargement…</p></div>
+  <div class="dl-list" id="guides-list" aria-live="polite"><p class="empty">Chargement…</p></div>
 </section>
 
 <section id="frais">
@@ -319,6 +241,8 @@
     <div class="as-chips" id="as-suggest"></div>
     <button class="btn" type="button" data-assistant-open>Ouvrir l'assistant</button>
   </div>
+  <div class="fq-tabs rv" id="faq-tabs" role="tablist"></div>
+  <div id="faq-list" aria-live="polite"></div>
 </section>
 
 <section id="actus">
@@ -367,6 +291,7 @@
 <script src="js/main.js" defer></script>
 <script src="js/sections.js" defer></script>
 <script src="js/fenetres.js" defer></script>
+<script src="js/vues.js" defer></script>
 <script src="js/forms.js" defer></script>
 <script src="js/search.js" defer></script>
 <script src="js/icons.js" defer></script>

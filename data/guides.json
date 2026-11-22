@@ -5,15 +5,15 @@
       "icone": "📝",
       "titre": "Préparer son dossier d'inscription",
       "titre_mg": "Fanomanana ny antontan-taratasy fisoratana anarana",
-      "resume": "Les pièces à réunir et les étapes à suivre pour déposer un dossier complet, sans retour du secrétariat.",
-      "resume_mg": "Fanazavana momba ireo antontan-taratasy ilaina sy ny dingana arahina mba hahafahana mametraka antontan-taratasy feno, ka hampihenana ny mety hiverenan'ny fangatahana noho ny tsy fahampian'ny antontan-taratasy.",
-      "duree": "Environ une semaine",
-      "duree_mg": "Fotoana ilaina: manodidina ny iray volana.",
+      "resume": "Pièces à fournir et étapes d'inscription",
+      "resume_mg": "Antontan-taratasy ilaina sy dingana amin'ny fisoratana anarana",
+      "duree": "environ 1 semaine",
+      "duree_mg": "manodidina ny iray herinandro",
       "etapes": [
         {
           "t": "1. Vérifier l'éligibilité",
           "t_mg": "1. Hamaky ny mety ho anarana",
-          "d": "Votre série de baccalauréat est-elle acceptée pour le parcours visé ? Agriculture, Élevage et Pêche et Aquiculture acceptent C, D, S, OSE et Agricole ; Environnement accepte en plus A2.",
+          "d": "Votre série de baccalauréat est-elle acceptée pour le parcours visé ? Agriculture, Élevage et Pêche et Aquaculture acceptent C, D, S, OSE et Agricole ; Environnement accepte en plus A2.",
           "d_mg": "Ny sokajy bakalaoraly anao dia ekaina ve amin'ny lilan-tanana tianao ? Ny Fambolena, ny Fiompiana ary ny Jono sy Fiompiana Trondro dia ekaina ny C, D, S, OSE ary Agricole ; ny Tontolo iainana dia ekaina koa ny A2."
         },
         {
@@ -38,7 +38,7 @@
           "t": "5. Confirmer l'inscription",
           "t_mg": "5. Manamarina ny fisoratana anarana",
           "d": "Récupérez le récépissé et la liste des matières. Notez les dates de paiement des tranches : elles sont dues même en cas de retard d'inscription.",
-          "d_mg": "Raiso ny tapakila fisoratana anarana sy ny lisitry ny taranja. Teeo ny daty fandoavana ny tranches: tsy maintsy manao izy aza na dia mora ny fisoratana anarana."
+          "d_mg": "Raiso ny tapakila fisoratana anarana sy ny lisitry ny taranja. Teeo ny daty fandoavana ny fandoavana isaky ny tapany (tranche): tsy maintsy aloha izy ireo na dia tara aza ny fisoratana anarana."
         }
       ],
       "pieces": [
@@ -56,26 +56,28 @@
         "Sary fanalahidy efatra",
         "Tapakila fisoratana anarana ny taona teo aloha",
         "Porofo fanaovana bursa na fangatahana (raha ilaina)"
-      ]
+      ],
+      "intro": "Les pièces à réunir et les étapes à suivre pour déposer un dossier complet, sans retour du secrétariat.",
+      "intro_mg": "Fanazavana momba ireo antontan-taratasy ilaina sy ny dingana arahina mba hahafahana mametraka antontan-taratasy feno, ka hampihenana ny mety hiverenan'ny fangatahana noho ny tsy fahampian'ny antontan-taratasy."
     },
     {
       "id": "bourse",
       "icone": "🎓",
       "titre": "Demander une bourse ou une aide financière",
       "titre_mg": "Fangatahana vatsim-pianarana na fanampiana ara-bola",
-      "resume": "Bourses d'État, aide aux frais de scolarité : qui décide, comment faire, et à quel moment.",
-      "resume_mg": "Fanazavana momba ny vatsim-pianarana omen'ny Fanjakana sy ny fanampiana amin'ny saram-pianarana: ireo afaka mangataka, ny fomba fangatahana ary ny fe-potoana tokony hanatanterahana izany.",
-      "duree": "De 1 à 3 mois selon l'organisme",
-      "duree_mg": "Fotoana tombanana: iray ka hatramin'ny telo volana, arakaraka ny rafitra misahana izany.",
+      "resume": "Bourses d'État et aides financières",
+      "resume_mg": "Vatsim-pianarana omen'ny Fanjakana sy fanampiana ara-bola",
+      "duree": "1 à 3 mois",
+      "duree_mg": "iray ka hatramin'ny telo volana",
       "etapes": [
         {
           "t": "1. Identifier l'aide visée",
           "t_mg": "1. Hamaky ny vatsim-pianarana tiana",
-          "d": "Bourse d'État (Bourse du Gouvernement), aide à l'inscription (frais Paid Schooling), aide d'urgence : les dispositifs diffèrent. Le service des bourses de l'Université de Mahajanga vous oriente sur le bon guichet.",
-          "d_mg": "Fanazavana momba ny vatsim-pianarana omen'ny Fanjakana sy ny fanampiana amin'ny saram-pianarana: ireo afaka mangataka, ny fomba fangatahana ary ny fe-potoana tokony hanatanterahana izany."
+          "d": "Bourse d'État (bourse du Gouvernement), aide à l'inscription et aux frais de scolarité, aide d'urgence : les dispositifs diffèrent. Le service des bourses de l'Université de Mahajanga vous oriente vers le bon guichet.",
+          "d_mg": "Vatsim-pianarana omen'ny Fanjakana, fanampiana amin'ny fisoratana anarana sy ny saram-pianarana, fanampiana maika: samy hafa ny rafitra tsirairay. Ny sampan'asa misahana ny vatsim-pianarana ao amin'ny Anjerimanontolon'i Mahajanga no mitarika anao any amin'ny birao mety."
         },
         {
-          "t": "2. R gathering les justificatifs",
+          "t": "2. Réunir les justificatifs",
           "t_mg": "2. Manangona ny antontan-taratasy",
           "d": "Relevé de notes du baccalauréat, attestation de scolarité, certificat de non-redevance, fiche de revenus du responsable légal, et le formulaire de demande de l'organisme concerné.",
           "d_mg": "Karatra ny naoty ny bakalaoraly, porofo fisoratana anarana, tapakila tsy mbola nandoa ny saram-pianarana, taratasy momba ny vola miditra amin'ny mpiantoka, ary ny taratasy fangatahana amin'ny rafitra ilaina."
@@ -90,7 +92,7 @@
           "t": "4. Suivre le dossier",
           "t_mg": "4. Manaraka ny antontan-taratasy",
           "d": "Conservez une trace écrite de chaque dépôt et demandez un accusé de réception. Le secrétariat de l'IUTAM peut vérifier l'état de votre dossier auprès de l'organisme financeur.",
-          "d_mg": "Mitahiry traikefa soratana ny fametrahamana tsirairay ary angataka porofo fandraisana. Ny Sekreteria ny IUTAM dia afaka manamarina ny toe-javatra ny antontan-taratasy-nao amin'ny rafitra mampa funding."
+          "d_mg": "Mitahiry traikefa soratana ny fametrahamana tsirairay ary angataka porofo fandraisana. Ny Sekreteria ny IUTAM dia afaka manamarina ny toe-javatra ny antontan-taratasy-nao amin'ny rafitra mpamatsy vola."
         }
       ],
       "pieces": [
@@ -105,18 +107,20 @@
         "Porofo fisoratana anarana ankehitriny",
         "Tapakila tsy mbola nandoa ny saram-pianarana",
         "Taratasy momba ny vola miditra amin'ny mpiantoka",
-        "Taratasy fangatahana amin'ny rafitra mampa funding"
-      ]
+        "Taratasy fangatahana amin'ny rafitra mpamatsy vola"
+      ],
+      "intro": "Bourses d'État, aide aux frais de scolarité : qui décide, comment faire, et à quel moment.",
+      "intro_mg": "Fanazavana momba ny vatsim-pianarana omen'ny Fanjakana sy ny fanampiana amin'ny saram-pianarana: ireo afaka mangataka, ny fomba fangatahana ary ny fe-potoana tokony hanatanterahana izany."
     },
     {
       "id": "stages",
       "icone": "🎯",
       "titre": "Organiser son stage",
       "titre_mg": "Fanomanana ny fiofanana eny amin'ny toeram-piasana",
-      "resume": "Trouver une structure d'accueil, signer la convention et préparer son rapport de stage.",
-      "resume_mg": "Fitadiavana toeram-pandraisana, fanaovan-tsonia ny fifanarahana ary fanomanana ny tatitra momba ny fiofanana.",
-      "duree": "De 1 à 2 mois avant le début du stage",
-      "duree_mg": "Fotoana tombanana: iray ka hatramin'ny roa volana mialoha ny fanombohan'ny fiofanana.",
+      "resume": "Recherche, convention et rapport de stage",
+      "resume_mg": "Fitadiavana toerana, fifanarahana ary tatitra momba ny fiofanana",
+      "duree": "selon le calendrier",
+      "duree_mg": "araka ny kalandrie",
       "etapes": [
         {
           "t": "1. Choisir une structure d'accueil",
@@ -154,7 +158,9 @@
         "CV vaovao",
         "Fifanarahana fanazaran-tena voasonia telo",
         "Porofo fanabeazana ny mpitantana ao amin'ny toerana fandraisana"
-      ]
+      ],
+      "intro": "Trouver une structure d'accueil, signer la convention et préparer son rapport de stage.",
+      "intro_mg": "Fitadiavana toeram-pandraisana, fanaovan-tsonia ny fifanarahana ary fanomanana ny tatitra momba ny fiofanana."
     }
   ]
 }

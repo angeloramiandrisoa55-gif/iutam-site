@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Langage visuel commun : Formations, Démarches, FAQ, Contact
+   Lignes compactes, pages dédiées (#/formation/… et #/demarche/…)
+   Chargé APRÈS style.css et assistant.css.
+   ========================================================================== */
+
+:root{--r:16px;--ico:40px;--gap:10px;--row-pad:12px 14px;--shadow-s:0 4px 16px #1b7a431a}
+
+/* ------------------------------------------------ espacement des sections */
+@media (max-width:640px){
+  #formations,#admission,#frais,#faq,#contact{padding-top:44px;padding-bottom:44px}
+  #formations .sub,#admission .sub{margin-bottom:18px}
+}
+
+/* ----------------------------------------- bloc Licence / Master, allégé */
+#formations .lvl{padding:22px 18px 16px;border-radius:20px}
+#formations .lvl-k{font-size:clamp(1.6rem,5vw,2.2rem)}
+#formations .mention{margin:14px 0 6px;padding:8px 12px}
+#formations .mention b{font-size:1.05rem}
+#formations .lvl-p{margin:4px 0 14px;font-size:.92rem}
+#formations .lvl .lsub{margin:0 0 8px}
+#formations .stg{margin-top:14px;padding-top:12px}
+#formations .bridge{margin:2px 0}
+@media (max-width:640px){
+  #formations .lvl{padding:18px 12px 14px}
+  #formations .lvl-p{display:none}
+}
+
+/* ----------------------------------------------- icône ronde, petite taille */
+.fi{display:grid;place-items:center;flex:0 0 auto;width:var(--ico);height:var(--ico);border-radius:12px;
+  background:var(--pcd,var(--pri));color:#fff;font-size:1.15rem;line-height:1}
+.fi .ic-i{width:1.15em;height:1.15em;vertical-align:baseline;stroke-width:1.7}
+.fi.di{background:var(--bl,#2f6fd0)}
+
+/* ------------------------------------------------------------ lignes (liste) */
+.fl,.dl-list{display:grid;gap:var(--gap)}
+.frow,.drow{--pc:var(--c,var(--pri));position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;
+  padding:var(--row-pad);border:1px solid var(--bd);border-left:4px solid var(--pc);border-radius:var(--r);
+  background:var(--card);color:var(--fg);text-decoration:none;
+  transition:box-shadow .2s,border-color .2s,transform .2s}
+.drow{--pc:var(--bl,#2f6fd0);border-left-color:var(--pc)}
+.frow:hover,.drow:hover{box-shadow:var(--shadow-s);border-color:var(--pc);transform:translateY(-1px)}
+.frow:focus-visible,.drow:focus-visible,.vmore a:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.ft{display:grid;gap:1px;min-width:0}
+.ft b{font:700 1.02rem/1.25 Georgia,"Times New Roman",serif}
+.ft .fs{font-size:.86rem;color:var(--mut);line-height:1.35}
+.ft small{font-size:.8rem;font-weight:600;color:var(--c,var(--pri));line-height:1.35}
+.dl{margin-top:3px;font-size:.78rem;color:var(--mut)}
+.fgo{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:700;color:var(--c,var(--pri));white-space:nowrap}
+.drow .fgo{color:var(--bl,#2f6fd0)}
+.fgo i{font-style:normal;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;
+  background:var(--hero);transition:transform .2s}
+.frow:hover .fgo i,.drow:hover .fgo i{transform:translateX(3px)}
+@media (max-width:620px){
+  .fgo-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}  /* reste lu par les lecteurs d'écran */
+  .frow,.drow{gap:10px;padding:10px 12px}
+}
+.lvl.mas .frow{--c:#2f6fd0}
+.drow .ft b{font-size:1rem}
+
+/* ---------------------------------------------------- sites (sans carrousel) */
+#sites{padding-top:8px}
+#sites .sites-t{margin:28px 0 12px;font-size:1.25rem}
+#sites .pubs-poster{display:inline-block;margin:0 0 16px}
+
+/* ======================================================== PAGE DÉDIÉE (vue) */
+.vue{position:fixed;inset:0;z-index:60;overflow-y:auto;overscroll-behavior:contain;
+  background:linear-gradient(180deg,var(--hero) 0,var(--bg) 360px),var(--bg);
+  padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+.vue[hidden]{display:none}
+.vue-open body{overflow:hidden}
+.vue-bar{position:sticky;top:0;z-index:2;padding:calc(10px + env(safe-area-inset-top,0px)) 5vw 10px;
+  background:var(--card);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.vue-back{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;border:0;background:none;color:var(--pri);
+  font:700 .98rem system-ui,sans-serif;cursor:pointer}
+.vue-back:hover{text-decoration:underline}
+.vue-back:focus-visible{outline:3px solid var(--pri);outline-offset:2px;border-radius:8px}
+.vue-in{max-width:760px;margin:0 auto;padding:22px 5vw 0;animation:vuein .28s ease-out}
+@keyframes vuein{from{transform:translateY(14px)}to{transform:none}}
+
+.vh{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:3px solid var(--pcd,var(--pri))}
+.vh.vh-d{border-bottom-color:var(--bl,#2f6fd0)}
+.vh .vi{--ico:52px;font-size:1.5rem;border-radius:16px}
+.vh h1{margin:0;font-size:clamp(1.5rem,5.5vw,2.1rem)}
+.vk-k{margin:0 0 4px;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pcd,var(--pri))}
+.vh-d .vk-k{color:var(--bl,#2f6fd0)}
+.vsub{margin:4px 0 0;color:var(--mut);font-size:.95rem}
+.vdl{display:inline-block;margin:8px 0 0;padding:3px 12px;border:1px solid var(--bd);border-radius:99px;background:var(--hero);font-size:.82rem;font-weight:600}
+.vlead{margin:0 0 16px;color:var(--mut)}
+
+.vf{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--gap);margin:0 0 6px}
+.vf>div{min-width:0;padding:8px 12px;border:1px solid var(--bd);border-radius:var(--r);background:var(--card)}
+.vf dt{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pcd,var(--pri))}
+.vf dd{margin:2px 0 0;font-weight:600;font-size:.95rem}
+
+.vs{margin-top:22px}
+.vs h2,.vmore h2{margin:0 0 8px;font:800 .78rem system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--pcd,var(--pri))}
+.vh-d~.vs h2,.vh-d~.vmore h2,.vmore h2{color:var(--bl,#2f6fd0)}
+.vs p{margin:0}
+.vl{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.vl>li{position:relative;padding:9px 12px 9px 34px;border:1px solid var(--bd);border-radius:12px;background:var(--card);font-size:.95rem}
+.vl>li:before{content:"";position:absolute;left:13px;top:1.05em;width:8px;height:8px;border-radius:50%;background:var(--pcd,var(--pri))}
+.vl.vd>li b,.vl.vst>li b{display:block}
+.vl.vd>li span{display:block;font-size:.85rem;color:var(--mut)}
+.vl.vst>li{padding-left:12px;display:flex;gap:10px;align-items:baseline}
+.vl.vst>li:before{display:none}
+.vl.vst>li b{display:inline-block;min-width:2.2em;color:var(--pcd,var(--pri))}
+.vl.vchk>li:before{content:"✓";width:auto;height:auto;border-radius:0;background:none;color:var(--bl,#2f6fd0);font-weight:800;top:.7em}
+
+.vsteps{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:v}
+.vsteps>li{counter-increment:v;position:relative;padding:12px 14px 12px 52px;border:1px solid var(--bd);border-radius:var(--r);background:var(--card)}
+.vsteps>li:before{content:counter(v);position:absolute;left:14px;top:12px;width:26px;height:26px;display:grid;place-items:center;
+  border-radius:50%;background:var(--bl,#2f6fd0);color:#fff;font-size:.8rem;font-weight:700}
+.vsteps b{display:block;font-size:.98rem}
+.vsteps span{display:block;margin-top:3px;font-size:.9rem;color:var(--mut)}
+
+.vact{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0}
+.vact .btn{margin:0}
+.vmore{margin-top:30px}
+.vmore a{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin-bottom:8px;padding:10px 14px;
+  border:1px solid var(--bd);border-radius:var(--r);background:var(--card);text-decoration:none;font-weight:600;font-size:.94rem}
+.vmore a:hover{border-color:var(--bl,#2f6fd0)}
+.vmore i{font-style:normal;color:var(--bl,#2f6fd0)}
+
+/* ===================================================== CONTACT (compact) */
+#contact .cc{grid-template-columns:1fr;gap:var(--gap);margin-bottom:28px}
+@media (min-width:720px){#contact .cc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#contact .cc-i{flex-direction:row;align-items:center;gap:14px;padding:var(--row-pad);border-radius:var(--r)}
+#contact .cc-ic{flex:0 0 auto;width:var(--ico);height:var(--ico);border-radius:12px}
+#contact .cc-ic svg{width:20px;height:20px}
+#contact .cc-t{min-width:0}
+#contact .cc-t b{font-size:1.02rem}
+#contact .cc-v{font-size:.9rem;line-height:1.4}
+#contact .cc-a{margin-left:auto;flex:0 0 auto;font-size:.82rem}
+@media (max-width:620px){
+  #contact .cc-a{font-size:0}            /* le texte reste lu par les lecteurs d'écran */
+  #contact .cc-a i{font-size:1.1rem}
+}
+
+/* ------------------------------------------------- carte FAQ, même gabarit */
+#faq .as-card{padding:16px;border-radius:var(--r);gap:14px}
+#faq .as-card-h{gap:12px}
+#faq .as-av{--ico:var(--ico)}
+#faq .as-card-h b{font-size:1.1rem}
+#faq .fq-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 14px}
+#faq .fq{border-radius:var(--r)}
+#faq .fq summary{padding:var(--row-pad)}
+#faq .fq-tab{padding:7px 14px;font-size:.9rem}
+
+@media (prefers-reduced-motion:reduce){
+  .vue-in{animation:none}
+  .frow,.drow,.fgo i{transition:none}
+  .frow:hover,.drow:hover{transform:none}
+}

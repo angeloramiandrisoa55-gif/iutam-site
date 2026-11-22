@@ -7,6 +7,7 @@
 <title>IUTAM Mahajanga – Ivontoeram-pampianarana ambony momba ny Teknolojia sy ny Agronomia</title>
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/assistant.css">
+<link rel="stylesheet" href="../css/vues.css">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="apple-touch-icon" href="../favicon.png">
@@ -65,10 +66,10 @@
         <span class="lmd-y"><i>L1</i><i>L2</i><i>L3</i></span>
         <p class="lmd-d">Bakalorea + 3: telo taona aorian'ny Bakalorea. Taranja iombonana: Biolojia Ampiharina.</p>
         <ul class="lmd-p">
-          <li><a href="#pubs" data-pc="p-agri">Fambolena</a></li>
-          <li><a href="#pubs" data-pc="p-elev">Fiompiana</a></li>
-          <li><a href="#pubs" data-pc="p-env">Tontolo iainana</a></li>
-          <li><a href="#pubs" data-pc="p-peche">Jono sy Fiompiana anaty rano</a></li>
+          <li><a href="#/formation/agriculture">Fambolena</a></li>
+          <li><a href="#/formation/elevage">Fiompiana</a></li>
+          <li><a href="#/formation/environnement">Tontolo iainana</a></li>
+          <li><a href="#/formation/peche">Jono sy Fiompiana anaty rano</a></li>
         </ul>
       </div>
       <div class="lmd-niv mas">
@@ -76,8 +77,8 @@
         <span class="lmd-y"><i>M1</i><i>M2</i></span>
         <p class="lmd-d">Bakalorea + 5: roa taona aorian'ny Laisansa. Taranja: Agro-biodiversité sy Tontolo iainana.</p>
         <ul class="lmd-p">
-          <li><a href="#pubs" data-pc="p-padd">P.A.D.D. — Famokarana biby sy fampandrosoana lovainjafy</a></li>
-          <li><a href="#pubs" data-pc="p-pvtdd">P.V.T.D.D. — Famokarana zavamaniry tropikaly sy fampandrosoana lovainjafy</a></li>
+          <li><a href="#/formation/padd">P.A.D.D. — Famokarana biby sy fampandrosoana lovainjafy</a></li>
+          <li><a href="#/formation/pvtdd">P.V.T.D.D. — Famokarana zavamaniry tropikaly sy fampandrosoana lovainjafy</a></li>
         </ul>
       </div>
     </div>
@@ -152,12 +153,7 @@
     <p class="mention"><i>Taranja</i><b>Biolojia Ampiharina</b></p>
     <p class="lvl-p">Mahazo fototra ara-tsiansa ny mpianatra, ary mianatra ireo teknika sy teknolojia ampiharina eo amin'ny sehatry ny fambolena sy ny fiompiana ary ny tontolo iainana.</p>
     <h3 class="lsub">Lalam-piofanana</h3>
-    <div class="pc">
-      <article class="card pcard p-agri rv"><span class="ic">🌾</span><h4>Fambolena</h4><small>Sokajin'ny Bakalorea ekena: C, D, S, OSE ary Agricole.</small><a class="more" href="#adm-lic">Jereo ny fepetra fidirana →</a></article>
-      <article class="card pcard p-elev rv"><span class="ic">🐄</span><h4>Fiompiana</h4><small>Sokajin'ny Bakalorea ekena: C, D, S, OSE ary Agricole.</small><a class="more" href="#adm-lic">Jereo ny fepetra fidirana →</a></article>
-      <article class="card pcard p-env rv"><span class="ic">🌿</span><h4>Tontolo iainana</h4><small>Sokajin'ny Bakalorea ekena: A2, C, D, S, OSE ary Agricole.</small><a class="more" href="#adm-lic">Jereo ny fepetra fidirana →</a></article>
-      <article class="card pcard p-peche rv"><span class="ic">🐟</span><h4>Jono sy Fiompiana anaty rano</h4><small>Sokajin'ny Bakalorea ekena: C, D, S, OSE ary Agricole.</small><a class="more" href="#adm-lic">Jereo ny fepetra fidirana →</a></article>
-    </div>
+    <div class="fl" data-niv="licence" aria-live="polite"></div>
     <div class="stg"><b>FIOFANANA ENY AMIN'NY TOERAM-PIASANA</b><span>L1 · Fiofanana fampahafantarana ny tontolon'ny asa</span><span>L2 · Fiofanana arak'asa</span><span>L3 · Fiofanana sy fanomanana ny asa soratra famaranana ny Laisansa</span><a class="more" href="#frais">Jereo ny saram-pianarana →</a></div>
   </div>
 
@@ -172,88 +168,14 @@
     <p class="mention"><i>Taranja</i><b>Agro-biodiversité sy Tontolo iainana</b></p>
     <p class="lvl-p">Manofana injeniora manam-pahaizana momba ny siansa sy ny teknolojian'ny zavamananaina, ny bioteknolojia, ny siansan'ny tany, ny indostrian'ny sakafo, ny fikarohana, ny fanavaozana ary ny fampandrosoana lovainjafy.</p>
     <h3 class="lsub">Lalam-piofanana</h3>
-    <div class="pc">
-      <article class="card pcard p-padd rv"><span class="ic">🐄</span><h4>P.A.D.D.</h4><p>Famokarana biby sy fampandrosoana lovainjafy.</p><small>Fepetra takiana: diplaoma Laisansa amin'ny Fiompiana, Tontolo iainana, Jono sy Fiompiana anaty rano, na lalam-piofanana mitovy lenta.</small><a class="more" href="#adm-mas">Jereo ny fepetra fidirana →</a></article>
-      <article class="card pcard p-pvtdd rv"><span class="ic">🌴</span><h4>P.V.T.D.D.</h4><p>Famokarana zavamaniry tropikaly sy fampandrosoana lovainjafy.</p><small>Fepetra takiana: diplaoma Laisansa amin'ny Fambolena, Tontolo iainana, na lalam-piofanana mitovy lenta.</small><a class="more" href="#adm-mas">Jereo ny fepetra fidirana →</a></article>
-    </div>
+    <div class="fl" data-niv="ingeniorat" aria-live="polite"></div>
     <div class="stg"><b>FIOFANANA ENY AMIN'NY TOERAM-PIASANA</b><span>M2 · Fiofanana sy fanomanana ny asa soratra famaranana ny diplaoma Injeniora amin'ny ambaratonga Mastera</span><a class="more" href="#frais">Jereo ny saram-pianarana →</a></div>
   </div>
 </section>
 
 <section id="sites">
-  <div class="pubs rv" id="pubs" role="region" aria-roledescription="carousel" aria-label="Fampisehoana ireo lalam-pianarana" tabindex="-1">
-    <div class="pubs-bar"><i></i></div>
-    <div class="pubs-stage">
-    <article class="ps p-agri on" role="group" aria-roledescription="slide" aria-label="Fambolena">
-      <img class="ps-bg" src="../images/pub-agriculture.jpg" alt="Sarin'ny tanimboly misy marika sy mpianatra manao asa eny an-kianja" width="1000" height="750" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Laisansa Matihanina</span><span class="ps-m"><i>Taranja</i>Biolojia Ampiharina</span></div>
-        <h3 class="ps-t">Fambolena</h3><p class="ps-p">Mahazoa fototra ara-tsiansa, teknika ary teknolojia momba ny famokarana ara-pambolena. Misy asa fampiharana eny an-kianja sy ao amin'ny laboratoara, arahin'ny fanazaran-tena ao amin'ny tontolon'ny asa.</p><ul class="ps-k"><li>Faharetany: 3 taona aorian'ny Bakalorea</li><li>Sokajin'ny Bakalorea ekena: C, D, S, OSE ary Agricole.</li><li>Fiofanana sy fanazaran-tena mandritra ny L1 ka hatramin'ny L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Jereo ny fepetra fidirana →</a><a class="btn o" href="#frais">Jereo ny saram-pianarana</a></div></div>
-    </article>
-    <article class="ps p-elev" role="group" aria-roledescription="slide" aria-label="Fiompiana">
-      <img class="ps-bg" src="../images/pub-elevage.jpg" alt="Mpianatra mandray fampianarana ao amin'ny amfiteatra" width="1000" height="750" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Laisansa Matihanina</span><span class="ps-m"><i>Taranja</i>Biolojia Ampiharina</span></div>
-        <h3 class="ps-t">Fiompiana</h3><p class="ps-p">Fantaro ny teknika sy ny teknolojian'ny fiompiana, miorina amin'ny fototra ara-tsiansa matanjaka. Misy fampiharana ao amin'ny laboratoara sy eny an-kianja, miaraka amin'ny efitrano fampisehoana sy ny toeram-pambolena fampianarana.</p><ul class="ps-k"><li>Faharetany: 3 taona aorian'ny Bakalorea</li><li>Sokajin'ny Bakalorea ekena: C, D, S, OSE ary Agricole.</li><li>Fiofanana sy fanazaran-tena mandritra ny L1 ka hatramin'ny L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Jereo ny fepetra fidirana →</a><a class="btn o" href="#frais">Jereo ny saram-pianarana</a></div></div>
-    </article>
-    <article class="ps p-env" role="group" aria-roledescription="slide" aria-label="Tontolo iainana">
-      <img class="ps-bg" src="../images/pub-environnement.jpg" alt="Toeram-pamokarana zana-javamaniry ambanin'ny aloka: zana-kazo ao anaty kitapo plastika" width="1000" height="748" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Laisansa Matihanina</span><span class="ps-m"><i>Taranja</i>Biolojia Ampiharina</span></div>
-        <h3 class="ps-t">Tontolo iainana</h3><p class="ps-p">Mianara ny tontolo voajanahary sy ny olana mikasika azy, miaraka amin'ny fototra ara-tsiansa, ny teknika ary ny teknolojia eo amin'ny sehatry ny agronomia sy ny tontolo iainana. Misokatra ho an'ny mpitana Bakalorea A2 koa.</p><ul class="ps-k"><li>Faharetany: 3 taona aorian'ny Bakalorea</li><li>Sokajin'ny Bakalorea ekena: A2, C, D, S, OSE ary Agricole.</li><li>Fiofanana sy fanazaran-tena mandritra ny L1 ka hatramin'ny L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Jereo ny fepetra fidirana →</a><a class="btn o" href="#frais">Jereo ny saram-pianarana</a></div></div>
-    </article>
-    <article class="ps p-peche" role="group" aria-roledescription="slide" aria-label="Jono sy Fiompiana anaty rano">
-      <img class="ps-bg" src="../images/pub-peche.jpg" alt="Dobo fiompiana trondro sy trondro ao anaty harato" width="1000" height="605" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Laisansa Matihanina</span><span class="ps-m"><i>Taranja</i>Biolojia Ampiharina</span></div>
-        <h3 class="ps-t">Jono sy Fiompiana anaty rano</h3><p class="ps-p">Mianara ny teknikan'ny jono sy ny fiompiana trondro, miaraka amin'ny fototra ara-tsiansa sy ny teknolojian'ny sehatra. Misy fampiharana ao amin'ny laboratoara sy eny an-kianja, ary fanazaran-tena ao amin'ny tontolon'ny asa.</p><ul class="ps-k"><li>Faharetany: 3 taona aorian'ny Bakalorea</li><li>Sokajin'ny Bakalorea ekena: C, D, S, OSE ary Agricole.</li><li>Fiofanana sy fanazaran-tena mandritra ny L1 ka hatramin'ny L3</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-lic">Jereo ny fepetra fidirana →</a><a class="btn o" href="#frais">Jereo ny saram-pianarana</a></div></div>
-    </article>
-    <article class="ps p-padd" role="group" aria-roledescription="slide" aria-label="P.A.D.D.">
-      <img class="ps-bg" src="../images/pub-padd.jpg" alt="Laboratoara: mikraoskaopy sy otoklava" width="660" height="358" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv m">DIPLAOMA INJENIORA AMIN'NY AMBARATONGA MASTERA</span><span class="ps-m"><i>Taranja</i>Agro-biodiversité sy Tontolo iainana</span></div>
-        <h3 class="ps-t">P.A.D.D.</h3><p class="ps-p"><b>Famokarana biby sy fampandrosoana lovainjafy.</b>Fanofanana injeniora amin'ny ambaratonga Mastera eo amin'ny siansa sy teknolojian'ny zavamananaina, ny biolojian'ny biby, ny fikarohana, ny fanavaozana ary ny fampandrosoana lovainjafy.</p><ul class="ps-k"><li>Faharetany: 2 taona aorian'ny Laisansa</li><li>Fepetra takiana: diplaoma Laisansa amin'ny Fiompiana, Tontolo iainana, Jono sy Fiompiana anaty rano, na lalam-piofanana mitovy lenta.</li><li>Fifantenana araka ny antontan-taratasy, arahin'ny tafatafa</li><li>Fanazaran-tena ho an'ny Taratasy fikarohana Injeniora amin'ny ambaratonga Mastera (M2)</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-mas">Jereo ny fepetra fidirana →</a><a class="btn o" href="#frais">Jereo ny saram-pianarana</a></div></div>
-    </article>
-    <article class="ps p-pvtdd" role="group" aria-roledescription="slide" aria-label="P.V.T.D.D.">
-      <img class="ps-bg" src="../images/pub-pvtdd.jpg" alt="Zavamaniry tropikaly ambanin'ny aloka fambolena" width="1000" height="748" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv m">DIPLAOMA INJENIORA AMIN'NY AMBARATONGA MASTERA</span><span class="ps-m"><i>Taranja</i>Agro-biodiversité sy Tontolo iainana</span></div>
-        <h3 class="ps-t">P.V.T.D.D.</h3><p class="ps-p"><b>Famokarana zavamaniry tropikaly sy fampandrosoana lovainjafy.</b>Fanofanana injeniora amin'ny ambaratonga Mastera eo amin'ny siansa sy teknolojian'ny zavamananaina, ny biolojian'ny zavamaniry, ny biotehnolojia, ny fikarohana, ny fanavaozana ary ny fampandrosoana lovainjafy.</p><ul class="ps-k"><li>Faharetany: 2 taona aorian'ny Laisansa</li><li>Fepetra takiana: diplaoma Laisansa amin'ny Fambolena, Tontolo iainana, na lalam-piofanana mitovy lenta.</li><li>Fifantenana araka ny antontan-taratasy, arahin'ny tafatafa</li><li>Fanazaran-tena ho an'ny Taratasy fikarohana Injeniora amin'ny ambaratonga Mastera (M2)</li></ul>
-        <div class="ps-b"><a class="btn" href="#adm-mas">Jereo ny fepetra fidirana →</a><a class="btn o" href="#frais">Jereo ny saram-pianarana</a></div></div>
-    </article>
-    <article class="ps p-antso" role="group" aria-roledescription="slide" aria-label="Antsohihy">
-      <img class="ps-bg" src="../images/antsohihy.jpg" alt="Trano ao Antsohihy" width="1200" height="760" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <figure class="ps-fr"><img src="../images/antsohihy-panneau.jpg" alt="Takelaka « IUTAM — Annexe ANTSOHIHY » manondro ny lalana mankany (60 m) sy ny adiresy" width="404" height="242" loading="lazy" decoding="async"><figcaption>Takelaka fanondroana · 60 m</figcaption></figure>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-lv">Sampana</span><span class="ps-m">Akaikinao</span></div>
-        <h3 class="ps-t">IUTAM<b>Antsohihy</b></h3>
-        <p class="ps-p">Sampan'ny IUTAM ao Antsohihy: fanofanana agronomika ekena avy amin'ny MESupReS. Fambolena, fiompiana, tontolo iainana, jono ary fiompiana trondro (ho ekena ho an'ny 2026-2027).</p>
-        <ul class="ps-k"><li>📞 032 05 580 06 · 034 02 653 27</li><li>✉️ iutamumg@gmail.com</li></ul>
-        <div class="ps-b"><a class="btn" href="tel:+261320558006">Antsoy</a><a class="btn o" href="#sites-list">Jereo ireo toerana</a></div></div>
-    </article>
-    <article class="ps p-maeva" role="group" aria-roledescription="slide" aria-label="Maevatanana">
-      <img class="ps-bg" src="../images/maevatanana.jpg" alt="Ny tampon-trano ny IUTAM Maevatanana: trano roa rihana misy ny takelaka « I.U.T.A.M — Antenne Maevatanana » sy ny fanondroana mankany amin'ny Sekreteria" width="1600" height="1200" loading="lazy" decoding="async">
-      <div class="ps-ov"></div>
-      <div class="ps-c"><div class="ps-tags"><span class="ps-m">Akaikinao</span></div>
-        <h3 class="ps-t">IUTAM<b>Maevatanana</b></h3>
-        <p class="ps-p">Mangataha fanazavana momba ireo lalam-pianarana atolotra ao Maevatanana (fambolena, fiompiana, tontolo iainana) amin'ny Sekreteria ao amin'ny IUTAM Mahajanga.</p>
-        <ul class="ps-k"><li>Fanofanana hohamafisina amin'ny Sekreteria</li></ul>
-        <div class="ps-b"><a class="btn" href="tel:+261320558006">Mifandraisa amin'ny Sekreteria</a><a class="btn o" href="#sites-list">Jereo ireo toerana</a></div></div>
-    </article>
-    </div>
-    <div class="pubs-ctl">
-      <button class="pubs-btn pubs-prev" type="button" aria-label="Fampisehoana teo aloha">←</button>
-      <button class="pubs-btn pubs-next" type="button" aria-label="Fampisehoana manaraka">→</button>
-      <span class="pubs-cnt">01 / 08</span>
-    </div>
-  </div>
-  <div class="pubs-tabs"><button class="pt p-agri on" type="button" aria-current="true"><i></i>Fambolena</button><button class="pt p-elev" type="button"><i></i>Fiompiana</button><button class="pt p-env" type="button"><i></i>Tontolo iainana</button><button class="pt p-peche" type="button"><i></i>Jono sy Fiompiana anaty rano</button><button class="pt p-padd" type="button"><i></i>P.A.D.D.</button><button class="pt p-pvtdd" type="button"><i></i>P.V.T.D.D.</button><button class="pt p-antso" type="button"><i></i>Antsohihy</button><button class="pt p-maeva" type="button"><i></i>Maevatanana</button></div>
   <a class="pubs-poster lb" id="poster-link" href="../images/affiche-formations.jpg" data-alt="Afisy « Ireo lalam-piofanana atolotray »: Laisansa Matihanina sy Diplaoma Injeniora amin'ny ambaratonga Mastera">Jereo ny takelaka fampahafantarana momba ny lalam-piofanana</a>
+  <h3 class="sites-t">Akaikinao</h3>
   <div class="grid" id="sites-list" aria-live="polite"></div>
 </section>
 
@@ -288,7 +210,7 @@
   </table></div>
   <h3 class="rv" id="guides" style="margin-top:56px">TOROLALANA AZO AMPIHARINA</h3>
   <p class="sub rv">Ireo dingana tokony harahina, hazavaina tsikelikely.</p>
-  <div class="grid gd-grid" id="guides-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
+  <div class="dl-list" id="guides-list" aria-live="polite"><p class="empty">Mampiditra…</p></div>
 </section>
 
 <section id="frais">
@@ -319,6 +241,8 @@
     <div class="as-chips" id="as-suggest"></div>
     <button class="btn" type="button" data-assistant-open>Sokafy ny mpanampy</button>
   </div>
+  <div class="fq-tabs rv" id="faq-tabs" role="tablist"></div>
+  <div id="faq-list" aria-live="polite"></div>
 </section>
 
 <section id="actus">
@@ -367,6 +291,7 @@
 <script src="../js/main.js" defer></script>
 <script src="../js/sections.js" defer></script>
 <script src="../js/fenetres.js" defer></script>
+<script src="../js/vues.js" defer></script>
 <script src="../js/forms.js" defer></script>
 <script src="../js/search.js" defer></script>
 <script src="../js/icons.js" defer></script>

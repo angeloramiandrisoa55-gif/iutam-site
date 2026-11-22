@@ -257,7 +257,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!m.hidden)c
 // URL propre : les liens internes (#about, #vie...) défilent sans afficher l'ancre dans la barre d'adresse
 (function(){
 var propre=location.pathname+location.search;
-function retirer(){if(location.hash&&window.history&&history.replaceState)history.replaceState(null,"",propre)}
+function retirer(){if(location.hash&&location.hash.indexOf("#/")!==0&&window.history&&history.replaceState)history.replaceState(null,"",propre)}
 document.addEventListener("click",function(e){
 var a=e.target.closest&&e.target.closest('a[href^="#"]');
 if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;

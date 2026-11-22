@@ -1,7 +1,8 @@
 /* Fenêtres de détails, bouton « Retour » et pied de page.
  *
- *  1) Les blocs dépliables (débouchés, guides pratiques, grille tarifaire) s'ouvrent dans une fenêtre,
+ *  1) Les blocs dépliables (débouchés, guides pratiques) s'ouvrent dans une fenêtre,
  *     comme les mentions légales : plus rien ne s'étale dans la page. Chaque fenêtre a « Retour » et « Fermer ».
+ *     La grille tarifaire (#fb) n'est PLUS une fenêtre : c'est l'accordéon de main.js (voir correctif du bug).
  *  2) Toutes les fenêtres (mentions légales, photos, détails) ajoutent une étape à l'historique :
  *     le bouton « Retour » du téléphone ou du navigateur ferme la fenêtre au lieu de quitter le site.
  *  3) Page des mentions légales : « Retour au site » revient là où l'on était.
@@ -12,8 +13,8 @@
 
   var LANG = document.documentElement.lang === 'mg' ? 'mg' : 'fr';
   var TXT = {
-    fr: { back: '← Retour', close: 'Fermer', fees: 'Grille tarifaire' },
-    mg: { back: '← Miverina', close: 'Akatony', fees: 'Lisitry ny saram-pianarana' }
+    fr: { back: '← Retour', close: 'Fermer' },
+    mg: { back: '← Miverina', close: 'Akatony' }
   };
   var T = TXT[LANG];
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -179,27 +180,12 @@
     showSheet([top], body.cloneNode(true), summary);
   }
 
-  function openFees(button) {
-    var panel = document.getElementById('fp');
-    if (!panel) return;
-    var h = el('h2', 'sheet-t', T.fees);
-    h.id = 'sheet-t';
-    var total = textOf(button, '#frais-total');
-    var meta = el('p', 'sheet-meta');
-    if (total) meta.appendChild(el('span', 'chip', total));
-    var wrap = el('div', 'sheet-fees');
-    wrap.innerHTML = panel.innerHTML;
-    showSheet([h, meta], wrap, button);
-  }
-
   document.addEventListener('click', function (e) {
     if (!e.target.closest) return;
     var s = e.target.closest('details.db-row > summary');
     if (s) { e.preventDefault(); e.stopPropagation(); openDebouche(s); return; }
     s = e.target.closest('details.gd > summary');
     if (s) { e.preventDefault(); e.stopPropagation(); openGuide(s); return; }
-    var fb = e.target.closest('#fb');
-    if (fb) { e.preventDefault(); e.stopImmediatePropagation(); openFees(fb); }
   }, true);
 
   /* ------------------------------------- 3) page des mentions légales : « Retour au site » */

@@ -45,6 +45,7 @@ for (const page of pages) {
   // --- ancres internes ---------------------------------------------------------
   const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]));
   for (const m of html.matchAll(/href="#([^"]+)"/g)) {
+    if (m[1].startsWith('/')) continue;   // route dynamique (#/formation/…, #/demarche/…) gérée par js/vues.js
     if (!ids.has(m[1])) err(`ancre interne introuvable : #${m[1]}`);
   }
 
