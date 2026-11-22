@@ -160,7 +160,7 @@ const P = [
    "Ny fidirana amin'ny Laisansa dia mifototra amin'ny fandinihana ny antontan-taratasy. Ny fidirana amin'ny diplaoma Injeniera amin'ny ambaratonga Mastera kosa dia mifototra amin'ny fandinihana ny antontan-taratasy sy ny dinidinika."],
   ["Licence Professionnelle · Baccalauréat requis", "LAISANSA MATIHANINA · TAKIANA NY BAKALOREA"],
   ["Parcours", "Lalam-piofanana"],
-  ["Séries de Bacc admises", "Sokajin'ny Bakalorea ekena"],
+  ["Séries de Bac admises", "Sokajin'ny Bakalorea ekena"],
   ["Ingéniorat au grade de Master · Licence requise", "DIPLAOMA INJENIERA AMIN'NY AMBARATONGA MASTERA · TAKIANA NY LAISANSA"],
   ["Licence en", "Laisansa takiana"],
   ["Élevage, Environnement, Pêche et Aquaculture et équivalents",

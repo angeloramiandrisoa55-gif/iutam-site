@@ -130,12 +130,16 @@
         }
         var obj = liste(p.objectifs, p.objectifs_mg);
         var comp = liste(p.competences, p.competences_mg);
+        // « P.A.D.D. — Production Animale… » : sigle en titre, nom complet en sous-titre
+        var nomFull = text(p, 'nom'), cut = nomFull.indexOf(' — ');
+        var nomCourt = cut < 0 ? { t: nomFull, s: '' } : { t: nomFull.slice(0, cut), s: nomFull.slice(cut + 3) };
         var niveau = p.niveau === 'ingeniorat' ? T.master : T.licence;
         var mention = p.niveau === 'ingeniorat' ? T.mentionMas : T.mentionLic;
         return '<details class="db-row" style="--i:' + i + '">' +
           '<summary>' +
           '<span class="db-num" aria-hidden="true">' + ROMAN[i] + '</span>' +
-          '<span class="db-t"><b>' + esc(text(p, 'nom')) + '</b>' +
+          '<span class="db-t"><b>' + esc(nomCourt.t) + '</b>' +
+          (nomCourt.s ? '<span class="db-lv db-sg">' + esc(nomCourt.s) + '</span>' : '') +
           '<span class="db-lv">' + esc((LANG === 'mg' && p.mention_mg) || (niveau + ' · ' + mention)) + '</span></span>' +
           '<span class="db-m">' + esc(metiersLigne) + '</span>' +
           '<span class="db-d">' + esc(text(p, 'duree')) + '</span>' +
