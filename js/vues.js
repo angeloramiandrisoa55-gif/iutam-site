@@ -264,7 +264,11 @@
     if (pendingScroll) {
       var target = document.getElementById(pendingScroll);
       pendingScroll = null;
-      if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      if (target) {
+        var hd = document.querySelector('body > header');
+        var off = (hd ? hd.offsetHeight : 0) + 8;
+        window.scrollTo(0, Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - off));
+      }
     } else if (t && t.focus && document.contains(t)) {
       t.focus({ preventScroll: true });
     }
@@ -301,15 +305,17 @@
     }
   }
 
+  // Phase de capture : ces liens doivent passer AVANT le défilement doux de main.js,
+  // sinon il fait défiler la page cachée derrière la vue et la vue reste ouverte.
   document.addEventListener('click', function (e) {
     if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a) return;
     var leaveId = a.getAttribute('data-leave');
-    if (leaveId) { e.preventDefault(); leave(leaveId); return; }
+    if (leaveId) { e.preventDefault(); e.stopPropagation(); leave(leaveId); return; }
     var href = a.getAttribute('href');
-    if (href && ROUTE.test(href)) { e.preventDefault(); openLink(href, a); }
-  });
+    if (href && ROUTE.test(href)) { e.preventDefault(); e.stopPropagation(); openLink(href, a); }
+  }, true);
 
   window.addEventListener('popstate', route);
   window.addEventListener('hashchange', route);
