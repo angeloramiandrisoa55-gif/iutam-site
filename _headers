@@ -1,0 +1,53 @@
+# Netlify et Cloudflare Pages : en-têtes de sécurité, cache et CORS
+# (équivalent du .htaccess fourni pour Apache)
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
+
+# Politique de contenu stricte pour les pages publiques
+# Si le formulaire est branché sur api/worker.js, ajouter l'origine du Worker
+# dans connect-src et form-action.
+/:
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.VOTRE-DOMAINE.mg; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+/index.html
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.VOTRE-DOMAINE.mg; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+/mg/*
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.VOTRE-DOMAINE.mg; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+/mentions-legales.html
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.VOTRE-DOMAINE.mg; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+
+# Interface d'administration (Decap CMS) : politique adaptée
+/admin/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: blob: https:; connect-src 'self' https://api.github.com https://github.com https://VOTRE-PASSERELLE-OAUTH; font-src 'self' data: https://unpkg.com; frame-ancestors 'none'
+  X-Robots-Tag: noindex
+
+# API JSON publique : lecture seule depuis n'importe quelle origine.
+/api/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Accept
+  Access-Control-Max-Age: 86400
+  Cache-Control: public, max-age=300
+  X-Robots-Tag: noindex, nofollow
+
+# Les écritures passent par le Worker, dont le CORS est strict (voir docs/API.md).
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/js/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/data/*
+  Cache-Control: public, max-age=300
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

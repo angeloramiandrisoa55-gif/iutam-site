@@ -1,0 +1,35 @@
+# Configuration du Worker « iutam-api » (Cloudflare Workers)
+# -----------------------------------------------------------------------------
+# Déploiement :
+#   npx wrangler kv:namespace create IUTAM_KV      # créer l'espace de stockage
+#   npx wrangler secret put JWT_SECRET             # secret de signature (32 octets+)
+#   npx wrangler secret put ALLOWED_ORIGINS        # ex. https://www.iutam.mahajanga-univ.mg
+#   npx wrangler deploy
+#
+# Documentation complète : docs/API.md
+name = "iutam-api"
+main = "api/worker.js"
+compatibility_date = "2024-11-01"
+workers_dev = false
+
+# Le Worker sert l'API d'écriture. L'API de lecture est portée par les fichiers
+# statiques /api/*.json (générés par tools/build-api.js).
+[[kv_namespaces]]
+binding = "IUTAM_KV"
+id = "REMPLACER_PAR_L_ID_DU_NAMESPACE_KV"
+
+# Variables d'environnement (les secrets ne sont pas ici : wrangler secret put).
+[vars]
+MAIL_FROM = "site@iutam.mahajanga-univ.mg"
+MAIL_TO = "iutamumg@gmail.com"
+RATE_LIMIT = "5"
+RATE_WINDOW = "600"
+
+# Observabilité : journalise chaque requête (consulter avec `wrangler tail`).
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+# Limites de déploiement (débit de l'API d'écriture).
+[limits]
+requests_per_second = 20

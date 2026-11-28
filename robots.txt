@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /503.html
+Sitemap: https://iutam.univ.mg/sitemap.xml
